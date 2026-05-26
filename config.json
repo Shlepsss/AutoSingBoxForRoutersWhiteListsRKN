@@ -34,30 +34,44 @@
       "type": "selector",
       "tag": "select-singtun0",
       "outbounds": [
-        "🇨🇿 Czechia [*CIDR] YA",
-        "🇨🇿 Czechia [*CIDR] YA-2",
-        "🇨🇿 Czechia [*CIDR] YA-3",
-        "🇨🇿 Czechia [*CIDR] YA-4",
-        "🇵🇱 Poland | 🌐 [*CIDR] VK"
+        "🇷🇺 Russia [*CIDR]",
+        "🇷🇺 Russia [*CIDR]-2",
+        "🇷🇺 Russia [*CIDR]-3",
+        "🇷🇺 Russia [*CIDR]-4",
+        "🇷🇺 Russia [*CIDR]-5"
       ],
-      "default": "🇨🇿 Czechia [*CIDR] YA",
+      "default": "🇷🇺 Russia [*CIDR]",
       "interrupt_exist_connections": false
     },
     {
-      "tag": "🇨🇿 Czechia [*CIDR] YA",
+      "tag": "🇷🇺 Russia [*CIDR]",
       "type": "vless",
-      "server": "158.160.150.233",
-      "server_port": 443,
-      "uuid": "801e398f-b5b8-42a8-a387-982967f1900d",
-      "flow": "xtls-rprx-vision",
+      "server": "5.188.156.138",
+      "server_port": 4443,
+      "uuid": "de87620b-6bff-4077-99cc-ce65e06b64ed"
+    },
+    {
+      "tag": "🇷🇺 Russia [*CIDR]-2",
+      "type": "vless",
+      "server": "87.228.124.196",
+      "server_port": 4443,
+      "uuid": "de87620b-6bff-4077-99cc-ce65e06b64ed"
+    },
+    {
+      "tag": "🇷🇺 Russia [*CIDR]-3",
+      "type": "vless",
+      "server": "ru3.alexanderoff.ru",
+      "server_port": 4443,
+      "uuid": "de87620b-6bff-4077-99cc-ce65e06b64ed"
+    },
+    {
+      "tag": "🇷🇺 Russia [*CIDR]-4",
+      "type": "vless",
+      "server": "ru3.alexanderoff.ru",
+      "server_port": 4443,
+      "uuid": "de87620b-6bff-4077-99cc-ce65e06b64ed",
       "tls": {
         "enabled": true,
-        "server_name": "ads.x5.ru",
-        "reality": {
-          "enabled": true,
-          "public_key": "r5WB5FnSCt4eeBC1FJMfkWHbzsMuabo0Rc6wuAhlZUs",
-          "short_id": "672ff0"
-        },
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
@@ -65,83 +79,14 @@
       }
     },
     {
-      "tag": "🇨🇿 Czechia [*CIDR] YA-2",
+      "tag": "🇷🇺 Russia [*CIDR]-5",
       "type": "vless",
-      "server": "158.160.150.233",
-      "server_port": 443,
-      "uuid": "801e398f-b5b8-42a8-a387-982967f1900d",
-      "flow": "xtls-rprx-vision",
+      "server": "ru3.alexanderoff.ru",
+      "server_port": 4443,
+      "uuid": "de87620b-6bff-4077-99cc-ce65e06b64ed",
       "tls": {
         "enabled": true,
-        "server_name": "ads.x5.ru",
-        "reality": {
-          "enabled": true,
-          "public_key": "r5WB5FnSCt4eeBC1FJMfkWHbzsMuabo0Rc6wuAhlZUs",
-          "short_id": "672ff0"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "randomized"
-        }
-      }
-    },
-    {
-      "tag": "🇨🇿 Czechia [*CIDR] YA-3",
-      "type": "vless",
-      "server": "158.160.249.158",
-      "server_port": 8443,
-      "uuid": "801e398f-b5b8-42a8-a387-982967f1900d",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "ads.x5.ru",
-        "reality": {
-          "enabled": true,
-          "public_key": "r5WB5FnSCt4eeBC1FJMfkWHbzsMuabo0Rc6wuAhlZUs",
-          "short_id": "672ff0"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      }
-    },
-    {
-      "tag": "🇨🇿 Czechia [*CIDR] YA-4",
-      "type": "vless",
-      "server": "158.160.249.158",
-      "server_port": 8443,
-      "uuid": "801e398f-b5b8-42a8-a387-982967f1900d",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "ads.x5.ru",
-        "reality": {
-          "enabled": true,
-          "public_key": "r5WB5FnSCt4eeBC1FJMfkWHbzsMuabo0Rc6wuAhlZUs",
-          "short_id": "672ff0"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "randomized"
-        }
-      }
-    },
-    {
-      "tag": "🇵🇱 Poland | 🌐 [*CIDR] VK",
-      "type": "vless",
-      "server": "109.120.188.50",
-      "server_port": 443,
-      "uuid": "392e4a69-bf35-40ef-a73c-34ac8c9e0136",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "max.ru",
-        "reality": {
-          "enabled": true,
-          "public_key": "mAu8QDi3pbmMCFg9kKC-ZBIHdtnXeCuZt3VnAw6vlH4",
-          "short_id": "ad7dab462a323acb"
-        },
+        "server_name": "ru3.alexanderoff.ru",
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
