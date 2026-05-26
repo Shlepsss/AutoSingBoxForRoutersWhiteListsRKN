@@ -1,4 +1,4 @@
-name: Update SingBox Config
+name: Build SingBox Config
 
 on:
   schedule:
@@ -6,32 +6,34 @@ on:
   workflow_dispatch:
 
 jobs:
-  update:
+  build:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout
+      - name: Checkout repo
         uses: actions/checkout@v4
 
-      - name: Install Python
-        uses: actions/setup-python@v5
-        with:
-          python-version: "3.11"
-
-      - name: Install dependencies
+      - name: Build config via API
         run: |
-          pip install requests
+          curl -sS -X POST "https://api.web2core.workers.dev/" 
+          -H "Content-Type: application/json" 
+          --data @- <<EOF > config.json
+          {
+            "core": "singbox",
+            "input": "$(curl -s https://YOUR_SUB_URL | tr '\n' '\n')",
+            "options": {
+              "addTun": true,
+              "addSocks": true,
+              "useExtended": false
+            }
+          }
+          EOF
 
-      - name: Run updater
+      - name: Commit config
         run: |
-          python updater.py
-
-      - name: Commit files
-        run: |
-          git config --global user.name "github-actions"
-          git config --global user.email "actions@github.com"
+          git config user.name "github-actions"
+          git config user.email "actions@github.com"
 
           git add config.json
-          git commit -m "auto update config" || echo "no changes"
-
+          git commit -m "auto update config" || exit 0
           git push
