@@ -15,7 +15,8 @@ def filter_lines(raw: str):
     clean = []
 
     for line in lines:
-        if not line.startswith('#'):
+        line = line.strip()
+        if line.startswith("vless") or line.startswith("trojan"):
             clean.append(line)
 
     return "\n".join(clean)
