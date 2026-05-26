@@ -37,7 +37,7 @@ def build_config(clean_input: str):
     r = requests.post(API_URL, json=payload, timeout=15)
     r.raise_for_status()
 
-    return r
+    return r.json()
 
 def main():
     print("Downloading subscription...")
