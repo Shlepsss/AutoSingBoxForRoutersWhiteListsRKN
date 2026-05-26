@@ -15,12 +15,14 @@ jobs:
 
       - name: Build config via API
         run: |
+          SUB=$(curl -s https://YOUR_SUB_URL | tr -d '\r')
+      
           curl -sS -X POST "https://api.web2core.workers.dev/" 
-          -H "Content-Type: application/json" 
-          --data @- <<EOF > config.json
+            -H "Content-Type: application/json" 
+            --data-binary @- <<EOF > config.json
           {
             "core": "singbox",
-            "input": "$(curl -s https://YOUR_SUB_URL | tr '\n' '\n')",
+            "input": "$SUB",
             "options": {
               "addTun": true,
               "addSocks": true,
