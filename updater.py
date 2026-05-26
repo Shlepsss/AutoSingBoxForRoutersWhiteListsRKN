@@ -12,14 +12,14 @@ def fetch_subscription():
 
 def filter_lines(raw: str):
     lines = raw.splitlines()
-    clean = []
+    #clean = []
 
-    for line in lines:
-        line = line.strip()
-        if line.startswith("vless") or line.startswith("trojan"):
-            clean.append(line)
+    #for line in lines:
+    #    line = line.strip()
+    #    if line.startswith("vless") or line.startswith("trojan"):
+    #        clean.append(line)
 
-    return "\n".join(clean)
+    return "\n".join(lines[14:34:2])
 
 def build_config(clean_input: str):
     payload = {
