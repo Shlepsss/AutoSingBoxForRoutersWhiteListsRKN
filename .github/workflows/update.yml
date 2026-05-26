@@ -23,7 +23,7 @@ jobs:
             exit 1
           fi
       
-          jq -n --arg input "$SUB" '{
+          jq -n --arg input "$CLEAN" '{
             core: "singbox",
             input: $input,
             options: { addTun: true, addSocks: true, tunName: "singtun0", genClashSecret: false, useExtended: false, detour: false }
