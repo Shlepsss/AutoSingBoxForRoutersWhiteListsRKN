@@ -46,37 +46,64 @@
     {
       "tag": "🇷🇺 Russia [*CIDR]",
       "type": "vless",
-      "server": "5.188.156.138",
-      "server_port": 4443,
-      "uuid": "de87620b-6bff-4077-99cc-ce65e06b64ed"
+      "server": "212.192.14.50",
+      "server_port": 61825,
+      "uuid": "b6083a84-80a5-3e88-9dbb-5c8ef241be3a",
+      "tls": {
+        "enabled": true,
+        "server_name": "github.com",
+        "reality": {
+          "enabled": true,
+          "public_key": "G8hjZomMXOCmbVboqMiuf2sVvcnihjQ4BdyVo3XewW4",
+          "short_id": "6bcde426"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "newinsight"
+      }
     },
     {
       "tag": "🇷🇺 Russia [*CIDR]-2",
       "type": "vless",
-      "server": "87.228.124.196",
-      "server_port": 4443,
-      "uuid": "de87620b-6bff-4077-99cc-ce65e06b64ed"
+      "server": "212.192.14.50",
+      "server_port": 61825,
+      "uuid": "b6083a84-80a5-3e88-9dbb-5c8ef241be3a",
+      "tls": {
+        "enabled": true,
+        "server_name": "github.com",
+        "reality": {
+          "enabled": true,
+          "public_key": "G8hjZomMXOCmbVboqMiuf2sVvcnihjQ4BdyVo3XewW4",
+          "short_id": "6bcde426"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "random"
+        }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "newinsight"
+      }
     },
     {
       "tag": "🇷🇺 Russia [*CIDR]-3",
       "type": "vless",
-      "server": "ru3.alexanderoff.ru",
+      "server": "5.188.156.138",
       "server_port": 4443,
       "uuid": "de87620b-6bff-4077-99cc-ce65e06b64ed"
     },
     {
       "tag": "🇷🇺 Russia [*CIDR]-4",
       "type": "vless",
-      "server": "ru3.alexanderoff.ru",
+      "server": "87.228.124.196",
       "server_port": 4443,
-      "uuid": "de87620b-6bff-4077-99cc-ce65e06b64ed",
-      "tls": {
-        "enabled": true,
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      }
+      "uuid": "de87620b-6bff-4077-99cc-ce65e06b64ed"
     },
     {
       "tag": "🇷🇺 Russia [*CIDR]-5",
@@ -86,7 +113,6 @@
       "uuid": "de87620b-6bff-4077-99cc-ce65e06b64ed",
       "tls": {
         "enabled": true,
-        "server_name": "ru3.alexanderoff.ru",
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
