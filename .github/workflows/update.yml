@@ -73,17 +73,26 @@ jobs:
             ' "$OUTPUT" > tmp.json && mv tmp.json "$OUTPUT"
           }
 
+          # ------------------------------------------------
           # config.json
           # 5 total
-          # prefer 3 RU
-          # urltest interval 1m
+          # prefer 3 RU + 2 foreign
+          # ------------------------------------------------
           build_config 5 3 config.json "1m"
 
+          # ------------------------------------------------
+          # config7.json
+          # 7 total
+          # prefer 5 RU + 2 foreign
+          # ------------------------------------------------
+          build_config 7 5 config7.json "2m"
+
+          # ------------------------------------------------
           # config10.json
           # 10 total
-          # prefer 6 RU
-          # urltest interval 3m
-          build_config 10 6 config10.json "3m"
+          # prefer 8 RU + 2 foreign
+          # ------------------------------------------------
+          build_config 10 8 config10.json "3m"
 
 
       - name: Commit configs
@@ -91,7 +100,7 @@ jobs:
           git config user.name "github-actions"
           git config user.email "actions@github.com"
 
-          git add config.json config10.json
+          git add config.json config7.json config10.json
 
           git commit -m "auto update configs" || exit 0
 
