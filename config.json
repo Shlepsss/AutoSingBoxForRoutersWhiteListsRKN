@@ -37,8 +37,8 @@
         "🇷🇺 Russia [*CIDR]",
         "🇷🇺 Russia [*CIDR]-2",
         "🇷🇺 Russia [*CIDR] YA",
-        "🇳🇱 The Netherlands [*CIDR] YA",
-        "🌐 Anycast-IP | 🇩🇪 🇳🇱 [*CIDR] YA"
+        "🌐 Anycast-IP | 🇩🇪 🇳🇱 [*CIDR] YA",
+        "🇨🇭 Switzerland | 🌐 [*CIDR]"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -54,8 +54,8 @@
         "🇷🇺 Russia [*CIDR]",
         "🇷🇺 Russia [*CIDR]-2",
         "🇷🇺 Russia [*CIDR] YA",
-        "🇳🇱 The Netherlands [*CIDR] YA",
-        "🌐 Anycast-IP | 🇩🇪 🇳🇱 [*CIDR] YA"
+        "🌐 Anycast-IP | 🇩🇪 🇳🇱 [*CIDR] YA",
+        "🇨🇭 Switzerland | 🌐 [*CIDR]"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
@@ -116,30 +116,9 @@
       }
     },
     {
-      "tag": "🇳🇱 The Netherlands [*CIDR] YA",
-      "type": "vless",
-      "server": "51.250.4.2",
-      "server_port": 443,
-      "uuid": "c8131d5a-7c08-4fb9-a045-dab11980cae9",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "api-maps.yandex.ru",
-        "reality": {
-          "enabled": true,
-          "public_key": "EBISh6QAVskJ_nvet-Qio9jS2yqxe9de6GMScYlbjhI",
-          "short_id": "226509f017e4c36d"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "randomized"
-        }
-      }
-    },
-    {
       "tag": "🌐 Anycast-IP | 🇩🇪 🇳🇱 [*CIDR] YA",
       "type": "vless",
-      "server": "51.250.17.80",
+      "server": "84.201.168.220",
       "server_port": 443,
       "uuid": "c2907539-dfef-467f-8c54-e30ba1af6a03",
       "flow": "xtls-rprx-vision",
@@ -155,6 +134,24 @@
           "enabled": true,
           "fingerprint": "randomized"
         }
+      }
+    },
+    {
+      "tag": "🇨🇭 Switzerland | 🌐 [*CIDR]",
+      "type": "vless",
+      "server": "a.l-itx.info",
+      "server_port": 2053,
+      "uuid": "5da05cf7-9913-45a9-a7c6-71a41b1cd713",
+      "tls": {
+        "enabled": true,
+        "server_name": "itx-server.digital"
+      },
+      "transport": {
+        "type": "ws",
+        "headers": {
+          "Host": "itx-server.digital"
+        },
+        "path": "/ws"
       }
     }
   ],
