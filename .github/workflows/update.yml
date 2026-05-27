@@ -1,4 +1,4 @@
-name: Build SingBox Config
+name: Build SingBox Configs
 
 on:
   schedule:
@@ -13,7 +13,7 @@ jobs:
       - name: Checkout repo
         uses: actions/checkout@v4
 
-      - name: Build configs via API
+      - name: Build configs
         run: |
 
           SUB=$(curl -s "https://raw.githack.com/igareck/vpn-configs-for-russia/main/Vless-Reality-White-Lists-Rus-Mobile.txt" | tr -d '\r')
@@ -22,33 +22,23 @@ jobs:
 
           RUSSIA=$(echo "$ALL" | grep -Ei 'russia' || true)
 
-          NON_RUSSIA=$(echo "$ALL" | grep -Evi 'russia' | shuf || true)
+          NON_RUSSIA=$(echo "$ALL" | grep -Evi 'russia' || true)
 
-          build_config () {
+          make_config () {
+            SIZE=$1
+            RU_PREF=$2
+            OUT=$3
 
-            TARGET=$1
-            RU_TARGET=$2
-            OUTPUT=$3
-            INTERVAL=$4
+            RU=$(echo "$RUSSIA" | head -n "$RU_PREF")
+            RU_COUNT=$(echo "$RU" | grep -c . || true)
 
-            RU_SELECTED=$(echo "$RUSSIA" | head -n "$RU_TARGET")
+            NEED=$((SIZE - RU_COUNT))
 
-            RU_COUNT=$(echo "$RU_SELECTED" | grep -c . || true)
+            NONRU=$(echo "$NON_RUSSIA" | shuf | head -n "$NEED")
 
-            NEED=$((TARGET - RU_COUNT))
+            FINAL=$(printf "%s\n%s\n" "$RU" "$NONRU" | grep .)
 
-            NONRU_SELECTED=$(echo "$NON_RUSSIA" | head -n "$NEED")
-
-            FINAL=$(printf "%s\n%s\n" "$RU_SELECTED" "$NONRU_SELECTED" | grep .)
-
-            COUNT=$(echo "$FINAL" | grep -c . || true)
-
-            if [ "$COUNT" -eq 0 ]; then
-              echo "ERROR: Нет доступных ключей"
-              exit 1
-            fi
-
-            echo "Building $OUTPUT with $COUNT nodes..."
+            echo "Building $OUT with $(echo "$FINAL" | grep -c .) nodes..."
 
             jq -n --arg input "$FINAL" '{
               core: "singbox",
@@ -63,36 +53,43 @@ jobs:
             | curl -sS -X POST "https://api.web2core.workers.dev/" \
                 -H "Content-Type: application/json" \
                 --data-binary @- \
-            > "$OUTPUT"
-
-            echo "Patching urltest settings in $OUTPUT..."
-
-            jq --arg interval "$INTERVAL" '
-              (.outbounds[] | select(.type=="urltest") | .interval) = $interval |
-              (.outbounds[] | select(.type=="urltest") | .tolerance) = 50
-            ' "$OUTPUT" > tmp.json && mv tmp.json "$OUTPUT"
+            > "$OUT"
           }
 
-          # ------------------------------------------------
-          # config.json
-          # 5 total
-          # prefer 3 RU + 2 foreign
-          # ------------------------------------------------
-          build_config 5 3 config.json "1m"
+          make_config 5 3 config5.json
+          make_config 7 5 config7.json
+          make_config 10 8 config10.json
 
-          # ------------------------------------------------
-          # config7.json
-          # 7 total
-          # prefer 5 RU + 2 foreign
-          # ------------------------------------------------
-          build_config 7 5 config7.json "2m"
+          # PURE FOREIGN
+          make_foreign () {
+            SIZE=$1
+            OUT=$2
 
-          # ------------------------------------------------
-          # config10.json
-          # 10 total
-          # prefer 8 RU + 2 foreign
-          # ------------------------------------------------
-          build_config 10 8 config10.json "3m"
+            FOREIGN=$(echo "$NON_RUSSIA" | shuf | head -n "$SIZE")
+
+            jq -n --arg input "$FOREIGN" '{
+              core: "singbox",
+              input: $input,
+              options: {
+                addTun: true,
+                addSocks: true,
+                genClashSecret: false,
+                useExtended: false
+              }
+            }' \
+            | curl -sS -X POST "https://api.web2core.workers.dev/" \
+                -H "Content-Type: application/json" \
+                --data-binary @- \
+            > "$OUT"
+          }
+
+          make_foreign 5 config5_foreign.json
+          make_foreign 10 config10_foreign.json
+
+          # shuffled duplicates (RU configs)
+          make_config 5 3 config5_b.json
+          make_config 7 5 config7_b.json
+          make_config 10 8 config10_b.json
 
 
       - name: Commit configs
@@ -100,8 +97,8 @@ jobs:
           git config user.name "github-actions"
           git config user.email "actions@github.com"
 
-          git add config.json config7.json config10.json
+          git add config*.json
 
-          git commit -m "auto update configs" || exit 0
+          git commit -m "extended multi-config system" || exit 0
 
           git push
