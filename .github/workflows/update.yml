@@ -2,7 +2,8 @@ name: Build SingBox Configs
 
 on:
   schedule:
-    - cron: '*/30 * * * *'
+    - cron: "*/30 * * * *"
+      timezone: "Europe/Moscow"
   workflow_dispatch:
 
 jobs:
