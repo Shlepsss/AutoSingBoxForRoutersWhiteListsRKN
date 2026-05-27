@@ -17,6 +17,7 @@ jobs:
         run: |
           SUB=$(curl -s "https://raw.githack.com/igareck/vpn-configs-for-russia/main/Vless-Reality-White-Lists-Rus-Mobile.txt" | tr -d '\r')
           CLEAN=$(echo "$SUB" | grep -E '^(vless|vmess|trojan)://' | grep -Ei 'russia' | head -n 5)
+          CLEAN10=$(echo "$SUB" | grep -E '^(vless|vmess|trojan)://' | grep -Ei 'russia' | head -n 10)
       
           if [ -z "$CLEAN" ]; then
             echo "ERROR: Нет ключей в списке"
@@ -28,6 +29,12 @@ jobs:
             input: $input,
             options: { addTun: true, addSocks: true, genClashSecret: false, useExtended: false }
           }' | curl -sS -X POST "https://api.web2core.workers.dev/" -H "Content-Type: application/json" --data-binary @- > config.json
+
+          jq -n --arg input "$CLEAN10" '{
+            core: "singbox",
+            input: $input,
+            options: { addTun: true, addSocks: true, genClashSecret: false, useExtended: false }
+          }' | curl -sS -X POST "https://api.web2core.workers.dev/" -H "Content-Type: application/json" --data-binary @- > config10.json
 
 
       - name: Commit config
