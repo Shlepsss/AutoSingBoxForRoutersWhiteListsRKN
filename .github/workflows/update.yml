@@ -26,7 +26,7 @@ jobs:
           jq -n --arg input "$CLEAN" '{
             core: "singbox",
             input: $input,
-            options: { addTun: true, addSocks: true, tunName: "singtun0", genClashSecret: false, useExtended: false, detour: false }
+            options: { addTun: true, addSocks: true, genClashSecret: false, useExtended: false }
           }' | curl -sS -X POST "https://api.web2core.workers.dev/" -H "Content-Type: application/json" --data-binary @- > config.json
 
 
