@@ -40,10 +40,10 @@
         "🇷🇺 Russia [*CIDR] YA-2",
         "🇷🇺 Russia [*CIDR] YA-3",
         "🇷🇺 Russia [*CIDR] YA-4",
-        "🌐 Anycast-IP | 🇩🇪 🇳🇱 [*CIDR] YA"
+        "🇳🇱 The Netherlands [*CIDR] YA"
       ],
       "url": "https://google.com/generate_204",
-      "interval": "3m",
+      "interval": "2m",
       "tolerance": 50,
       "idle_timeout": "30m",
       "interrupt_exist_connections": false
@@ -59,7 +59,7 @@
         "🇷🇺 Russia [*CIDR] YA-2",
         "🇷🇺 Russia [*CIDR] YA-3",
         "🇷🇺 Russia [*CIDR] YA-4",
-        "🌐 Anycast-IP | 🇩🇪 🇳🇱 [*CIDR] YA"
+        "🇳🇱 The Netherlands [*CIDR] YA"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
@@ -181,19 +181,19 @@
       }
     },
     {
-      "tag": "🌐 Anycast-IP | 🇩🇪 🇳🇱 [*CIDR] YA",
+      "tag": "🇳🇱 The Netherlands [*CIDR] YA",
       "type": "vless",
-      "server": "51.250.17.80",
+      "server": "51.250.4.2",
       "server_port": 443,
-      "uuid": "3851720f-103d-41db-b0c7-c426b02fe4df",
+      "uuid": "cf6843bd-1925-45d8-955c-2544b043a2e2",
       "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "cdp.x5.ru",
+        "server_name": "api-maps.yandex.ru",
         "reality": {
           "enabled": true,
-          "public_key": "wgXD4k3A16WR0aL63N9Mx8xoqFigJLyQWJXi-l3MPXI",
-          "short_id": "8ec792bfd725be8a"
+          "public_key": "EBISh6QAVskJ_nvet-Qio9jS2yqxe9de6GMScYlbjhI",
+          "short_id": "226509f017e4c36d"
         },
         "utls": {
           "enabled": true,

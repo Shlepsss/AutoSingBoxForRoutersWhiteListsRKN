@@ -41,7 +41,7 @@
         "🇷🇺 Russia [*CIDR] YA-3"
       ],
       "url": "https://google.com/generate_204",
-      "interval": "3m",
+      "interval": "1m",
       "tolerance": 50,
       "idle_timeout": "30m",
       "interrupt_exist_connections": false
