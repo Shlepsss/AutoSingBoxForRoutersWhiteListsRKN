@@ -39,8 +39,8 @@
         "🇷🇺 Russia [*CIDR] YA",
         "🇷🇺 Russia [*CIDR] YA-2",
         "🇷🇺 Russia [*CIDR] YA-3",
-        "🇳🇱 The Netherlands [*CIDR] YA",
-        "🇳🇱 The Netherlands [*CIDR] YA-2"
+        "🇷🇺 Russia [*CIDR] YA-4",
+        "🌐 Anycast-IP | 🇩🇪 🇳🇱 [*CIDR] YA"
       ],
       "url": "https://google.com/generate_204",
       "interval": "3m",
@@ -58,8 +58,8 @@
         "🇷🇺 Russia [*CIDR] YA",
         "🇷🇺 Russia [*CIDR] YA-2",
         "🇷🇺 Russia [*CIDR] YA-3",
-        "🇳🇱 The Netherlands [*CIDR] YA",
-        "🇳🇱 The Netherlands [*CIDR] YA-2"
+        "🇷🇺 Russia [*CIDR] YA-4",
+        "🌐 Anycast-IP | 🇩🇪 🇳🇱 [*CIDR] YA"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
@@ -161,19 +161,18 @@
       }
     },
     {
-      "tag": "🇳🇱 The Netherlands [*CIDR] YA",
+      "tag": "🇷🇺 Russia [*CIDR] YA-4",
       "type": "vless",
-      "server": "158.160.255.35",
+      "server": "178.154.243.251",
       "server_port": 443,
-      "uuid": "cf6843bd-1925-45d8-955c-2544b043a2e2",
-      "flow": "xtls-rprx-vision",
+      "uuid": "bd6acaa8-4579-3d31-9bcb-0dae59f756e9",
       "tls": {
         "enabled": true,
-        "server_name": "api-maps.yandex.ru",
+        "server_name": "www.google.com",
         "reality": {
           "enabled": true,
-          "public_key": "EBISh6QAVskJ_nvet-Qio9jS2yqxe9de6GMScYlbjhI",
-          "short_id": "226509f017e4c36d"
+          "public_key": "JkiFzvTq6FFDb44V8ifby6-P7QZo7Z1B5VOrGTgAQEY",
+          "short_id": "a1e1a7"
         },
         "utls": {
           "enabled": true,
@@ -182,19 +181,19 @@
       }
     },
     {
-      "tag": "🇳🇱 The Netherlands [*CIDR] YA-2",
+      "tag": "🌐 Anycast-IP | 🇩🇪 🇳🇱 [*CIDR] YA",
       "type": "vless",
-      "server": "158.160.255.35",
+      "server": "51.250.17.80",
       "server_port": 443,
-      "uuid": "e83394ec-2614-438a-9364-4fed657a9e56",
+      "uuid": "3851720f-103d-41db-b0c7-c426b02fe4df",
       "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "api-maps.yandex.ru",
+        "server_name": "cdp.x5.ru",
         "reality": {
           "enabled": true,
-          "public_key": "EBISh6QAVskJ_nvet-Qio9jS2yqxe9de6GMScYlbjhI",
-          "short_id": "226509f017e4c36d"
+          "public_key": "wgXD4k3A16WR0aL63N9Mx8xoqFigJLyQWJXi-l3MPXI",
+          "short_id": "8ec792bfd725be8a"
         },
         "utls": {
           "enabled": true,

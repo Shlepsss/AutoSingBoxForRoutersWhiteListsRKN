@@ -40,10 +40,10 @@
         "🇷🇺 Russia [*CIDR] YA-2",
         "🇷🇺 Russia [*CIDR] YA-3",
         "🇷🇺 Russia [*CIDR] YA-4",
-        "🇳🇱 The Netherlands | 🌐 [*CIDR] YA",
-        "🇫🇮 Finland [*CIDR]",
+        "🌐 Anycast-IP | 🇩🇪 🇳🇱 [*CIDR] YA",
         "🇳🇱 The Netherlands [*CIDR] YA",
-        "🌐 Anycast-IP | 🇩🇪 🇳🇱 [*CIDR] YA"
+        "🌐 Anycast-IP | 🇩🇪 🇳🇱 [*CIDR] YA-2",
+        "🇫🇮 Finland | 🌐 [*CIDR]"
       ],
       "url": "https://google.com/generate_204",
       "interval": "3m",
@@ -62,10 +62,10 @@
         "🇷🇺 Russia [*CIDR] YA-2",
         "🇷🇺 Russia [*CIDR] YA-3",
         "🇷🇺 Russia [*CIDR] YA-4",
-        "🇳🇱 The Netherlands | 🌐 [*CIDR] YA",
-        "🇫🇮 Finland [*CIDR]",
+        "🌐 Anycast-IP | 🇩🇪 🇳🇱 [*CIDR] YA",
         "🇳🇱 The Netherlands [*CIDR] YA",
-        "🌐 Anycast-IP | 🇩🇪 🇳🇱 [*CIDR] YA"
+        "🌐 Anycast-IP | 🇩🇪 🇳🇱 [*CIDR] YA-2",
+        "🇫🇮 Finland | 🌐 [*CIDR]"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
@@ -187,9 +187,9 @@
       }
     },
     {
-      "tag": "🇳🇱 The Netherlands | 🌐 [*CIDR] YA",
+      "tag": "🌐 Anycast-IP | 🇩🇪 🇳🇱 [*CIDR] YA",
       "type": "vless",
-      "server": "158.160.130.173",
+      "server": "51.250.17.80",
       "server_port": 443,
       "uuid": "3851720f-103d-41db-b0c7-c426b02fe4df",
       "flow": "xtls-rprx-vision",
@@ -208,25 +208,11 @@
       }
     },
     {
-      "tag": "🇫🇮 Finland [*CIDR]",
-      "type": "vless",
-      "server": "185.242.19.252",
-      "server_port": 80,
-      "uuid": "4e783039-6260-4107-9a11-2ab7dc18ded8",
-      "transport": {
-        "type": "ws",
-        "headers": {
-          "Host": "top2019950683.mwscdn.ru"
-        },
-        "path": "/static"
-      }
-    },
-    {
       "tag": "🇳🇱 The Netherlands [*CIDR] YA",
       "type": "vless",
       "server": "51.250.4.2",
       "server_port": 443,
-      "uuid": "e83394ec-2614-438a-9364-4fed657a9e56",
+      "uuid": "cf6843bd-1925-45d8-955c-2544b043a2e2",
       "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
@@ -243,9 +229,9 @@
       }
     },
     {
-      "tag": "🌐 Anycast-IP | 🇩🇪 🇳🇱 [*CIDR] YA",
+      "tag": "🌐 Anycast-IP | 🇩🇪 🇳🇱 [*CIDR] YA-2",
       "type": "vless",
-      "server": "51.250.108.162",
+      "server": "84.201.168.220",
       "server_port": 443,
       "uuid": "3851720f-103d-41db-b0c7-c426b02fe4df",
       "flow": "xtls-rprx-vision",
@@ -260,6 +246,27 @@
         "utls": {
           "enabled": true,
           "fingerprint": "randomized"
+        }
+      }
+    },
+    {
+      "tag": "🇫🇮 Finland | 🌐 [*CIDR]",
+      "type": "vless",
+      "server": "176.108.252.25",
+      "server_port": 57506,
+      "uuid": "202a32db-16bd-4959-8d00-7e60ad9aa079",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.intel.com",
+        "reality": {
+          "enabled": true,
+          "public_key": "VmTHgpXOg8LwAE097pQHpa-xIgbf70HrR69RNkzm3DQ",
+          "short_id": "c0027f1cce"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
         }
       }
     }
