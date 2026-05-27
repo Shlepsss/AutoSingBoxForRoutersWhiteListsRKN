@@ -34,13 +34,13 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🌐 Anycast-IP | 🇪🇪 🇫🇷 [*CIDR]",
-        "🇫🇷 France | 🌐 [*CIDR]",
-        "🇳🇱 The Netherlands [*CIDR] YA",
-        "🇳🇱 The Netherlands [*CIDR] YA-2",
         "🇩🇪 Germany [*CIDR]",
+        "🌐 Anycast-IP | 🇪🇪 🇫🇷 [*CIDR]",
         "🇩🇪 Germany | 🌐 [*CIDR]",
-        "🌐 Anycast-IP | 🇪🇪 🇫🇷 [*CIDR]-2"
+        "🇳🇱 The Netherlands [*CIDR] YA",
+        "🇩🇪 Germany [*CIDR]-2",
+        "🇩🇪 Germany [*CIDR]-3",
+        "🇳🇱 The Netherlands [*CIDR] YA-2"
       ],
       "url": "https://google.com/generate_204",
       "interval": "2m",
@@ -53,16 +53,34 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🌐 Anycast-IP | 🇪🇪 🇫🇷 [*CIDR]",
-        "🇫🇷 France | 🌐 [*CIDR]",
-        "🇳🇱 The Netherlands [*CIDR] YA",
-        "🇳🇱 The Netherlands [*CIDR] YA-2",
         "🇩🇪 Germany [*CIDR]",
+        "🌐 Anycast-IP | 🇪🇪 🇫🇷 [*CIDR]",
         "🇩🇪 Germany | 🌐 [*CIDR]",
-        "🌐 Anycast-IP | 🇪🇪 🇫🇷 [*CIDR]-2"
+        "🇳🇱 The Netherlands [*CIDR] YA",
+        "🇩🇪 Germany [*CIDR]-2",
+        "🇩🇪 Germany [*CIDR]-3",
+        "🇳🇱 The Netherlands [*CIDR] YA-2"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
+    },
+    {
+      "tag": "🇩🇪 Germany [*CIDR]",
+      "type": "vless",
+      "server": "46.235.185.25",
+      "server_port": 443,
+      "uuid": "9ebab373-19fe-4535-aa95-4e348ea300f1",
+      "tls": {
+        "enabled": true,
+        "server_name": "s28315.cdn.ngenix.net"
+      },
+      "transport": {
+        "type": "ws",
+        "headers": {
+          "Host": "s28315.cdn.ngenix.net"
+        },
+        "path": "/ws"
+      }
     },
     {
       "tag": "🌐 Anycast-IP | 🇪🇪 🇫🇷 [*CIDR]",
@@ -73,7 +91,24 @@
       "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "sub.sbrf-cdn342.ru",
+        "server_name": "sub.sbrf-cdn342.ru"
+      }
+    },
+    {
+      "tag": "🇩🇪 Germany | 🌐 [*CIDR]",
+      "type": "vless",
+      "server": "172.86.93.96",
+      "server_port": 443,
+      "uuid": "01cf5781-5948-11f1-9a67-dc08fb041e0d",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.google.com",
+        "reality": {
+          "enabled": true,
+          "public_key": "uJ-BxRVgVWNn-cIgpBCtrYPShFR9wE7pn_JQxC2vgHc",
+          "short_id": ""
+        },
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
@@ -81,48 +116,7 @@
       }
     },
     {
-      "tag": "🇫🇷 France | 🌐 [*CIDR]",
-      "type": "vless",
-      "server": "185.171.202.76",
-      "server_port": 42652,
-      "uuid": "Tel:Arshiacomplus",
-      "tls": {
-        "enabled": true,
-        "insecure": true,
-        "server_name": "www.wikipedia.com",
-        "alpn": [
-          "h2",
-          "http/1.1"
-        ],
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
-        }
-      }
-    },
-    {
       "tag": "🇳🇱 The Netherlands [*CIDR] YA",
-      "type": "vless",
-      "server": "51.250.4.2",
-      "server_port": 443,
-      "uuid": "a8fe0503-d755-418e-b7ba-fd754dcf4b38",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "api-maps.yandex.ru",
-        "reality": {
-          "enabled": true,
-          "public_key": "EBISh6QAVskJ_nvet-Qio9jS2yqxe9de6GMScYlbjhI",
-          "short_id": "226509f017e4c36d"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "randomized"
-        }
-      }
-    },
-    {
-      "tag": "🇳🇱 The Netherlands [*CIDR] YA-2",
       "type": "vless",
       "server": "158.160.255.35",
       "server_port": 443,
@@ -143,52 +137,49 @@
       }
     },
     {
-      "tag": "🇩🇪 Germany [*CIDR]",
+      "tag": "🇩🇪 Germany [*CIDR]-2",
       "type": "vless",
-      "server": "184.174.80.164",
+      "server": "78.41.110.238",
       "server_port": 443,
-      "uuid": "8ed34565-b143-429a-a6b6-da2cbd3a06da",
+      "uuid": "9ebab373-19fe-4535-aa95-4e348ea300f1",
       "tls": {
         "enabled": true,
-        "insecure": true,
-        "server_name": "prime.cynex.ru",
-        "alpn": [
-          "h3"
-        ],
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
+        "server_name": "s28315.cdn.ngenix.net"
+      },
+      "transport": {
+        "type": "ws",
+        "headers": {
+          "Host": "s28315.cdn.ngenix.net"
+        },
+        "path": "/ws"
       }
     },
     {
-      "tag": "🇩🇪 Germany | 🌐 [*CIDR]",
+      "tag": "🇩🇪 Germany [*CIDR]-3",
       "type": "vless",
-      "server": "dey.lnmarketplace.net",
-      "server_port": 443,
-      "uuid": "3536e1fa-0850-44d1-b123-925ce12476cf",
-      "tls": {
-        "enabled": true,
-        "server_name": "dey.lnmarketplace.net",
-        "alpn": [
-          "h2"
-        ],
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      }
+      "server": "146.103.43.213",
+      "server_port": 25355,
+      "uuid": "94d1551e-352f-45a6-a46c-709bcb7abce2"
     },
     {
-      "tag": "🌐 Anycast-IP | 🇪🇪 🇫🇷 [*CIDR]-2",
+      "tag": "🇳🇱 The Netherlands [*CIDR] YA-2",
       "type": "vless",
-      "server": "est-def.sbrf-cdn342.ru",
+      "server": "51.250.4.2",
       "server_port": 443,
-      "uuid": "91e120bc-159a-4390-b4e1-197b19602ea0",
+      "uuid": "a8fe0503-d755-418e-b7ba-fd754dcf4b38",
       "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "sub.sbrf-cdn342.ru"
+        "server_name": "api-maps.yandex.ru",
+        "reality": {
+          "enabled": true,
+          "public_key": "EBISh6QAVskJ_nvet-Qio9jS2yqxe9de6GMScYlbjhI",
+          "short_id": "226509f017e4c36d"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "randomized"
+        }
       }
     }
   ],
