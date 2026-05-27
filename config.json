@@ -36,9 +36,9 @@
       "outbounds": [
         "🇷🇺 Russia [*CIDR]",
         "🇷🇺 Russia [*CIDR]-2",
-        "🇷🇺 Russia [*CIDR]-3",
-        "🇷🇺 Russia [*CIDR]-4",
-        "🇷🇺 Russia [*CIDR] YA"
+        "🇷🇺 Russia [*CIDR] YA",
+        "🌐 Anycast-IP | 🇩🇪 🇳🇱 [*CIDR] YA",
+        "🌐 Anycast-IP | 🇩🇪 🇳🇱 [*CIDR] YA-2"
       ],
       "url": "https://google.com/generate_204",
       "interval": "3m",
@@ -53,9 +53,9 @@
         "auto",
         "🇷🇺 Russia [*CIDR]",
         "🇷🇺 Russia [*CIDR]-2",
-        "🇷🇺 Russia [*CIDR]-3",
-        "🇷🇺 Russia [*CIDR]-4",
-        "🇷🇺 Russia [*CIDR] YA"
+        "🇷🇺 Russia [*CIDR] YA",
+        "🌐 Anycast-IP | 🇩🇪 🇳🇱 [*CIDR] YA",
+        "🌐 Anycast-IP | 🇩🇪 🇳🇱 [*CIDR] YA-2"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
@@ -63,60 +63,16 @@
     {
       "tag": "🇷🇺 Russia [*CIDR]",
       "type": "vless",
-      "server": "ru.c2horizon.app",
-      "server_port": 443,
-      "uuid": "232627e4-1bec-41cc-8f91-6dd9235df1ce"
+      "server": "45.12.114.81",
+      "server_port": 80,
+      "uuid": "106c376f-431d-4ea0-bc61-f82308fefb4e",
+      "tls": {
+        "enabled": true,
+        "server_name": "obhod.riotvpn.eu"
+      }
     },
     {
       "tag": "🇷🇺 Russia [*CIDR]-2",
-      "type": "vless",
-      "server": "212.192.14.50",
-      "server_port": 61825,
-      "uuid": "b6083a84-80a5-3e88-9dbb-5c8ef241be3a",
-      "tls": {
-        "enabled": true,
-        "server_name": "github.com",
-        "reality": {
-          "enabled": true,
-          "public_key": "G8hjZomMXOCmbVboqMiuf2sVvcnihjQ4BdyVo3XewW4",
-          "short_id": "6bcde426"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "randomized"
-        }
-      },
-      "transport": {
-        "type": "grpc",
-        "service_name": "newinsight"
-      }
-    },
-    {
-      "tag": "🇷🇺 Russia [*CIDR]-3",
-      "type": "vless",
-      "server": "212.192.14.50",
-      "server_port": 61825,
-      "uuid": "b6083a84-80a5-3e88-9dbb-5c8ef241be3a",
-      "tls": {
-        "enabled": true,
-        "server_name": "github.com",
-        "reality": {
-          "enabled": true,
-          "public_key": "G8hjZomMXOCmbVboqMiuf2sVvcnihjQ4BdyVo3XewW4",
-          "short_id": "6bcde426"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
-      "transport": {
-        "type": "grpc",
-        "service_name": "newinsight"
-      }
-    },
-    {
-      "tag": "🇷🇺 Russia [*CIDR]-4",
       "type": "vless",
       "server": "212.192.14.50",
       "server_port": 61825,
@@ -142,16 +98,58 @@
     {
       "tag": "🇷🇺 Russia [*CIDR] YA",
       "type": "vless",
-      "server": "178.154.243.251",
+      "server": "158.160.250.45",
       "server_port": 443,
-      "uuid": "bd6acaa8-4579-3d31-9bcb-0dae59f756e9",
+      "uuid": "b6083a84-80a5-3e88-9dbb-5c8ef241be3a",
       "tls": {
         "enabled": true,
-        "server_name": "www.google.com",
+        "server_name": "ads.x5.ru",
         "reality": {
           "enabled": true,
-          "public_key": "JkiFzvTq6FFDb44V8ifby6-P7QZo7Z1B5VOrGTgAQEY",
-          "short_id": "a1e1a7"
+          "public_key": "mDtiIWLFPJoPVrDLOCvKn6lvlS8r0TdRO9MxmmdIDmo",
+          "short_id": "917fd5a45e8840"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      }
+    },
+    {
+      "tag": "🌐 Anycast-IP | 🇩🇪 🇳🇱 [*CIDR] YA",
+      "type": "vless",
+      "server": "51.250.24.222",
+      "server_port": 443,
+      "uuid": "c2907539-dfef-467f-8c54-e30ba1af6a03",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "cdp.x5.ru",
+        "reality": {
+          "enabled": true,
+          "public_key": "wgXD4k3A16WR0aL63N9Mx8xoqFigJLyQWJXi-l3MPXI",
+          "short_id": "8ec792bfd725be8a"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "randomized"
+        }
+      }
+    },
+    {
+      "tag": "🌐 Anycast-IP | 🇩🇪 🇳🇱 [*CIDR] YA-2",
+      "type": "vless",
+      "server": "51.250.17.80",
+      "server_port": 443,
+      "uuid": "c2907539-dfef-467f-8c54-e30ba1af6a03",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "cdp.x5.ru",
+        "reality": {
+          "enabled": true,
+          "public_key": "wgXD4k3A16WR0aL63N9Mx8xoqFigJLyQWJXi-l3MPXI",
+          "short_id": "8ec792bfd725be8a"
         },
         "utls": {
           "enabled": true,
