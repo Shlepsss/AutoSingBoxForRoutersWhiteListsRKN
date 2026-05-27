@@ -31,20 +31,68 @@
       "type": "block"
     },
     {
-      "type": "selector",
-      "tag": "select-singtun0",
+      "type": "urltest",
+      "tag": "auto",
       "outbounds": [
         "🇷🇺 Russia [*CIDR]",
         "🇷🇺 Russia [*CIDR]-2",
         "🇷🇺 Russia [*CIDR]-3",
         "🇷🇺 Russia [*CIDR]-4",
-        "🇷🇺 Russia [*CIDR]-5"
+        "🇷🇺 Russia [*CIDR] YA"
       ],
-      "default": "🇷🇺 Russia [*CIDR]",
+      "url": "https://google.com/generate_204",
+      "interval": "3m",
+      "tolerance": 50,
+      "idle_timeout": "30m",
+      "interrupt_exist_connections": false
+    },
+    {
+      "type": "selector",
+      "tag": "select",
+      "outbounds": [
+        "auto",
+        "🇷🇺 Russia [*CIDR]",
+        "🇷🇺 Russia [*CIDR]-2",
+        "🇷🇺 Russia [*CIDR]-3",
+        "🇷🇺 Russia [*CIDR]-4",
+        "🇷🇺 Russia [*CIDR] YA"
+      ],
+      "default": "auto",
       "interrupt_exist_connections": false
     },
     {
       "tag": "🇷🇺 Russia [*CIDR]",
+      "type": "vless",
+      "server": "ru.c2horizon.app",
+      "server_port": 443,
+      "uuid": "232627e4-1bec-41cc-8f91-6dd9235df1ce"
+    },
+    {
+      "tag": "🇷🇺 Russia [*CIDR]-2",
+      "type": "vless",
+      "server": "212.192.14.50",
+      "server_port": 61825,
+      "uuid": "b6083a84-80a5-3e88-9dbb-5c8ef241be3a",
+      "tls": {
+        "enabled": true,
+        "server_name": "github.com",
+        "reality": {
+          "enabled": true,
+          "public_key": "G8hjZomMXOCmbVboqMiuf2sVvcnihjQ4BdyVo3XewW4",
+          "short_id": "6bcde426"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "randomized"
+        }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "newinsight"
+      }
+    },
+    {
+      "tag": "🇷🇺 Russia [*CIDR]-3",
       "type": "vless",
       "server": "212.192.14.50",
       "server_port": 61825,
@@ -68,7 +116,7 @@
       }
     },
     {
-      "tag": "🇷🇺 Russia [*CIDR]-2",
+      "tag": "🇷🇺 Russia [*CIDR]-4",
       "type": "vless",
       "server": "212.192.14.50",
       "server_port": 61825,
@@ -92,30 +140,22 @@
       }
     },
     {
-      "tag": "🇷🇺 Russia [*CIDR]-3",
+      "tag": "🇷🇺 Russia [*CIDR] YA",
       "type": "vless",
-      "server": "5.188.156.138",
-      "server_port": 4443,
-      "uuid": "de87620b-6bff-4077-99cc-ce65e06b64ed"
-    },
-    {
-      "tag": "🇷🇺 Russia [*CIDR]-4",
-      "type": "vless",
-      "server": "87.228.124.196",
-      "server_port": 4443,
-      "uuid": "de87620b-6bff-4077-99cc-ce65e06b64ed"
-    },
-    {
-      "tag": "🇷🇺 Russia [*CIDR]-5",
-      "type": "vless",
-      "server": "ru3.alexanderoff.ru",
-      "server_port": 4443,
-      "uuid": "de87620b-6bff-4077-99cc-ce65e06b64ed",
+      "server": "178.154.243.251",
+      "server_port": 443,
+      "uuid": "bd6acaa8-4579-3d31-9bcb-0dae59f756e9",
       "tls": {
         "enabled": true,
+        "server_name": "www.google.com",
+        "reality": {
+          "enabled": true,
+          "public_key": "JkiFzvTq6FFDb44V8ifby6-P7QZo7Z1B5VOrGTgAQEY",
+          "short_id": "a1e1a7"
+        },
         "utls": {
           "enabled": true,
-          "fingerprint": "chrome"
+          "fingerprint": "randomized"
         }
       }
     }
@@ -123,19 +163,11 @@
   "route": {
     "rules": [
       {
-        "inbound": "tun-in",
-        "outbound": "select-singtun0"
-      },
-      {
-        "inbound": "mixed-in",
-        "outbound": "select-singtun0"
-      },
-      {
         "ip_version": 6,
         "outbound": "block"
       }
     ],
-    "final": "direct"
+    "final": "select"
   },
   "experimental": {
     "cache_file": {
