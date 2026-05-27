@@ -3,6 +3,7 @@ name: Build SingBox Configs
 on:
   schedule:
     - cron: '0 * * * *'
+  workflow_dispatch:
 
 jobs:
   build:
@@ -133,3 +134,12 @@ jobs:
           git commit -m "auto update sing-box configs" || exit 0
 
           git push
+              # === НОВЫЙ ШАГ ДЛЯ ЗАГРУЗКИ НА ЯНДЕКС.ДИСК ===
+      - name: Upload configs to Yandex Disk
+        uses: kirpichk/yandex-disk-publish@v1
+        with:
+          token: ${{ secrets.YANDEX_TOKEN }}
+          source: './config*.json'    # Загрузить все файлы, начинающиеся с config
+          target: '/SingBox_Configs'  # Путь к ПАПКЕ на вашем Яндекс.Диске
+          # Опционально: удалить старые файлы в папке перед загрузкой, чтобы там были только новые
+          cleanup: 'true'
