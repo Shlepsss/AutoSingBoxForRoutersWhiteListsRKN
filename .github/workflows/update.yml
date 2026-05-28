@@ -40,19 +40,19 @@ jobs:
           RUSSIA=$(echo "$ALL" | grep -Ei 'russia' | shuf || true)
           NON_RUSSIA=$(echo "$ALL" | grep -Evi 'russia' | shuf || true)
           
-          # Функция создания конфига ровно из 7 ключей
+          # Функция создания конфига ровно из 5 ключей
           # Приоритет: сначала RU, потом при нехватке NON-RU
-          make_config_7keys() {
+          make_config_5keys() {
             OUT=$1
             VARIANT=$2
             
             # Берем случайные русские ключи
-            RU_KEYS=$(echo "$RUSSIA" | shuf | head -n 7 || true)
+            RU_KEYS=$(echo "$RUSSIA" | shuf | head -n 5 || true)
             RU_COUNT=$(echo "$RU_KEYS" | grep -c . || echo 0)
             
-            # Если русских меньше 7, добираем из нерусских
-            if [ "$RU_COUNT" -lt 7 ]; then
-              NEED=$((7 - RU_COUNT))
+            # Если русских меньше 5, добираем из нерусских
+            if [ "$RU_COUNT" -lt 5 ]; then
+              NEED=$((5 - RU_COUNT))
               NONRU_KEYS=$(echo "$NON_RUSSIA" | shuf | head -n "$NEED" || true)
               FINAL=$(printf "%s\n%s\n" "$RU_KEYS" "$NONRU_KEYS" | grep .)
             else
@@ -100,11 +100,11 @@ jobs:
             # (чтобы каждый конфиг был независимым)
             RUSSIA=$(echo "$ALL" | grep -Ei 'russia' | shuf || true)
             NON_RUSSIA=$(echo "$ALL" | grep -Evi 'russia' | shuf || true)
-            make_config_7keys "config_${SOURCE_NUM}.json" "source${SOURCE_NUM}_main"
+            make_config_5keys "config_${SOURCE_NUM}.json" "source${SOURCE_NUM}_main"
             
             RUSSIA=$(echo "$ALL" | grep -Ei 'russia' | shuf || true)
             NON_RUSSIA=$(echo "$ALL" | grep -Evi 'russia' | shuf || true)
-            make_config_7keys "config_${SOURCE_NUM}_b.json" "source${SOURCE_NUM}_backup"
+            make_config_5keys "config_${SOURCE_NUM}_b.json" "source${SOURCE_NUM}_backup"
           done
           
           # ---------------- PATCH URLTEST НА 1 МИНУТУ ДЛЯ ВСЕХ КОНФИГОВ ----------------
@@ -138,7 +138,7 @@ jobs:
           
           git add config_*.json
           
-          git commit -m "auto update sing-box configs (7 keys each, RU priority)" || exit 0
+          git commit -m "auto update sing-box configs (5 keys each, RU priority)" || exit 0
           
           git push
           
