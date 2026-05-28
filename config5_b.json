@@ -34,11 +34,11 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
+        "🇨🇿 Czechia [*CIDR] YA",
         "🇩🇪 Germany | 🌐 [*CIDR]",
+        "🇪🇪 Estonia [*CIDR]",
         "🇳🇱 The Netherlands [*CIDR]",
-        "🇩🇪 Germany | 🌐 [*CIDR]-2",
-        "🇩🇪 Germany | 🌐 [*CIDR]-3",
-        "🌐 Anycast-IP | 🇩🇪 🇳🇱 [*CIDR] YA"
+        "🌐 Anycast-IP | 🇳🇴 🇺🇸 [*CIDR]"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -51,19 +51,40 @@
       "tag": "select",
       "outbounds": [
         "auto",
+        "🇨🇿 Czechia [*CIDR] YA",
         "🇩🇪 Germany | 🌐 [*CIDR]",
+        "🇪🇪 Estonia [*CIDR]",
         "🇳🇱 The Netherlands [*CIDR]",
-        "🇩🇪 Germany | 🌐 [*CIDR]-2",
-        "🇩🇪 Germany | 🌐 [*CIDR]-3",
-        "🌐 Anycast-IP | 🇩🇪 🇳🇱 [*CIDR] YA"
+        "🌐 Anycast-IP | 🇳🇴 🇺🇸 [*CIDR]"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
     },
     {
+      "tag": "🇨🇿 Czechia [*CIDR] YA",
+      "type": "vless",
+      "server": "158.160.249.158",
+      "server_port": 8443,
+      "uuid": "725fe80b-0380-4f2e-9403-dabbc69e856e",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "ads.x5.ru",
+        "reality": {
+          "enabled": true,
+          "public_key": "r5WB5FnSCt4eeBC1FJMfkWHbzsMuabo0Rc6wuAhlZUs",
+          "short_id": "d995792afeb193"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      }
+    },
+    {
       "tag": "🇩🇪 Germany | 🌐 [*CIDR]",
       "type": "vless",
-      "server": "46.235.185.25",
+      "server": "78.41.110.238",
       "server_port": 443,
       "uuid": "9ebab373-19fe-4535-aa95-4e348ea300f1",
       "tls": {
@@ -76,6 +97,27 @@
           "Host": "s28315.cdn.ngenix.net"
         },
         "path": "/ws"
+      }
+    },
+    {
+      "tag": "🇪🇪 Estonia [*CIDR]",
+      "type": "vless",
+      "server": "eeshka.api.dznn.net",
+      "server_port": 443,
+      "uuid": "9bc46020-c550-439a-86c5-38f64abc1ffd",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "eeshka.api.dznn.net",
+        "reality": {
+          "enabled": true,
+          "public_key": "9F7JxyyP-TNLt0dY2xOB0_34I8W0xXIpFY7rZ7-L0Gg",
+          "short_id": "0a6ba2716a409da6"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
       }
     },
     {
@@ -103,60 +145,27 @@
       }
     },
     {
-      "tag": "🇩🇪 Germany | 🌐 [*CIDR]-2",
+      "tag": "🌐 Anycast-IP | 🇳🇴 🇺🇸 [*CIDR]",
       "type": "vless",
-      "server": "78.41.110.238",
+      "server": "77.233.221.8",
       "server_port": 443,
-      "uuid": "9ebab373-19fe-4535-aa95-4e348ea300f1",
+      "uuid": "7841aff6-8552-4f8e-ad0c-06c3b73e6440",
       "tls": {
         "enabled": true,
-        "server_name": "s28315.cdn.ngenix.net"
-      },
-      "transport": {
-        "type": "ws",
-        "headers": {
-          "Host": "s28315.cdn.ngenix.net"
-        },
-        "path": "/ws"
-      }
-    },
-    {
-      "tag": "🇩🇪 Germany | 🌐 [*CIDR]-3",
-      "type": "vless",
-      "server": "46.235.186.50",
-      "server_port": 443,
-      "uuid": "9ebab373-19fe-4535-aa95-4e348ea300f1",
-      "tls": {
-        "enabled": true,
-        "server_name": "s28315.cdn.ngenix.net"
-      },
-      "transport": {
-        "type": "ws",
-        "headers": {
-          "Host": "s28315.cdn.ngenix.net"
-        },
-        "path": "/ws"
-      }
-    },
-    {
-      "tag": "🌐 Anycast-IP | 🇩🇪 🇳🇱 [*CIDR] YA",
-      "type": "vless",
-      "server": "84.201.136.5",
-      "server_port": 443,
-      "uuid": "3203ecb2-2d94-4ec1-be9f-79eb2c8d5e51",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "cdp.x5.ru",
+        "server_name": "us.moktana.app",
         "reality": {
           "enabled": true,
-          "public_key": "wgXD4k3A16WR0aL63N9Mx8xoqFigJLyQWJXi-l3MPXI",
-          "short_id": "8ec792bfd725be8a"
+          "public_key": "_yzmX8WwaZJD4ddVgOZWJsx6r0lJzhTrTbkQLhwiWXk",
+          "short_id": "c8540a3e9e1d8136"
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "safari"
+          "fingerprint": "chrome"
         }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "moktana.net.v1.StreamService"
       }
     }
   ],
