@@ -34,11 +34,11 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🌐 Anycast-IP | 🇩🇪 🇳🇱 [*CIDR] YA",
-        "🌐 Anycast-IP | 🇷🇺 [*CIDR] YA",
+        "🇰🇿 Kazakhstan [SNI-RU] ads.x5.ru",
         "🇷🇺 Russia [SNI-RU] ads.x5.ru",
-        "🌐 Anycast-IP | 🇧🇬 🇩🇪 🇵🇱 [*CIDR] YA",
-        "🇷🇺 Russia [*CIDR] YA"
+        "🌐 Anycast-IP | 🇫🇷 [*CIDR]",
+        "🌐 Anycast-IP | 🇫🇷 🇺🇸 [*CIDR]",
+        "🌐 Anycast-IP | 🇫🇷 [*CIDR]-2"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -51,54 +51,32 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🌐 Anycast-IP | 🇩🇪 🇳🇱 [*CIDR] YA",
-        "🌐 Anycast-IP | 🇷🇺 [*CIDR] YA",
+        "🇰🇿 Kazakhstan [SNI-RU] ads.x5.ru",
         "🇷🇺 Russia [SNI-RU] ads.x5.ru",
-        "🌐 Anycast-IP | 🇧🇬 🇩🇪 🇵🇱 [*CIDR] YA",
-        "🇷🇺 Russia [*CIDR] YA"
+        "🌐 Anycast-IP | 🇫🇷 [*CIDR]",
+        "🌐 Anycast-IP | 🇫🇷 🇺🇸 [*CIDR]",
+        "🌐 Anycast-IP | 🇫🇷 [*CIDR]-2"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
     },
     {
-      "tag": "🌐 Anycast-IP | 🇩🇪 🇳🇱 [*CIDR] YA",
+      "tag": "🇰🇿 Kazakhstan [SNI-RU] ads.x5.ru",
       "type": "vless",
-      "server": "51.250.24.222",
+      "server": "159.194.239.37",
       "server_port": 443,
-      "uuid": "6be0671c-e9c7-4c23-ae8b-72e1a46faa70",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "cdp.x5.ru",
-        "reality": {
-          "enabled": true,
-          "public_key": "wgXD4k3A16WR0aL63N9Mx8xoqFigJLyQWJXi-l3MPXI",
-          "short_id": "8ec792bfd725be8a"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "safari"
-        }
-      }
-    },
-    {
-      "tag": "🌐 Anycast-IP | 🇷🇺 [*CIDR] YA",
-      "type": "vless",
-      "server": "84.201.162.110",
-      "server_port": 3443,
-      "uuid": "fe768c0e-5597-496b-b57b-dd442299508a",
-      "flow": "xtls-rprx-vision",
+      "uuid": "91a3f712-c4e0-42a0-9475-bdd551a06e73",
       "tls": {
         "enabled": true,
         "server_name": "ads.x5.ru",
         "reality": {
           "enabled": true,
-          "public_key": "sgFFdQvfeujBKh6g7N7klU_u0mKYlr800MFbko5FzUg",
-          "short_id": "e67fb918ed6b9ffb"
+          "public_key": "AhQkw1Ydp_ZkXnE7UbIZvwHk9KE_Bf5_TkojYZZUuGs",
+          "short_id": "2da46294d6a521b2"
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "randomized"
+          "fingerprint": "chrome"
         }
       }
     },
@@ -124,20 +102,39 @@
       }
     },
     {
-      "tag": "🌐 Anycast-IP | 🇧🇬 🇩🇪 🇵🇱 [*CIDR] YA",
+      "tag": "🌐 Anycast-IP | 🇫🇷 [*CIDR]",
       "type": "vless",
-      "server": "84.201.162.110",
-      "server_port": 443,
-      "uuid": "fe768c0e-5597-496b-b57b-dd442299508a",
-      "flow": "xtls-rprx-vision",
+      "server": "185.171.202.76",
+      "server_port": 42652,
+      "uuid": "Tel:Arshiacomplus",
       "tls": {
         "enabled": true,
-        "server_name": "avatars.mds.yandex.net",
-        "reality": {
+        "insecure": true,
+        "server_name": "soft98.ir",
+        "alpn": [
+          "h2",
+          "http/1.1"
+        ],
+        "utls": {
           "enabled": true,
-          "public_key": "sgFFdQvfeujBKh6g7N7klU_u0mKYlr800MFbko5FzUg",
-          "short_id": "e67fb918ed6b9ffb"
-        },
+          "fingerprint": "firefox"
+        }
+      }
+    },
+    {
+      "tag": "🌐 Anycast-IP | 🇫🇷 🇺🇸 [*CIDR]",
+      "type": "vless",
+      "server": "185.171.202.76",
+      "server_port": 42652,
+      "uuid": "Tel:Arshiacomplus",
+      "tls": {
+        "enabled": true,
+        "insecure": true,
+        "server_name": "yahoo.com",
+        "alpn": [
+          "h2",
+          "http/1.1"
+        ],
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
@@ -145,22 +142,22 @@
       }
     },
     {
-      "tag": "🇷🇺 Russia [*CIDR] YA",
+      "tag": "🌐 Anycast-IP | 🇫🇷 [*CIDR]-2",
       "type": "vless",
-      "server": "51.250.113.157",
-      "server_port": 443,
-      "uuid": "b6083a84-80a5-3e88-9dbb-5c8ef241be3a",
+      "server": "185.171.202.76",
+      "server_port": 42652,
+      "uuid": "Tel:Arshiacomplus",
       "tls": {
         "enabled": true,
-        "server_name": "www.google.com",
-        "reality": {
-          "enabled": true,
-          "public_key": "65nqcY-jE1J_G27W-X_qGCSpXMEHif6MBLXN8kBoFB0",
-          "short_id": "1f18adc24d1d"
-        },
+        "insecure": true,
+        "server_name": "yahoo.com",
+        "alpn": [
+          "h2",
+          "http/1.1"
+        ],
         "utls": {
           "enabled": true,
-          "fingerprint": "random"
+          "fingerprint": "firefox"
         }
       }
     }

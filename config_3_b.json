@@ -34,11 +34,11 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇷🇺 Russia [*CIDR] YA",
-        "🌐 Anycast-IP | 🇷🇺 [*CIDR] YA",
-        "🇳🇱 The Netherlands [*CIDR]",
+        "🇵🇱 Poland [*CIDR]",
         "🇷🇺 Russia [SNI-RU] ads.x5.ru",
-        "🌐 Anycast-IP | 🇵🇱 [*CIDR] YA"
+        "🇨🇦 Canada [SNI-RU] eh.vk.com",
+        "🌐 Anycast-IP | 🇫🇷 🇺🇸 [*CIDR]",
+        "🇩🇰 Denmark [SNI-RU] www.kinopoisk.ru"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -51,78 +51,33 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇷🇺 Russia [*CIDR] YA",
-        "🌐 Anycast-IP | 🇷🇺 [*CIDR] YA",
-        "🇳🇱 The Netherlands [*CIDR]",
+        "🇵🇱 Poland [*CIDR]",
         "🇷🇺 Russia [SNI-RU] ads.x5.ru",
-        "🌐 Anycast-IP | 🇵🇱 [*CIDR] YA"
+        "🇨🇦 Canada [SNI-RU] eh.vk.com",
+        "🌐 Anycast-IP | 🇫🇷 🇺🇸 [*CIDR]",
+        "🇩🇰 Denmark [SNI-RU] www.kinopoisk.ru"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
     },
     {
-      "tag": "🇷🇺 Russia [*CIDR] YA",
+      "tag": "🇵🇱 Poland [*CIDR]",
       "type": "vless",
-      "server": "51.250.113.157",
+      "server": "89.126.229.40",
       "server_port": 443,
-      "uuid": "b6083a84-80a5-3e88-9dbb-5c8ef241be3a",
+      "uuid": "301d514e-4aa0-47b0-ba44-a0cb891cd52f",
       "tls": {
         "enabled": true,
-        "server_name": "www.google.com",
+        "server_name": "www.samsung.com",
         "reality": {
           "enabled": true,
-          "public_key": "65nqcY-jE1J_G27W-X_qGCSpXMEHif6MBLXN8kBoFB0",
-          "short_id": "1f18adc24d1d"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "random"
-        }
-      }
-    },
-    {
-      "tag": "🌐 Anycast-IP | 🇷🇺 [*CIDR] YA",
-      "type": "vless",
-      "server": "84.201.162.110",
-      "server_port": 3443,
-      "uuid": "fe768c0e-5597-496b-b57b-dd442299508a",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "ads.x5.ru",
-        "reality": {
-          "enabled": true,
-          "public_key": "sgFFdQvfeujBKh6g7N7klU_u0mKYlr800MFbko5FzUg",
-          "short_id": "844352756c1fabba"
+          "public_key": "OZVjfQBboTDTBw0baMFqzVPsVUI4FNQmspTEb0b0zW4",
+          "short_id": "a1b2c3d4"
         },
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
         }
-      }
-    },
-    {
-      "tag": "🇳🇱 The Netherlands [*CIDR]",
-      "type": "vless",
-      "server": "ss.ll0ll.vip",
-      "server_port": 2096,
-      "uuid": "5610a52c-48e0-4e8c-9230-fb302b04d02e",
-      "tls": {
-        "enabled": true,
-        "server_name": "id.vk.com",
-        "reality": {
-          "enabled": true,
-          "public_key": "SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc",
-          "short_id": ""
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
-      "transport": {
-        "type": "grpc",
-        "service_name": "vless-grpc-reality"
       }
     },
     {
@@ -147,19 +102,50 @@
       }
     },
     {
-      "tag": "🌐 Anycast-IP | 🇵🇱 [*CIDR] YA",
-      "type": "vless",
-      "server": "84.201.162.110",
-      "server_port": 4443,
-      "uuid": "fe768c0e-5597-496b-b57b-dd442299508a",
-      "flow": "xtls-rprx-vision",
+      "tag": "🇨🇦 Canada [SNI-RU] eh.vk.com",
+      "type": "trojan",
+      "server": "64.74.163.118",
+      "server_port": 58536,
+      "password": "lEjtI3pFYfU7O1UYozJcfZV5K6Fwfths",
       "tls": {
         "enabled": true,
-        "server_name": "ads.x5.ru",
+        "insecure": true,
+        "server_name": "eh.vk.com"
+      }
+    },
+    {
+      "tag": "🌐 Anycast-IP | 🇫🇷 🇺🇸 [*CIDR]",
+      "type": "vless",
+      "server": "185.171.202.76",
+      "server_port": 42652,
+      "uuid": "Tel:Arshiacomplus",
+      "tls": {
+        "enabled": true,
+        "insecure": true,
+        "server_name": "yahoo.com",
+        "alpn": [
+          "h2",
+          "http/1.1"
+        ],
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      }
+    },
+    {
+      "tag": "🇩🇰 Denmark [SNI-RU] www.kinopoisk.ru",
+      "type": "vless",
+      "server": "81.17.159.63",
+      "server_port": 443,
+      "uuid": "c8b6167c-615a-53ec-ae23-87054336339e",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.kinopoisk.ru",
         "reality": {
           "enabled": true,
-          "public_key": "sgFFdQvfeujBKh6g7N7klU_u0mKYlr800MFbko5FzUg",
-          "short_id": "e67fb918ed6b9ffb"
+          "public_key": "XDBvi6U6TnvlyuCdsIUtQ_yjrjyTEvr0KLHvuo-pF0Q",
+          "short_id": "cf53a10184e17998"
         },
         "utls": {
           "enabled": true,
