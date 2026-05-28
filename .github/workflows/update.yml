@@ -19,7 +19,7 @@ jobs:
 
           SUB=$(curl -s "https://raw.githack.com/igareck/vpn-configs-for-russia/main/Vless-Reality-White-Lists-Rus-Mobile.txt" | tr -d '\r')
 
-          ALL=$(echo "$SUB" | grep -E '^(vless|vmess|trojan)://')
+          ALL=$(echo "$SUB" | grep -E '^(vless|vmess|trojan)://' | grep -Evi 'raw')
 
           RUSSIA=$(echo "$ALL" | grep -Ei 'russia' || true)
           NON_RUSSIA=$(echo "$ALL" | grep -Evi 'russia' | shuf || true)
