@@ -116,7 +116,7 @@ jobs:
             
             jq --arg interval "$INTERVAL" '
               (.outbounds[] | select(.type=="urltest") | .interval) = $interval |
-              (.outbounds[] | select(.type=="urltest") | .tolerance) = 50
+              (.outbounds[] | select(.type=="urltest") | .tolerance) = 100
             ' "$FILE" > tmp.json && mv tmp.json "$FILE"
           }
           
