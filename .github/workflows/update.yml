@@ -17,46 +17,52 @@ jobs:
       - name: Build configs
         run: |
 
-          SUB=$(curl -s "https://raw.githack.com/igareck/vpn-configs-for-russia/main/WHITE-CIDR-RU-all.txt" | tr -d '\r')
+          # Загрузка всех исходников
+          echo "Loading source files..."
+          
+          # 1. WHITE-CIDR-RU-all.txt
+          SOURCE1=$(curl -s "https://raw.githack.com/igareck/vpn-configs-for-russia/main/WHITE-CIDR-RU-all.txt" | tr -d '\r')
+          
+          # 2. WHITE-CIDR-RU-checked.txt
+          SOURCE2=$(curl -s "https://raw.githack.com/igareck/vpn-configs-for-russia/main/WHITE-CIDR-RU-checked.txt" | tr -d '\r')
+          
+          # 3. WHITE-SNI-RU-all.txt
+          SOURCE3=$(curl -s "https://raw.githack.com/igareck/vpn-configs-for-russia/main/WHITE-SNI-RU-all.txt" | tr -d '\r')
+          
+          # 4. Vless-Reality-White-Lists-Rus-Mobile.txt
+          SOURCE4=$(curl -s "https://raw.githack.com/igareck/vpn-configs-for-russia/main/Vless-Reality-White-Lists-Rus-Mobile.txt" | tr -d '\r')
+          
+          # Объединяем все источники и фильтруем только валидные ссылки
+          ALL=$(printf "%s\n%s\n%s\n%s\n" "$SOURCE1" "$SOURCE2" "$SOURCE3" "$SOURCE4" | grep -E '^(vless|vmess|trojan)://' | grep -Evi 'raw')
+          
+          echo "Total links found: $(echo "$ALL" | grep -c . || echo 0)"
 
-          ALL=$(echo "$SUB" | grep -E '^(vless|vmess|trojan)://' | grep -Evi 'raw')
-
-          RUSSIA=$(echo "$ALL" | grep -Ei 'russia' || true)
-          NON_RUSSIA=$(echo "$ALL" | grep -Evi 'russia' | shuf || true)
-
-          make_config_variant () {
-            SIZE=$1
-            TARGET_RU_COUNT=$2
-            OUT=$3
-            VARIANT=$4  # для отладки, можно использовать разный seed или просто перемешивать по-разному
+          # Функция для создания конфига из 7 ключей
+          make_config_7() {
+            LOCAL_NON_RUSSIA="$1"
+            OUT="$2"
             
-            # Перемешиваем русские ключи для каждого варианта
-            RUSSIA_SHUFFLED=$(echo "$RUSSIA" | shuf)
+            # Пытаемся взять 7 русских ключей
+            RUSSIA_SELECTED=$(echo "$RUSSIA_MASTER" | head -n 7)
+            RU_COUNT=$(echo "$RUSSIA_SELECTED" | grep -c . || true)
             
-            # Берем целевое количество русских из перемешанного списка
-            RU=$(echo "$RUSSIA_SHUFFLED" | head -n "$TARGET_RU_COUNT")
-            RU_COUNT=$(echo "$RU" | grep -c . || true)
-            
-            # Если русских меньше цели, добираем из NON_RUSSIA
-            NEED=$((SIZE - RU_COUNT))
+            # Если русских меньше 7, добираем из нерусских
+            NEED=$((7 - RU_COUNT))
             NONRU=""
             if [ "$NEED" -gt 0 ]; then
-              # Для fallback варианта берем другие нерусские ключи (уже перемешаны глобально)
-              NONRU=$(echo "$NON_RUSSIA" | head -n "$NEED")
-              # Удаляем использованные нерусские ключи, чтобы следующие конфиги не повторялись
-              if [ "$NEED" -gt 0 ]; then
-                USED_NONRU=$(echo "$NONRU" | sed 's/[\/&]/\\&/g' | sed 's/^/^/; s/$/$/')
-                NON_RUSSIA=$(echo "$NON_RUSSIA" | grep -vFf <(echo "$NONRU"))
+              NONRU=$(echo "$LOCAL_NON_RUSSIA" | head -n "$NEED")
+              # Удаляем использованные нерусские ключи из временного списка
+              if [ "$NEED" -gt 0 ] && [ -n "$NONRU" ]; then
+                LOCAL_NON_RUSSIA=$(echo "$LOCAL_NON_RUSSIA" | tail -n +$((NEED + 1)))
               fi
             fi
             
-            # Финальный список и перемешиваем его для разнообразия
-            FINAL=$(printf "%s\n%s\n" "$RU" "$NONRU" | grep . | shuf)
+            # Финальный список (сначала русские, потом нерусские)
+            FINAL=$(printf "%s\n%s\n" "$RUSSIA_SELECTED" "$NONRU" | grep .)
             
             echo "Building $OUT with $(echo "$FINAL" | grep -c .) nodes..."
             echo "  - Russian nodes: $RU_COUNT"
             echo "  - Non-Russian nodes: $(echo "$NONRU" | grep -c . || echo 0)"
-            echo "  - Variant: $VARIANT"
 
             jq -n --arg input "$FINAL" '{
               core: "singbox",
@@ -72,75 +78,58 @@ jobs:
                 -H "Content-Type: application/json" \
                 --data-binary @- \
             > "$OUT"
+            
+            # Возвращаем оставшиеся нерусские ключи
+            echo "$LOCAL_NON_RUSSIA"
           }
 
-          make_foreign () {
-            SIZE=$1
-            OUT=$2
+          # Получаем все русские ключи (один раз для всех конфигов)
+          RUSSIA_MASTER=$(echo "$ALL" | grep -Ei 'russia' | shuf || true)
+          TOTAL_RU=$(echo "$RUSSIA_MASTER" | grep -c . || echo 0)
+          echo "Total Russian nodes available: $TOTAL_RU"
+          
+          # Получаем все нерусские ключи (один раз для всех конфигов)
+          NON_RUSSIA_MASTER=$(echo "$ALL" | grep -Evi 'russia' | shuf || true)
+          TOTAL_NONRU=$(echo "$NON_RUSSIA_MASTER" | grep -c . || echo 0)
+          echo "Total Non-Russian nodes available: $TOTAL_NONRU"
+          
+          # Получаем количество ссылок из исходников
+          LINK_COUNT=$(echo "$ALL" | grep -c . || echo 1)
+          echo "Will create $LINK_COUNT config pairs (config7 and config7b)"
+          
+          # Для каждой ссылки создаем свою пару конфигов
+          LINK_NUMBER=1
+          while IFS= read -r link; do
+            echo ""
+            echo "========================================="
+            echo "Processing config pair #$LINK_NUMBER"
+            echo "========================================="
             
-            FOREIGN=$(echo "$NON_RUSSIA" | shuf | head -n "$SIZE")
+            # Создаем временные копии мастер-списков для этого конфига
+            TEMP_RU="$RUSSIA_MASTER"
+            TEMP_NONRU="$NON_RUSSIA_MASTER"
             
-            # Удаляем использованные
-            USED_FOREIGN=$(echo "$FOREIGN" | sed 's/[\/&]/\\&/g' | sed 's/^/^/; s/$/$/')
-            NON_RUSSIA=$(echo "$NON_RUSSIA" | grep -vFf <(echo "$FOREIGN"))
+            # Для основного конфига (config7)
+            TEMP_NONRU=$(make_config_7 "$TEMP_NONRU" "config7_${LINK_NUMBER}.json")
+            
+            # Для бэкап конфига (config7b) - используем оставшиеся ключи
+            # Перемешиваем русские ключи заново для разнообразия
+            RUSSIA_MASTER=$(echo "$RUSSIA_MASTER" | shuf)
+            TEMP_RU="$RUSSIA_MASTER"
+            
+            # Создаем config7b
+            make_config_7 "$TEMP_NONRU" "config7b_${LINK_NUMBER}.json"
+            
+            LINK_NUMBER=$((LINK_NUMBER + 1))
+          done <<< "$(echo "$ALL")"
+          
+          echo ""
+          echo "========================================="
+          echo "Created $((LINK_NUMBER - 1)) config pairs successfully"
+          echo "========================================="
 
-            jq -n --arg input "$FOREIGN" '{
-              core: "singbox",
-              input: $input,
-              options: {
-                addTun: true,
-                addSocks: true,
-                genClashSecret: false,
-                useExtended: false
-              }
-            }' \
-            | curl -sS -X POST "https://api.web2core.workers.dev/" \
-                -H "Content-Type: application/json" \
-                --data-binary @- \
-            > "$OUT"
-          }
-
-          # Восстанавливаем оригинальные списки для каждого размера конфига,
-          # чтобы конфиги разных размеров были независимы
-          
-          # Для 5-ки (5 узлов, хотим 4-5 русских)
-          RUSSIA=$(echo "$ALL" | grep -Ei 'russia' || true)
-          NON_RUSSIA=$(echo "$ALL" | grep -Evi 'russia' | shuf || true)
-          make_config_variant 5 4 config5.json "primary"
-          
-          RUSSIA=$(echo "$ALL" | grep -Ei 'russia' || true)
-          NON_RUSSIA=$(echo "$ALL" | grep -Evi 'russia' | shuf || true)
-          make_config_variant 5 4 config5_b.json "fallback"
-          
-          # Для 7-ки (7 узлов, хотим 6-7 русских)
-          RUSSIA=$(echo "$ALL" | grep -Ei 'russia' || true)
-          NON_RUSSIA=$(echo "$ALL" | grep -Evi 'russia' | shuf || true)
-          make_config_variant 7 6 config7.json "primary"
-          
-          RUSSIA=$(echo "$ALL" | grep -Ei 'russia' || true)
-          NON_RUSSIA=$(echo "$ALL" | grep -Evi 'russia' | shuf || true)
-          make_config_variant 7 6 config7_b.json "fallback"
-          
-          # Для 10-ки (10 узлов, хотим 8-10 русских)
-          RUSSIA=$(echo "$ALL" | grep -Ei 'russia' || true)
-          NON_RUSSIA=$(echo "$ALL" | grep -Evi 'russia' | shuf || true)
-          make_config_variant 10 8 config10.json "primary"
-          
-          RUSSIA=$(echo "$ALL" | grep -Ei 'russia' || true)
-          NON_RUSSIA=$(echo "$ALL" | grep -Evi 'russia' | shuf || true)
-          make_config_variant 10 8 config10_b.json "fallback"
-          
-          # Иностранные конфиги
-          RUSSIA=$(echo "$ALL" | grep -Ei 'russia' || true)
-          NON_RUSSIA=$(echo "$ALL" | grep -Evi 'russia' | shuf || true)
-          make_foreign 5 config5_foreign.json
-          
-          RUSSIA=$(echo "$ALL" | grep -Ei 'russia' || true)
-          NON_RUSSIA=$(echo "$ALL" | grep -Evi 'russia' | shuf || true)
-          make_foreign 10 config10_foreign.json
-
-          # ---------------- PATCH URLTEST ----------------
-          patch_interval () {
+          # ---------------- PATCH URLTEST (1 минута для всех) ----------------
+          patch_interval() {
             FILE=$1
             INTERVAL=$2
 
@@ -152,44 +141,41 @@ jobs:
             ' "$FILE" > tmp.json && mv tmp.json "$FILE"
           }
 
-          # 5-series → 1m
-          patch_interval config5.json "1m"
-          patch_interval config5_b.json "1m"
-          patch_interval config5_foreign.json "1m"
-
-          # all others → 2m
-          patch_interval config7.json "2m"
-          patch_interval config7_b.json "2m"
-          patch_interval config10.json "2m"
-          patch_interval config10_b.json "2m"
-          patch_interval config10_foreign.json "2m"
+          # Все конфиги получают интервал 1 минута
+          for file in config7_*.json config7b_*.json; do
+            if [ -f "$file" ]; then
+              patch_interval "$file" "1m"
+            fi
+          done
 
       - name: Commit configs
         run: |
           git config user.name "github-actions"
           git config user.email "actions@github.com"
 
-          git add config*.json
+          git add config7_*.json config7b_*.json
 
-          git commit -m "auto update sing-box configs" || exit 0
+          git commit -m "auto update sing-box configs (7-node configs, 1 min interval)" || exit 0
 
           git push
-              # === НОВЫЙ ШАГ ДЛЯ ЗАГРУЗКИ НА ЯНДЕКС.ДИСК ===
+          
       - name: Upload to Yandex Disk via WebDAV
         env:
           YA_LOGIN: ${{ secrets.YANDEX_NAME }}
           YA_PASS: ${{ secrets.YANDEX_TOKEN }}
         run: |
-          # Кодируем логин:пароль в base64 (правильный способ для WebDAV) [citation:3][citation:9]
+          # Кодируем логин:пароль в base64 для WebDAV
           AUTH_HEADER=$(echo -n "$YA_LOGIN:$YA_PASS" | base64)
           
           # Создаём папку
           curl -s -X MKCOL "https://webdav.yandex.ru/SingBox_Configs/" \
                -H "Authorization: Basic $AUTH_HEADER"
           
-          # Загружаем файлы
-          for file in config*.json; do
-            echo "Uploading $file..."
-            curl -s -T "$file" "https://webdav.yandex.ru/SingBox_Configs/$file" \
-                 -H "Authorization: Basic $AUTH_HEADER"
+          # Загружаем все конфиги
+          for file in config7_*.json config7b_*.json; do
+            if [ -f "$file" ]; then
+              echo "Uploading $file..."
+              curl -s -T "$file" "https://webdav.yandex.ru/SingBox_Configs/$file" \
+                   -H "Authorization: Basic $AUTH_HEADER"
+            fi
           done
