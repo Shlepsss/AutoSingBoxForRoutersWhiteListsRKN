@@ -34,11 +34,11 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇸🇪 Sweden [*CIDR]",
-        "🌐 Anycast-IP | 🇫🇮 🇷🇺 [*CIDR]",
-        "🇷🇺 Russia [SNI-RU] max.ru",
-        "🌐 Anycast-IP | 🇫🇷 [*CIDR] VK",
-        "🇩🇪 Germany | 🌐 [*CIDR]"
+        "🇱🇻 Latvia [*CIDR]",
+        "🇷🇺 Russia [*CIDR]",
+        "🇳🇱 The Netherlands | 🌐 [*CIDR]",
+        "🇷🇺 Russia | 🌐 [*CIDR] VK",
+        "🇺🇸 United States [*CIDR]"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -51,21 +51,21 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇸🇪 Sweden [*CIDR]",
-        "🌐 Anycast-IP | 🇫🇮 🇷🇺 [*CIDR]",
-        "🇷🇺 Russia [SNI-RU] max.ru",
-        "🌐 Anycast-IP | 🇫🇷 [*CIDR] VK",
-        "🇩🇪 Germany | 🌐 [*CIDR]"
+        "🇱🇻 Latvia [*CIDR]",
+        "🇷🇺 Russia [*CIDR]",
+        "🇳🇱 The Netherlands | 🌐 [*CIDR]",
+        "🇷🇺 Russia | 🌐 [*CIDR] VK",
+        "🇺🇸 United States [*CIDR]"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
     },
     {
-      "tag": "🇸🇪 Sweden [*CIDR]",
+      "tag": "🇱🇻 Latvia [*CIDR]",
       "type": "vless",
-      "server": "62.76.233.254",
+      "server": "194.87.56.99",
       "server_port": 443,
-      "uuid": "a5c689ce-ef93-0190-8b74-3dbe2287d71b",
+      "uuid": "a5c689ce-ef93-0064-8b74-3dbe2287d71b",
       "tls": {
         "enabled": true,
         "server_name": "max.ru",
@@ -81,26 +81,7 @@
       }
     },
     {
-      "tag": "🌐 Anycast-IP | 🇫🇮 🇷🇺 [*CIDR]",
-      "type": "vless",
-      "server": "185.242.19.251",
-      "server_port": 443,
-      "uuid": "09d33f30-a0d0-4962-a384-9e54bf032906",
-      "tls": {
-        "enabled": true,
-        "server_name": "top2197697635.mwscdn.ru",
-        "alpn": [
-          "h2",
-          "http/1.1"
-        ],
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      }
-    },
-    {
-      "tag": "🇷🇺 Russia [SNI-RU] max.ru",
+      "tag": "🇷🇺 Russia [*CIDR]",
       "type": "vless",
       "server": "94.228.112.55",
       "server_port": 443,
@@ -120,43 +101,60 @@
       }
     },
     {
-      "tag": "🌐 Anycast-IP | 🇫🇷 [*CIDR] VK",
+      "tag": "🇳🇱 The Netherlands | 🌐 [*CIDR]",
       "type": "vless",
-      "server": "ru.cleanersaz.help",
-      "server_port": 9443,
-      "uuid": "9beef3b2-5749-4529-a91a-29af1c043d6b",
+      "server": "dey.lnmarketplace.net",
+      "server_port": 443,
+      "uuid": "3536e1fa-0850-44d1-b123-925ce12476cf",
       "tls": {
         "enabled": true,
-        "server_name": "api-maps.yandex.ru",
+        "alpn": [
+          "h2"
+        ],
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
+      }
+    },
+    {
+      "tag": "🇷🇺 Russia | 🌐 [*CIDR] VK",
+      "type": "vless",
+      "server": "89.208.86.87",
+      "server_port": 443,
+      "uuid": "4accc4fb-9ec3-41ae-ac3e-cc5d3dabe156",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "m.vk.com",
         "reality": {
           "enabled": true,
-          "public_key": "1Ft21vrEzdxBXrTvxvxetfMqBrb-FtuSG1PDDhfCh2A",
-          "short_id": "aaaa"
+          "public_key": "pSM8cZd3BzdI5gp0UJaufCEFUjamTpYtHcbFudbk11s",
+          "short_id": "9b83faf63715956b"
         },
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
         }
-      },
-      "transport": {
-        "type": "grpc",
-        "service_name": "api-maps.yandex.ru"
       }
     },
     {
-      "tag": "🇩🇪 Germany | 🌐 [*CIDR]",
+      "tag": "🇺🇸 United States [*CIDR]",
       "type": "vless",
-      "server": "5.83.129.113",
+      "server": "152.53.53.168",
       "server_port": 443,
-      "uuid": "91e120bc-159a-4390-b4e1-197b19602ea0",
-      "flow": "xtls-rprx-vision",
+      "uuid": "a5c689ce-ef93-4a6a-8b74-3dbe2287d71b",
       "tls": {
         "enabled": true,
-        "insecure": true,
-        "server_name": "sub.sbrf-cdn342.ru",
+        "server_name": "cloudrynth.com",
+        "reality": {
+          "enabled": true,
+          "public_key": "G2i-nsQgWiVf52tdCUV-G_VeuCJ3hggwDnTaEAgvg0Y",
+          "short_id": ""
+        },
         "utls": {
           "enabled": true,
-          "fingerprint": "chrome"
+          "fingerprint": "firefox"
         }
       }
     }
