@@ -34,10 +34,10 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇷🇺 Russia | 🌐 [*CIDR] VK",
         "🇷🇺 Russia [*CIDR]",
         "🇷🇺 Russia | 🌐 [*CIDR]",
         "🇷🇺 Russia | 🌐 [*CIDR]-2",
+        "🇷🇺 Russia | 🌐 [*CIDR] VK",
         "🇷🇺 Russia [*CIDR] YA"
       ],
       "url": "https://google.com/generate_204",
@@ -51,35 +51,14 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇷🇺 Russia | 🌐 [*CIDR] VK",
         "🇷🇺 Russia [*CIDR]",
         "🇷🇺 Russia | 🌐 [*CIDR]",
         "🇷🇺 Russia | 🌐 [*CIDR]-2",
+        "🇷🇺 Russia | 🌐 [*CIDR] VK",
         "🇷🇺 Russia [*CIDR] YA"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
-    },
-    {
-      "tag": "🇷🇺 Russia | 🌐 [*CIDR] VK",
-      "type": "vless",
-      "server": "cdn16.cloud-vk.com",
-      "server_port": 443,
-      "uuid": "4accc4fb-9ec3-41ae-ac3e-cc5d3dabe156",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "m.vk.com",
-        "reality": {
-          "enabled": true,
-          "public_key": "pSM8cZd3BzdI5gp0UJaufCEFUjamTpYtHcbFudbk11s",
-          "short_id": "9b83faf63715956b"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      }
     },
     {
       "tag": "🇷🇺 Russia [*CIDR]",
@@ -151,18 +130,39 @@
       }
     },
     {
-      "tag": "🇷🇺 Russia [*CIDR] YA",
+      "tag": "🇷🇺 Russia | 🌐 [*CIDR] VK",
       "type": "vless",
-      "server": "84.201.164.3",
+      "server": "cdn16.cloud-vk.com",
       "server_port": 443,
-      "uuid": "96fec558-76d9-40f5-8589-fe01afb6eaf6",
+      "uuid": "4accc4fb-9ec3-41ae-ac3e-cc5d3dabe156",
       "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "yandex.ru",
+        "server_name": "m.vk.com",
         "reality": {
           "enabled": true,
-          "public_key": "HmRtly8onk8X3HeLdRuqN7q81Qv-7wX-tfCWOUAsFio",
+          "public_key": "pSM8cZd3BzdI5gp0UJaufCEFUjamTpYtHcbFudbk11s",
+          "short_id": "9b83faf63715956b"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      }
+    },
+    {
+      "tag": "🇷🇺 Russia [*CIDR] YA",
+      "type": "vless",
+      "server": "158.160.246.28",
+      "server_port": 443,
+      "uuid": "9e1d737e-f3c1-4757-84b2-3dcf66a468ed",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "ads.x5.ru",
+        "reality": {
+          "enabled": true,
+          "public_key": "NaONDf0qCoNVteBefVS25yLJbMMLdnKnwsu7_il9MXE",
           "short_id": ""
         },
         "utls": {
