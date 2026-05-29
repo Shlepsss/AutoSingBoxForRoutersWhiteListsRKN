@@ -34,11 +34,11 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🌐 Anycast-IP | 🇬🇧 🇷🇺 🇸🇬 [*CIDR]",
-        "🇳🇱 The Netherlands | 🌐 [*CIDR] YA",
-        "🇷🇺 Russia | 🌐 [*CIDR] VK",
-        "🇷🇺 Russia [*CIDR]",
-        "🌐 Anycast-IP | 🇬🇧 🇯🇵 🇷🇺 [*CIDR]"
+        "🇷🇺 Russia | 🌐 [*CIDR]",
+        "🇷🇺 Russia [*CIDR] VK",
+        "🇳🇱 The Netherlands [*CIDR] YA",
+        "🇵🇱 Poland [SNI-RU] www.kinopoisk.ru",
+        "🇩🇪 Germany [*CIDR]"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -51,25 +51,110 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🌐 Anycast-IP | 🇬🇧 🇷🇺 🇸🇬 [*CIDR]",
-        "🇳🇱 The Netherlands | 🌐 [*CIDR] YA",
-        "🇷🇺 Russia | 🌐 [*CIDR] VK",
-        "🇷🇺 Russia [*CIDR]",
-        "🌐 Anycast-IP | 🇬🇧 🇯🇵 🇷🇺 [*CIDR]"
+        "🇷🇺 Russia | 🌐 [*CIDR]",
+        "🇷🇺 Russia [*CIDR] VK",
+        "🇳🇱 The Netherlands [*CIDR] YA",
+        "🇵🇱 Poland [SNI-RU] www.kinopoisk.ru",
+        "🇩🇪 Germany [*CIDR]"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
     },
     {
-      "tag": "🌐 Anycast-IP | 🇬🇧 🇷🇺 🇸🇬 [*CIDR]",
-      "type": "trojan",
-      "server": "216.24.57.6",
+      "tag": "🇷🇺 Russia | 🌐 [*CIDR]",
+      "type": "vless",
+      "server": "109.73.199.199",
       "server_port": 443,
-      "password": "Mitivpn",
+      "uuid": "ad32f976-1203-000b-aea0-0e83a6f4c14f",
       "tls": {
         "enabled": true,
-        "insecure": true,
-        "server_name": "cdn.hitgram.ir",
+        "server_name": "apple.com",
+        "reality": {
+          "enabled": true,
+          "public_key": "AbRB_cTOwwb768-x-lxKBD7M1eC7BnOLJk2AxIHEfB4",
+          "short_id": "02b5bd4ef3777eb1"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "grpc"
+      }
+    },
+    {
+      "tag": "🇷🇺 Russia [*CIDR] VK",
+      "type": "vless",
+      "server": "37.139.34.63",
+      "server_port": 5969,
+      "uuid": "10132cf6-6536-4c45-8d75-c90f91a1c5d6",
+      "tls": {
+        "enabled": true,
+        "server_name": "surfvpn24.ru",
+        "reality": {
+          "enabled": true,
+          "public_key": "lPTd0_SulMMhWfRHF4tjsv5iM06hU1bDJv8aPaBipEw",
+          "short_id": "c19de8fa"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      }
+    },
+    {
+      "tag": "🇳🇱 The Netherlands [*CIDR] YA",
+      "type": "vless",
+      "server": "84.201.150.86",
+      "server_port": 443,
+      "uuid": "Fluffy_VPN-757700MA",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "api-maps.yandex.ru",
+        "reality": {
+          "enabled": true,
+          "public_key": "Pmjtafuz8nmxva6yFAt189hbwRFO_5VfunTX7vngSDU",
+          "short_id": ""
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      }
+    },
+    {
+      "tag": "🇵🇱 Poland [SNI-RU] www.kinopoisk.ru",
+      "type": "vless",
+      "server": "85.158.109.113",
+      "server_port": 443,
+      "uuid": "87be8be2-9296-4912-944e-d49cc81485d8",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.kinopoisk.ru",
+        "reality": {
+          "enabled": true,
+          "public_key": "ice5ApDYceTGVoxODC51F4RVW0HBoykvMpgL4_qLABw",
+          "short_id": "aabbccdd"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      }
+    },
+    {
+      "tag": "🇩🇪 Germany [*CIDR]",
+      "type": "vless",
+      "server": "de.sbrf-cdn342.ru",
+      "server_port": 443,
+      "uuid": "91e120bc-159a-4390-b4e1-197b19602ea0",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "sub.sbrf-cdn342.ru",
         "alpn": [
           "http/1.1"
         ],
@@ -77,93 +162,6 @@
           "enabled": true,
           "fingerprint": "chrome"
         }
-      },
-      "transport": {
-        "type": "ws",
-        "headers": {
-          "Host": "cdn.hitgram.ir"
-        },
-        "path": "/"
-      }
-    },
-    {
-      "tag": "🇳🇱 The Netherlands | 🌐 [*CIDR] YA",
-      "type": "vless",
-      "server": "158.160.130.173",
-      "server_port": 443,
-      "uuid": "81921570-c613-46fd-a788-fc314bde7b26",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "cdp.x5.ru",
-        "reality": {
-          "enabled": true,
-          "public_key": "wgXD4k3A16WR0aL63N9Mx8xoqFigJLyQWJXi-l3MPXI",
-          "short_id": "8ec792bfd725be8a"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "safari"
-        }
-      }
-    },
-    {
-      "tag": "🇷🇺 Russia | 🌐 [*CIDR] VK",
-      "type": "vless",
-      "server": "89.208.86.87",
-      "server_port": 443,
-      "uuid": "4accc4fb-9ec3-41ae-ac3e-cc5d3dabe156",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "m.vk.com",
-        "reality": {
-          "enabled": true,
-          "public_key": "pSM8cZd3BzdI5gp0UJaufCEFUjamTpYtHcbFudbk11s",
-          "short_id": "9b83faf63715956b"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      }
-    },
-    {
-      "tag": "🇷🇺 Russia [*CIDR]",
-      "type": "vless",
-      "server": "94.228.112.55",
-      "server_port": 443,
-      "uuid": "a5c689ce-ef93-4a6a-8b74-3dbe2287d71b",
-      "tls": {
-        "enabled": true,
-        "server_name": "max.ru",
-        "reality": {
-          "enabled": true,
-          "public_key": "G2i-nsQgWiVf52tdCUV-G_VeuCJ3hggwDnTaEAgvg0Y",
-          "short_id": ""
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
-        }
-      }
-    },
-    {
-      "tag": "🌐 Anycast-IP | 🇬🇧 🇯🇵 🇷🇺 [*CIDR]",
-      "type": "vless",
-      "server": "216.24.57.7",
-      "server_port": 443,
-      "uuid": "e258977b-e413-4718-a3af-02d75492c349",
-      "tls": {
-        "enabled": true,
-        "server_name": "jp.aniua.qzz.io"
-      },
-      "transport": {
-        "type": "ws",
-        "headers": {
-          "Host": "jp.aniua.qzz.io"
-        },
-        "path": "/"
       }
     }
   ],
