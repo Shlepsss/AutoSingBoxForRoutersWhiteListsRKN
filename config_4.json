@@ -34,11 +34,11 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇷🇺 Russia | 🌐 [*CIDR]",
+        "ð³ð± The Netherlands | [*CIDR]",
+        "🇷🇺 Russia [*CIDR] VK",
+        "🇫🇷 France [*CIDR]",
         "🇳🇱 The Netherlands | 🌐 [*CIDR] YA",
-        "🇳🇱 The Netherlands | 🌐 [*CIDR]",
-        "🇩🇪 Germany [*CIDR] VK",
-        "🇷🇺 Russia [*CIDR] VK"
+        "🇷🇺 Russia [*CIDR] VK-2"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -51,45 +51,94 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇷🇺 Russia | 🌐 [*CIDR]",
+        "ð³ð± The Netherlands | [*CIDR]",
+        "🇷🇺 Russia [*CIDR] VK",
+        "🇫🇷 France [*CIDR]",
         "🇳🇱 The Netherlands | 🌐 [*CIDR] YA",
-        "🇳🇱 The Netherlands | 🌐 [*CIDR]",
-        "🇩🇪 Germany [*CIDR] VK",
-        "🇷🇺 Russia [*CIDR] VK"
+        "🇷🇺 Russia [*CIDR] VK-2"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
     },
     {
-      "tag": "🇷🇺 Russia | 🌐 [*CIDR]",
-      "type": "vless",
-      "server": "109.73.199.199",
+      "tag": "ð³ð± The Netherlands | [*CIDR]",
+      "type": "vmess",
+      "server": "renderer-stream-1-411.mirra.now",
       "server_port": 443,
-      "uuid": "ad32f976-1203-000b-aea0-0e83a6f4c14f",
+      "uuid": "df9c9355-b02c-4c12-909d-0dbeb725d52b",
+      "security": "auto",
       "tls": {
         "enabled": true,
-        "server_name": "apple.com",
-        "reality": {
-          "enabled": true,
-          "public_key": "AbRB_cTOwwb768-x-lxKBD7M1eC7BnOLJk2AxIHEfB4",
-          "short_id": "02b5bd4ef3777eb1"
-        },
+        "server_name": "renderer-stream-1-411.mirra.now",
+        "alpn": [
+          "h2",
+          "http/1.1"
+        ],
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
         }
       },
       "transport": {
-        "type": "grpc",
-        "service_name": "grpc"
+        "type": "ws",
+        "headers": {
+          "Host": "renderer-stream-1-411.mirra.now"
+        },
+        "path": "/api/v1/gpu-stream/socket"
+      }
+    },
+    {
+      "tag": "🇷🇺 Russia [*CIDR] VK",
+      "type": "vless",
+      "server": "37.139.34.63",
+      "server_port": 5969,
+      "uuid": "10132cf6-6536-4c45-8d75-c90f91a1c5d6",
+      "tls": {
+        "enabled": true,
+        "server_name": "surfvpn24.ru",
+        "reality": {
+          "enabled": true,
+          "public_key": "lPTd0_SulMMhWfRHF4tjsv5iM06hU1bDJv8aPaBipEw",
+          "short_id": "c19de8fa"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      }
+    },
+    {
+      "tag": "🇫🇷 France [*CIDR]",
+      "type": "trojan",
+      "server": "216.24.57.6",
+      "server_port": 443,
+      "password": "humanity",
+      "tls": {
+        "enabled": true,
+        "insecure": true,
+        "server_name": "www.calmloud.com",
+        "alpn": [
+          "http/1.1"
+        ],
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "headers": {
+          "Host": "www.calmloud.com"
+        },
+        "path": "/assignment"
       }
     },
     {
       "tag": "🇳🇱 The Netherlands | 🌐 [*CIDR] YA",
       "type": "vless",
-      "server": "51.250.106.87",
+      "server": "158.160.136.203",
       "server_port": 443,
-      "uuid": "0e38ace5-e9ba-4e93-990a-68d2d3269a52",
+      "uuid": "0812ce0c-35e1-4063-9fe0-8a27b52b2c79",
       "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
@@ -106,49 +155,7 @@
       }
     },
     {
-      "tag": "🇳🇱 The Netherlands | 🌐 [*CIDR]",
-      "type": "vless",
-      "server": "dey.lnmarketplace.net",
-      "server_port": 443,
-      "uuid": "3536e1fa-0850-44d1-b123-925ce12476cf",
-      "tls": {
-        "enabled": true,
-        "server_name": "dey.lnmarketplace.net",
-        "alpn": [
-          "h2"
-        ],
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
-        }
-      }
-    },
-    {
-      "tag": "🇩🇪 Germany [*CIDR] VK",
-      "type": "vless",
-      "server": "89.208.208.92",
-      "server_port": 7443,
-      "uuid": "cbc27e56-38a1-4b0d-bce3-f9e7dcb807a4",
-      "tls": {
-        "enabled": true,
-        "server_name": "loadtest.dev.urent.ru",
-        "reality": {
-          "enabled": true,
-          "public_key": "_AXs-QnufIq918tbb2pwM3MDbe7kQ6i0cIHDMLwPmGs",
-          "short_id": "3210e0eee6605048"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "qq"
-        }
-      },
-      "transport": {
-        "type": "grpc",
-        "service_name": "grpc"
-      }
-    },
-    {
-      "tag": "🇷🇺 Russia [*CIDR] VK",
+      "tag": "🇷🇺 Russia [*CIDR] VK-2",
       "type": "vless",
       "server": "37.139.34.63",
       "server_port": 5969,

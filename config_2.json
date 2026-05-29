@@ -34,11 +34,11 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇱🇻 Latvia [*CIDR]",
-        "🇳🇱 The Netherlands | 🌐 [*CIDR] YA",
-        "🇷🇺 Russia | 🌐 [*CIDR]",
+        "🇫🇷 France | 🌐 [*CIDR] VK",
         "🇷🇺 Russia [*CIDR] VK",
-        "🇩🇪 Germany [*CIDR]"
+        "🇹🇷 Turkey [*CIDR]",
+        "🇷🇺 Russia [*CIDR] VK-2",
+        "🇫🇮 Finland [*CIDR]"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -51,79 +51,32 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇱🇻 Latvia [*CIDR]",
-        "🇳🇱 The Netherlands | 🌐 [*CIDR] YA",
-        "🇷🇺 Russia | 🌐 [*CIDR]",
+        "🇫🇷 France | 🌐 [*CIDR] VK",
         "🇷🇺 Russia [*CIDR] VK",
-        "🇩🇪 Germany [*CIDR]"
+        "🇹🇷 Turkey [*CIDR]",
+        "🇷🇺 Russia [*CIDR] VK-2",
+        "🇫🇮 Finland [*CIDR]"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
     },
     {
-      "tag": "🇱🇻 Latvia [*CIDR]",
+      "tag": "🇫🇷 France | 🌐 [*CIDR] VK",
       "type": "vless",
-      "server": "83.229.14.131",
-      "server_port": 58888,
-      "uuid": "cc1c6c8a-91ee-4ed6-9d42-d63510bb1190",
-      "flow": "xtls-rprx-vision",
+      "server": "ru5.cleanersaz.help",
+      "server_port": 7443,
+      "uuid": "9beef3b2-5749-4529-a91a-29af1c043d6b",
       "tls": {
         "enabled": true,
-        "server_name": "max.ru",
-        "reality": {
-          "enabled": true,
-          "public_key": "5rarCwWIE6vDLCyip5C66PYDsm7ETZ9V4LQR34dfuGA",
-          "short_id": "6ba85179e30d4fc2"
-        },
+        "server_name": "ru5.cleanersaz.help",
+        "alpn": [
+          "h2",
+          "http/1.1"
+        ],
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
         }
-      }
-    },
-    {
-      "tag": "🇳🇱 The Netherlands | 🌐 [*CIDR] YA",
-      "type": "vless",
-      "server": "84.201.136.5",
-      "server_port": 443,
-      "uuid": "ff1f7563-ac4f-4233-995e-1690758d0dde",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "cdp.x5.ru",
-        "reality": {
-          "enabled": true,
-          "public_key": "wgXD4k3A16WR0aL63N9Mx8xoqFigJLyQWJXi-l3MPXI",
-          "short_id": "8ec792bfd725be8a"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "safari"
-        }
-      }
-    },
-    {
-      "tag": "🇷🇺 Russia | 🌐 [*CIDR]",
-      "type": "vless",
-      "server": "109.73.199.199",
-      "server_port": 443,
-      "uuid": "ad32f976-1203-000b-aea0-0e83a6f4c14f",
-      "tls": {
-        "enabled": true,
-        "server_name": "apple.com",
-        "reality": {
-          "enabled": true,
-          "public_key": "AbRB_cTOwwb768-x-lxKBD7M1eC7BnOLJk2AxIHEfB4",
-          "short_id": "02b5bd4ef3777eb1"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
-      "transport": {
-        "type": "grpc",
-        "service_name": "grpc"
       }
     },
     {
@@ -147,21 +100,62 @@
       }
     },
     {
-      "tag": "🇩🇪 Germany [*CIDR]",
+      "tag": "🇹🇷 Turkey [*CIDR]",
       "type": "vless",
-      "server": "185.242.19.252",
-      "server_port": 443,
-      "uuid": "61f72e28-e56b-409c-8c38-0ee51ada5dfc",
+      "server": "176.109.101.215",
+      "server_port": 7443,
+      "uuid": "7446ce0f-c3ae-40bf-a046-7d9b64be4b80",
       "tls": {
         "enabled": true,
-        "server_name": "top2197697635.mwscdn.ru",
-        "alpn": [
-          "h2",
-          "http/1.1"
-        ],
+        "server_name": "sso.passport.yandex.ru",
+        "reality": {
+          "enabled": true,
+          "public_key": "Z84J2IelR9ch3k8VtlVhhs5ycBUlXA7wHBWcBrjqnAw",
+          "short_id": "7dbf7d3233971d5c"
+        },
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
+        }
+      }
+    },
+    {
+      "tag": "🇷🇺 Russia [*CIDR] VK-2",
+      "type": "vless",
+      "server": "37.139.34.63",
+      "server_port": 5969,
+      "uuid": "10132cf6-6536-4c45-8d75-c90f91a1c5d6",
+      "tls": {
+        "enabled": true,
+        "server_name": "surfvpn24.ru",
+        "reality": {
+          "enabled": true,
+          "public_key": "lPTd0_SulMMhWfRHF4tjsv5iM06hU1bDJv8aPaBipEw",
+          "short_id": "c19de8fa"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      }
+    },
+    {
+      "tag": "🇫🇮 Finland [*CIDR]",
+      "type": "vless",
+      "server": "176.109.101.215",
+      "server_port": 8083,
+      "uuid": "7446ce0f-c3ae-40bf-a046-7d9b64be4b80",
+      "tls": {
+        "enabled": true,
+        "server_name": "ads.x5.ru",
+        "reality": {
+          "enabled": true,
+          "public_key": "Z84J2IelR9ch3k8VtlVhhs5ycBUlXA7wHBWcBrjqnAw",
+          "short_id": "7dbf7d3233971d5c"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "qq"
         }
       }
     }

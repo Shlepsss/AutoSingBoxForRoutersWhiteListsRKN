@@ -34,11 +34,11 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇳🇱 The Netherlands | 🌐 [*CIDR] YA",
+        "🇩🇪 Germany | 🌐 [*CIDR]",
         "🇷🇺 Russia [*CIDR] VK",
-        "🇳🇱 The Netherlands | 🌐 [*CIDR] YA-2",
-        "🇷🇺 Russia | 🌐 [*CIDR]",
-        "🇳🇱 The Netherlands | 🌐 [*CIDR] YA-3"
+        "🇩🇪 Germany [*CIDR]",
+        "🇷🇺 Russia [*CIDR] VK-2",
+        "🇩🇪 Germany | 🌐 [*CIDR]-2"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -51,33 +51,31 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇳🇱 The Netherlands | 🌐 [*CIDR] YA",
+        "🇩🇪 Germany | 🌐 [*CIDR]",
         "🇷🇺 Russia [*CIDR] VK",
-        "🇳🇱 The Netherlands | 🌐 [*CIDR] YA-2",
-        "🇷🇺 Russia | 🌐 [*CIDR]",
-        "🇳🇱 The Netherlands | 🌐 [*CIDR] YA-3"
+        "🇩🇪 Germany [*CIDR]",
+        "🇷🇺 Russia [*CIDR] VK-2",
+        "🇩🇪 Germany | 🌐 [*CIDR]-2"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
     },
     {
-      "tag": "🇳🇱 The Netherlands | 🌐 [*CIDR] YA",
+      "tag": "🇩🇪 Germany | 🌐 [*CIDR]",
       "type": "vless",
-      "server": "51.250.106.87",
+      "server": "de.sbrf-cdn342.ru",
       "server_port": 443,
-      "uuid": "ff1f7563-ac4f-4233-995e-1690758d0dde",
+      "uuid": "91e120bc-159a-4390-b4e1-197b19602ea0",
       "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "cdp.x5.ru",
-        "reality": {
-          "enabled": true,
-          "public_key": "wgXD4k3A16WR0aL63N9Mx8xoqFigJLyQWJXi-l3MPXI",
-          "short_id": "8ec792bfd725be8a"
-        },
+        "server_name": "sub.sbrf-cdn342.ru",
+        "alpn": [
+          "http/1.1"
+        ],
         "utls": {
           "enabled": true,
-          "fingerprint": "safari"
+          "fingerprint": "chrome"
         }
       }
     },
@@ -102,68 +100,62 @@
       }
     },
     {
-      "tag": "🇳🇱 The Netherlands | 🌐 [*CIDR] YA-2",
+      "tag": "🇩🇪 Germany [*CIDR]",
       "type": "vless",
-      "server": "51.250.104.246",
+      "server": "de.sbrf-cdn342.ru",
       "server_port": 443,
-      "uuid": "0e38ace5-e9ba-4e93-990a-68d2d3269a52",
+      "uuid": "91e120bc-159a-4390-b4e1-197b19602ea0",
       "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "cdp.x5.ru",
-        "reality": {
-          "enabled": true,
-          "public_key": "wgXD4k3A16WR0aL63N9Mx8xoqFigJLyQWJXi-l3MPXI",
-          "short_id": "8ec792bfd725be8a"
-        },
+        "server_name": "sub.sbrf-cdn342.ru",
+        "alpn": [
+          "http/1.1"
+        ],
         "utls": {
           "enabled": true,
-          "fingerprint": "safari"
+          "fingerprint": "qq"
         }
       }
     },
     {
-      "tag": "🇷🇺 Russia | 🌐 [*CIDR]",
+      "tag": "🇷🇺 Russia [*CIDR] VK-2",
       "type": "vless",
-      "server": "109.73.199.199",
-      "server_port": 443,
-      "uuid": "ad32f976-1203-000b-aea0-0e83a6f4c14f",
+      "server": "37.139.34.63",
+      "server_port": 5969,
+      "uuid": "10132cf6-6536-4c45-8d75-c90f91a1c5d6",
       "tls": {
         "enabled": true,
-        "server_name": "apple.com",
+        "server_name": "surfvpn24.ru",
         "reality": {
           "enabled": true,
-          "public_key": "AbRB_cTOwwb768-x-lxKBD7M1eC7BnOLJk2AxIHEfB4",
-          "short_id": "02b5bd4ef3777eb1"
+          "public_key": "lPTd0_SulMMhWfRHF4tjsv5iM06hU1bDJv8aPaBipEw",
+          "short_id": "c19de8fa"
         },
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
         }
-      },
-      "transport": {
-        "type": "grpc",
-        "service_name": "grpc"
       }
     },
     {
-      "tag": "🇳🇱 The Netherlands | 🌐 [*CIDR] YA-3",
+      "tag": "🇩🇪 Germany | 🌐 [*CIDR]-2",
       "type": "vless",
-      "server": "84.201.144.113",
-      "server_port": 443,
-      "uuid": "ff1f7563-ac4f-4233-995e-1690758d0dde",
+      "server": "ru.pool-b.vodkacore.pro",
+      "server_port": 44003,
+      "uuid": "2a87235a-cac6-4751-a42a-da603f7de13c",
       "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "cdp.x5.ru",
+        "server_name": "netcenter-cdn.com",
         "reality": {
           "enabled": true,
-          "public_key": "wgXD4k3A16WR0aL63N9Mx8xoqFigJLyQWJXi-l3MPXI",
-          "short_id": "8ec792bfd725be8a"
+          "public_key": "mCtDwMr9u9MdztUGzCGADj-nfHv6CQpAf_ywbyKl8ww",
+          "short_id": "ab3f86b9f8e956"
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "safari"
+          "fingerprint": "qq"
         }
       }
     }

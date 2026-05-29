@@ -34,11 +34,11 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇷🇺 Russia | 🌐 [*CIDR]",
         "🇷🇺 Russia [*CIDR] VK",
-        "🇩🇪 Germany [*CIDR]",
-        "🇳🇱 The Netherlands | 🌐 [*CIDR] YA",
-        "🇳🇱 The Netherlands | 🌐 [*CIDR] YA-2"
+        "🇮🇳 India [*CIDR]",
+        "🌐 Anycast-IP | 🇨🇦 🇫🇮 [*CIDR]",
+        "🇷🇺 Russia [*CIDR] VK-2",
+        "🇩🇪 Germany [*CIDR]"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -51,41 +51,77 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇷🇺 Russia | 🌐 [*CIDR]",
         "🇷🇺 Russia [*CIDR] VK",
-        "🇩🇪 Germany [*CIDR]",
-        "🇳🇱 The Netherlands | 🌐 [*CIDR] YA",
-        "🇳🇱 The Netherlands | 🌐 [*CIDR] YA-2"
+        "🇮🇳 India [*CIDR]",
+        "🌐 Anycast-IP | 🇨🇦 🇫🇮 [*CIDR]",
+        "🇷🇺 Russia [*CIDR] VK-2",
+        "🇩🇪 Germany [*CIDR]"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
     },
     {
-      "tag": "🇷🇺 Russia | 🌐 [*CIDR]",
+      "tag": "🇷🇺 Russia [*CIDR] VK",
       "type": "vless",
-      "server": "109.73.199.199",
-      "server_port": 443,
-      "uuid": "ad32f976-1203-000b-aea0-0e83a6f4c14f",
+      "server": "37.139.34.63",
+      "server_port": 5969,
+      "uuid": "10132cf6-6536-4c45-8d75-c90f91a1c5d6",
       "tls": {
         "enabled": true,
-        "server_name": "apple.com",
+        "server_name": "surfvpn24.ru",
         "reality": {
           "enabled": true,
-          "public_key": "AbRB_cTOwwb768-x-lxKBD7M1eC7BnOLJk2AxIHEfB4",
-          "short_id": "02b5bd4ef3777eb1"
+          "public_key": "lPTd0_SulMMhWfRHF4tjsv5iM06hU1bDJv8aPaBipEw",
+          "short_id": "c19de8fa"
         },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      }
+    },
+    {
+      "tag": "🇮🇳 India [*CIDR]",
+      "type": "vless",
+      "server": "185.242.19.249",
+      "server_port": 80,
+      "uuid": "7446ce0f-c3ae-40bf-a046-7d9b64be4b80",
+      "transport": {
+        "type": "ws",
+        "headers": {
+          "Host": "top28521690.mwscdn.ru"
+        },
+        "path": "/static"
+      }
+    },
+    {
+      "tag": "🌐 Anycast-IP | 🇨🇦 🇫🇮 [*CIDR]",
+      "type": "trojan",
+      "server": "216.24.57.7",
+      "server_port": 443,
+      "password": "Mitivpn",
+      "tls": {
+        "enabled": true,
+        "insecure": true,
+        "server_name": "dash.hitgram.ir",
+        "alpn": [
+          "http/1.1"
+        ],
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
         }
       },
       "transport": {
-        "type": "grpc",
-        "service_name": "grpc"
+        "type": "ws",
+        "headers": {
+          "Host": "dash.hitgram.ir"
+        },
+        "path": "/"
       }
     },
     {
-      "tag": "🇷🇺 Russia [*CIDR] VK",
+      "tag": "🇷🇺 Russia [*CIDR] VK-2",
       "type": "vless",
       "server": "37.139.34.63",
       "server_port": 5969,
@@ -119,49 +155,7 @@
         ],
         "utls": {
           "enabled": true,
-          "fingerprint": "chrome"
-        }
-      }
-    },
-    {
-      "tag": "🇳🇱 The Netherlands | 🌐 [*CIDR] YA",
-      "type": "vless",
-      "server": "51.250.106.87",
-      "server_port": 443,
-      "uuid": "ff1f7563-ac4f-4233-995e-1690758d0dde",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "cdp.x5.ru",
-        "reality": {
-          "enabled": true,
-          "public_key": "wgXD4k3A16WR0aL63N9Mx8xoqFigJLyQWJXi-l3MPXI",
-          "short_id": "8ec792bfd725be8a"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "safari"
-        }
-      }
-    },
-    {
-      "tag": "🇳🇱 The Netherlands | 🌐 [*CIDR] YA-2",
-      "type": "vless",
-      "server": "158.160.51.70",
-      "server_port": 443,
-      "uuid": "ff1f7563-ac4f-4233-995e-1690758d0dde",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "cdp.x5.ru",
-        "reality": {
-          "enabled": true,
-          "public_key": "wgXD4k3A16WR0aL63N9Mx8xoqFigJLyQWJXi-l3MPXI",
-          "short_id": "8ec792bfd725be8a"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "safari"
+          "fingerprint": "qq"
         }
       }
     }

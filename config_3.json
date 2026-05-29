@@ -35,9 +35,9 @@
       "tag": "auto",
       "outbounds": [
         "🇳🇱 The Netherlands | 🌐 [*CIDR] YA",
-        "🇳🇱 The Netherlands | 🌐 [*CIDR] YA-2",
-        "🇷🇺 Russia | 🌐 [*CIDR]",
         "🇷🇺 Russia [*CIDR] VK",
+        "🌐 Anycast-IP | 🇨🇦 🇫🇮 [*CIDR]",
+        "🇷🇺 Russia [*CIDR] VK-2",
         "🇩🇪 Germany [*CIDR]"
       ],
       "url": "https://google.com/generate_204",
@@ -52,9 +52,9 @@
       "outbounds": [
         "auto",
         "🇳🇱 The Netherlands | 🌐 [*CIDR] YA",
-        "🇳🇱 The Netherlands | 🌐 [*CIDR] YA-2",
-        "🇷🇺 Russia | 🌐 [*CIDR]",
         "🇷🇺 Russia [*CIDR] VK",
+        "🌐 Anycast-IP | 🇨🇦 🇫🇮 [*CIDR]",
+        "🇷🇺 Russia [*CIDR] VK-2",
         "🇩🇪 Germany [*CIDR]"
       ],
       "default": "auto",
@@ -63,9 +63,9 @@
     {
       "tag": "🇳🇱 The Netherlands | 🌐 [*CIDR] YA",
       "type": "vless",
-      "server": "51.250.104.246",
+      "server": "84.201.168.220",
       "server_port": 443,
-      "uuid": "0e38ace5-e9ba-4e93-990a-68d2d3269a52",
+      "uuid": "0812ce0c-35e1-4063-9fe0-8a27b52b2c79",
       "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
@@ -79,51 +79,6 @@
           "enabled": true,
           "fingerprint": "safari"
         }
-      }
-    },
-    {
-      "tag": "🇳🇱 The Netherlands | 🌐 [*CIDR] YA-2",
-      "type": "vless",
-      "server": "84.201.144.113",
-      "server_port": 443,
-      "uuid": "ff1f7563-ac4f-4233-995e-1690758d0dde",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "cdp.x5.ru",
-        "reality": {
-          "enabled": true,
-          "public_key": "wgXD4k3A16WR0aL63N9Mx8xoqFigJLyQWJXi-l3MPXI",
-          "short_id": "8ec792bfd725be8a"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "safari"
-        }
-      }
-    },
-    {
-      "tag": "🇷🇺 Russia | 🌐 [*CIDR]",
-      "type": "vless",
-      "server": "109.73.199.199",
-      "server_port": 443,
-      "uuid": "ad32f976-1203-000b-aea0-0e83a6f4c14f",
-      "tls": {
-        "enabled": true,
-        "server_name": "apple.com",
-        "reality": {
-          "enabled": true,
-          "public_key": "AbRB_cTOwwb768-x-lxKBD7M1eC7BnOLJk2AxIHEfB4",
-          "short_id": "02b5bd4ef3777eb1"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
-      "transport": {
-        "type": "grpc",
-        "service_name": "grpc"
       }
     },
     {
@@ -147,14 +102,61 @@
       }
     },
     {
-      "tag": "🇩🇪 Germany [*CIDR]",
-      "type": "vless",
-      "server": "185.242.19.252",
+      "tag": "🌐 Anycast-IP | 🇨🇦 🇫🇮 [*CIDR]",
+      "type": "trojan",
+      "server": "216.24.57.7",
       "server_port": 443,
-      "uuid": "61f72e28-e56b-409c-8c38-0ee51ada5dfc",
+      "password": "Mitivpn",
       "tls": {
         "enabled": true,
-        "server_name": "top2197697635.mwscdn.ru",
+        "insecure": true,
+        "server_name": "dash.hitgram.ir",
+        "alpn": [
+          "http/1.1"
+        ],
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "headers": {
+          "Host": "dash.hitgram.ir"
+        },
+        "path": "/"
+      }
+    },
+    {
+      "tag": "🇷🇺 Russia [*CIDR] VK-2",
+      "type": "vless",
+      "server": "37.139.34.63",
+      "server_port": 5969,
+      "uuid": "10132cf6-6536-4c45-8d75-c90f91a1c5d6",
+      "tls": {
+        "enabled": true,
+        "server_name": "surfvpn24.ru",
+        "reality": {
+          "enabled": true,
+          "public_key": "lPTd0_SulMMhWfRHF4tjsv5iM06hU1bDJv8aPaBipEw",
+          "short_id": "c19de8fa"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      }
+    },
+    {
+      "tag": "🇩🇪 Germany [*CIDR]",
+      "type": "vless",
+      "server": "216.24.57.6",
+      "server_port": 443,
+      "uuid": "Telegram-Parsashonam-3",
+      "tls": {
+        "enabled": true,
+        "insecure": true,
+        "server_name": "p4r34m.hendevaneh.sbs",
         "alpn": [
           "h2",
           "http/1.1"

@@ -34,11 +34,11 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇷🇺 Russia | 🌐 [*CIDR]",
+        "🇳🇱 The Netherlands | 🌐 [*CIDR] YA",
         "🇷🇺 Russia [*CIDR] VK",
-        "🇺🇸 United States | 🌐 [*CIDR]",
-        "🇸🇪 Sweden [SNI-RU] api-maps.yandex.ru",
-        "🇩🇪 Germany [*CIDR]"
+        "🌐 Anycast-IP | 🇨🇦 🇫🇮 🇸🇬 [*CIDR]",
+        "🇳🇱 The Netherlands | 🌐 [*CIDR] YA-2",
+        "🇷🇺 Russia [*CIDR] VK-2"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -51,37 +51,34 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇷🇺 Russia | 🌐 [*CIDR]",
+        "🇳🇱 The Netherlands | 🌐 [*CIDR] YA",
         "🇷🇺 Russia [*CIDR] VK",
-        "🇺🇸 United States | 🌐 [*CIDR]",
-        "🇸🇪 Sweden [SNI-RU] api-maps.yandex.ru",
-        "🇩🇪 Germany [*CIDR]"
+        "🌐 Anycast-IP | 🇨🇦 🇫🇮 🇸🇬 [*CIDR]",
+        "🇳🇱 The Netherlands | 🌐 [*CIDR] YA-2",
+        "🇷🇺 Russia [*CIDR] VK-2"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
     },
     {
-      "tag": "🇷🇺 Russia | 🌐 [*CIDR]",
+      "tag": "🇳🇱 The Netherlands | 🌐 [*CIDR] YA",
       "type": "vless",
-      "server": "109.73.199.199",
+      "server": "158.160.136.203",
       "server_port": 443,
-      "uuid": "ad32f976-1203-000b-aea0-0e83a6f4c14f",
+      "uuid": "0812ce0c-35e1-4063-9fe0-8a27b52b2c79",
+      "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "apple.com",
+        "server_name": "cdp.x5.ru",
         "reality": {
           "enabled": true,
-          "public_key": "AbRB_cTOwwb768-x-lxKBD7M1eC7BnOLJk2AxIHEfB4",
-          "short_id": "02b5bd4ef3777eb1"
+          "public_key": "wgXD4k3A16WR0aL63N9Mx8xoqFigJLyQWJXi-l3MPXI",
+          "short_id": "8ec792bfd725be8a"
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "chrome"
+          "fingerprint": "safari"
         }
-      },
-      "transport": {
-        "type": "grpc",
-        "service_name": "grpc"
       }
     },
     {
@@ -105,46 +102,66 @@
       }
     },
     {
-      "tag": "🇺🇸 United States | 🌐 [*CIDR]",
-      "type": "vless",
-      "server": "104.167.199.191",
+      "tag": "🌐 Anycast-IP | 🇨🇦 🇫🇮 🇸🇬 [*CIDR]",
+      "type": "trojan",
+      "server": "216.24.57.251",
       "server_port": 443,
-      "uuid": "7bf0aa49-4200-4a07-ae73-302bbe214958"
+      "password": "Mitivpn",
+      "tls": {
+        "enabled": true,
+        "insecure": true,
+        "server_name": "dash.hitgram.ir",
+        "alpn": [
+          "http/1.1"
+        ],
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "headers": {
+          "Host": "dash.hitgram.ir"
+        },
+        "path": "/"
+      }
     },
     {
-      "tag": "🇸🇪 Sweden [SNI-RU] api-maps.yandex.ru",
+      "tag": "🇳🇱 The Netherlands | 🌐 [*CIDR] YA-2",
       "type": "vless",
-      "server": "cdn-msk-1.bigbossvpn.online",
-      "server_port": 8443,
-      "uuid": "d8a5d149-4e4f-4fbd-b6b1-7d6b59c9e9ba",
+      "server": "84.201.168.220",
+      "server_port": 443,
+      "uuid": "0812ce0c-35e1-4063-9fe0-8a27b52b2c79",
       "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "api-maps.yandex.ru",
+        "server_name": "cdp.x5.ru",
         "reality": {
           "enabled": true,
-          "public_key": "7d3CStrxBsfQQIx0_Td6qdJnks4n0JZr_DjzCkD-iwE",
-          "short_id": "4bdc542eb368ab6a"
+          "public_key": "wgXD4k3A16WR0aL63N9Mx8xoqFigJLyQWJXi-l3MPXI",
+          "short_id": "8ec792bfd725be8a"
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "qq"
+          "fingerprint": "safari"
         }
       }
     },
     {
-      "tag": "🇩🇪 Germany [*CIDR]",
+      "tag": "🇷🇺 Russia [*CIDR] VK-2",
       "type": "vless",
-      "server": "de.sbrf-cdn342.ru",
-      "server_port": 443,
-      "uuid": "91e120bc-159a-4390-b4e1-197b19602ea0",
-      "flow": "xtls-rprx-vision",
+      "server": "37.139.34.63",
+      "server_port": 5969,
+      "uuid": "10132cf6-6536-4c45-8d75-c90f91a1c5d6",
       "tls": {
         "enabled": true,
-        "server_name": "sub.sbrf-cdn342.ru",
-        "alpn": [
-          "http/1.1"
-        ],
+        "server_name": "surfvpn24.ru",
+        "reality": {
+          "enabled": true,
+          "public_key": "lPTd0_SulMMhWfRHF4tjsv5iM06hU1bDJv8aPaBipEw",
+          "short_id": "c19de8fa"
+        },
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
