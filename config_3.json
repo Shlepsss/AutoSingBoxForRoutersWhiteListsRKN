@@ -34,11 +34,11 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇳🇱 The Netherlands | 🌐 [*CIDR] YA",
         "🇷🇺 Russia [*CIDR] VK",
-        "🌐 Anycast-IP | 🇨🇦 🇫🇮 [*CIDR]",
-        "🇷🇺 Russia [*CIDR] VK-2",
-        "🇩🇪 Germany [*CIDR]"
+        "🇷🇺 Russia [*CIDR]",
+        "🇷🇺 Russia | 🌐 [*CIDR]",
+        "🇷🇺 Russia | 🌐 [*CIDR]-2",
+        "🇫🇮 Finland [SNI-RU] yastatic.net"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -51,35 +51,14 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇳🇱 The Netherlands | 🌐 [*CIDR] YA",
         "🇷🇺 Russia [*CIDR] VK",
-        "🌐 Anycast-IP | 🇨🇦 🇫🇮 [*CIDR]",
-        "🇷🇺 Russia [*CIDR] VK-2",
-        "🇩🇪 Germany [*CIDR]"
+        "🇷🇺 Russia [*CIDR]",
+        "🇷🇺 Russia | 🌐 [*CIDR]",
+        "🇷🇺 Russia | 🌐 [*CIDR]-2",
+        "🇫🇮 Finland [SNI-RU] yastatic.net"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
-    },
-    {
-      "tag": "🇳🇱 The Netherlands | 🌐 [*CIDR] YA",
-      "type": "vless",
-      "server": "84.201.168.220",
-      "server_port": 443,
-      "uuid": "0812ce0c-35e1-4063-9fe0-8a27b52b2c79",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "cdp.x5.ru",
-        "reality": {
-          "enabled": true,
-          "public_key": "wgXD4k3A16WR0aL63N9Mx8xoqFigJLyQWJXi-l3MPXI",
-          "short_id": "8ec792bfd725be8a"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "safari"
-        }
-      }
     },
     {
       "tag": "🇷🇺 Russia [*CIDR] VK",
@@ -102,44 +81,43 @@
       }
     },
     {
-      "tag": "🌐 Anycast-IP | 🇨🇦 🇫🇮 [*CIDR]",
-      "type": "trojan",
-      "server": "216.24.57.7",
-      "server_port": 443,
-      "password": "Mitivpn",
-      "tls": {
-        "enabled": true,
-        "insecure": true,
-        "server_name": "dash.hitgram.ir",
-        "alpn": [
-          "http/1.1"
-        ],
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "headers": {
-          "Host": "dash.hitgram.ir"
-        },
-        "path": "/"
-      }
-    },
-    {
-      "tag": "🇷🇺 Russia [*CIDR] VK-2",
+      "tag": "🇷🇺 Russia [*CIDR]",
       "type": "vless",
-      "server": "37.139.34.63",
-      "server_port": 5969,
-      "uuid": "10132cf6-6536-4c45-8d75-c90f91a1c5d6",
+      "server": "46.149.71.46",
+      "server_port": 443,
+      "uuid": "d511e429-e32b-46a7-ac07-a0fffa9b634c",
+      "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "surfvpn24.ru",
+        "server_name": "www.avito.ru",
         "reality": {
           "enabled": true,
-          "public_key": "lPTd0_SulMMhWfRHF4tjsv5iM06hU1bDJv8aPaBipEw",
-          "short_id": "c19de8fa"
+          "public_key": "ZHEMPjSWslk6_qD2JNQzd5enUPz8nY9mYRRuM6NkZmU",
+          "short_id": "0123456789abcdef"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "edge"
+        }
+      }
+    },
+    {
+      "tag": "🇷🇺 Russia | 🌐 [*CIDR]",
+      "type": "vless",
+      "server": "46.149.71.46",
+      "server_port": 9443,
+      "uuid": "d511e429-e32b-46a7-ac07-a0fffa9b634c",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "rutube.ru",
+        "alpn": [
+          "http/1.1"
+        ],
+        "reality": {
+          "enabled": true,
+          "public_key": "ZHEMPjSWslk6_qD2JNQzd5enUPz8nY9mYRRuM6NkZmU",
+          "short_id": "43dcff53849b81e6"
         },
         "utls": {
           "enabled": true,
@@ -148,19 +126,43 @@
       }
     },
     {
-      "tag": "🇩🇪 Germany [*CIDR]",
+      "tag": "🇷🇺 Russia | 🌐 [*CIDR]-2",
       "type": "vless",
-      "server": "216.24.57.6",
+      "server": "46.149.71.46",
       "server_port": 443,
-      "uuid": "Telegram-Parsashonam-3",
+      "uuid": "0dc3fe97-73e3-4cc2-89a7-331e66540365",
+      "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "insecure": true,
-        "server_name": "p4r34m.hendevaneh.sbs",
+        "server_name": "www.avito.ru",
         "alpn": [
-          "h2",
           "http/1.1"
         ],
+        "reality": {
+          "enabled": true,
+          "public_key": "ZHEMPjSWslk6_qD2JNQzd5enUPz8nY9mYRRuM6NkZmU",
+          "short_id": "67ccfc02"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "edge"
+        }
+      }
+    },
+    {
+      "tag": "🇫🇮 Finland [SNI-RU] yastatic.net",
+      "type": "vless",
+      "server": "fi2.vitok.cc",
+      "server_port": 443,
+      "uuid": "1b9e301d-cecd-4eb1-8b36-eef811c2696d",
+      "tls": {
+        "enabled": true,
+        "server_name": "yastatic.net",
+        "reality": {
+          "enabled": true,
+          "public_key": "3LUIM_6cYceTgNt6LWnR8YSVrenpLsh-FIGDrmfjjwc",
+          "short_id": "5e841fab"
+        },
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
