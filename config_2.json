@@ -34,11 +34,11 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
+        "🇷🇺 Russia | 🌐 [*CIDR]",
         "🇷🇺 Russia [*CIDR]",
         "🇷🇺 Russia [*CIDR]-2",
         "🇷🇺 Russia [*CIDR]-3",
-        "🇷🇺 Russia [*CIDR]-4",
-        "🇷🇺 Russia [*CIDR]-5"
+        "🇷🇺 Russia [*CIDR]-4"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -51,59 +51,40 @@
       "tag": "select",
       "outbounds": [
         "auto",
+        "🇷🇺 Russia | 🌐 [*CIDR]",
         "🇷🇺 Russia [*CIDR]",
         "🇷🇺 Russia [*CIDR]-2",
         "🇷🇺 Russia [*CIDR]-3",
-        "🇷🇺 Russia [*CIDR]-4",
-        "🇷🇺 Russia [*CIDR]-5"
+        "🇷🇺 Russia [*CIDR]-4"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
     },
     {
-      "tag": "🇷🇺 Russia [*CIDR]",
+      "tag": "🇷🇺 Russia | 🌐 [*CIDR]",
       "type": "vless",
-      "server": "185.14.46.20",
+      "server": "46.149.71.46",
       "server_port": 443,
-      "uuid": "a1b19834-a5e3-4d49-9301-aaa3fb248f49",
-      "tls": {
-        "enabled": true,
-        "server_name": "185.14.46.20.blanesik.space",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
-      "transport": {
-        "type": "grpc",
-        "service_name": "/sequre/grpc"
-      }
-    },
-    {
-      "tag": "🇷🇺 Russia [*CIDR]-2",
-      "type": "vless",
-      "server": "95.163.232.57",
-      "server_port": 8778,
-      "uuid": "9287f532-4150-48ff-a755-64b21e30e9c3",
+      "uuid": "0dc3fe97-73e3-4cc2-89a7-331e66540365",
       "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "receive-sentry.lmru.tech",
+        "server_name": "www.avito.ru",
         "reality": {
           "enabled": true,
-          "public_key": "OOqB9mFan3ucg0FLHOdmgNgh7jdIc1wAy6AuU5dehxU",
-          "short_id": ""
+          "public_key": "ZHEMPjSWslk6_qD2JNQzd5enUPz8nY9mYRRuM6NkZmU",
+          "short_id": "67ccfc02"
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "firefox"
+          "fingerprint": "edge"
         }
       }
     },
     {
-      "tag": "🇷🇺 Russia [*CIDR]-3",
+      "tag": "🇷🇺 Russia [*CIDR]",
       "type": "vless",
-      "server": "78.40.217.101",
+      "server": "185.119.56.231",
       "server_port": 443,
       "uuid": "31969cf4-c1bb-4a3e-b42b-574dfb271c73",
       "flow": "xtls-rprx-vision",
@@ -122,9 +103,33 @@
       }
     },
     {
-      "tag": "🇷🇺 Russia [*CIDR]-4",
+      "tag": "🇷🇺 Russia [*CIDR]-2",
       "type": "vless",
-      "server": "bucket-ru-4.extravpn.io",
+      "server": "5.178.85.238",
+      "server_port": 443,
+      "uuid": "4002bbf3-d35d-423e-a767-3d4a8167aed4",
+      "tls": {
+        "enabled": true,
+        "server_name": "bucket-ru-2.extravpn.io",
+        "reality": {
+          "enabled": true,
+          "public_key": "sOx7AkBNtLuAdWCzqYPxjOErfqI5CeDzbJleGJqp8WU",
+          "short_id": ""
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "randomized"
+        }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "bucket-ru-2.extravpn.io"
+      }
+    },
+    {
+      "tag": "🇷🇺 Russia [*CIDR]-3",
+      "type": "vless",
+      "server": "185.91.54.12",
       "server_port": 443,
       "uuid": "4002bbf3-d35d-423e-a767-3d4a8167aed4",
       "tls": {
@@ -146,24 +151,26 @@
       }
     },
     {
-      "tag": "🇷🇺 Russia [*CIDR]-5",
+      "tag": "🇷🇺 Russia [*CIDR]-4",
       "type": "vless",
-      "server": "92.53.107.175",
-      "server_port": 443,
-      "uuid": "31969cf4-c1bb-4a3e-b42b-574dfb271c73",
-      "flow": "xtls-rprx-vision",
+      "server": "85.198.85.193",
+      "server_port": 40470,
+      "uuid": "b43c896e-d9b8-4606-b902-b1bf6d10d2f9",
       "tls": {
         "enabled": true,
-        "server_name": "rus.scroogethebest.com",
+        "server_name": "5post-gate.x5.ru",
         "reality": {
           "enabled": true,
-          "public_key": "sbvKAdRy_0h33iRxgGwHAD1HC62WGwlkWwj0S5ptJEU",
-          "short_id": "9c2378562188c3cb"
+          "public_key": "kn16KgkUCMVfqSIwKI9fd0yDy6VcavlTt56LqE_7JWI",
+          "short_id": "1fad87"
         },
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
         }
+      },
+      "transport": {
+        "type": "grpc"
       }
     }
   ],
