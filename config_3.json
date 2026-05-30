@@ -34,11 +34,11 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇫🇮 Finland [*CIDR] YA",
-        "🇷🇺 Russia [*CIDR] VK",
         "🇳🇱 The Netherlands | 🌐 [*CIDR] YA",
+        "🇷🇺 Russia [*CIDR] VK",
+        "🇳🇱 The Netherlands | 🌐 [*CIDR] YA-2",
         "🇷🇺 Russia [*CIDR] VK-2",
-        "🇳🇱 The Netherlands | 🌐 [*CIDR] YA-2"
+        "🇳🇱 The Netherlands | 🌐 [*CIDR] YA-3"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -51,32 +51,33 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇫🇮 Finland [*CIDR] YA",
-        "🇷🇺 Russia [*CIDR] VK",
         "🇳🇱 The Netherlands | 🌐 [*CIDR] YA",
+        "🇷🇺 Russia [*CIDR] VK",
+        "🇳🇱 The Netherlands | 🌐 [*CIDR] YA-2",
         "🇷🇺 Russia [*CIDR] VK-2",
-        "🇳🇱 The Netherlands | 🌐 [*CIDR] YA-2"
+        "🇳🇱 The Netherlands | 🌐 [*CIDR] YA-3"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
     },
     {
-      "tag": "🇫🇮 Finland [*CIDR] YA",
+      "tag": "🇳🇱 The Netherlands | 🌐 [*CIDR] YA",
       "type": "vless",
-      "server": "ru7.vitok.cc",
+      "server": "51.250.104.246",
       "server_port": 443,
-      "uuid": "1b9e301d-cecd-4eb1-8b36-eef811c2696d",
+      "uuid": "a9165430-5cf8-4008-a220-1d5a21e046a9",
+      "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "ads.x5.ru",
+        "server_name": "cdp.x5.ru",
         "reality": {
           "enabled": true,
-          "public_key": "eXl8Dpux23etQ0aA_16LUQ9eBwfDqbCaJm7YusDIzUU",
-          "short_id": "5e841fab"
+          "public_key": "wgXD4k3A16WR0aL63N9Mx8xoqFigJLyQWJXi-l3MPXI",
+          "short_id": "8ec792bfd725be8a"
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "chrome"
+          "fingerprint": "safari"
         }
       }
     },
@@ -101,9 +102,9 @@
       }
     },
     {
-      "tag": "🇳🇱 The Netherlands | 🌐 [*CIDR] YA",
+      "tag": "🇳🇱 The Netherlands | 🌐 [*CIDR] YA-2",
       "type": "vless",
-      "server": "51.250.108.162",
+      "server": "84.201.168.186",
       "server_port": 443,
       "uuid": "a9165430-5cf8-4008-a220-1d5a21e046a9",
       "flow": "xtls-rprx-vision",
@@ -142,9 +143,9 @@
       }
     },
     {
-      "tag": "🇳🇱 The Netherlands | 🌐 [*CIDR] YA-2",
+      "tag": "🇳🇱 The Netherlands | 🌐 [*CIDR] YA-3",
       "type": "vless",
-      "server": "51.250.104.246",
+      "server": "51.250.97.18",
       "server_port": 443,
       "uuid": "a9165430-5cf8-4008-a220-1d5a21e046a9",
       "flow": "xtls-rprx-vision",
