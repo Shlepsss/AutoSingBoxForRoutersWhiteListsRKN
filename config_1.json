@@ -34,11 +34,11 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
+        "🇷🇺 Russia [*CIDR] VK",
         "🇷🇺 Russia [*CIDR]",
-        "🇷🇺 Russia | 🌐 [*CIDR]",
         "🇷🇺 Russia [*CIDR]-2",
         "🇷🇺 Russia [*CIDR]-3",
-        "🇷🇺 Russia [*CIDR] VK"
+        "🇷🇺 Russia | 🌐 [*CIDR]"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -51,17 +51,77 @@
       "tag": "select",
       "outbounds": [
         "auto",
+        "🇷🇺 Russia [*CIDR] VK",
         "🇷🇺 Russia [*CIDR]",
-        "🇷🇺 Russia | 🌐 [*CIDR]",
         "🇷🇺 Russia [*CIDR]-2",
         "🇷🇺 Russia [*CIDR]-3",
-        "🇷🇺 Russia [*CIDR] VK"
+        "🇷🇺 Russia | 🌐 [*CIDR]"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
     },
     {
+      "tag": "🇷🇺 Russia [*CIDR] VK",
+      "type": "vless",
+      "server": "37.139.34.63",
+      "server_port": 5969,
+      "uuid": "10132cf6-6536-4c45-8d75-c90f91a1c5d6",
+      "tls": {
+        "enabled": true,
+        "server_name": "surfvpn24.ru",
+        "reality": {
+          "enabled": true,
+          "public_key": "lPTd0_SulMMhWfRHF4tjsv5iM06hU1bDJv8aPaBipEw",
+          "short_id": "c19de8fa"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      }
+    },
+    {
       "tag": "🇷🇺 Russia [*CIDR]",
+      "type": "vless",
+      "server": "185.14.46.20",
+      "server_port": 443,
+      "uuid": "a1b19834-a5e3-4d49-9301-aaa3fb248f49",
+      "tls": {
+        "enabled": true,
+        "server_name": "185.14.46.20.blanesik.space",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "/sequre/grpc"
+      }
+    },
+    {
+      "tag": "🇷🇺 Russia [*CIDR]-2",
+      "type": "vless",
+      "server": "185.119.56.231",
+      "server_port": 443,
+      "uuid": "31969cf4-c1bb-4a3e-b42b-574dfb271c73",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "rus.scroogethebest.com",
+        "reality": {
+          "enabled": true,
+          "public_key": "sbvKAdRy_0h33iRxgGwHAD1HC62WGwlkWwj0S5ptJEU",
+          "short_id": "9c2378562188c3cb"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      }
+    },
+    {
+      "tag": "🇷🇺 Russia [*CIDR]-3",
       "type": "vless",
       "server": "217.12.40.10",
       "server_port": 23151,
@@ -91,72 +151,13 @@
       "tls": {
         "enabled": true,
         "server_name": "rutube.ru",
+        "alpn": [
+          "http/1.1"
+        ],
         "reality": {
           "enabled": true,
           "public_key": "ZHEMPjSWslk6_qD2JNQzd5enUPz8nY9mYRRuM6NkZmU",
           "short_id": "43dcff53849b81e6"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      }
-    },
-    {
-      "tag": "🇷🇺 Russia [*CIDR]-2",
-      "type": "vless",
-      "server": "217.26.24.101",
-      "server_port": 23151,
-      "uuid": "9287f532-4150-48ff-a755-64b21e30e9c3",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "cms-res-web.online.sberbank.ru",
-        "reality": {
-          "enabled": true,
-          "public_key": "eP0MKUFOcNVSVFbHT8GgBLP4LIHZFq8JuVGlCAlH1HI",
-          "short_id": ""
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      }
-    },
-    {
-      "tag": "🇷🇺 Russia [*CIDR]-3",
-      "type": "vless",
-      "server": "78.40.217.101",
-      "server_port": 443,
-      "uuid": "31969cf4-c1bb-4a3e-b42b-574dfb271c73",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "rus.scroogethebest.com",
-        "reality": {
-          "enabled": true,
-          "public_key": "sbvKAdRy_0h33iRxgGwHAD1HC62WGwlkWwj0S5ptJEU",
-          "short_id": "9c2378562188c3cb"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      }
-    },
-    {
-      "tag": "🇷🇺 Russia [*CIDR] VK",
-      "type": "vless",
-      "server": "37.139.34.63",
-      "server_port": 5969,
-      "uuid": "10132cf6-6536-4c45-8d75-c90f91a1c5d6",
-      "tls": {
-        "enabled": true,
-        "server_name": "surfvpn24.ru",
-        "reality": {
-          "enabled": true,
-          "public_key": "lPTd0_SulMMhWfRHF4tjsv5iM06hU1bDJv8aPaBipEw",
-          "short_id": "c19de8fa"
         },
         "utls": {
           "enabled": true,
