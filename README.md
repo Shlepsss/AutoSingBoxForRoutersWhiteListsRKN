@@ -40,9 +40,8 @@ text TXT subscription       ↓ GitHub Actions       ↓ filter proxies       �
 
 # Используемая подписка
 
-По умолчанию используется:
-
-text https://raw.githack.com/igareck/vpn-configs-for-russia/main/Vless-Reality-White-Lists-Rus-Mobile.txt 
+text https://github.com/igareck/vpn-configs-for-russia
+Спасибо автору!
 
 ---
 
