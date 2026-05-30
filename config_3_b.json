@@ -35,10 +35,10 @@
       "tag": "auto",
       "outbounds": [
         "🇷🇺 Russia [*CIDR] VK",
-        "🇳🇱 The Netherlands | 🌐 [*CIDR] YA",
         "🇩🇪 Germany [*CIDR] YA",
-        "🇳🇱 The Netherlands | 🌐 [*CIDR] YA-2",
-        "🇷🇺 Russia [*CIDR] VK-2"
+        "🇷🇺 Russia [*CIDR] VK-2",
+        "🇳🇱 The Netherlands | 🌐 [*CIDR] YA",
+        "🇫🇮 Finland [*CIDR] YA"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -52,16 +52,57 @@
       "outbounds": [
         "auto",
         "🇷🇺 Russia [*CIDR] VK",
-        "🇳🇱 The Netherlands | 🌐 [*CIDR] YA",
         "🇩🇪 Germany [*CIDR] YA",
-        "🇳🇱 The Netherlands | 🌐 [*CIDR] YA-2",
-        "🇷🇺 Russia [*CIDR] VK-2"
+        "🇷🇺 Russia [*CIDR] VK-2",
+        "🇳🇱 The Netherlands | 🌐 [*CIDR] YA",
+        "🇫🇮 Finland [*CIDR] YA"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
     },
     {
       "tag": "🇷🇺 Russia [*CIDR] VK",
+      "type": "vless",
+      "server": "37.139.34.63",
+      "server_port": 5969,
+      "uuid": "10132cf6-6536-4c45-8d75-c90f91a1c5d6",
+      "tls": {
+        "enabled": true,
+        "server_name": "surfvpn24.ru",
+        "reality": {
+          "enabled": true,
+          "public_key": "lPTd0_SulMMhWfRHF4tjsv5iM06hU1bDJv8aPaBipEw",
+          "short_id": "c19de8fa"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      }
+    },
+    {
+      "tag": "🇩🇪 Germany [*CIDR] YA",
+      "type": "vless",
+      "server": "84.201.179.200",
+      "server_port": 443,
+      "uuid": "e737e2e7-04bc-477f-8211-dc0b1354168f",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "ads.x5.ru",
+        "reality": {
+          "enabled": true,
+          "public_key": "AYWvVCObGJ_5TnNMGj4z_UDSDzMJ3IcoRgIBCAeUWFs",
+          "short_id": ""
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      }
+    },
+    {
+      "tag": "🇷🇺 Russia [*CIDR] VK-2",
       "type": "vless",
       "server": "37.139.34.63",
       "server_port": 5969,
@@ -102,60 +143,18 @@
       }
     },
     {
-      "tag": "🇩🇪 Germany [*CIDR] YA",
+      "tag": "🇫🇮 Finland [*CIDR] YA",
       "type": "vless",
-      "server": "84.201.179.200",
+      "server": "ru7.vitok.cc",
       "server_port": 443,
-      "uuid": "e737e2e7-04bc-477f-8211-dc0b1354168f",
-      "flow": "xtls-rprx-vision",
+      "uuid": "1b9e301d-cecd-4eb1-8b36-eef811c2696d",
       "tls": {
         "enabled": true,
         "server_name": "ads.x5.ru",
         "reality": {
           "enabled": true,
-          "public_key": "AYWvVCObGJ_5TnNMGj4z_UDSDzMJ3IcoRgIBCAeUWFs",
-          "short_id": ""
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "random"
-        }
-      }
-    },
-    {
-      "tag": "🇳🇱 The Netherlands | 🌐 [*CIDR] YA-2",
-      "type": "vless",
-      "server": "158.160.57.73",
-      "server_port": 443,
-      "uuid": "a9165430-5cf8-4008-a220-1d5a21e046a9",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "cdp.x5.ru",
-        "reality": {
-          "enabled": true,
-          "public_key": "wgXD4k3A16WR0aL63N9Mx8xoqFigJLyQWJXi-l3MPXI",
-          "short_id": "8ec792bfd725be8a"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "safari"
-        }
-      }
-    },
-    {
-      "tag": "🇷🇺 Russia [*CIDR] VK-2",
-      "type": "vless",
-      "server": "37.139.34.63",
-      "server_port": 5969,
-      "uuid": "10132cf6-6536-4c45-8d75-c90f91a1c5d6",
-      "tls": {
-        "enabled": true,
-        "server_name": "surfvpn24.ru",
-        "reality": {
-          "enabled": true,
-          "public_key": "lPTd0_SulMMhWfRHF4tjsv5iM06hU1bDJv8aPaBipEw",
-          "short_id": "c19de8fa"
+          "public_key": "eXl8Dpux23etQ0aA_16LUQ9eBwfDqbCaJm7YusDIzUU",
+          "short_id": "5e841fab"
         },
         "utls": {
           "enabled": true,
