@@ -34,9 +34,8 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
+        "🇨🇿 Czechia [*CIDR] Beeline",
         "🇺🇸 United States [*CIDR] VK",
-        "🇳🇱 The Netherlands | 🌐 [*CIDR] YA",
-        "🇳🇱 The Netherlands | 🌐 [*CIDR] YA-2",
         "🇷🇺 Russia [*CIDR] VK",
         "🇺🇸 United States [*CIDR] VK-2"
       ],
@@ -51,14 +50,28 @@
       "tag": "select",
       "outbounds": [
         "auto",
+        "🇨🇿 Czechia [*CIDR] Beeline",
         "🇺🇸 United States [*CIDR] VK",
-        "🇳🇱 The Netherlands | 🌐 [*CIDR] YA",
-        "🇳🇱 The Netherlands | 🌐 [*CIDR] YA-2",
         "🇷🇺 Russia [*CIDR] VK",
         "🇺🇸 United States [*CIDR] VK-2"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
+    },
+    {
+      "tag": "🇨🇿 Czechia [*CIDR] Beeline",
+      "type": "vless",
+      "server": "128.75.228.189",
+      "server_port": 443,
+      "uuid": "56470441-5d85-4266-89f3-c2b5b000c522",
+      "tls": {
+        "enabled": true,
+        "server_name": "ftatx5g6dt.cdn.twcstorage.ru",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      }
     },
     {
       "tag": "🇺🇸 United States [*CIDR] VK",
@@ -77,48 +90,6 @@
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
-        }
-      }
-    },
-    {
-      "tag": "🇳🇱 The Netherlands | 🌐 [*CIDR] YA",
-      "type": "vless",
-      "server": "51.250.103.104",
-      "server_port": 443,
-      "uuid": "c79ab45a-e419-4417-9af7-83957e41a5f1",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "cdp.x5.ru",
-        "reality": {
-          "enabled": true,
-          "public_key": "wgXD4k3A16WR0aL63N9Mx8xoqFigJLyQWJXi-l3MPXI",
-          "short_id": "8ec792bfd725be8a"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "safari"
-        }
-      }
-    },
-    {
-      "tag": "🇳🇱 The Netherlands | 🌐 [*CIDR] YA-2",
-      "type": "vless",
-      "server": "51.250.97.18",
-      "server_port": 443,
-      "uuid": "c79ab45a-e419-4417-9af7-83957e41a5f1",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "cdp.x5.ru",
-        "reality": {
-          "enabled": true,
-          "public_key": "wgXD4k3A16WR0aL63N9Mx8xoqFigJLyQWJXi-l3MPXI",
-          "short_id": "8ec792bfd725be8a"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "safari"
         }
       }
     },
@@ -145,16 +116,17 @@
     {
       "tag": "🇺🇸 United States [*CIDR] VK-2",
       "type": "vless",
-      "server": "srv-0bc3dc.21freedom.net",
+      "server": "37.139.43.57",
       "server_port": 443,
-      "uuid": "7be400d9-67ad-4819-bd06-c889308f12d0",
+      "uuid": "97836028-9cb2-4a7a-8511-8a59d1e57e15",
+      "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "vk.com",
+        "server_name": "eh.vk.com",
         "reality": {
           "enabled": true,
-          "public_key": "iIhrPpoPQN1gDf8coQ8o54-oTRdYFpLD7I7e9tHF0EE",
-          "short_id": "a977328085692dc8"
+          "public_key": "RiSs_VVhep71TZU8buuMedhJ9wenvWJ2sSp8HfaYnGw",
+          "short_id": ""
         },
         "utls": {
           "enabled": true,
