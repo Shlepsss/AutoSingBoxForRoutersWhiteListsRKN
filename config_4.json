@@ -34,11 +34,9 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇷🇺 Russia | 🌐 [SNI-RU] max.ru",
-        "🇳🇱 The Netherlands | 🌐 [SNI-RU] vk.com",
-        "🌐 Anycast-IP | 🇪🇪 🇳🇱 [SNI-RU] io.ozone.ru",
-        "🇷🇺 Russia | 🌐 [SNI-RU] ads.x5.ru",
-        "🌐 Anycast-IP | 🇪🇪 🇳🇱 [SNI-RU] io.ozone.ru-2"
+        "🇵🇱 Poland | 🌐 [SNI-RU] max.ru",
+        "🇩🇪 Germany [SNI-RU] max.ru",
+        "🇩🇪 Germany [SNI-RU] max.ru-2"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -51,19 +49,17 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇷🇺 Russia | 🌐 [SNI-RU] max.ru",
-        "🇳🇱 The Netherlands | 🌐 [SNI-RU] vk.com",
-        "🌐 Anycast-IP | 🇪🇪 🇳🇱 [SNI-RU] io.ozone.ru",
-        "🇷🇺 Russia | 🌐 [SNI-RU] ads.x5.ru",
-        "🌐 Anycast-IP | 🇪🇪 🇳🇱 [SNI-RU] io.ozone.ru-2"
+        "🇵🇱 Poland | 🌐 [SNI-RU] max.ru",
+        "🇩🇪 Germany [SNI-RU] max.ru",
+        "🇩🇪 Germany [SNI-RU] max.ru-2"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
     },
     {
-      "tag": "🇷🇺 Russia | 🌐 [SNI-RU] max.ru",
+      "tag": "🇵🇱 Poland | 🌐 [SNI-RU] max.ru",
       "type": "vless",
-      "server": "msknode1.frost-api.com",
+      "server": "polnode1.frost-api.com",
       "server_port": 443,
       "uuid": "248891a9-1ac5-42ad-a68b-2cecef897b0a",
       "flow": "xtls-rprx-vision",
@@ -73,7 +69,7 @@
         "reality": {
           "enabled": true,
           "public_key": "SHIYN7zN9aFVxwKK-bIvDbhUgtHvlBhDi1qSl2sWwRw",
-          "short_id": "01e7"
+          "short_id": "fb916778d4"
         },
         "utls": {
           "enabled": true,
@@ -82,39 +78,19 @@
       }
     },
     {
-      "tag": "🇳🇱 The Netherlands | 🌐 [SNI-RU] vk.com",
+      "tag": "🇩🇪 Germany [SNI-RU] max.ru",
       "type": "vless",
-      "server": "194.32.98.225",
+      "server": "denode1.frost-api.com",
       "server_port": 443,
-      "uuid": "ce499803-8698-4b8c-a537-691ceca28bca",
-      "tls": {
-        "enabled": true,
-        "server_name": "vk.com",
-        "reality": {
-          "enabled": true,
-          "public_key": "aewYQ9yaYSHjG_4-LvEh5Yd8tGuVTWC5psJI9Zio2B4",
-          "short_id": "e15404ddecf0b9fe"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      }
-    },
-    {
-      "tag": "🌐 Anycast-IP | 🇪🇪 🇳🇱 [SNI-RU] io.ozone.ru",
-      "type": "vless",
-      "server": "95.85.228.146",
-      "server_port": 8443,
-      "uuid": "a67e3045-626c-42c9-8cc0-a5afa6b18b05",
+      "uuid": "248891a9-1ac5-42ad-a68b-2cecef897b0a",
       "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "io.ozone.ru",
+        "server_name": "max.ru",
         "reality": {
           "enabled": true,
-          "public_key": "A9jwrodyycJJV-apFQ91_rrh1vfJ_hSzZGNP9GBPGCM",
-          "short_id": "92d0c4089b6c1da3"
+          "public_key": "SHIYN7zN9aFVxwKK-bIvDbhUgtHvlBhDi1qSl2sWwRw",
+          "short_id": "513b0a"
         },
         "utls": {
           "enabled": true,
@@ -123,44 +99,23 @@
       }
     },
     {
-      "tag": "🇷🇺 Russia | 🌐 [SNI-RU] ads.x5.ru",
+      "tag": "🇩🇪 Germany [SNI-RU] max.ru-2",
       "type": "vless",
-      "server": "pro-ru-84.emrata.top",
+      "server": "node4.frost-api.com",
       "server_port": 443,
-      "uuid": "6e84b643-1c90-41e7-9028-ce4dea28c21c",
+      "uuid": "248891a9-1ac5-42ad-a68b-2cecef897b0a",
       "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "ads.x5.ru",
+        "server_name": "max.ru",
         "reality": {
           "enabled": true,
-          "public_key": "AAZjVvbC7AwPKot_1ygO5VMpN7XYifCA7lG0RNR5sEk",
-          "short_id": ""
+          "public_key": "SHIYN7zN9aFVxwKK-bIvDbhUgtHvlBhDi1qSl2sWwRw",
+          "short_id": "4f61d0728e062b"
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "firefox"
-        }
-      }
-    },
-    {
-      "tag": "🌐 Anycast-IP | 🇪🇪 🇳🇱 [SNI-RU] io.ozone.ru-2",
-      "type": "vless",
-      "server": "95.85.228.146",
-      "server_port": 8443,
-      "uuid": "a67e3045-626c-42c9-8cc0-a5afa6b18b05",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "io.ozone.ru",
-        "reality": {
-          "enabled": true,
-          "public_key": "A9jwrodyycJJV-apFQ91_rrh1vfJ_hSzZGNP9GBPGCM",
-          "short_id": "92d0c4089b6c1da3"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "random"
+          "fingerprint": "chrome"
         }
       }
     }
