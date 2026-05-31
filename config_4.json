@@ -35,10 +35,10 @@
       "tag": "auto",
       "outbounds": [
         "🇩🇰 Denmark [SNI-RU] www.kinopoisk.ru",
-        "🇫🇮 Finland [SNI-RU] queuev4.vk.com",
-        "🇵🇱 Poland [SNI-RU] vkvideo.ru",
-        "🇳🇱 The Netherlands | 🌐 [SNI-RU] vk.com",
-        "🇳🇱 The Netherlands [SNI-RU] www.vk.com"
+        "🌐 Anycast-IP | 🇪🇪 🇳🇱 [SNI-RU] io.ozone.ru",
+        "🇺🇸 United States [SNI-RU] api.vk.ru",
+        "🇵🇱 Poland [SNI-RU] www.kinopoisk.ru",
+        "🇫🇮 Finland [SNI-RU] queuev4.vk.com"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -52,10 +52,10 @@
       "outbounds": [
         "auto",
         "🇩🇰 Denmark [SNI-RU] www.kinopoisk.ru",
-        "🇫🇮 Finland [SNI-RU] queuev4.vk.com",
-        "🇵🇱 Poland [SNI-RU] vkvideo.ru",
-        "🇳🇱 The Netherlands | 🌐 [SNI-RU] vk.com",
-        "🇳🇱 The Netherlands [SNI-RU] www.vk.com"
+        "🌐 Anycast-IP | 🇪🇪 🇳🇱 [SNI-RU] io.ozone.ru",
+        "🇺🇸 United States [SNI-RU] api.vk.ru",
+        "🇵🇱 Poland [SNI-RU] www.kinopoisk.ru",
+        "🇫🇮 Finland [SNI-RU] queuev4.vk.com"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
@@ -81,6 +81,68 @@
       }
     },
     {
+      "tag": "🌐 Anycast-IP | 🇪🇪 🇳🇱 [SNI-RU] io.ozone.ru",
+      "type": "vless",
+      "server": "95.85.228.146",
+      "server_port": 8443,
+      "uuid": "a67e3045-626c-42c9-8cc0-a5afa6b18b05",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "io.ozone.ru",
+        "reality": {
+          "enabled": true,
+          "public_key": "A9jwrodyycJJV-apFQ91_rrh1vfJ_hSzZGNP9GBPGCM",
+          "short_id": "92d0c4089b6c1da3"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      }
+    },
+    {
+      "tag": "🇺🇸 United States [SNI-RU] api.vk.ru",
+      "type": "vless",
+      "server": "194.154.27.103",
+      "server_port": 2026,
+      "uuid": "9287f532-4150-48ff-a755-64b21e30e9c3",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "api.vk.ru",
+        "reality": {
+          "enabled": true,
+          "public_key": "cH-LYLxYIolfsrn2V3wqkhw-hkVPPDW7ljE9KqcuJX4",
+          "short_id": ""
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      }
+    },
+    {
+      "tag": "🇵🇱 Poland [SNI-RU] www.kinopoisk.ru",
+      "type": "vless",
+      "server": "85.158.109.113",
+      "server_port": 443,
+      "uuid": "87be8be2-9296-4912-944e-d49cc81485d8",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.kinopoisk.ru",
+        "reality": {
+          "enabled": true,
+          "public_key": "ice5ApDYceTGVoxODC51F4RVW0HBoykvMpgL4_qLABw",
+          "short_id": "aabbccdd"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      }
+    },
+    {
       "tag": "🇫🇮 Finland [SNI-RU] queuev4.vk.com",
       "type": "vless",
       "server": "185.228.232.216",
@@ -98,66 +160,6 @@
         "utls": {
           "enabled": true,
           "fingerprint": "random"
-        }
-      }
-    },
-    {
-      "tag": "🇵🇱 Poland [SNI-RU] vkvideo.ru",
-      "type": "vless",
-      "server": "45.136.125.81",
-      "server_port": 8443,
-      "uuid": "c911ab2b-f202-4924-b463-f74cd6bbadab",
-      "tls": {
-        "enabled": true,
-        "server_name": "vkvideo.ru",
-        "reality": {
-          "enabled": true,
-          "public_key": "cwcnbddHbF43U9uNvN3h7ng3x2hTib0mldaYAcz5Gmk",
-          "short_id": "abcd1234"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      }
-    },
-    {
-      "tag": "🇳🇱 The Netherlands | 🌐 [SNI-RU] vk.com",
-      "type": "vless",
-      "server": "srv-6aeda6.21freedom.net",
-      "server_port": 443,
-      "uuid": "ce499803-8698-4b8c-a537-691ceca28bca",
-      "tls": {
-        "enabled": true,
-        "server_name": "vk.com",
-        "reality": {
-          "enabled": true,
-          "public_key": "aewYQ9yaYSHjG_4-LvEh5Yd8tGuVTWC5psJI9Zio2B4",
-          "short_id": "e15404ddecf0b9fe"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      }
-    },
-    {
-      "tag": "🇳🇱 The Netherlands [SNI-RU] www.vk.com",
-      "type": "vless",
-      "server": "nl2.nvrsk-not-news.ru",
-      "server_port": 41698,
-      "uuid": "b49aff9a-84f9-4e41-9be4-6113901fc2dc",
-      "tls": {
-        "enabled": true,
-        "server_name": "www.vk.com",
-        "reality": {
-          "enabled": true,
-          "public_key": "CGy3XQXti0IWqe5GK93fH5kolq7zafDhFZvkedRFKR8",
-          "short_id": "6d"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
         }
       }
     }

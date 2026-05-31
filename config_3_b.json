@@ -35,10 +35,10 @@
       "tag": "auto",
       "outbounds": [
         "🇷🇺 Russia [*CIDR] VK",
-        "🇷🇺 Russia [*CIDR] VK-2",
         "🇳🇱 The Netherlands | 🌐 [*CIDR] YA",
-        "🇫🇷 France [*CIDR] VK",
-        "🇳🇱 The Netherlands | 🌐 [*CIDR] YA-2"
+        "🇷🇺 Russia [*CIDR] VK-2",
+        "🇳🇱 The Netherlands | 🌐 [*CIDR] YA-2",
+        "🇳🇱 The Netherlands | 🌐 [*CIDR] YA-3"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -52,10 +52,10 @@
       "outbounds": [
         "auto",
         "🇷🇺 Russia [*CIDR] VK",
-        "🇷🇺 Russia [*CIDR] VK-2",
         "🇳🇱 The Netherlands | 🌐 [*CIDR] YA",
-        "🇫🇷 France [*CIDR] VK",
-        "🇳🇱 The Netherlands | 🌐 [*CIDR] YA-2"
+        "🇷🇺 Russia [*CIDR] VK-2",
+        "🇳🇱 The Netherlands | 🌐 [*CIDR] YA-2",
+        "🇳🇱 The Netherlands | 🌐 [*CIDR] YA-3"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
@@ -81,6 +81,27 @@
       }
     },
     {
+      "tag": "🇳🇱 The Netherlands | 🌐 [*CIDR] YA",
+      "type": "vless",
+      "server": "51.250.97.18",
+      "server_port": 443,
+      "uuid": "ed3d23ac-0213-49b1-b6f5-e3ad0736d22e",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "cdp.x5.ru",
+        "reality": {
+          "enabled": true,
+          "public_key": "wgXD4k3A16WR0aL63N9Mx8xoqFigJLyQWJXi-l3MPXI",
+          "short_id": "8ec792bfd725be8a"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "safari"
+        }
+      }
+    },
+    {
       "tag": "🇷🇺 Russia [*CIDR] VK-2",
       "type": "vless",
       "server": "37.139.34.63",
@@ -101,9 +122,9 @@
       }
     },
     {
-      "tag": "🇳🇱 The Netherlands | 🌐 [*CIDR] YA",
+      "tag": "🇳🇱 The Netherlands | 🌐 [*CIDR] YA-2",
       "type": "vless",
-      "server": "51.250.17.80",
+      "server": "158.160.57.73",
       "server_port": 443,
       "uuid": "ed3d23ac-0213-49b1-b6f5-e3ad0736d22e",
       "flow": "xtls-rprx-vision",
@@ -122,28 +143,9 @@
       }
     },
     {
-      "tag": "🇫🇷 France [*CIDR] VK",
+      "tag": "🇳🇱 The Netherlands | 🌐 [*CIDR] YA-3",
       "type": "vless",
-      "server": "217.16.29.23",
-      "server_port": 443,
-      "uuid": "9beef3b2-5749-4529-a91a-29af1c043d6b",
-      "tls": {
-        "enabled": true,
-        "server_name": "ru5.cleanersaz.help",
-        "alpn": [
-          "h2",
-          "http/1.1"
-        ],
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      }
-    },
-    {
-      "tag": "🇳🇱 The Netherlands | 🌐 [*CIDR] YA-2",
-      "type": "vless",
-      "server": "51.250.104.246",
+      "server": "51.250.24.222",
       "server_port": 443,
       "uuid": "ed3d23ac-0213-49b1-b6f5-e3ad0736d22e",
       "flow": "xtls-rprx-vision",

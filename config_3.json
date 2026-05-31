@@ -36,9 +36,9 @@
       "outbounds": [
         "🇳🇱 The Netherlands | 🌐 [*CIDR] YA",
         "🇳🇱 The Netherlands | 🌐 [*CIDR] YA-2",
-        "🇳🇱 The Netherlands | 🌐 [*CIDR] YA-3",
         "🇷🇺 Russia [*CIDR] VK",
-        "🇷🇺 Russia [*CIDR] VK-2"
+        "🇷🇺 Russia [*CIDR] VK-2",
+        "🇳🇱 The Netherlands [*CIDR] YA"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -53,9 +53,9 @@
         "auto",
         "🇳🇱 The Netherlands | 🌐 [*CIDR] YA",
         "🇳🇱 The Netherlands | 🌐 [*CIDR] YA-2",
-        "🇳🇱 The Netherlands | 🌐 [*CIDR] YA-3",
         "🇷🇺 Russia [*CIDR] VK",
-        "🇷🇺 Russia [*CIDR] VK-2"
+        "🇷🇺 Russia [*CIDR] VK-2",
+        "🇳🇱 The Netherlands [*CIDR] YA"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
@@ -63,7 +63,7 @@
     {
       "tag": "🇳🇱 The Netherlands | 🌐 [*CIDR] YA",
       "type": "vless",
-      "server": "158.160.57.73",
+      "server": "158.160.130.173",
       "server_port": 443,
       "uuid": "ed3d23ac-0213-49b1-b6f5-e3ad0736d22e",
       "flow": "xtls-rprx-vision",
@@ -84,28 +84,7 @@
     {
       "tag": "🇳🇱 The Netherlands | 🌐 [*CIDR] YA-2",
       "type": "vless",
-      "server": "84.201.168.186",
-      "server_port": 443,
-      "uuid": "ed3d23ac-0213-49b1-b6f5-e3ad0736d22e",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "cdp.x5.ru",
-        "reality": {
-          "enabled": true,
-          "public_key": "wgXD4k3A16WR0aL63N9Mx8xoqFigJLyQWJXi-l3MPXI",
-          "short_id": "8ec792bfd725be8a"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "safari"
-        }
-      }
-    },
-    {
-      "tag": "🇳🇱 The Netherlands | 🌐 [*CIDR] YA-3",
-      "type": "vless",
-      "server": "51.250.106.87",
+      "server": "51.250.97.18",
       "server_port": 443,
       "uuid": "ed3d23ac-0213-49b1-b6f5-e3ad0736d22e",
       "flow": "xtls-rprx-vision",
@@ -156,6 +135,27 @@
           "enabled": true,
           "public_key": "lPTd0_SulMMhWfRHF4tjsv5iM06hU1bDJv8aPaBipEw",
           "short_id": "c19de8fa"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      }
+    },
+    {
+      "tag": "🇳🇱 The Netherlands [*CIDR] YA",
+      "type": "vless",
+      "server": "51.250.106.197",
+      "server_port": 443,
+      "uuid": "Fluffy_VPN-757700MA",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "max.ru",
+        "reality": {
+          "enabled": true,
+          "public_key": "gLwECcibrJ-wErHzfYbPzMDVu6960VNuXUhjOQ3rUQk",
+          "short_id": ""
         },
         "utls": {
           "enabled": true,
