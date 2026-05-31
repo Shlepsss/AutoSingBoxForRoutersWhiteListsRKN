@@ -34,11 +34,11 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇫🇮 Finland [SNI-RU] max.ru",
-        "🇵🇱 Poland [SNI-RU] max.ru",
-        "🇰🇿 Kazakhstan [SNI-RU] max.ru",
-        "🇫🇮 Finland [SNI-RU] max.ru-2",
-        "🇫🇷 France [SNI-RU] max.ru"
+        "🇳🇱 The Netherlands [SNI-RU] www.kinopoisk.ru",
+        "🇵🇱 Poland [SNI-RU] www.kinopoisk.ru",
+        "🇬🇧 United Kingdom | 🌐 [SNI-RU] m.vk.ru",
+        "🇷🇴 Romania [SNI-RU] www.yandex.ru",
+        "🇬🇧 United Kingdom [SNI-RU] ozon.ru"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -51,50 +51,49 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇫🇮 Finland [SNI-RU] max.ru",
-        "🇵🇱 Poland [SNI-RU] max.ru",
-        "🇰🇿 Kazakhstan [SNI-RU] max.ru",
-        "🇫🇮 Finland [SNI-RU] max.ru-2",
-        "🇫🇷 France [SNI-RU] max.ru"
+        "🇳🇱 The Netherlands [SNI-RU] www.kinopoisk.ru",
+        "🇵🇱 Poland [SNI-RU] www.kinopoisk.ru",
+        "🇬🇧 United Kingdom | 🌐 [SNI-RU] m.vk.ru",
+        "🇷🇴 Romania [SNI-RU] www.yandex.ru",
+        "🇬🇧 United Kingdom [SNI-RU] ozon.ru"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
     },
     {
-      "tag": "🇫🇮 Finland [SNI-RU] max.ru",
+      "tag": "🇳🇱 The Netherlands [SNI-RU] www.kinopoisk.ru",
       "type": "vless",
-      "server": "node2.nyxo-vpn.com",
-      "server_port": 443,
-      "uuid": "a4964ebf-7868-4743-bfee-9e484cf309cd",
+      "server": "5.35.85.51",
+      "server_port": 8443,
+      "uuid": "888403d1-621b-481a-b5dc-7aca518a787b",
       "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "max.ru",
+        "server_name": "www.kinopoisk.ru",
         "reality": {
           "enabled": true,
-          "public_key": "HtkIufkGEKKvh3B6a4id9av2a6bzrn02uiPuQ-nSg1I",
-          "short_id": "7201d5eb6884bcf5"
+          "public_key": "BrGL0gTKK_Ir2VwJOa91Vd8870DswnOXhA6-F92RBGI",
+          "short_id": "a987b6bd1781daa3"
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "firefox"
+          "fingerprint": "qq"
         }
       }
     },
     {
-      "tag": "🇵🇱 Poland [SNI-RU] max.ru",
+      "tag": "🇵🇱 Poland [SNI-RU] www.kinopoisk.ru",
       "type": "vless",
-      "server": "node5.frost-api.com",
+      "server": "85.158.109.113",
       "server_port": 443,
-      "uuid": "248891a9-1ac5-42ad-a68b-2cecef897b0a",
-      "flow": "xtls-rprx-vision",
+      "uuid": "87be8be2-9296-4912-944e-d49cc81485d8",
       "tls": {
         "enabled": true,
-        "server_name": "max.ru",
+        "server_name": "www.kinopoisk.ru",
         "reality": {
           "enabled": true,
-          "public_key": "SHIYN7zN9aFVxwKK-bIvDbhUgtHvlBhDi1qSl2sWwRw",
-          "short_id": "01e7"
+          "public_key": "ice5ApDYceTGVoxODC51F4RVW0HBoykvMpgL4_qLABw",
+          "short_id": "aabbccdd"
         },
         "utls": {
           "enabled": true,
@@ -103,65 +102,64 @@
       }
     },
     {
-      "tag": "🇰🇿 Kazakhstan [SNI-RU] max.ru",
+      "tag": "🇬🇧 United Kingdom | 🌐 [SNI-RU] m.vk.ru",
       "type": "vless",
-      "server": "kaz1.frost-api.com",
-      "server_port": 443,
-      "uuid": "248891a9-1ac5-42ad-a68b-2cecef897b0a",
+      "server": "auk.url-shorter.online",
+      "server_port": 4443,
+      "uuid": "1379aed6-0a11-4533-97ee-f7df8026510a",
       "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "max.ru",
+        "server_name": "m.vk.ru",
         "reality": {
           "enabled": true,
-          "public_key": "SHIYN7zN9aFVxwKK-bIvDbhUgtHvlBhDi1qSl2sWwRw",
-          "short_id": "e7"
+          "public_key": "NCNqme8sDO4TA0jitmR9v0FE9ZaELiNV2pmrY13ZK3I",
+          "short_id": "355d395e"
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "chrome"
+          "fingerprint": "qq"
         }
       }
     },
     {
-      "tag": "🇫🇮 Finland [SNI-RU] max.ru-2",
+      "tag": "🇷🇴 Romania [SNI-RU] www.yandex.ru",
       "type": "vless",
-      "server": "150.251.152.179",
+      "server": "72.5.42.122",
       "server_port": 443,
-      "uuid": "a4964ebf-7868-4743-bfee-9e484cf309cd",
+      "uuid": "5a2dd675-410e-4553-a81b-db7cc8b02d59",
       "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "max.ru",
+        "server_name": "www.yandex.ru",
         "reality": {
           "enabled": true,
-          "public_key": "HtkIufkGEKKvh3B6a4id9av2a6bzrn02uiPuQ-nSg1I",
-          "short_id": "a89dbbc802678b72"
+          "public_key": "CxjnGHCI3HXN2RAXwytela7jXyOGDCBqzMAqTfm60D0",
+          "short_id": "4ed920401771c4ab"
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "firefox"
+          "fingerprint": "random"
         }
       }
     },
     {
-      "tag": "🇫🇷 France [SNI-RU] max.ru",
+      "tag": "🇬🇧 United Kingdom [SNI-RU] ozon.ru",
       "type": "vless",
-      "server": "fra1.frost-api.com",
-      "server_port": 443,
-      "uuid": "248891a9-1ac5-42ad-a68b-2cecef897b0a",
-      "flow": "xtls-rprx-vision",
+      "server": "gam2r.skystreamgame.com",
+      "server_port": 8080,
+      "uuid": "8dcc5d10-9aee-4487-b927-d86462ef0f77",
       "tls": {
         "enabled": true,
-        "server_name": "max.ru",
+        "server_name": "ozon.ru",
         "reality": {
           "enabled": true,
-          "public_key": "SHIYN7zN9aFVxwKK-bIvDbhUgtHvlBhDi1qSl2sWwRw",
-          "short_id": "e7"
+          "public_key": "XBePIY00JetBf0pbmcx-Dvu8XsZ-l079GiHf93HhS0Y",
+          "short_id": "6d6f13013d3e1d0c"
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "chrome"
+          "fingerprint": "random"
         }
       }
     }
