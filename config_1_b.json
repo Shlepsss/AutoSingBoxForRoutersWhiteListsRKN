@@ -34,12 +34,12 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇳🇱 The Netherlands | 🌐 [*CIDR] YA",
-        "🇳🇱 The Netherlands | 🌐 [*CIDR] YA-2",
-        "🌐 Anycast-IP | 🇫🇮 🇬🇧 [*CIDR]",
         "🇷🇺 Russia [*CIDR]",
+        "🇳🇱 The Netherlands | 🌐 [*CIDR] YA",
         "🇷🇺 Russia [*CIDR]-2",
+        "🇩🇪 Germany [*CIDR]",
         "🇷🇺 Russia [*CIDR]-3",
+        "🇧🇬 Bulgaria [*CIDR]",
         "🇷🇺 Russia [*CIDR]-4"
       ],
       "url": "https://google.com/generate_204",
@@ -53,79 +53,16 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇳🇱 The Netherlands | 🌐 [*CIDR] YA",
-        "🇳🇱 The Netherlands | 🌐 [*CIDR] YA-2",
-        "🌐 Anycast-IP | 🇫🇮 🇬🇧 [*CIDR]",
         "🇷🇺 Russia [*CIDR]",
+        "🇳🇱 The Netherlands | 🌐 [*CIDR] YA",
         "🇷🇺 Russia [*CIDR]-2",
+        "🇩🇪 Germany [*CIDR]",
         "🇷🇺 Russia [*CIDR]-3",
+        "🇧🇬 Bulgaria [*CIDR]",
         "🇷🇺 Russia [*CIDR]-4"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
-    },
-    {
-      "tag": "🇳🇱 The Netherlands | 🌐 [*CIDR] YA",
-      "type": "vless",
-      "server": "158.160.136.203",
-      "server_port": 443,
-      "uuid": "c25d3382-90cc-4cb6-8418-0f3cbb8165ad",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "cdp.x5.ru",
-        "reality": {
-          "enabled": true,
-          "public_key": "wgXD4k3A16WR0aL63N9Mx8xoqFigJLyQWJXi-l3MPXI",
-          "short_id": "8ec792bfd725be8a"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "safari"
-        }
-      }
-    },
-    {
-      "tag": "🇳🇱 The Netherlands | 🌐 [*CIDR] YA-2",
-      "type": "vless",
-      "server": "84.201.168.220",
-      "server_port": 443,
-      "uuid": "2f39ed55-aeeb-4f65-ad4b-c8543368e037",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "cdp.x5.ru",
-        "reality": {
-          "enabled": true,
-          "public_key": "wgXD4k3A16WR0aL63N9Mx8xoqFigJLyQWJXi-l3MPXI",
-          "short_id": "8ec792bfd725be8a"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "safari"
-        }
-      }
-    },
-    {
-      "tag": "🌐 Anycast-IP | 🇫🇮 🇬🇧 [*CIDR]",
-      "type": "vless",
-      "server": "spb.connectv.net",
-      "server_port": 443,
-      "uuid": "477535ff-7878-0003-a614-5bb0e4b80959",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "spb.connectv.net",
-        "reality": {
-          "enabled": true,
-          "public_key": "vegx20Xc9XIkr8nfdEB7LZnficXNURVnDbB8_ND97Dw",
-          "short_id": ""
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "randomized"
-        }
-      }
     },
     {
       "tag": "🇷🇺 Russia [*CIDR]",
@@ -144,6 +81,27 @@
       "transport": {
         "type": "grpc",
         "service_name": "/sequre/grpc"
+      }
+    },
+    {
+      "tag": "🇳🇱 The Netherlands | 🌐 [*CIDR] YA",
+      "type": "vless",
+      "server": "84.201.168.186",
+      "server_port": 443,
+      "uuid": "4b6eea34-a1cb-489c-92d3-feb862d69ec9",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "cdp.x5.ru",
+        "reality": {
+          "enabled": true,
+          "public_key": "wgXD4k3A16WR0aL63N9Mx8xoqFigJLyQWJXi-l3MPXI",
+          "short_id": "8ec792bfd725be8a"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "safari"
+        }
       }
     },
     {
@@ -169,17 +127,19 @@
       }
     },
     {
-      "tag": "🇷🇺 Russia [*CIDR]-3",
+      "tag": "🇩🇪 Germany [*CIDR]",
       "type": "vless",
-      "server": "185.14.46.20.blanesik.space",
+      "server": "185.91.52.67",
       "server_port": 443,
-      "uuid": "a1b19834-a5e3-4d49-9301-aaa3fb248f49",
+      "uuid": "605ccddb-e857-437f-8bfb-6c343e2c2990",
       "tls": {
         "enabled": true,
-        "server_name": "185.14.46.20.blanesik.space",
-        "alpn": [
-          "h2"
-        ],
+        "server_name": "avatars.mds.yandex.net",
+        "reality": {
+          "enabled": true,
+          "public_key": "sgFFdQvfeujBKh6g7N7klU_u0mKYlr800MFbko5FzUg",
+          "short_id": "e67fb918ed6b9ffb"
+        },
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
@@ -187,22 +147,67 @@
       },
       "transport": {
         "type": "grpc",
-        "service_name": "/sequre/grpc"
+        "service_name": "grpc-vk"
+      }
+    },
+    {
+      "tag": "🇷🇺 Russia [*CIDR]-3",
+      "type": "vless",
+      "server": "185.91.52.67",
+      "server_port": 3443,
+      "uuid": "605ccddb-e857-437f-8bfb-6c343e2c2990",
+      "tls": {
+        "enabled": true,
+        "server_name": "ads.x5.ru",
+        "reality": {
+          "enabled": true,
+          "public_key": "sgFFdQvfeujBKh6g7N7klU_u0mKYlr800MFbko5FzUg",
+          "short_id": "844352756c1fabba"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "grpc-vk"
+      }
+    },
+    {
+      "tag": "🇧🇬 Bulgaria [*CIDR]",
+      "type": "vless",
+      "server": "185.91.52.67",
+      "server_port": 443,
+      "uuid": "605ccddb-e857-437f-8bfb-6c343e2c2990",
+      "tls": {
+        "enabled": true,
+        "server_name": "avatars.mds.yandex.net",
+        "reality": {
+          "enabled": true,
+          "public_key": "sgFFdQvfeujBKh6g7N7klU_u0mKYlr800MFbko5FzUg",
+          "short_id": "844352756c1fabba"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "grpc-vk"
       }
     },
     {
       "tag": "🇷🇺 Russia [*CIDR]-4",
       "type": "vless",
-      "server": "185.14.46.20",
+      "server": "bankir.ksnodes.net",
       "server_port": 443,
-      "uuid": "a1b19834-a5e3-4d49-9301-aaa3fb248f49",
+      "uuid": "33612cbf-0639-4285-81da-f88eba1d4f85",
+      "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "185.14.46.20.blanesik.space"
-      },
-      "transport": {
-        "type": "grpc",
-        "service_name": "/sequre/grpc"
+        "server_name": "bankir.ksnodes.net"
       }
     }
   ],

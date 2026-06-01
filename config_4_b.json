@@ -34,11 +34,11 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇬🇧 United Kingdom [SNI-RU] ozon.ru",
-        "🇪🇪 Estonia | 🌐 [SNI-RU] ozon.ru",
-        "🇳🇱 The Netherlands [SNI-RU] max.ru",
-        "🇷🇺 Russia [SNI-RU] sun6-21.userapi.com",
-        "🇷🇺 Russia | 🌐 [SNI-RU] ads.x5.ru"
+        "🇫🇮 Finland [SNI-RU] ads.x5.ru",
+        "🇵🇱 Poland [SNI-RU] www.kinopoisk.ru",
+        "🇫🇷 France | 🌐 [SNI-RU] max.ru",
+        "🌐 Anycast-IP | 🇦🇹 🇩🇪 [SNI-RU] yandex.ru",
+        "🇵🇱 Poland [SNI-RU] www.kinopoisk.ru-2"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -51,48 +51,28 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇬🇧 United Kingdom [SNI-RU] ozon.ru",
-        "🇪🇪 Estonia | 🌐 [SNI-RU] ozon.ru",
-        "🇳🇱 The Netherlands [SNI-RU] max.ru",
-        "🇷🇺 Russia [SNI-RU] sun6-21.userapi.com",
-        "🇷🇺 Russia | 🌐 [SNI-RU] ads.x5.ru"
+        "🇫🇮 Finland [SNI-RU] ads.x5.ru",
+        "🇵🇱 Poland [SNI-RU] www.kinopoisk.ru",
+        "🇫🇷 France | 🌐 [SNI-RU] max.ru",
+        "🌐 Anycast-IP | 🇦🇹 🇩🇪 [SNI-RU] yandex.ru",
+        "🇵🇱 Poland [SNI-RU] www.kinopoisk.ru-2"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
     },
     {
-      "tag": "🇬🇧 United Kingdom [SNI-RU] ozon.ru",
+      "tag": "🇫🇮 Finland [SNI-RU] ads.x5.ru",
       "type": "vless",
-      "server": "gam2r.skystreamgame.com",
-      "server_port": 8080,
-      "uuid": "8dcc5d10-9aee-4487-b927-d86462ef0f77",
+      "server": "ru7.vitok.cc",
+      "server_port": 443,
+      "uuid": "1b9e301d-cecd-4eb1-8b36-eef811c2696d",
       "tls": {
         "enabled": true,
-        "server_name": "ozon.ru",
+        "server_name": "ads.x5.ru",
         "reality": {
           "enabled": true,
-          "public_key": "XBePIY00JetBf0pbmcx-Dvu8XsZ-l079GiHf93HhS0Y",
-          "short_id": "6d6f13013d3e1d0c"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "random"
-        }
-      }
-    },
-    {
-      "tag": "🇪🇪 Estonia | 🌐 [SNI-RU] ozon.ru",
-      "type": "vless",
-      "server": "s2.fastfilex.pro",
-      "server_port": 8080,
-      "uuid": "033f6ad0-90c1-4ebf-ac12-09d158a13daa",
-      "tls": {
-        "enabled": true,
-        "server_name": "ozon.ru",
-        "reality": {
-          "enabled": true,
-          "public_key": "XBePIY00JetBf0pbmcx-Dvu8XsZ-l079GiHf93HhS0Y",
-          "short_id": "6d6f13013d3e1d0c"
+          "public_key": "eXl8Dpux23etQ0aA_16LUQ9eBwfDqbCaJm7YusDIzUU",
+          "short_id": "5e841fab"
         },
         "utls": {
           "enabled": true,
@@ -101,19 +81,39 @@
       }
     },
     {
-      "tag": "🇳🇱 The Netherlands [SNI-RU] max.ru",
+      "tag": "🇵🇱 Poland [SNI-RU] www.kinopoisk.ru",
       "type": "vless",
-      "server": "nldnode1.frost-api.com",
+      "server": "85.158.109.113",
       "server_port": 443,
-      "uuid": "248891a9-1ac5-42ad-a68b-2cecef897b0a",
+      "uuid": "87be8be2-9296-4912-944e-d49cc81485d8",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.kinopoisk.ru",
+        "reality": {
+          "enabled": true,
+          "public_key": "ice5ApDYceTGVoxODC51F4RVW0HBoykvMpgL4_qLABw",
+          "short_id": "aabbccdd"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      }
+    },
+    {
+      "tag": "🇫🇷 France | 🌐 [SNI-RU] max.ru",
+      "type": "vless",
+      "server": "ya-most-fr.harknmav.fun",
+      "server_port": 7443,
+      "uuid": "c23e11a6-d8b8-4884-a751-a71d4d1c320c",
       "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
         "server_name": "max.ru",
         "reality": {
           "enabled": true,
-          "public_key": "SHIYN7zN9aFVxwKK-bIvDbhUgtHvlBhDi1qSl2sWwRw",
-          "short_id": "fb916778d4"
+          "public_key": "shFF3ItNnCCFyXKCqkGqz0sUYu_qoE7h1-UbNlQvWQo",
+          "short_id": "fd1c2c12ca44261a"
         },
         "utls": {
           "enabled": true,
@@ -122,44 +122,43 @@
       }
     },
     {
-      "tag": "🇷🇺 Russia [SNI-RU] sun6-21.userapi.com",
+      "tag": "🌐 Anycast-IP | 🇦🇹 🇩🇪 [SNI-RU] yandex.ru",
       "type": "vless",
-      "server": "drm3y.videoaiconverter.com",
-      "server_port": 8081,
-      "uuid": "99f1fc84-29a9-4715-bc60-e25fc4f56ff9",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "sun6-21.userapi.com",
-        "reality": {
-          "enabled": true,
-          "public_key": "QHkXBS2ENHV0khgY9VBYi8_9bpfqnUYDcfQN4cW5Qg0",
-          "short_id": "4326"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      }
-    },
-    {
-      "tag": "🇷🇺 Russia | 🌐 [SNI-RU] ads.x5.ru",
-      "type": "vless",
-      "server": "pro-ru-84.emrata.top",
+      "server": "ctt.phantom.direct",
       "server_port": 443,
-      "uuid": "6e84b643-1c90-41e7-9028-ce4dea28c21c",
+      "uuid": "d1aa0bc6-8b4f-45a8-8917-4664b3cab074",
       "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "ads.x5.ru",
+        "server_name": "yandex.ru",
         "reality": {
           "enabled": true,
-          "public_key": "AAZjVvbC7AwPKot_1ygO5VMpN7XYifCA7lG0RNR5sEk",
-          "short_id": ""
+          "public_key": "MvulKIGlZrkM65ni5qzHCtoECLxj1vqbKHA5831RGnk",
+          "short_id": "f83fd840aa1e1bc6"
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "firefox"
+          "fingerprint": "chrome"
+        }
+      }
+    },
+    {
+      "tag": "🇵🇱 Poland [SNI-RU] www.kinopoisk.ru-2",
+      "type": "vless",
+      "server": "85.158.109.113",
+      "server_port": 443,
+      "uuid": "87be8be2-9296-4912-944e-d49cc81485d8",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.kinopoisk.ru",
+        "reality": {
+          "enabled": true,
+          "public_key": "ice5ApDYceTGVoxODC51F4RVW0HBoykvMpgL4_qLABw",
+          "short_id": "aabbccdd"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
         }
       }
     }

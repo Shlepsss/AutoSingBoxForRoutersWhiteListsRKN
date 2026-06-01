@@ -34,11 +34,11 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇫🇮 Finland [*CIDR] YA",
         "🇳🇱 The Netherlands | 🌐 [*CIDR] YA",
         "🇳🇱 The Netherlands | 🌐 [*CIDR] YA-2",
         "🇳🇱 The Netherlands | 🌐 [*CIDR] YA-3",
-        "🇳🇱 The Netherlands | 🌐 [*CIDR] YA-4"
+        "🇳🇱 The Netherlands | 🌐 [*CIDR] YA-4",
+        "🇨🇿 Czechia [*CIDR] Beeline"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -51,41 +51,21 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇫🇮 Finland [*CIDR] YA",
         "🇳🇱 The Netherlands | 🌐 [*CIDR] YA",
         "🇳🇱 The Netherlands | 🌐 [*CIDR] YA-2",
         "🇳🇱 The Netherlands | 🌐 [*CIDR] YA-3",
-        "🇳🇱 The Netherlands | 🌐 [*CIDR] YA-4"
+        "🇳🇱 The Netherlands | 🌐 [*CIDR] YA-4",
+        "🇨🇿 Czechia [*CIDR] Beeline"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
     },
     {
-      "tag": "🇫🇮 Finland [*CIDR] YA",
-      "type": "vless",
-      "server": "ru7.vitok.cc",
-      "server_port": 443,
-      "uuid": "1b9e301d-cecd-4eb1-8b36-eef811c2696d",
-      "tls": {
-        "enabled": true,
-        "server_name": "ads.x5.ru",
-        "reality": {
-          "enabled": true,
-          "public_key": "eXl8Dpux23etQ0aA_16LUQ9eBwfDqbCaJm7YusDIzUU",
-          "short_id": "5e841fab"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      }
-    },
-    {
       "tag": "🇳🇱 The Netherlands | 🌐 [*CIDR] YA",
       "type": "vless",
-      "server": "158.160.51.70",
+      "server": "51.250.108.162",
       "server_port": 443,
-      "uuid": "c25d3382-90cc-4cb6-8418-0f3cbb8165ad",
+      "uuid": "4b6eea34-a1cb-489c-92d3-feb862d69ec9",
       "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
@@ -104,9 +84,9 @@
     {
       "tag": "🇳🇱 The Netherlands | 🌐 [*CIDR] YA-2",
       "type": "vless",
-      "server": "158.160.51.70",
+      "server": "158.160.57.73",
       "server_port": 443,
-      "uuid": "2f39ed55-aeeb-4f65-ad4b-c8543368e037",
+      "uuid": "4b6eea34-a1cb-489c-92d3-feb862d69ec9",
       "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
@@ -125,9 +105,9 @@
     {
       "tag": "🇳🇱 The Netherlands | 🌐 [*CIDR] YA-3",
       "type": "vless",
-      "server": "51.250.17.80",
+      "server": "84.201.144.113",
       "server_port": 443,
-      "uuid": "c25d3382-90cc-4cb6-8418-0f3cbb8165ad",
+      "uuid": "4b6eea34-a1cb-489c-92d3-feb862d69ec9",
       "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
@@ -146,9 +126,9 @@
     {
       "tag": "🇳🇱 The Netherlands | 🌐 [*CIDR] YA-4",
       "type": "vless",
-      "server": "158.160.136.203",
+      "server": "158.160.51.70",
       "server_port": 443,
-      "uuid": "2f39ed55-aeeb-4f65-ad4b-c8543368e037",
+      "uuid": "4b6eea34-a1cb-489c-92d3-feb862d69ec9",
       "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
@@ -161,6 +141,25 @@
         "utls": {
           "enabled": true,
           "fingerprint": "safari"
+        }
+      }
+    },
+    {
+      "tag": "🇨🇿 Czechia [*CIDR] Beeline",
+      "type": "vless",
+      "server": "128.75.228.189",
+      "server_port": 443,
+      "uuid": "56470441-5d85-4266-89f3-c2b5b000c522",
+      "tls": {
+        "enabled": true,
+        "server_name": "ftatx5g6dt.cdn.twcstorage.ru",
+        "alpn": [
+          "h2",
+          "http/1.1"
+        ],
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
         }
       }
     }
