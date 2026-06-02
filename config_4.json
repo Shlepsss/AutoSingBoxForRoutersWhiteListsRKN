@@ -34,11 +34,11 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
+        "🇺🇸 United States [SNI-RU] www.kinopoisk.ru",
+        "🇺🇸 United States [SNI-RU] www.kinopoisk.ru-2",
         "🇦🇪 United Arab Emirates [SNI-RU] sberbank.ru",
-        "🇳🇱 The Netherlands [SNI-RU] max.ru",
-        "🇳🇱 The Netherlands | 🌐 [SNI-RU] ads.x5.ru",
-        "🇸🇬 Singapore [SNI-RU] max.ru",
-        "🇺🇸 United States [SNI-RU] www.kinopoisk.ru"
+        "🇳🇱 The Netherlands | 🌐 [SNI-RU] ya.ru",
+        "🇺🇸 United States [SNI-RU] www.kinopoisk.ru-3"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -51,14 +51,54 @@
       "tag": "select",
       "outbounds": [
         "auto",
+        "🇺🇸 United States [SNI-RU] www.kinopoisk.ru",
+        "🇺🇸 United States [SNI-RU] www.kinopoisk.ru-2",
         "🇦🇪 United Arab Emirates [SNI-RU] sberbank.ru",
-        "🇳🇱 The Netherlands [SNI-RU] max.ru",
-        "🇳🇱 The Netherlands | 🌐 [SNI-RU] ads.x5.ru",
-        "🇸🇬 Singapore [SNI-RU] max.ru",
-        "🇺🇸 United States [SNI-RU] www.kinopoisk.ru"
+        "🇳🇱 The Netherlands | 🌐 [SNI-RU] ya.ru",
+        "🇺🇸 United States [SNI-RU] www.kinopoisk.ru-3"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
+    },
+    {
+      "tag": "🇺🇸 United States [SNI-RU] www.kinopoisk.ru",
+      "type": "vless",
+      "server": "usa6.odavpn.online",
+      "server_port": 443,
+      "uuid": "af555232-0c87-487b-bcb0-87a378a1a371",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.kinopoisk.ru",
+        "reality": {
+          "enabled": true,
+          "public_key": "CJ1B3eJWwwIUmz2BGFis0tNpas8fnwXTeri-dkhCclo",
+          "short_id": "aabbccdd"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      }
+    },
+    {
+      "tag": "🇺🇸 United States [SNI-RU] www.kinopoisk.ru-2",
+      "type": "vless",
+      "server": "185.33.87.62",
+      "server_port": 443,
+      "uuid": "af555232-0c87-487b-bcb0-87a378a1a371",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.kinopoisk.ru",
+        "reality": {
+          "enabled": true,
+          "public_key": "CJ1B3eJWwwIUmz2BGFis0tNpas8fnwXTeri-dkhCclo",
+          "short_id": "aabbccdd"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      }
     },
     {
       "tag": "🇦🇪 United Arab Emirates [SNI-RU] sberbank.ru",
@@ -81,68 +121,28 @@
       }
     },
     {
-      "tag": "🇳🇱 The Netherlands [SNI-RU] max.ru",
+      "tag": "🇳🇱 The Netherlands | 🌐 [SNI-RU] ya.ru",
       "type": "vless",
-      "server": "213.170.133.114",
-      "server_port": 8443,
-      "uuid": "0a84e278-a837-446c-8cd2-59c3b787e13e",
-      "tls": {
-        "enabled": true,
-        "server_name": "max.ru",
-        "reality": {
-          "enabled": true,
-          "public_key": "G2T9PF3w5e4AP-Shkea5_-leYkGMvojH2YewWGR_5hI",
-          "short_id": "8c0de80ec8e0e438"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "random"
-        }
-      }
-    },
-    {
-      "tag": "🇳🇱 The Netherlands | 🌐 [SNI-RU] ads.x5.ru",
-      "type": "vless",
-      "server": "nl-pro.maxg.ch",
-      "server_port": 443,
-      "uuid": "51efd1bb-e3b7-4020-9bfe-f436a0d89480",
+      "server": "nl6.odavpn.online",
+      "server_port": 28167,
+      "uuid": "34186e94-af15-4ffd-8b0a-4c9d39c21960",
       "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "ads.x5.ru",
+        "server_name": "ya.ru",
         "reality": {
           "enabled": true,
-          "public_key": "QlQDX8jxqNJE1qtZmaZCDxE7gZqcLlOKdWd5YKNv0Gg",
-          "short_id": "555b9b33d083d3f1"
+          "public_key": "edl7x700EJzY6NIN1pZXo-QiyRAScQCW5UO-0ZQXpA0",
+          "short_id": "aabbccdd"
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "firefox"
+          "fingerprint": "chrome"
         }
       }
     },
     {
-      "tag": "🇸🇬 Singapore [SNI-RU] max.ru",
-      "type": "vless",
-      "server": "206.206.76.210",
-      "server_port": 8443,
-      "uuid": "0a84e278-a837-446c-8cd2-59c3b787e13e",
-      "tls": {
-        "enabled": true,
-        "server_name": "max.ru",
-        "reality": {
-          "enabled": true,
-          "public_key": "G2T9PF3w5e4AP-Shkea5_-leYkGMvojH2YewWGR_5hI",
-          "short_id": "8c0de80ec8e0e438"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "random"
-        }
-      }
-    },
-    {
-      "tag": "🇺🇸 United States [SNI-RU] www.kinopoisk.ru",
+      "tag": "🇺🇸 United States [SNI-RU] www.kinopoisk.ru-3",
       "type": "vless",
       "server": "usa6.odavpn.online",
       "server_port": 443,
