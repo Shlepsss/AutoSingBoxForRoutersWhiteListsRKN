@@ -63,7 +63,7 @@
     {
       "tag": "🇳🇱 The Netherlands | 🌐 [*CIDR] YA",
       "type": "vless",
-      "server": "51.250.102.69",
+      "server": "158.160.136.203",
       "server_port": 443,
       "uuid": "a5a8c84e-c93c-4fed-a4f4-a1b1d9dcac02",
       "flow": "xtls-rprx-vision",
@@ -105,9 +105,9 @@
     {
       "tag": "🇳🇱 The Netherlands | 🌐 [*CIDR] YA-2",
       "type": "vless",
-      "server": "84.201.168.220",
+      "server": "84.201.168.186",
       "server_port": 443,
-      "uuid": "a5a8c84e-c93c-4fed-a4f4-a1b1d9dcac02",
+      "uuid": "f4b907c2-4faa-46cc-a0f2-6dd6c2057bd2",
       "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
@@ -126,7 +126,7 @@
     {
       "tag": "🇳🇱 The Netherlands | 🌐 [*CIDR] YA-3",
       "type": "vless",
-      "server": "51.250.24.222",
+      "server": "158.160.57.73",
       "server_port": 443,
       "uuid": "f4b907c2-4faa-46cc-a0f2-6dd6c2057bd2",
       "flow": "xtls-rprx-vision",
@@ -147,9 +147,9 @@
     {
       "tag": "🇳🇱 The Netherlands | 🌐 [*CIDR] YA-4",
       "type": "vless",
-      "server": "51.250.24.222",
+      "server": "51.250.24.232",
       "server_port": 443,
-      "uuid": "a5a8c84e-c93c-4fed-a4f4-a1b1d9dcac02",
+      "uuid": "f4b907c2-4faa-46cc-a0f2-6dd6c2057bd2",
       "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
