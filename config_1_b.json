@@ -34,11 +34,11 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇵🇱 Poland [*CIDR] YA",
-        "🇵🇱 Poland [*CIDR] YA-2",
-        "🇷🇺 Russia [*CIDR]",
+        "🌐 Anycast-IP | 🇨🇦 🇫🇮 [*CIDR]",
         "🇫🇮 Finland | 🌐 [*CIDR]",
-        "🇫🇮 Finland | 🌐 [*CIDR]-2"
+        "🇫🇮 Finland | 🌐 [*CIDR]-2",
+        "🇺🇸 United States [*CIDR] YA",
+        "🇷🇺 Russia [*CIDR] VK"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -51,74 +51,31 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇵🇱 Poland [*CIDR] YA",
-        "🇵🇱 Poland [*CIDR] YA-2",
-        "🇷🇺 Russia [*CIDR]",
+        "🌐 Anycast-IP | 🇨🇦 🇫🇮 [*CIDR]",
         "🇫🇮 Finland | 🌐 [*CIDR]",
-        "🇫🇮 Finland | 🌐 [*CIDR]-2"
+        "🇫🇮 Finland | 🌐 [*CIDR]-2",
+        "🇺🇸 United States [*CIDR] YA",
+        "🇷🇺 Russia [*CIDR] VK"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
     },
     {
-      "tag": "🇵🇱 Poland [*CIDR] YA",
-      "type": "vless",
-      "server": "158.160.240.208",
+      "tag": "🌐 Anycast-IP | 🇨🇦 🇫🇮 [*CIDR]",
+      "type": "trojan",
+      "server": "141.193.213.10",
       "server_port": 443,
-      "uuid": "6ea592b3-aa83-420d-80e4-171395dc999a",
-      "flow": "xtls-rprx-vision",
+      "password": "6b7f37af-a853-4f01-a031-5fa4eca4f5bf",
       "tls": {
         "enabled": true,
-        "server_name": "max.ru",
-        "reality": {
-          "enabled": true,
-          "public_key": "9Y-_jCI3Z1x6SXK2tHdZ6V1CN9IJPNPnoxSW0cbXxD8",
-          "short_id": "50e09046c0c00159"
+        "server_name": "ads.ruangguru.com.cyylr.eu.cc"
+      },
+      "transport": {
+        "type": "ws",
+        "headers": {
+          "Host": "ads.ruangguru.com.cyylr.eu.cc"
         },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
-        }
-      }
-    },
-    {
-      "tag": "🇵🇱 Poland [*CIDR] YA-2",
-      "type": "vless",
-      "server": "158.160.240.208",
-      "server_port": 443,
-      "uuid": "1b53dbae-157c-40d8-83cd-9820bf4d2296",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "ads.x5.ru",
-        "reality": {
-          "enabled": true,
-          "public_key": "9Y-_jCI3Z1x6SXK2tHdZ6V1CN9IJPNPnoxSW0cbXxD8",
-          "short_id": "764f497dda21c4fc"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
-        }
-      }
-    },
-    {
-      "tag": "🇷🇺 Russia [*CIDR]",
-      "type": "vless",
-      "server": "185.242.19.249",
-      "server_port": 443,
-      "uuid": "87065fda-527f-4abc-830a-e017930ef786",
-      "tls": {
-        "enabled": true,
-        "server_name": "top2197697635.mwscdn.ru",
-        "alpn": [
-          "h2",
-          "http/1.1"
-        ],
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
+        "path": "/in-do"
       }
     },
     {
@@ -135,7 +92,7 @@
         ],
         "utls": {
           "enabled": true,
-          "fingerprint": "chrome"
+          "fingerprint": "firefox"
         }
       }
     },
@@ -148,6 +105,48 @@
       "tls": {
         "enabled": true,
         "server_name": "cd2.serviceali.ir",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
+      }
+    },
+    {
+      "tag": "🇺🇸 United States [*CIDR] YA",
+      "type": "vless",
+      "server": "158.160.27.112",
+      "server_port": 8443,
+      "uuid": "5986ea20-fde1-429e-9c7d-de9d8c0daafb",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "ads.x5.ru",
+        "reality": {
+          "enabled": true,
+          "public_key": "8NO5brz8Y11AggfitRijd0mNgkfTfXM0rvkES54z8V0",
+          "short_id": "362f2965f71a429b"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      }
+    },
+    {
+      "tag": "🇷🇺 Russia [*CIDR] VK",
+      "type": "vless",
+      "server": "185.241.194.34",
+      "server_port": 5994,
+      "uuid": "2397be53-f62b-42f7-80fe-5d22627c03a9",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "surfvpn24.ru",
+        "reality": {
+          "enabled": true,
+          "public_key": "trrVBG2fDc411qxZQ8__7x6ZlJC4lI2m_mwl-O-BEjQ",
+          "short_id": "c19de8fa"
+        },
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"

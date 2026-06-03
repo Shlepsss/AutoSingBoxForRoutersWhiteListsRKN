@@ -34,11 +34,11 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇵🇱 Poland [*CIDR] YA",
-        "🇵🇱 Poland [*CIDR] YA-2",
-        "🇵🇱 Poland [*CIDR] YA-3",
-        "🇵🇱 Poland [*CIDR] YA-4",
-        "🇵🇱 Poland [*CIDR] YA-5"
+        "🇨🇿 Czechia [*CIDR] YA",
+        "🇷🇺 Russia [*CIDR] VK",
+        "🇨🇿 Czechia [*CIDR] YA-2",
+        "🇺🇸 United States [*CIDR] YA",
+        "🇨🇿 Czechia [*CIDR] YA-3"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -51,117 +51,117 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇵🇱 Poland [*CIDR] YA",
-        "🇵🇱 Poland [*CIDR] YA-2",
-        "🇵🇱 Poland [*CIDR] YA-3",
-        "🇵🇱 Poland [*CIDR] YA-4",
-        "🇵🇱 Poland [*CIDR] YA-5"
+        "🇨🇿 Czechia [*CIDR] YA",
+        "🇷🇺 Russia [*CIDR] VK",
+        "🇨🇿 Czechia [*CIDR] YA-2",
+        "🇺🇸 United States [*CIDR] YA",
+        "🇨🇿 Czechia [*CIDR] YA-3"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
     },
     {
-      "tag": "🇵🇱 Poland [*CIDR] YA",
+      "tag": "🇨🇿 Czechia [*CIDR] YA",
       "type": "vless",
-      "server": "158.160.240.208",
-      "server_port": 8443,
-      "uuid": "0e805ec2-af53-43cd-8a52-b21c95db041e",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "ads.x5.ru",
-        "reality": {
-          "enabled": true,
-          "public_key": "9Y-_jCI3Z1x6SXK2tHdZ6V1CN9IJPNPnoxSW0cbXxD8",
-          "short_id": "50e09046c0c00159"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
-        }
-      }
-    },
-    {
-      "tag": "🇵🇱 Poland [*CIDR] YA-2",
-      "type": "vless",
-      "server": "158.160.240.208",
-      "server_port": 8443,
-      "uuid": "08373093-3122-49b0-9f2c-fdbf12abec3f",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "max.ru",
-        "reality": {
-          "enabled": true,
-          "public_key": "9Y-_jCI3Z1x6SXK2tHdZ6V1CN9IJPNPnoxSW0cbXxD8",
-          "short_id": "d2c6d9f6e6e12bfe"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
-        }
-      }
-    },
-    {
-      "tag": "🇵🇱 Poland [*CIDR] YA-3",
-      "type": "vless",
-      "server": "158.160.240.208",
-      "server_port": 8443,
-      "uuid": "a541022c-e64c-4532-9263-f8cb3b68a554",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "ads.x5.ru",
-        "reality": {
-          "enabled": true,
-          "public_key": "9Y-_jCI3Z1x6SXK2tHdZ6V1CN9IJPNPnoxSW0cbXxD8",
-          "short_id": "d2c6d9f6e6e12bfe"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
-        }
-      }
-    },
-    {
-      "tag": "🇵🇱 Poland [*CIDR] YA-4",
-      "type": "vless",
-      "server": "158.160.240.208",
-      "server_port": 8443,
-      "uuid": "d3e66314-d0af-40ba-8e8b-b36bbffbd3bd",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "ads.x5.ru",
-        "reality": {
-          "enabled": true,
-          "public_key": "9Y-_jCI3Z1x6SXK2tHdZ6V1CN9IJPNPnoxSW0cbXxD8",
-          "short_id": "764f497dda21c4fc"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
-        }
-      }
-    },
-    {
-      "tag": "🇵🇱 Poland [*CIDR] YA-5",
-      "type": "vless",
-      "server": "158.160.240.208",
+      "server": "158.160.150.233",
       "server_port": 443,
-      "uuid": "8a62bddc-1e14-492b-a1da-4ac7e43c4b7f",
+      "uuid": "c17e85c9-09bf-447e-a548-c858677953f0",
       "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "max.ru",
+        "server_name": "ads.x5.ru",
         "reality": {
           "enabled": true,
-          "public_key": "9Y-_jCI3Z1x6SXK2tHdZ6V1CN9IJPNPnoxSW0cbXxD8",
-          "short_id": "d2c6d9f6e6e12bfe"
+          "public_key": "r5WB5FnSCt4eeBC1FJMfkWHbzsMuabo0Rc6wuAhlZUs",
+          "short_id": "c4caf3f1848a"
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "firefox"
+          "fingerprint": "chrome"
+        }
+      }
+    },
+    {
+      "tag": "🇷🇺 Russia [*CIDR] VK",
+      "type": "vless",
+      "server": "185.241.194.34",
+      "server_port": 5994,
+      "uuid": "2397be53-f62b-42f7-80fe-5d22627c03a9",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "surfvpn24.ru",
+        "reality": {
+          "enabled": true,
+          "public_key": "trrVBG2fDc411qxZQ8__7x6ZlJC4lI2m_mwl-O-BEjQ",
+          "short_id": "c19de8fa"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      }
+    },
+    {
+      "tag": "🇨🇿 Czechia [*CIDR] YA-2",
+      "type": "vless",
+      "server": "158.160.22.127",
+      "server_port": 443,
+      "uuid": "c17e85c9-09bf-447e-a548-c858677953f0",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "api-maps.yandex.ru",
+        "reality": {
+          "enabled": true,
+          "public_key": "r5WB5FnSCt4eeBC1FJMfkWHbzsMuabo0Rc6wuAhlZUs",
+          "short_id": "672ff0"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "edge"
+        }
+      }
+    },
+    {
+      "tag": "🇺🇸 United States [*CIDR] YA",
+      "type": "vless",
+      "server": "158.160.27.112",
+      "server_port": 8443,
+      "uuid": "5986ea20-fde1-429e-9c7d-de9d8c0daafb",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "ads.x5.ru",
+        "reality": {
+          "enabled": true,
+          "public_key": "8NO5brz8Y11AggfitRijd0mNgkfTfXM0rvkES54z8V0",
+          "short_id": "362f2965f71a429b"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      }
+    },
+    {
+      "tag": "🇨🇿 Czechia [*CIDR] YA-3",
+      "type": "vless",
+      "server": "158.160.249.158",
+      "server_port": 8443,
+      "uuid": "c17e85c9-09bf-447e-a548-c858677953f0",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "ads.x5.ru",
+        "reality": {
+          "enabled": true,
+          "public_key": "r5WB5FnSCt4eeBC1FJMfkWHbzsMuabo0Rc6wuAhlZUs",
+          "short_id": "672ff0"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
         }
       }
     }

@@ -34,11 +34,11 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇭🇺 Hungary | 🌐 [*CIDR]",
-        "🌐 Anycast-IP | 🇨🇦 🇫🇮 🇸🇬 [*CIDR]",
-        "🌐 Anycast-IP | 🇨🇦 🇫🇮 [*CIDR]",
-        "🌐 Anycast-IP | 🇨🇦 🇫🇮 [*CIDR]-2",
-        "🌐 Anycast-IP | 🇨🇦 🇫🇮 🇮🇩 [*CIDR]"
+        "🇷🇺 Russia [*CIDR] VK",
+        "🇫🇮 Finland | 🌐 [*CIDR]",
+        "🌐 Anycast-IP | 🇨🇦 🇫🇮 🇮🇩 [*CIDR]",
+        "🇫🇮 Finland | 🌐 [*CIDR]-2",
+        "ð³ð± The Netherlands | [*CIDR]"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -51,24 +51,30 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇭🇺 Hungary | 🌐 [*CIDR]",
-        "🌐 Anycast-IP | 🇨🇦 🇫🇮 🇸🇬 [*CIDR]",
-        "🌐 Anycast-IP | 🇨🇦 🇫🇮 [*CIDR]",
-        "🌐 Anycast-IP | 🇨🇦 🇫🇮 [*CIDR]-2",
-        "🌐 Anycast-IP | 🇨🇦 🇫🇮 🇮🇩 [*CIDR]"
+        "🇷🇺 Russia [*CIDR] VK",
+        "🇫🇮 Finland | 🌐 [*CIDR]",
+        "🌐 Anycast-IP | 🇨🇦 🇫🇮 🇮🇩 [*CIDR]",
+        "🇫🇮 Finland | 🌐 [*CIDR]-2",
+        "ð³ð± The Netherlands | [*CIDR]"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
     },
     {
-      "tag": "🇭🇺 Hungary | 🌐 [*CIDR]",
+      "tag": "🇷🇺 Russia [*CIDR] VK",
       "type": "vless",
-      "server": "82.202.138.158",
-      "server_port": 8443,
-      "uuid": "931729a8-3c20-4841-89a1-f18dc9ce0a6f",
+      "server": "185.241.194.34",
+      "server_port": 5994,
+      "uuid": "2397be53-f62b-42f7-80fe-5d22627c03a9",
+      "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "cdn7-09.vk-cdnvideo.com",
+        "server_name": "surfvpn24.ru",
+        "reality": {
+          "enabled": true,
+          "public_key": "trrVBG2fDc411qxZQ8__7x6ZlJC4lI2m_mwl-O-BEjQ",
+          "short_id": "c19de8fa"
+        },
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
@@ -76,71 +82,18 @@
       }
     },
     {
-      "tag": "🌐 Anycast-IP | 🇨🇦 🇫🇮 🇸🇬 [*CIDR]",
+      "tag": "🇫🇮 Finland | 🌐 [*CIDR]",
       "type": "vless",
-      "server": "216.24.57.1",
+      "server": "63.141.128.237",
       "server_port": 443,
-      "uuid": "5dbfed06-dd62-48c0-8e39-b4835defcdb0",
+      "uuid": "ffc46551-cb3f-435c-a97a-b9bab4a1a0d2",
       "tls": {
         "enabled": true,
-        "server_name": "investors.spotify.com.cyylr.eu.cc",
-        "alpn": [
-          "http/1.1"
-        ],
+        "server_name": "cd2.serviceali.ir",
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
         }
-      },
-      "transport": {
-        "type": "ws",
-        "headers": {
-          "Host": "investors.spotify.com.cyylr.eu.cc"
-        },
-        "path": "/sg-amz"
-      }
-    },
-    {
-      "tag": "🌐 Anycast-IP | 🇨🇦 🇫🇮 [*CIDR]",
-      "type": "vless",
-      "server": "141.193.213.11",
-      "server_port": 443,
-      "uuid": "@a_amr79",
-      "tls": {
-        "enabled": true,
-        "server_name": "unnes.ac.id.cyylr.eu.cc",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "headers": {
-          "Host": "unnes.ac.id.cyylr.eu.cc"
-        },
-        "path": "/my-wbv"
-      }
-    },
-    {
-      "tag": "🌐 Anycast-IP | 🇨🇦 🇫🇮 [*CIDR]-2",
-      "type": "vless",
-      "server": "216.24.57.1",
-      "server_port": 443,
-      "uuid": "5dbfed06-dd62-48c0-8e39-b4835defcdb0",
-      "tls": {
-        "enabled": true,
-        "server_name": "investors.spotify.com.cyylr.eu.cc",
-        "alpn": [
-          "http/1.1"
-        ]
-      },
-      "transport": {
-        "type": "ws",
-        "headers": {
-          "Host": "investors.spotify.com.cyylr.eu.cc"
-        },
-        "path": "/sg-amz"
       }
     },
     {
@@ -148,11 +101,52 @@
       "type": "vless",
       "server": "216.24.57.1",
       "server_port": 443,
-      "uuid": "1a5b24bc-6180-4fa7-922d-ba7ee8a7a2b7",
+      "uuid": "565b50d4-604d-4a60-9fc2-d9d3dac0aec6",
       "tls": {
         "enabled": true,
-        "server_name": "support.zoom.us.cyylr.eu.cc",
+        "server_name": "dl.cvs.freefiremobile.com.cyylr.eu.cc",
         "alpn": [
+          "http/1.1"
+        ]
+      },
+      "transport": {
+        "type": "ws",
+        "headers": {
+          "Host": "dl.cvs.freefiremobile.com.cyylr.eu.cc"
+        },
+        "path": "/id-pusat"
+      }
+    },
+    {
+      "tag": "🇫🇮 Finland | 🌐 [*CIDR]-2",
+      "type": "vless",
+      "server": "63.141.128.237",
+      "server_port": 443,
+      "uuid": "ffc46551-cb3f-435c-a97a-b9bab4a1a0d2",
+      "tls": {
+        "enabled": true,
+        "server_name": "cd2.serviceali.ir",
+        "alpn": [
+          "h2"
+        ],
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
+      }
+    },
+    {
+      "tag": "ð³ð± The Netherlands | [*CIDR]",
+      "type": "vmess",
+      "server": "renderer-stream-1-411.mirra.now",
+      "server_port": 443,
+      "uuid": "df9c9355-b02c-4c12-909d-0dbeb725d52b",
+      "security": "auto",
+      "tls": {
+        "enabled": true,
+        "server_name": "renderer-stream-1-411.mirra.now",
+        "alpn": [
+          "h2",
           "http/1.1"
         ],
         "utls": {
@@ -163,9 +157,9 @@
       "transport": {
         "type": "ws",
         "headers": {
-          "Host": "support.zoom.us.cyylr.eu.cc"
+          "Host": "renderer-stream-1-411.mirra.now"
         },
-        "path": "/id-pusat"
+        "path": "/api/v1/gpu-stream/socket"
       }
     }
   ],

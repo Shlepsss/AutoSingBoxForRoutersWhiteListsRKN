@@ -31,32 +31,89 @@
       "type": "block"
     },
     {
-      "type": "selector",
-      "tag": "select",
+      "type": "urltest",
+      "tag": "auto",
       "outbounds": [
-        "🇳🇱 The Netherlands | 🌐 [SNI-RU] ads.x5.ru"
+        "🇵🇱 Poland [SNI-RU] api-maps.yandex.ru",
+        "🇫🇮 Finland [SNI-RU] yastatic.net",
+        "🇺🇸 United States [SNI-RU] www.kinopoisk.ru"
       ],
-      "default": "🇳🇱 The Netherlands | 🌐 [SNI-RU] ads.x5.ru",
+      "url": "https://google.com/generate_204",
+      "interval": "1m",
+      "tolerance": 100,
+      "idle_timeout": "30m",
       "interrupt_exist_connections": false
     },
     {
-      "tag": "🇳🇱 The Netherlands | 🌐 [SNI-RU] ads.x5.ru",
+      "type": "selector",
+      "tag": "select",
+      "outbounds": [
+        "auto",
+        "🇵🇱 Poland [SNI-RU] api-maps.yandex.ru",
+        "🇫🇮 Finland [SNI-RU] yastatic.net",
+        "🇺🇸 United States [SNI-RU] www.kinopoisk.ru"
+      ],
+      "default": "auto",
+      "interrupt_exist_connections": false
+    },
+    {
+      "tag": "🇵🇱 Poland [SNI-RU] api-maps.yandex.ru",
       "type": "vless",
-      "server": "nl-pro.maxg.ch",
-      "server_port": 443,
-      "uuid": "6ed3c281-cf63-4501-9bae-b34c1ce00854",
+      "server": "poland.boot-lee.ru",
+      "server_port": 8443,
+      "uuid": "07ab8a15-a4a5-4a03-92b4-4e6a2e9aa5e7",
       "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "ads.x5.ru",
+        "server_name": "api-maps.yandex.ru",
         "reality": {
           "enabled": true,
-          "public_key": "QlQDX8jxqNJE1qtZmaZCDxE7gZqcLlOKdWd5YKNv0Gg",
-          "short_id": "555b9b33d083d3f1"
+          "public_key": "RlAi5R84YF3U7llMLLoEui7R7nXhNWYWWy8Zukoo0m8",
+          "short_id": "019ae4dcc8f3aae7"
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "firefox"
+          "fingerprint": "qq"
+        }
+      }
+    },
+    {
+      "tag": "🇫🇮 Finland [SNI-RU] yastatic.net",
+      "type": "vless",
+      "server": "62.238.32.25",
+      "server_port": 443,
+      "uuid": "1b9e301d-cecd-4eb1-8b36-eef811c2696d",
+      "tls": {
+        "enabled": true,
+        "server_name": "yastatic.net",
+        "reality": {
+          "enabled": true,
+          "public_key": "3LUIM_6cYceTgNt6LWnR8YSVrenpLsh-FIGDrmfjjwc",
+          "short_id": "5e841fab"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      }
+    },
+    {
+      "tag": "🇺🇸 United States [SNI-RU] www.kinopoisk.ru",
+      "type": "vless",
+      "server": "185.33.87.62",
+      "server_port": 443,
+      "uuid": "af555232-0c87-487b-bcb0-87a378a1a371",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.kinopoisk.ru",
+        "reality": {
+          "enabled": true,
+          "public_key": "CJ1B3eJWwwIUmz2BGFis0tNpas8fnwXTeri-dkhCclo",
+          "short_id": "aabbccdd"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
         }
       }
     }

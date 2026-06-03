@@ -34,11 +34,11 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇵🇱 Poland [*CIDR] YA",
-        "🇵🇱 Poland [*CIDR] YA-2",
-        "🇷🇺 Russia [*CIDR]",
-        "🇵🇱 Poland [*CIDR] YA-3",
-        "🇵🇱 Poland [*CIDR] YA-4"
+        "🌐 Anycast-IP | 🇨🇦 🇫🇮 🇮🇩 [*CIDR]",
+        "🇷🇺 Russia [*CIDR] VK",
+        "🌐 Anycast-IP | 🇨🇦 🇫🇮 [*CIDR]",
+        "🌐 Anycast-IP | 🇨🇦 🇫🇮 [*CIDR]-2",
+        "🇵🇱 Poland [*CIDR]"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -51,70 +51,51 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇵🇱 Poland [*CIDR] YA",
-        "🇵🇱 Poland [*CIDR] YA-2",
-        "🇷🇺 Russia [*CIDR]",
-        "🇵🇱 Poland [*CIDR] YA-3",
-        "🇵🇱 Poland [*CIDR] YA-4"
+        "🌐 Anycast-IP | 🇨🇦 🇫🇮 🇮🇩 [*CIDR]",
+        "🇷🇺 Russia [*CIDR] VK",
+        "🌐 Anycast-IP | 🇨🇦 🇫🇮 [*CIDR]",
+        "🌐 Anycast-IP | 🇨🇦 🇫🇮 [*CIDR]-2",
+        "🇵🇱 Poland [*CIDR]"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
     },
     {
-      "tag": "🇵🇱 Poland [*CIDR] YA",
+      "tag": "🌐 Anycast-IP | 🇨🇦 🇫🇮 🇮🇩 [*CIDR]",
       "type": "vless",
-      "server": "158.160.240.208",
+      "server": "216.24.57.1",
       "server_port": 443,
-      "uuid": "bf132285-9cf6-4017-b868-ef967f859134",
-      "flow": "xtls-rprx-vision",
+      "uuid": "6e593426-1a8e-4226-984f-0ea174e218c7",
       "tls": {
         "enabled": true,
-        "server_name": "max.ru",
-        "reality": {
-          "enabled": true,
-          "public_key": "9Y-_jCI3Z1x6SXK2tHdZ6V1CN9IJPNPnoxSW0cbXxD8",
-          "short_id": "50e09046c0c00159"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
-        }
-      }
-    },
-    {
-      "tag": "🇵🇱 Poland [*CIDR] YA-2",
-      "type": "vless",
-      "server": "158.160.240.208",
-      "server_port": 443,
-      "uuid": "32dd5ba0-beb0-4526-bb31-1caf2df14f67",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "max.ru",
-        "reality": {
-          "enabled": true,
-          "public_key": "9Y-_jCI3Z1x6SXK2tHdZ6V1CN9IJPNPnoxSW0cbXxD8",
-          "short_id": "764f497dda21c4fc"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
-        }
-      }
-    },
-    {
-      "tag": "🇷🇺 Russia [*CIDR]",
-      "type": "vless",
-      "server": "185.242.19.249",
-      "server_port": 443,
-      "uuid": "87065fda-527f-4abc-830a-e017930ef786",
-      "tls": {
-        "enabled": true,
-        "server_name": "top2197697635.mwscdn.ru",
+        "server_name": "dl.cvs.freefiremobile.com.cyylr.eu.cc",
         "alpn": [
-          "h2",
           "http/1.1"
-        ],
+        ]
+      },
+      "transport": {
+        "type": "ws",
+        "headers": {
+          "Host": "dl.cvs.freefiremobile.com.cyylr.eu.cc"
+        },
+        "path": "/id-pusat"
+      }
+    },
+    {
+      "tag": "🇷🇺 Russia [*CIDR] VK",
+      "type": "vless",
+      "server": "185.241.194.34",
+      "server_port": 5994,
+      "uuid": "2397be53-f62b-42f7-80fe-5d22627c03a9",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "surfvpn24.ru",
+        "reality": {
+          "enabled": true,
+          "public_key": "trrVBG2fDc411qxZQ8__7x6ZlJC4lI2m_mwl-O-BEjQ",
+          "short_id": "c19de8fa"
+        },
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
@@ -122,44 +103,66 @@
       }
     },
     {
-      "tag": "🇵🇱 Poland [*CIDR] YA-3",
+      "tag": "🌐 Anycast-IP | 🇨🇦 🇫🇮 [*CIDR]",
       "type": "vless",
-      "server": "158.160.240.208",
+      "server": "216.24.57.1",
       "server_port": 443,
-      "uuid": "6ea592b3-aa83-420d-80e4-171395dc999a",
-      "flow": "xtls-rprx-vision",
+      "uuid": "6e593426-1a8e-4226-984f-0ea174e218c7",
       "tls": {
         "enabled": true,
-        "server_name": "max.ru",
-        "reality": {
-          "enabled": true,
-          "public_key": "9Y-_jCI3Z1x6SXK2tHdZ6V1CN9IJPNPnoxSW0cbXxD8",
-          "short_id": "50e09046c0c00159"
-        },
+        "server_name": "dl.cvs.freefiremobile.com.cyylr.eu.cc",
         "utls": {
           "enabled": true,
-          "fingerprint": "firefox"
+          "fingerprint": "chrome"
         }
+      },
+      "transport": {
+        "type": "ws",
+        "headers": {
+          "Host": "dl.cvs.freefiremobile.com.cyylr.eu.cc"
+        },
+        "path": "/id-pusat"
       }
     },
     {
-      "tag": "🇵🇱 Poland [*CIDR] YA-4",
+      "tag": "🌐 Anycast-IP | 🇨🇦 🇫🇮 [*CIDR]-2",
       "type": "vless",
-      "server": "158.160.240.208",
+      "server": "141.193.213.11",
       "server_port": 443,
-      "uuid": "6ea592b3-aa83-420d-80e4-171395dc999a",
-      "flow": "xtls-rprx-vision",
+      "uuid": "@a_amr79",
       "tls": {
         "enabled": true,
-        "server_name": "max.ru",
+        "server_name": "unnes.ac.id.cyylr.eu.cc",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "headers": {
+          "Host": "unnes.ac.id.cyylr.eu.cc"
+        },
+        "path": "/my-wbv"
+      }
+    },
+    {
+      "tag": "🇵🇱 Poland [*CIDR]",
+      "type": "vless",
+      "server": "89.126.229.40",
+      "server_port": 443,
+      "uuid": "301d514e-4aa0-47b0-ba44-a0cb891cd52f",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.samsung.com",
         "reality": {
           "enabled": true,
-          "public_key": "9Y-_jCI3Z1x6SXK2tHdZ6V1CN9IJPNPnoxSW0cbXxD8",
-          "short_id": "764f497dda21c4fc"
+          "public_key": "OZVjfQBboTDTBw0baMFqzVPsVUI4FNQmspTEb0b0zW4",
+          "short_id": "a1b2c3d4"
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "firefox"
+          "fingerprint": "chrome"
         }
       }
     }
