@@ -35,10 +35,10 @@
       "tag": "auto",
       "outbounds": [
         "🇷🇺 Russia [SNI-RU] max.ru",
+        "🇺🇸 United States [SNI-RU] vk.com",
         "🇺🇸 United States [SNI-RU] www.kinopoisk.ru",
         "🇺🇸 United States [SNI-RU] www.kinopoisk.ru-2",
-        "🇺🇸 United States [SNI-RU] www.kinopoisk.ru-3",
-        "🇫🇮 Finland | 🌐 [SNI-RU] www.vk.ru"
+        "🇨🇭 Switzerland [SNI-RU] www.vk.com"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -52,10 +52,10 @@
       "outbounds": [
         "auto",
         "🇷🇺 Russia [SNI-RU] max.ru",
+        "🇺🇸 United States [SNI-RU] vk.com",
         "🇺🇸 United States [SNI-RU] www.kinopoisk.ru",
         "🇺🇸 United States [SNI-RU] www.kinopoisk.ru-2",
-        "🇺🇸 United States [SNI-RU] www.kinopoisk.ru-3",
-        "🇫🇮 Finland | 🌐 [SNI-RU] www.vk.ru"
+        "🇨🇭 Switzerland [SNI-RU] www.vk.com"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
@@ -82,9 +82,29 @@
       }
     },
     {
+      "tag": "🇺🇸 United States [SNI-RU] vk.com",
+      "type": "vless",
+      "server": "srv-06a2a6.21freedom.net",
+      "server_port": 443,
+      "uuid": "fa86a0cf-fc25-4fdd-8479-f18229446428",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.microsoft.com",
+        "reality": {
+          "enabled": true,
+          "public_key": "i94KIi7GKGTZnRVHp0IkIEUiWSAXrjdswOVyhhweTio",
+          "short_id": "43c195b86271871a"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      }
+    },
+    {
       "tag": "🇺🇸 United States [SNI-RU] www.kinopoisk.ru",
       "type": "vless",
-      "server": "usa6.odavpn.online",
+      "server": "185.33.87.62",
       "server_port": 443,
       "uuid": "af555232-0c87-487b-bcb0-87a378a1a371",
       "tls": {
@@ -122,39 +142,19 @@
       }
     },
     {
-      "tag": "🇺🇸 United States [SNI-RU] www.kinopoisk.ru-3",
+      "tag": "🇨🇭 Switzerland [SNI-RU] www.vk.com",
       "type": "vless",
-      "server": "usa6.odavpn.online",
+      "server": "194.67.99.9",
       "server_port": 443,
-      "uuid": "af555232-0c87-487b-bcb0-87a378a1a371",
-      "tls": {
-        "enabled": true,
-        "server_name": "www.kinopoisk.ru",
-        "reality": {
-          "enabled": true,
-          "public_key": "CJ1B3eJWwwIUmz2BGFis0tNpas8fnwXTeri-dkhCclo",
-          "short_id": "aabbccdd"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      }
-    },
-    {
-      "tag": "🇫🇮 Finland | 🌐 [SNI-RU] www.vk.ru",
-      "type": "vless",
-      "server": "89.223.64.20",
-      "server_port": 443,
-      "uuid": "69a2af58-d74a-44ca-864a-e09b493f4274",
+      "uuid": "cd2cab0d-595b-48ec-a9f7-98689417922b",
       "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "www.vk.ru",
+        "server_name": "www.vk.com",
         "reality": {
           "enabled": true,
-          "public_key": "y06BF8UIZ8HpU9KYNUAVWX7hJtbjfkbqZzJeV0KT1DI",
-          "short_id": "005972"
+          "public_key": "ReFC6hXXcJyyZGIhqjvjdYHv6xTBG-6uNM-wf63dykI",
+          "short_id": "40ce08cf20c67003"
         },
         "utls": {
           "enabled": true,
