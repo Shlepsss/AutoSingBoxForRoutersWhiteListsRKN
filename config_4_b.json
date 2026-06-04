@@ -34,11 +34,11 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇫🇮 Finland [SNI-RU] max.ru",
         "🇺🇸 United States [SNI-RU] www.kinopoisk.ru",
         "🇺🇸 United States [SNI-RU] vk.com",
-        "🇺🇸 United States [SNI-RU] www.kinopoisk.ru-2",
-        "🌐 Anycast-IP | 🇩🇪 🇬🇧 🇳🇱 [SNI-RU] kinopoisk.ru"
+        "🇬🇧 United Kingdom [SNI-RU] vk.com",
+        "🌐 Anycast-IP | 🇩🇪 🇬🇧 🇳🇱 [SNI-RU] kinopoisk.ru",
+        "🇺🇸 United States [SNI-RU] www.kinopoisk.ru-2"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -51,43 +51,19 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇫🇮 Finland [SNI-RU] max.ru",
         "🇺🇸 United States [SNI-RU] www.kinopoisk.ru",
         "🇺🇸 United States [SNI-RU] vk.com",
-        "🇺🇸 United States [SNI-RU] www.kinopoisk.ru-2",
-        "🌐 Anycast-IP | 🇩🇪 🇬🇧 🇳🇱 [SNI-RU] kinopoisk.ru"
+        "🇬🇧 United Kingdom [SNI-RU] vk.com",
+        "🌐 Anycast-IP | 🇩🇪 🇬🇧 🇳🇱 [SNI-RU] kinopoisk.ru",
+        "🇺🇸 United States [SNI-RU] www.kinopoisk.ru-2"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
     },
     {
-      "tag": "🇫🇮 Finland [SNI-RU] max.ru",
-      "type": "vless",
-      "server": "132.243.223.219",
-      "server_port": 8443,
-      "uuid": "785c7771-8d7f-48ca-bbc2-1a22e360d4d0",
-      "tls": {
-        "enabled": true,
-        "server_name": "max.ru",
-        "reality": {
-          "enabled": true,
-          "public_key": "TdT90qbeyM7WO0QCztOhKDGKOi2qaFFif0hO0cfK1E4",
-          "short_id": "ea1058117be12087"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
-      "transport": {
-        "type": "grpc",
-        "service_name": "max.ru"
-      }
-    },
-    {
       "tag": "🇺🇸 United States [SNI-RU] www.kinopoisk.ru",
       "type": "vless",
-      "server": "185.33.87.62",
+      "server": "usa6.odavpn.online",
       "server_port": 443,
       "uuid": "af555232-0c87-487b-bcb0-87a378a1a371",
       "tls": {
@@ -125,18 +101,18 @@
       }
     },
     {
-      "tag": "🇺🇸 United States [SNI-RU] www.kinopoisk.ru-2",
+      "tag": "🇬🇧 United Kingdom [SNI-RU] vk.com",
       "type": "vless",
-      "server": "usa6.odavpn.online",
+      "server": "srv-7bb006.21freedom.net",
       "server_port": 443,
-      "uuid": "af555232-0c87-487b-bcb0-87a378a1a371",
+      "uuid": "ce21aa49-416b-4a93-9dd1-361ef93c0b6f",
       "tls": {
         "enabled": true,
-        "server_name": "www.kinopoisk.ru",
+        "server_name": "dl.google.com",
         "reality": {
           "enabled": true,
-          "public_key": "CJ1B3eJWwwIUmz2BGFis0tNpas8fnwXTeri-dkhCclo",
-          "short_id": "aabbccdd"
+          "public_key": "k1ON6obzDtbVNixn1gcqyyUYeV5RoW3mZWGp0ZbkC0c",
+          "short_id": "58961d3b8d47e342"
         },
         "utls": {
           "enabled": true,
@@ -166,6 +142,26 @@
       "transport": {
         "type": "grpc",
         "service_name": "grpc-service"
+      }
+    },
+    {
+      "tag": "🇺🇸 United States [SNI-RU] www.kinopoisk.ru-2",
+      "type": "vless",
+      "server": "usa6.odavpn.online",
+      "server_port": 443,
+      "uuid": "af555232-0c87-487b-bcb0-87a378a1a371",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.kinopoisk.ru",
+        "reality": {
+          "enabled": true,
+          "public_key": "CJ1B3eJWwwIUmz2BGFis0tNpas8fnwXTeri-dkhCclo",
+          "short_id": "aabbccdd"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
       }
     }
   ],
