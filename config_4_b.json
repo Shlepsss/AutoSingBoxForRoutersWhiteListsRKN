@@ -34,11 +34,11 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🌐 Anycast-IP | 🇩🇪 🇬🇧 🇳🇱 [SNI-RU] kinopoisk.ru",
-        "🇷🇺 Russia [SNI-RU] max.ru",
+        "🇫🇮 Finland [SNI-RU] max.ru",
         "🇺🇸 United States [SNI-RU] www.kinopoisk.ru",
+        "🇺🇸 United States [SNI-RU] vk.com",
         "🇺🇸 United States [SNI-RU] www.kinopoisk.ru-2",
-        "🇫🇮 Finland [SNI-RU] max.ru"
+        "🌐 Anycast-IP | 🇩🇪 🇬🇧 🇳🇱 [SNI-RU] kinopoisk.ru"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -51,58 +51,37 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🌐 Anycast-IP | 🇩🇪 🇬🇧 🇳🇱 [SNI-RU] kinopoisk.ru",
-        "🇷🇺 Russia [SNI-RU] max.ru",
+        "🇫🇮 Finland [SNI-RU] max.ru",
         "🇺🇸 United States [SNI-RU] www.kinopoisk.ru",
+        "🇺🇸 United States [SNI-RU] vk.com",
         "🇺🇸 United States [SNI-RU] www.kinopoisk.ru-2",
-        "🇫🇮 Finland [SNI-RU] max.ru"
+        "🌐 Anycast-IP | 🇩🇪 🇬🇧 🇳🇱 [SNI-RU] kinopoisk.ru"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
     },
     {
-      "tag": "🌐 Anycast-IP | 🇩🇪 🇬🇧 🇳🇱 [SNI-RU] kinopoisk.ru",
+      "tag": "🇫🇮 Finland [SNI-RU] max.ru",
       "type": "vless",
-      "server": "72.56.246.199",
-      "server_port": 50576,
-      "uuid": "ab20bac9-6c43-4a3b-9d19-bb5cf31db209",
-      "tls": {
-        "enabled": true,
-        "server_name": "kinopoisk.ru",
-        "reality": {
-          "enabled": true,
-          "public_key": "OabzwINtiQRMMqd98usJI_oajK-u73YmZIO4WATOyCM",
-          "short_id": "a6f304b8ab447463"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "qq"
-        }
-      },
-      "transport": {
-        "type": "grpc",
-        "service_name": "grpc-service"
-      }
-    },
-    {
-      "tag": "🇷🇺 Russia [SNI-RU] max.ru",
-      "type": "vless",
-      "server": "omg.herumhas.shop",
-      "server_port": 5443,
-      "uuid": "7d876627-abf5-4865-8ff4-03f37d49de5d",
-      "flow": "xtls-rprx-vision",
+      "server": "132.243.223.219",
+      "server_port": 8443,
+      "uuid": "785c7771-8d7f-48ca-bbc2-1a22e360d4d0",
       "tls": {
         "enabled": true,
         "server_name": "max.ru",
         "reality": {
           "enabled": true,
-          "public_key": "LGcG8Sqv5vPDypbaEgHV0ZGqQOBkgDepPWXyDohbVXQ",
-          "short_id": ""
+          "public_key": "TdT90qbeyM7WO0QCztOhKDGKOi2qaFFif0hO0cfK1E4",
+          "short_id": "ea1058117be12087"
         },
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
         }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "max.ru"
       }
     },
     {
@@ -118,6 +97,26 @@
           "enabled": true,
           "public_key": "CJ1B3eJWwwIUmz2BGFis0tNpas8fnwXTeri-dkhCclo",
           "short_id": "aabbccdd"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      }
+    },
+    {
+      "tag": "🇺🇸 United States [SNI-RU] vk.com",
+      "type": "vless",
+      "server": "srv-06a2a6.21freedom.net",
+      "server_port": 443,
+      "uuid": "fa86a0cf-fc25-4fdd-8479-f18229446428",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.microsoft.com",
+        "reality": {
+          "enabled": true,
+          "public_key": "i94KIi7GKGTZnRVHp0IkIEUiWSAXrjdswOVyhhweTio",
+          "short_id": "43c195b86271871a"
         },
         "utls": {
           "enabled": true,
@@ -146,27 +145,27 @@
       }
     },
     {
-      "tag": "🇫🇮 Finland [SNI-RU] max.ru",
+      "tag": "🌐 Anycast-IP | 🇩🇪 🇬🇧 🇳🇱 [SNI-RU] kinopoisk.ru",
       "type": "vless",
-      "server": "132.243.223.219",
-      "server_port": 8443,
-      "uuid": "785c7771-8d7f-48ca-bbc2-1a22e360d4d0",
+      "server": "72.56.246.199",
+      "server_port": 50576,
+      "uuid": "ab20bac9-6c43-4a3b-9d19-bb5cf31db209",
       "tls": {
         "enabled": true,
-        "server_name": "max.ru",
+        "server_name": "kinopoisk.ru",
         "reality": {
           "enabled": true,
-          "public_key": "TdT90qbeyM7WO0QCztOhKDGKOi2qaFFif0hO0cfK1E4",
-          "short_id": "ea1058117be12087"
+          "public_key": "OabzwINtiQRMMqd98usJI_oajK-u73YmZIO4WATOyCM",
+          "short_id": "a6f304b8ab447463"
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "chrome"
+          "fingerprint": "qq"
         }
       },
       "transport": {
         "type": "grpc",
-        "service_name": "max.ru"
+        "service_name": "grpc-service"
       }
     }
   ],
