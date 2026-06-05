@@ -34,8 +34,8 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🌐 Anycast-IP | 🇧🇷 🇩🇪 🇵🇱 [*CIDR] Beeline",
         "🌐 Anycast-IP | 🇩🇪 🇵🇱 [*CIDR] Beeline",
+        "🌐 Anycast-IP | 🇧🇷 🇩🇪 🇵🇱 [*CIDR] Beeline",
         "🌐 Anycast-IP | 🇧🇷 🇩🇪 🇵🇱 [*CIDR] Beeline-2"
       ],
       "url": "https://google.com/generate_204",
@@ -49,34 +49,12 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🌐 Anycast-IP | 🇧🇷 🇩🇪 🇵🇱 [*CIDR] Beeline",
         "🌐 Anycast-IP | 🇩🇪 🇵🇱 [*CIDR] Beeline",
+        "🌐 Anycast-IP | 🇧🇷 🇩🇪 🇵🇱 [*CIDR] Beeline",
         "🌐 Anycast-IP | 🇧🇷 🇩🇪 🇵🇱 [*CIDR] Beeline-2"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
-    },
-    {
-      "tag": "🌐 Anycast-IP | 🇧🇷 🇩🇪 🇵🇱 [*CIDR] Beeline",
-      "type": "vless",
-      "server": "78.159.240.174",
-      "server_port": 443,
-      "uuid": "ab268dc7-510f-4fb9-ace4-b7305a59c7bb",
-      "tls": {
-        "enabled": true,
-        "server_name": "95.85.246.16.speed-storage.ru",
-        "alpn": [
-          "h2"
-        ],
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
-      "transport": {
-        "type": "grpc",
-        "service_name": "/sequre/grpc/"
-      }
     },
     {
       "tag": "🌐 Anycast-IP | 🇩🇪 🇵🇱 [*CIDR] Beeline",
@@ -93,6 +71,28 @@
         "utls": {
           "enabled": true,
           "fingerprint": "edge"
+        }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "/sequre/grpc/"
+      }
+    },
+    {
+      "tag": "🌐 Anycast-IP | 🇧🇷 🇩🇪 🇵🇱 [*CIDR] Beeline",
+      "type": "vless",
+      "server": "78.159.240.174",
+      "server_port": 443,
+      "uuid": "ab268dc7-510f-4fb9-ace4-b7305a59c7bb",
+      "tls": {
+        "enabled": true,
+        "server_name": "95.85.246.16.speed-storage.ru",
+        "alpn": [
+          "h2"
+        ],
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
         }
       },
       "transport": {

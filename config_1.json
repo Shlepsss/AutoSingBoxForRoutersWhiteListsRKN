@@ -34,11 +34,11 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇫🇷 France [*CIDR]",
         "🌐 Anycast-IP | 🇧🇷 🇩🇪 🇵🇱 [*CIDR] Beeline",
         "🇭🇺 Hungary [*CIDR]",
-        "🌐 Anycast-IP | 🇧🇷 🇩🇪 🇵🇱 [*CIDR] Beeline-2",
-        "🇫🇮 Finland | 🌐 [*CIDR]"
+        "🇫🇷 France [*CIDR]",
+        "🇫🇮 Finland | 🌐 [*CIDR]",
+        "🇫🇷 France [*CIDR]-2"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -51,32 +51,14 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇫🇷 France [*CIDR]",
         "🌐 Anycast-IP | 🇧🇷 🇩🇪 🇵🇱 [*CIDR] Beeline",
         "🇭🇺 Hungary [*CIDR]",
-        "🌐 Anycast-IP | 🇧🇷 🇩🇪 🇵🇱 [*CIDR] Beeline-2",
-        "🇫🇮 Finland | 🌐 [*CIDR]"
+        "🇫🇷 France [*CIDR]",
+        "🇫🇮 Finland | 🌐 [*CIDR]",
+        "🇫🇷 France [*CIDR]-2"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
-    },
-    {
-      "tag": "🇫🇷 France [*CIDR]",
-      "type": "trojan",
-      "server": "212.183.88.136",
-      "server_port": 443,
-      "password": "humanity",
-      "tls": {
-        "enabled": true,
-        "server_name": "www.calmlunch.com"
-      },
-      "transport": {
-        "type": "ws",
-        "headers": {
-          "Host": "www.calmlunch.com"
-        },
-        "path": "/assignment"
-      }
     },
     {
       "tag": "🌐 Anycast-IP | 🇧🇷 🇩🇪 🇵🇱 [*CIDR] Beeline",
@@ -116,22 +98,25 @@
       }
     },
     {
-      "tag": "🌐 Anycast-IP | 🇧🇷 🇩🇪 🇵🇱 [*CIDR] Beeline-2",
-      "type": "vless",
-      "server": "78.159.240.174",
+      "tag": "🇫🇷 France [*CIDR]",
+      "type": "trojan",
+      "server": "216.24.57.7",
       "server_port": 443,
-      "uuid": "ab268dc7-510f-4fb9-ace4-b7305a59c7bb",
+      "password": "humanity",
       "tls": {
         "enabled": true,
-        "server_name": "95.85.246.16.speed-storage.ru",
+        "server_name": "www.ignitelimit.com",
         "utls": {
           "enabled": true,
-          "fingerprint": "edge"
+          "fingerprint": "chrome"
         }
       },
       "transport": {
-        "type": "grpc",
-        "service_name": "/sequre/grpc/"
+        "type": "ws",
+        "headers": {
+          "Host": "www.ignitelimit.com"
+        },
+        "path": "/assignment"
       }
     },
     {
@@ -142,8 +127,11 @@
       "uuid": "fc965ad9-bdd7-4815-ad71-b39ec5972dc1",
       "tls": {
         "enabled": true,
-        "insecure": true,
-        "server_name": "octopusss4.com"
+        "server_name": "octopusss4.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
       },
       "transport": {
         "type": "ws",
@@ -151,6 +139,32 @@
           "Host": "octopusss4.com"
         },
         "path": "/tsghdws"
+      }
+    },
+    {
+      "tag": "🇫🇷 France [*CIDR]-2",
+      "type": "trojan",
+      "server": "216.24.57.7",
+      "server_port": 443,
+      "password": "humanity",
+      "tls": {
+        "enabled": true,
+        "insecure": true,
+        "server_name": "www.calmloud.com",
+        "alpn": [
+          "http/1.1"
+        ],
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "headers": {
+          "Host": "www.calmloud.com"
+        },
+        "path": "/assignment"
       }
     }
   ],

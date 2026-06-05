@@ -35,10 +35,10 @@
       "tag": "auto",
       "outbounds": [
         "🇫🇷 France [*CIDR]",
-        "🇫🇷 France [*CIDR]-2",
+        "🇫🇮 Finland | 🌐 [*CIDR]",
+        "🇳🇱 The Netherlands [*CIDR]",
         "🌐 Anycast-IP | 🇧🇷 🇩🇪 🇵🇱 [*CIDR] Beeline",
-        "🇫🇷 France [*CIDR]-3",
-        "🇳🇱 The Netherlands [*CIDR]"
+        "🌐 Anycast-IP | 🇧🇷 🇩🇪 🇵🇱 [*CIDR] Beeline-2"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -52,10 +52,10 @@
       "outbounds": [
         "auto",
         "🇫🇷 France [*CIDR]",
-        "🇫🇷 France [*CIDR]-2",
+        "🇫🇮 Finland | 🌐 [*CIDR]",
+        "🇳🇱 The Netherlands [*CIDR]",
         "🌐 Anycast-IP | 🇧🇷 🇩🇪 🇵🇱 [*CIDR] Beeline",
-        "🇫🇷 France [*CIDR]-3",
-        "🇳🇱 The Netherlands [*CIDR]"
+        "🌐 Anycast-IP | 🇧🇷 🇩🇪 🇵🇱 [*CIDR] Beeline-2"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
@@ -63,38 +63,30 @@
     {
       "tag": "🇫🇷 France [*CIDR]",
       "type": "trojan",
-      "server": "216.24.57.7",
+      "server": "212.183.88.136",
       "server_port": 443,
       "password": "humanity",
       "tls": {
         "enabled": true,
-        "server_name": "www.ignitelimit.com",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
+        "server_name": "www.calmlunch.com"
       },
       "transport": {
         "type": "ws",
         "headers": {
-          "Host": "www.ignitelimit.com"
+          "Host": "www.calmlunch.com"
         },
         "path": "/assignment"
       }
     },
     {
-      "tag": "🇫🇷 France [*CIDR]-2",
-      "type": "trojan",
+      "tag": "🇫🇮 Finland | 🌐 [*CIDR]",
+      "type": "vless",
       "server": "216.24.57.7",
       "server_port": 443,
-      "password": "humanity",
+      "uuid": "fc965ad9-bdd7-4815-ad71-b39ec5972dc1",
       "tls": {
         "enabled": true,
-        "insecure": true,
-        "server_name": "www.calmloud.com",
-        "alpn": [
-          "http/1.1"
-        ],
+        "server_name": "octopusss4.com",
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
@@ -103,13 +95,53 @@
       "transport": {
         "type": "ws",
         "headers": {
-          "Host": "www.calmloud.com"
+          "Host": "octopusss4.com"
         },
-        "path": "/assignment"
+        "path": "/tsghdws"
+      }
+    },
+    {
+      "tag": "🇳🇱 The Netherlands [*CIDR]",
+      "type": "vless",
+      "server": "155.212.215.179",
+      "server_port": 2087,
+      "uuid": "13d3d4bc-5e3b-11f1-bd95-ee5f4ed81fa1",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "vk.ru",
+        "reality": {
+          "enabled": true,
+          "public_key": "ythLos6gxS1GOuPPGJ1xUYtSpOySaDM1mu2nzLqIWjc",
+          "short_id": "a4077e915d0cd15a"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
       }
     },
     {
       "tag": "🌐 Anycast-IP | 🇧🇷 🇩🇪 🇵🇱 [*CIDR] Beeline",
+      "type": "vless",
+      "server": "78.159.240.174",
+      "server_port": 443,
+      "uuid": "ab268dc7-510f-4fb9-ace4-b7305a59c7bb",
+      "tls": {
+        "enabled": true,
+        "server_name": "95.85.246.16.speed-storage.ru",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "edge"
+        }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "/sequre/grpc/"
+      }
+    },
+    {
+      "tag": "🌐 Anycast-IP | 🇧🇷 🇩🇪 🇵🇱 [*CIDR] Beeline-2",
       "type": "vless",
       "server": "78.159.240.174",
       "server_port": 443,
@@ -128,45 +160,6 @@
       "transport": {
         "type": "grpc",
         "service_name": "/sequre/grpc/"
-      }
-    },
-    {
-      "tag": "🇫🇷 France [*CIDR]-3",
-      "type": "trojan",
-      "server": "216.24.57.7",
-      "server_port": 443,
-      "password": "humanity",
-      "tls": {
-        "enabled": true,
-        "server_name": "www.ignitelimit.com"
-      },
-      "transport": {
-        "type": "ws",
-        "headers": {
-          "Host": "www.ignitelimit.com"
-        },
-        "path": "/assignment"
-      }
-    },
-    {
-      "tag": "🇳🇱 The Netherlands [*CIDR]",
-      "type": "vless",
-      "server": "nid2.pink-perfect.ru",
-      "server_port": 443,
-      "uuid": "5d8fcd24-9634-4dd7-845c-3dc2d6291942",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "nid2.pink-perfect.ru",
-        "reality": {
-          "enabled": true,
-          "public_key": "DS9mX6cMb5wvwFzga8yN2NLbs7soXM7038_P23yPKwk",
-          "short_id": "8ffa160e608bf539"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
       }
     }
   ],
