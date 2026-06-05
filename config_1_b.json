@@ -34,11 +34,11 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇩🇪 Germany [*CIDR]",
-        "🇬🇧 United Kingdom | 🌐 [*CIDR] YA",
-        "🇬🇧 United Kingdom | 🌐 [*CIDR] YA-2",
-        "🇺🇸 United States | 🌐 [*CIDR]",
-        "ð³ð± The Netherlands | [*CIDR]"
+        "🇲🇩 Moldova [*CIDR]",
+        "ð³ð± The Netherlands | [*CIDR]",
+        "🇱🇹 Lithuania [*CIDR]",
+        "ð³ð± The Netherlands | [*CIDR]-2",
+        "🇳🇱 The Netherlands [*CIDR]"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -51,93 +51,24 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇩🇪 Germany [*CIDR]",
-        "🇬🇧 United Kingdom | 🌐 [*CIDR] YA",
-        "🇬🇧 United Kingdom | 🌐 [*CIDR] YA-2",
-        "🇺🇸 United States | 🌐 [*CIDR]",
-        "ð³ð± The Netherlands | [*CIDR]"
+        "🇲🇩 Moldova [*CIDR]",
+        "ð³ð± The Netherlands | [*CIDR]",
+        "🇱🇹 Lithuania [*CIDR]",
+        "ð³ð± The Netherlands | [*CIDR]-2",
+        "🇳🇱 The Netherlands [*CIDR]"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
     },
     {
-      "tag": "🇩🇪 Germany [*CIDR]",
+      "tag": "🇲🇩 Moldova [*CIDR]",
       "type": "vless",
-      "server": "192.200.160.3",
+      "server": "185.242.19.249",
       "server_port": 443,
-      "uuid": "5b6be23b-dff4-428f-8a60-4f11568abe12",
+      "uuid": "882e17c8-b013-4e99-9774-36e26e5001ff",
       "tls": {
         "enabled": true,
-        "server_name": "sync.amordad.xyz"
-      },
-      "transport": {
-        "type": "ws",
-        "headers": {
-          "Host": "sync.amordad.xyz"
-        },
-        "path": "/api/v1/stream"
-      }
-    },
-    {
-      "tag": "🇬🇧 United Kingdom | 🌐 [*CIDR] YA",
-      "type": "vless",
-      "server": "51.250.97.18",
-      "server_port": 443,
-      "uuid": "46b654eb-0229-4c4d-92d6-e5736ba8c4b5",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "cdp.x5.ru",
-        "reality": {
-          "enabled": true,
-          "public_key": "wgXD4k3A16WR0aL63N9Mx8xoqFigJLyQWJXi-l3MPXI",
-          "short_id": "8ec792bfd725be8a"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "safari"
-        }
-      }
-    },
-    {
-      "tag": "🇬🇧 United Kingdom | 🌐 [*CIDR] YA-2",
-      "type": "vless",
-      "server": "51.250.108.162",
-      "server_port": 443,
-      "uuid": "46b654eb-0229-4c4d-92d6-e5736ba8c4b5",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "cdp.x5.ru",
-        "reality": {
-          "enabled": true,
-          "public_key": "wgXD4k3A16WR0aL63N9Mx8xoqFigJLyQWJXi-l3MPXI",
-          "short_id": "8ec792bfd725be8a"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "safari"
-        }
-      }
-    },
-    {
-      "tag": "🇺🇸 United States | 🌐 [*CIDR]",
-      "type": "vless",
-      "server": "auto.datamove.online",
-      "server_port": 2040,
-      "uuid": "17451fec-af94-4715-8c2f-7f6839130d0a",
-      "tls": {
-        "enabled": true,
-        "server_name": "tradingview.com",
-        "reality": {
-          "enabled": true,
-          "public_key": "LidllyozUeeSbuzJ0ZfieGoy8YjVzqXX9H2m9whPaG0",
-          "short_id": "53197c66aef53c44"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
+        "server_name": "top3739667002.mwscdn.ru"
       }
     },
     {
@@ -157,6 +88,66 @@
           "Host": "renderer-stream-1-411.mirra.now"
         },
         "path": "/api/v1/gpu-stream/socket"
+      }
+    },
+    {
+      "tag": "🇱🇹 Lithuania [*CIDR]",
+      "type": "vless",
+      "server": "62.152.56.142",
+      "server_port": 443,
+      "uuid": "6525f506-56b0-0006-a77d-52676645c8da",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "gateway-dppb.x5.ru",
+        "reality": {
+          "enabled": true,
+          "public_key": "akCWFrGBboGajZT5HS4m5fw32uJsdw6esUTC1qN4LR0",
+          "short_id": "79ed76c157977111"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
+      }
+    },
+    {
+      "tag": "ð³ð± The Netherlands | [*CIDR]-2",
+      "type": "vmess",
+      "server": "renderer-stream-1-411.mirra.now",
+      "server_port": 443,
+      "uuid": "df9c9355-b02c-4c12-909d-0dbeb725d52b",
+      "security": "auto",
+      "tls": {
+        "enabled": true
+      },
+      "transport": {
+        "type": "ws",
+        "headers": {
+          "Host": "renderer-stream-1-411.mirra.now"
+        },
+        "path": "/api/v1/gpu-stream/socket"
+      }
+    },
+    {
+      "tag": "🇳🇱 The Netherlands [*CIDR]",
+      "type": "vless",
+      "server": "185.91.53.153",
+      "server_port": 443,
+      "uuid": "636f578e-e8bc-4f14-b7eb-8415e6dcd63e",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "api-maps.yandex.ru",
+        "reality": {
+          "enabled": true,
+          "public_key": "kDGigLxn2RUJ8HqhPVUb8pRAcjn5zMhR0-QrORmbIDk",
+          "short_id": "be6abde66d48cd13"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
       }
     }
   ],

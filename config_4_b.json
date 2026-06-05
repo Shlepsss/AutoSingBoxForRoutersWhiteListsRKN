@@ -34,10 +34,10 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇳🇱 The Netherlands [SNI-RU] id.vk.com",
-        "🇳🇱 The Netherlands [SNI-RU] id.vk.com-2",
+        "🇩🇪 Germany | 🌐 [SNI-RU] sun6-21.userapi.com",
+        "🇩🇪 Germany | 🌐 [SNI-RU] ads.x5.ru",
         "🇦🇹 Austria [SNI-RU] id.vk.com",
-        "🇳🇱 The Netherlands [SNI-RU] id.vk.com-3",
+        "🇩🇪 Germany | 🌐 [SNI-RU] max.ru",
         "🇦🇹 Austria [SNI-RU] id.vk.com-2"
       ],
       "url": "https://google.com/generate_204",
@@ -51,67 +51,61 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇳🇱 The Netherlands [SNI-RU] id.vk.com",
-        "🇳🇱 The Netherlands [SNI-RU] id.vk.com-2",
+        "🇩🇪 Germany | 🌐 [SNI-RU] sun6-21.userapi.com",
+        "🇩🇪 Germany | 🌐 [SNI-RU] ads.x5.ru",
         "🇦🇹 Austria [SNI-RU] id.vk.com",
-        "🇳🇱 The Netherlands [SNI-RU] id.vk.com-3",
+        "🇩🇪 Germany | 🌐 [SNI-RU] max.ru",
         "🇦🇹 Austria [SNI-RU] id.vk.com-2"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
     },
     {
-      "tag": "🇳🇱 The Netherlands [SNI-RU] id.vk.com",
+      "tag": "🇩🇪 Germany | 🌐 [SNI-RU] sun6-21.userapi.com",
       "type": "vless",
-      "server": "82.202.169.202",
-      "server_port": 2096,
-      "uuid": "c09f00bc-ef4c-441e-8317-17ac954c54ad",
+      "server": "155.212.132.9",
+      "server_port": 4343,
+      "uuid": "025b5550-cb81-4a51-8e46-45cc1b54a46f",
+      "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "id.vk.com",
+        "server_name": "sun6-21.userapi.com",
         "reality": {
           "enabled": true,
-          "public_key": "SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc",
-          "short_id": ""
+          "public_key": "a3_DLO6p_ZfPf7I0JFTVlAI2pPAPtC-ji2diyPcHcQA",
+          "short_id": "9e1c2a1b130b"
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "chrome"
+          "fingerprint": "firefox"
         }
-      },
-      "transport": {
-        "type": "grpc",
-        "service_name": "vless-grpc-reality"
       }
     },
     {
-      "tag": "🇳🇱 The Netherlands [SNI-RU] id.vk.com-2",
+      "tag": "🇩🇪 Germany | 🌐 [SNI-RU] ads.x5.ru",
       "type": "vless",
-      "server": "80.64.24.185",
-      "server_port": 2096,
-      "uuid": "c09f00bc-ef4c-441e-8317-17ac954c54ad",
+      "server": "155.212.132.9",
+      "server_port": 4433,
+      "uuid": "025b5550-cb81-4a51-8e46-45cc1b54a46f",
+      "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "id.vk.com",
+        "server_name": "ads.x5.ru",
         "reality": {
           "enabled": true,
-          "public_key": "SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc",
-          "short_id": ""
+          "public_key": "a3_DLO6p_ZfPf7I0JFTVlAI2pPAPtC-ji2diyPcHcQA",
+          "short_id": "25819efc8a6ade"
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "chrome"
+          "fingerprint": "firefox"
         }
-      },
-      "transport": {
-        "type": "grpc",
-        "service_name": "vless-grpc-reality"
       }
     },
     {
       "tag": "🇦🇹 Austria [SNI-RU] id.vk.com",
       "type": "vless",
-      "server": "83.136.233.105",
+      "server": "185.72.145.127",
       "server_port": 2096,
       "uuid": "c09f00bc-ef4c-441e-8317-17ac954c54ad",
       "tls": {
@@ -133,33 +127,30 @@
       }
     },
     {
-      "tag": "🇳🇱 The Netherlands [SNI-RU] id.vk.com-3",
+      "tag": "🇩🇪 Germany | 🌐 [SNI-RU] max.ru",
       "type": "vless",
-      "server": "45.142.44.12",
-      "server_port": 2096,
-      "uuid": "c09f00bc-ef4c-441e-8317-17ac954c54ad",
+      "server": "155.212.132.9",
+      "server_port": 4449,
+      "uuid": "025b5550-cb81-4a51-8e46-45cc1b54a46f",
+      "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "id.vk.com",
+        "server_name": "max.ru",
         "reality": {
           "enabled": true,
-          "public_key": "SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc",
-          "short_id": ""
+          "public_key": "n7SozQLXoCxDya7vBJwS5ebj39r4KCUZrfsnBfcCLGs",
+          "short_id": "c37545"
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "chrome"
+          "fingerprint": "firefox"
         }
-      },
-      "transport": {
-        "type": "grpc",
-        "service_name": "vless-grpc-reality"
       }
     },
     {
       "tag": "🇦🇹 Austria [SNI-RU] id.vk.com-2",
       "type": "vless",
-      "server": "83.136.235.101",
+      "server": "213.109.202.159",
       "server_port": 2096,
       "uuid": "c09f00bc-ef4c-441e-8317-17ac954c54ad",
       "tls": {
