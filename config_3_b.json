@@ -34,11 +34,10 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🌐 Anycast-IP | 🇫🇷 🇬🇧 [*CIDR] YA",
-        "🌐 Anycast-IP | 🇫🇷 🇬🇧 [*CIDR] YA-2",
-        "🇳🇱 The Netherlands | 🌐 [*CIDR] YA",
-        "🌐 Anycast-IP | 🇫🇷 🇬🇧 [*CIDR] YA-3",
-        "🌐 Anycast-IP | 🇫🇷 🇬🇧 [*CIDR] YA-4"
+        "🇬🇧 United Kingdom | 🌐 [*CIDR] YA",
+        "🇬🇧 United Kingdom | 🌐 [*CIDR] YA-2",
+        "🇬🇧 United Kingdom | 🌐 [*CIDR] YA-3",
+        "🇬🇧 United Kingdom | 🌐 [*CIDR] YA-4"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -51,21 +50,41 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🌐 Anycast-IP | 🇫🇷 🇬🇧 [*CIDR] YA",
-        "🌐 Anycast-IP | 🇫🇷 🇬🇧 [*CIDR] YA-2",
-        "🇳🇱 The Netherlands | 🌐 [*CIDR] YA",
-        "🌐 Anycast-IP | 🇫🇷 🇬🇧 [*CIDR] YA-3",
-        "🌐 Anycast-IP | 🇫🇷 🇬🇧 [*CIDR] YA-4"
+        "🇬🇧 United Kingdom | 🌐 [*CIDR] YA",
+        "🇬🇧 United Kingdom | 🌐 [*CIDR] YA-2",
+        "🇬🇧 United Kingdom | 🌐 [*CIDR] YA-3",
+        "🇬🇧 United Kingdom | 🌐 [*CIDR] YA-4"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
     },
     {
-      "tag": "🌐 Anycast-IP | 🇫🇷 🇬🇧 [*CIDR] YA",
+      "tag": "🇬🇧 United Kingdom | 🌐 [*CIDR] YA",
+      "type": "vless",
+      "server": "51.250.108.162",
+      "server_port": 443,
+      "uuid": "46b654eb-0229-4c4d-92d6-e5736ba8c4b5",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "cdp.x5.ru",
+        "reality": {
+          "enabled": true,
+          "public_key": "wgXD4k3A16WR0aL63N9Mx8xoqFigJLyQWJXi-l3MPXI",
+          "short_id": "8ec792bfd725be8a"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "safari"
+        }
+      }
+    },
+    {
+      "tag": "🇬🇧 United Kingdom | 🌐 [*CIDR] YA-2",
       "type": "vless",
       "server": "51.250.97.18",
       "server_port": 443,
-      "uuid": "a69d3804-b95f-4ea7-8b06-b544c1b49438",
+      "uuid": "46b654eb-0229-4c4d-92d6-e5736ba8c4b5",
       "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
@@ -82,11 +101,11 @@
       }
     },
     {
-      "tag": "🌐 Anycast-IP | 🇫🇷 🇬🇧 [*CIDR] YA-2",
+      "tag": "🇬🇧 United Kingdom | 🌐 [*CIDR] YA-3",
       "type": "vless",
       "server": "51.250.106.87",
       "server_port": 443,
-      "uuid": "a69d3804-b95f-4ea7-8b06-b544c1b49438",
+      "uuid": "46b654eb-0229-4c4d-92d6-e5736ba8c4b5",
       "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
@@ -103,52 +122,11 @@
       }
     },
     {
-      "tag": "🇳🇱 The Netherlands | 🌐 [*CIDR] YA",
+      "tag": "🇬🇧 United Kingdom | 🌐 [*CIDR] YA-4",
       "type": "vless",
-      "server": "84.201.180.13",
+      "server": "51.250.24.222",
       "server_port": 443,
-      "uuid": "eb3fe4a6-831c-5153-9493-5d97b28276f7",
-      "tls": {
-        "enabled": true,
-        "server_name": "api-maps.yandex.ru",
-        "reality": {
-          "enabled": true,
-          "public_key": "DuxQy3KWEZTU_sBhXSfeo_1Q0-0lMcSnx21bWvUi5hQ",
-          "short_id": ""
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      }
-    },
-    {
-      "tag": "🌐 Anycast-IP | 🇫🇷 🇬🇧 [*CIDR] YA-3",
-      "type": "vless",
-      "server": "51.250.104.246",
-      "server_port": 443,
-      "uuid": "a69d3804-b95f-4ea7-8b06-b544c1b49438",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "cdp.x5.ru",
-        "reality": {
-          "enabled": true,
-          "public_key": "wgXD4k3A16WR0aL63N9Mx8xoqFigJLyQWJXi-l3MPXI",
-          "short_id": "8ec792bfd725be8a"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "safari"
-        }
-      }
-    },
-    {
-      "tag": "🌐 Anycast-IP | 🇫🇷 🇬🇧 [*CIDR] YA-4",
-      "type": "vless",
-      "server": "51.250.103.104",
-      "server_port": 443,
-      "uuid": "a69d3804-b95f-4ea7-8b06-b544c1b49438",
+      "uuid": "46b654eb-0229-4c4d-92d6-e5736ba8c4b5",
       "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,

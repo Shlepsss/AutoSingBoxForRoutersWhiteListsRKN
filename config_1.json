@@ -34,11 +34,11 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇩🇪 Germany [*CIDR]",
-        "🌐 Anycast-IP | 🇫🇷 🇬🇧 [*CIDR] YA",
         "🇲🇩 Moldova [*CIDR]",
-        "🌐 Anycast-IP | 🇫🇷 🇬🇧 [*CIDR] YA-2",
-        "🇲🇩 Moldova [*CIDR]-2"
+        "🇵🇱 Poland | 🌐 [*CIDR]",
+        "🇲🇩 Moldova [*CIDR]-2",
+        "🇲🇩 Moldova [*CIDR]-3",
+        "🇬🇧 United Kingdom | 🌐 [*CIDR] YA"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -51,59 +51,49 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇩🇪 Germany [*CIDR]",
-        "🌐 Anycast-IP | 🇫🇷 🇬🇧 [*CIDR] YA",
         "🇲🇩 Moldova [*CIDR]",
-        "🌐 Anycast-IP | 🇫🇷 🇬🇧 [*CIDR] YA-2",
-        "🇲🇩 Moldova [*CIDR]-2"
+        "🇵🇱 Poland | 🌐 [*CIDR]",
+        "🇲🇩 Moldova [*CIDR]-2",
+        "🇲🇩 Moldova [*CIDR]-3",
+        "🇬🇧 United Kingdom | 🌐 [*CIDR] YA"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
     },
     {
-      "tag": "🇩🇪 Germany [*CIDR]",
-      "type": "vless",
-      "server": "193.233.198.69",
-      "server_port": 8443,
-      "uuid": "d914b02c-274b-41c9-9952-11eda75b12f0",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "apple.com",
-        "reality": {
-          "enabled": true,
-          "public_key": "i5a8i2AWUSMZ-rYA6hGBRCBBoe7W5ah33SCdF5JkMk4",
-          "short_id": "8bcfe256cf216fd8"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      }
-    },
-    {
-      "tag": "🌐 Anycast-IP | 🇫🇷 🇬🇧 [*CIDR] YA",
-      "type": "vless",
-      "server": "51.250.97.18",
-      "server_port": 443,
-      "uuid": "a69d3804-b95f-4ea7-8b06-b544c1b49438",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "cdp.x5.ru",
-        "reality": {
-          "enabled": true,
-          "public_key": "wgXD4k3A16WR0aL63N9Mx8xoqFigJLyQWJXi-l3MPXI",
-          "short_id": "8ec792bfd725be8a"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "safari"
-        }
-      }
-    },
-    {
       "tag": "🇲🇩 Moldova [*CIDR]",
+      "type": "vless",
+      "server": "185.242.19.249",
+      "server_port": 443,
+      "uuid": "882e17c8-b013-4e99-9774-36e26e5001ff",
+      "tls": {
+        "enabled": true,
+        "server_name": "top3739667002.mwscdn.ru"
+      }
+    },
+    {
+      "tag": "🇵🇱 Poland | 🌐 [*CIDR]",
+      "type": "vless",
+      "server": "83.229.14.125",
+      "server_port": 13569,
+      "uuid": "7283d2d5-7b14-431b-9d1f-96f2dac4a97b",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "business.vk.ru",
+        "reality": {
+          "enabled": true,
+          "public_key": "Xl6notHrxamdPvx0cZGGPRQOT-PR1rkjryRazI9i1VI",
+          "short_id": ""
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "random"
+        }
+      }
+    },
+    {
+      "tag": "🇲🇩 Moldova [*CIDR]-2",
       "type": "vless",
       "server": "185.242.19.250",
       "server_port": 443,
@@ -114,11 +104,22 @@
       }
     },
     {
-      "tag": "🌐 Anycast-IP | 🇫🇷 🇬🇧 [*CIDR] YA-2",
+      "tag": "🇲🇩 Moldova [*CIDR]-3",
       "type": "vless",
-      "server": "51.250.103.104",
+      "server": "185.242.19.250",
       "server_port": 443,
-      "uuid": "a69d3804-b95f-4ea7-8b06-b544c1b49438",
+      "uuid": "cfb70000-ed61-4a7e-89a3-2b9c2caa6001",
+      "tls": {
+        "enabled": true,
+        "server_name": "top3739667002.mwscdn.ru"
+      }
+    },
+    {
+      "tag": "🇬🇧 United Kingdom | 🌐 [*CIDR] YA",
+      "type": "vless",
+      "server": "51.250.97.18",
+      "server_port": 443,
+      "uuid": "46b654eb-0229-4c4d-92d6-e5736ba8c4b5",
       "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
@@ -131,21 +132,6 @@
         "utls": {
           "enabled": true,
           "fingerprint": "safari"
-        }
-      }
-    },
-    {
-      "tag": "🇲🇩 Moldova [*CIDR]-2",
-      "type": "vless",
-      "server": "185.242.19.250",
-      "server_port": 443,
-      "uuid": "882e17c8-b013-4e99-9774-36e26e5001ff",
-      "tls": {
-        "enabled": true,
-        "server_name": "top3739667002.mwscdn.ru",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
         }
       }
     }

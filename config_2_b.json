@@ -35,10 +35,10 @@
       "tag": "auto",
       "outbounds": [
         "🇲🇩 Moldova [*CIDR]",
-        "🌐 Anycast-IP | 🇫🇷 🇬🇧 [*CIDR] YA",
-        "🌐 Anycast-IP | 🇫🇷 🇬🇧 [*CIDR] YA-2",
-        "🇲🇩 Moldova [*CIDR]-2",
-        "ð³ð± The Netherlands | [*CIDR]"
+        "🇺🇸 United States | 🌐 [*CIDR]",
+        "ð³ð± The Netherlands | [*CIDR]",
+        "🇬🇧 United Kingdom | 🌐 [*CIDR] YA",
+        "🇲🇩 Moldova [*CIDR]-2"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -52,10 +52,10 @@
       "outbounds": [
         "auto",
         "🇲🇩 Moldova [*CIDR]",
-        "🌐 Anycast-IP | 🇫🇷 🇬🇧 [*CIDR] YA",
-        "🌐 Anycast-IP | 🇫🇷 🇬🇧 [*CIDR] YA-2",
-        "🇲🇩 Moldova [*CIDR]-2",
-        "ð³ð± The Netherlands | [*CIDR]"
+        "🇺🇸 United States | 🌐 [*CIDR]",
+        "ð³ð± The Netherlands | [*CIDR]",
+        "🇬🇧 United Kingdom | 🌐 [*CIDR] YA",
+        "🇲🇩 Moldova [*CIDR]-2"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
@@ -63,12 +63,28 @@
     {
       "tag": "🇲🇩 Moldova [*CIDR]",
       "type": "vless",
-      "server": "185.242.19.249",
+      "server": "185.242.19.250",
       "server_port": 443,
-      "uuid": "882e17c8-b013-4e99-9774-36e26e5001ff",
+      "uuid": "cfb70000-ed61-4a7e-89a3-2b9c2caa6001",
       "tls": {
         "enabled": true,
-        "server_name": "top3739667002.mwscdn.ru",
+        "server_name": "top3739667002.mwscdn.ru"
+      }
+    },
+    {
+      "tag": "🇺🇸 United States | 🌐 [*CIDR]",
+      "type": "vless",
+      "server": "auto.datamove.online",
+      "server_port": 2040,
+      "uuid": "17451fec-af94-4715-8c2f-7f6839130d0a",
+      "tls": {
+        "enabled": true,
+        "server_name": "tradingview.com",
+        "reality": {
+          "enabled": true,
+          "public_key": "LidllyozUeeSbuzJ0ZfieGoy8YjVzqXX9H2m9whPaG0",
+          "short_id": "53197c66aef53c44"
+        },
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
@@ -76,32 +92,30 @@
       }
     },
     {
-      "tag": "🌐 Anycast-IP | 🇫🇷 🇬🇧 [*CIDR] YA",
-      "type": "vless",
-      "server": "51.250.106.87",
+      "tag": "ð³ð± The Netherlands | [*CIDR]",
+      "type": "vmess",
+      "server": "renderer-stream-1-411.mirra.now",
       "server_port": 443,
-      "uuid": "a69d3804-b95f-4ea7-8b06-b544c1b49438",
-      "flow": "xtls-rprx-vision",
+      "uuid": "df9c9355-b02c-4c12-909d-0dbeb725d52b",
+      "security": "auto",
       "tls": {
         "enabled": true,
-        "server_name": "cdp.x5.ru",
-        "reality": {
-          "enabled": true,
-          "public_key": "wgXD4k3A16WR0aL63N9Mx8xoqFigJLyQWJXi-l3MPXI",
-          "short_id": "8ec792bfd725be8a"
+        "server_name": "renderer-stream-1-411.mirra.now"
+      },
+      "transport": {
+        "type": "ws",
+        "headers": {
+          "Host": "renderer-stream-1-411.mirra.now"
         },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "safari"
-        }
+        "path": "/api/v1/gpu-stream/socket"
       }
     },
     {
-      "tag": "🌐 Anycast-IP | 🇫🇷 🇬🇧 [*CIDR] YA-2",
+      "tag": "🇬🇧 United Kingdom | 🌐 [*CIDR] YA",
       "type": "vless",
-      "server": "51.250.103.104",
+      "server": "51.250.106.87",
       "server_port": 443,
-      "uuid": "a69d3804-b95f-4ea7-8b06-b544c1b49438",
+      "uuid": "46b654eb-0229-4c4d-92d6-e5736ba8c4b5",
       "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
@@ -126,24 +140,6 @@
       "tls": {
         "enabled": true,
         "server_name": "top3739667002.mwscdn.ru"
-      }
-    },
-    {
-      "tag": "ð³ð± The Netherlands | [*CIDR]",
-      "type": "vmess",
-      "server": "renderer-stream-1-411.mirra.now",
-      "server_port": 443,
-      "uuid": "df9c9355-b02c-4c12-909d-0dbeb725d52b",
-      "security": "auto",
-      "tls": {
-        "enabled": true
-      },
-      "transport": {
-        "type": "ws",
-        "headers": {
-          "Host": "renderer-stream-1-411.mirra.now"
-        },
-        "path": "/api/v1/gpu-stream/socket"
       }
     }
   ],

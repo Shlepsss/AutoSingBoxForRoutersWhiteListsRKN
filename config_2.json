@@ -34,11 +34,11 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🌐 Anycast-IP | 🇫🇷 🇬🇧 [*CIDR] YA",
         "🇲🇩 Moldova [*CIDR]",
-        "🌐 Anycast-IP | 🇩🇪 🇬🇧 [*CIDR] VK",
-        "🇲🇩 Moldova [*CIDR]-2",
-        "🇬🇧 United Kingdom | 🌐 [*CIDR] YA"
+        "🇩🇪 Germany [*CIDR]",
+        "🇬🇧 United Kingdom | 🌐 [*CIDR] YA",
+        "🇵🇱 Poland | 🌐 [*CIDR]",
+        "🇬🇧 United Kingdom | 🌐 [*CIDR] YA-2"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -51,21 +51,50 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🌐 Anycast-IP | 🇫🇷 🇬🇧 [*CIDR] YA",
         "🇲🇩 Moldova [*CIDR]",
-        "🌐 Anycast-IP | 🇩🇪 🇬🇧 [*CIDR] VK",
-        "🇲🇩 Moldova [*CIDR]-2",
-        "🇬🇧 United Kingdom | 🌐 [*CIDR] YA"
+        "🇩🇪 Germany [*CIDR]",
+        "🇬🇧 United Kingdom | 🌐 [*CIDR] YA",
+        "🇵🇱 Poland | 🌐 [*CIDR]",
+        "🇬🇧 United Kingdom | 🌐 [*CIDR] YA-2"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
     },
     {
-      "tag": "🌐 Anycast-IP | 🇫🇷 🇬🇧 [*CIDR] YA",
+      "tag": "🇲🇩 Moldova [*CIDR]",
       "type": "vless",
-      "server": "51.250.24.222",
+      "server": "185.242.19.249",
       "server_port": 443,
-      "uuid": "a69d3804-b95f-4ea7-8b06-b544c1b49438",
+      "uuid": "882e17c8-b013-4e99-9774-36e26e5001ff",
+      "tls": {
+        "enabled": true,
+        "server_name": "top3739667002.mwscdn.ru"
+      }
+    },
+    {
+      "tag": "🇩🇪 Germany [*CIDR]",
+      "type": "vless",
+      "server": "192.200.160.3",
+      "server_port": 443,
+      "uuid": "5b6be23b-dff4-428f-8a60-4f11568abe12",
+      "tls": {
+        "enabled": true,
+        "server_name": "sync.amordad.xyz"
+      },
+      "transport": {
+        "type": "ws",
+        "headers": {
+          "Host": "sync.amordad.xyz"
+        },
+        "path": "/api/v1/stream"
+      }
+    },
+    {
+      "tag": "🇬🇧 United Kingdom | 🌐 [*CIDR] YA",
+      "type": "vless",
+      "server": "51.250.108.162",
+      "server_port": 443,
+      "uuid": "46b654eb-0229-4c4d-92d6-e5736ba8c4b5",
       "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
@@ -82,57 +111,32 @@
       }
     },
     {
-      "tag": "🇲🇩 Moldova [*CIDR]",
+      "tag": "🇵🇱 Poland | 🌐 [*CIDR]",
       "type": "vless",
-      "server": "185.242.19.250",
-      "server_port": 443,
-      "uuid": "cfb70000-ed61-4a7e-89a3-2b9c2caa6001",
+      "server": "83.229.14.125",
+      "server_port": 13569,
+      "uuid": "7283d2d5-7b14-431b-9d1f-96f2dac4a97b",
+      "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "top3739667002.mwscdn.ru"
-      }
-    },
-    {
-      "tag": "🌐 Anycast-IP | 🇩🇪 🇬🇧 [*CIDR] VK",
-      "type": "vless",
-      "server": "89.208.208.92",
-      "server_port": 7443,
-      "uuid": "cbc27e56-38a1-4b0d-bce3-f9e7dcb807a4",
-      "tls": {
-        "enabled": true,
-        "server_name": "loadtest.dev.urent.ru",
+        "server_name": "business.vk.ru",
         "reality": {
           "enabled": true,
-          "public_key": "_AXs-QnufIq918tbb2pwM3MDbe7kQ6i0cIHDMLwPmGs",
-          "short_id": "3210e0eee6605048"
+          "public_key": "Xl6notHrxamdPvx0cZGGPRQOT-PR1rkjryRazI9i1VI",
+          "short_id": ""
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "chrome"
+          "fingerprint": "random"
         }
-      },
-      "transport": {
-        "type": "grpc",
-        "service_name": "grpc"
       }
     },
     {
-      "tag": "🇲🇩 Moldova [*CIDR]-2",
+      "tag": "🇬🇧 United Kingdom | 🌐 [*CIDR] YA-2",
       "type": "vless",
-      "server": "185.242.19.250",
+      "server": "51.250.106.87",
       "server_port": 443,
-      "uuid": "cfb70000-ed61-4a7e-89a3-2b9c2caa6001",
-      "tls": {
-        "enabled": true,
-        "server_name": "top3739667002.mwscdn.ru"
-      }
-    },
-    {
-      "tag": "🇬🇧 United Kingdom | 🌐 [*CIDR] YA",
-      "type": "vless",
-      "server": "51.250.108.162",
-      "server_port": 443,
-      "uuid": "a69d3804-b95f-4ea7-8b06-b544c1b49438",
+      "uuid": "46b654eb-0229-4c4d-92d6-e5736ba8c4b5",
       "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,

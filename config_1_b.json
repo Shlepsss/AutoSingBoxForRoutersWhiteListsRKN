@@ -34,11 +34,11 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🌐 Anycast-IP | 🇩🇪 🇬🇧 [*CIDR] VK",
-        "🇲🇩 Moldova [*CIDR]",
         "🇩🇪 Germany [*CIDR]",
-        "ð³ð± The Netherlands | [*CIDR]",
-        "🇲🇩 Moldova [*CIDR]-2"
+        "🇬🇧 United Kingdom | 🌐 [*CIDR] YA",
+        "🇬🇧 United Kingdom | 🌐 [*CIDR] YA-2",
+        "🇺🇸 United States | 🌐 [*CIDR]",
+        "ð³ð± The Netherlands | [*CIDR]"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -51,64 +51,88 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🌐 Anycast-IP | 🇩🇪 🇬🇧 [*CIDR] VK",
-        "🇲🇩 Moldova [*CIDR]",
         "🇩🇪 Germany [*CIDR]",
-        "ð³ð± The Netherlands | [*CIDR]",
-        "🇲🇩 Moldova [*CIDR]-2"
+        "🇬🇧 United Kingdom | 🌐 [*CIDR] YA",
+        "🇬🇧 United Kingdom | 🌐 [*CIDR] YA-2",
+        "🇺🇸 United States | 🌐 [*CIDR]",
+        "ð³ð± The Netherlands | [*CIDR]"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
     },
     {
-      "tag": "🌐 Anycast-IP | 🇩🇪 🇬🇧 [*CIDR] VK",
-      "type": "vless",
-      "server": "89.208.208.92",
-      "server_port": 7443,
-      "uuid": "cbc27e56-38a1-4b0d-bce3-f9e7dcb807a4",
-      "tls": {
-        "enabled": true,
-        "server_name": "loadtest.dev.urent.ru",
-        "reality": {
-          "enabled": true,
-          "public_key": "_AXs-QnufIq918tbb2pwM3MDbe7kQ6i0cIHDMLwPmGs",
-          "short_id": "3210e0eee6605048"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
-      "transport": {
-        "type": "grpc",
-        "service_name": "grpc"
-      }
-    },
-    {
-      "tag": "🇲🇩 Moldova [*CIDR]",
-      "type": "vless",
-      "server": "185.242.19.250",
-      "server_port": 443,
-      "uuid": "cfb70000-ed61-4a7e-89a3-2b9c2caa6001",
-      "tls": {
-        "enabled": true,
-        "server_name": "top3739667002.mwscdn.ru"
-      }
-    },
-    {
       "tag": "🇩🇪 Germany [*CIDR]",
       "type": "vless",
-      "server": "193.233.198.69",
-      "server_port": 8443,
-      "uuid": "d914b02c-274b-41c9-9952-11eda75b12f0",
+      "server": "192.200.160.3",
+      "server_port": 443,
+      "uuid": "5b6be23b-dff4-428f-8a60-4f11568abe12",
+      "tls": {
+        "enabled": true,
+        "server_name": "sync.amordad.xyz"
+      },
+      "transport": {
+        "type": "ws",
+        "headers": {
+          "Host": "sync.amordad.xyz"
+        },
+        "path": "/api/v1/stream"
+      }
+    },
+    {
+      "tag": "🇬🇧 United Kingdom | 🌐 [*CIDR] YA",
+      "type": "vless",
+      "server": "51.250.97.18",
+      "server_port": 443,
+      "uuid": "46b654eb-0229-4c4d-92d6-e5736ba8c4b5",
       "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "apple.com",
+        "server_name": "cdp.x5.ru",
         "reality": {
           "enabled": true,
-          "public_key": "i5a8i2AWUSMZ-rYA6hGBRCBBoe7W5ah33SCdF5JkMk4",
-          "short_id": "8bcfe256cf216fd8"
+          "public_key": "wgXD4k3A16WR0aL63N9Mx8xoqFigJLyQWJXi-l3MPXI",
+          "short_id": "8ec792bfd725be8a"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "safari"
+        }
+      }
+    },
+    {
+      "tag": "🇬🇧 United Kingdom | 🌐 [*CIDR] YA-2",
+      "type": "vless",
+      "server": "51.250.108.162",
+      "server_port": 443,
+      "uuid": "46b654eb-0229-4c4d-92d6-e5736ba8c4b5",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "cdp.x5.ru",
+        "reality": {
+          "enabled": true,
+          "public_key": "wgXD4k3A16WR0aL63N9Mx8xoqFigJLyQWJXi-l3MPXI",
+          "short_id": "8ec792bfd725be8a"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "safari"
+        }
+      }
+    },
+    {
+      "tag": "🇺🇸 United States | 🌐 [*CIDR]",
+      "type": "vless",
+      "server": "auto.datamove.online",
+      "server_port": 2040,
+      "uuid": "17451fec-af94-4715-8c2f-7f6839130d0a",
+      "tls": {
+        "enabled": true,
+        "server_name": "tradingview.com",
+        "reality": {
+          "enabled": true,
+          "public_key": "LidllyozUeeSbuzJ0ZfieGoy8YjVzqXX9H2m9whPaG0",
+          "short_id": "53197c66aef53c44"
         },
         "utls": {
           "enabled": true,
@@ -124,7 +148,8 @@
       "uuid": "df9c9355-b02c-4c12-909d-0dbeb725d52b",
       "security": "auto",
       "tls": {
-        "enabled": true
+        "enabled": true,
+        "server_name": "renderer-stream-1-411.mirra.now"
       },
       "transport": {
         "type": "ws",
@@ -132,21 +157,6 @@
           "Host": "renderer-stream-1-411.mirra.now"
         },
         "path": "/api/v1/gpu-stream/socket"
-      }
-    },
-    {
-      "tag": "🇲🇩 Moldova [*CIDR]-2",
-      "type": "vless",
-      "server": "185.242.19.250",
-      "server_port": 443,
-      "uuid": "882e17c8-b013-4e99-9774-36e26e5001ff",
-      "tls": {
-        "enabled": true,
-        "server_name": "top3739667002.mwscdn.ru",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
       }
     }
   ],
