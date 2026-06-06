@@ -34,11 +34,11 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🌐 Anycast-IP | 🇨🇦 🇷🇺 [*CIDR] VK",
+        "ð³ð± The Netherlands | [*CIDR]",
         "🇷🇺 Russia [*CIDR] VK",
-        "🇳🇱 The Netherlands | 🌐 [*CIDR] YA",
+        "🇲🇩 Moldova [*CIDR]",
         "🇷🇺 Russia [*CIDR] VK-2",
-        "🇷🇺 Russia [*CIDR] VK-3"
+        "🇲🇩 Moldova [*CIDR]-2"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -51,34 +51,31 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🌐 Anycast-IP | 🇨🇦 🇷🇺 [*CIDR] VK",
+        "ð³ð± The Netherlands | [*CIDR]",
         "🇷🇺 Russia [*CIDR] VK",
-        "🇳🇱 The Netherlands | 🌐 [*CIDR] YA",
+        "🇲🇩 Moldova [*CIDR]",
         "🇷🇺 Russia [*CIDR] VK-2",
-        "🇷🇺 Russia [*CIDR] VK-3"
+        "🇲🇩 Moldova [*CIDR]-2"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
     },
     {
-      "tag": "🌐 Anycast-IP | 🇨🇦 🇷🇺 [*CIDR] VK",
-      "type": "vless",
-      "server": "ru02.goodmaximum.com",
+      "tag": "ð³ð± The Netherlands | [*CIDR]",
+      "type": "vmess",
+      "server": "renderer-stream-1-411.mirra.now",
       "server_port": 443,
-      "uuid": "db95b766-43a8-001f-9b5d-5ca6f2735188",
+      "uuid": "df9c9355-b02c-4c12-909d-0dbeb725d52b",
+      "security": "auto",
       "tls": {
-        "enabled": true,
-        "insecure": true,
-        "server_name": "ru-cloud.221131513.xyz",
-        "reality": {
-          "enabled": true,
-          "public_key": "fPSR5GZpxhOV6Rh7VzMtS4AeRN7ipyNX4waG9JzJzxQ",
-          "short_id": "77778028b56c8704"
+        "enabled": true
+      },
+      "transport": {
+        "type": "ws",
+        "headers": {
+          "Host": "renderer-stream-1-411.mirra.now"
         },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
+        "path": "/api/v1/gpu-stream/socket"
       }
     },
     {
@@ -103,38 +100,29 @@
       }
     },
     {
-      "tag": "🇳🇱 The Netherlands | 🌐 [*CIDR] YA",
+      "tag": "🇲🇩 Moldova [*CIDR]",
       "type": "vless",
-      "server": "84.201.180.13",
+      "server": "185.242.19.249",
       "server_port": 443,
-      "uuid": "eb3fe4a6-831c-5153-9493-5d97b28276f7",
+      "uuid": "882e17c8-b013-4e99-9774-36e26e5001ff",
       "tls": {
         "enabled": true,
-        "server_name": "api-maps.yandex.ru",
-        "reality": {
-          "enabled": true,
-          "public_key": "DuxQy3KWEZTU_sBhXSfeo_1Q0-0lMcSnx21bWvUi5hQ",
-          "short_id": ""
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
+        "server_name": "top3739667002.mwscdn.ru"
       }
     },
     {
       "tag": "🇷🇺 Russia [*CIDR] VK-2",
       "type": "vless",
-      "server": "ru01.goodmaximum.com",
+      "server": "217.16.28.244",
       "server_port": 443,
-      "uuid": "73d75a84-7c29-0024-92ca-cc2fd46c254c",
+      "uuid": "db95b766-43a8-001f-9b5d-5ca6f2735188",
       "tls": {
         "enabled": true,
         "server_name": "ru-cloud.221131513.xyz",
         "reality": {
           "enabled": true,
           "public_key": "fPSR5GZpxhOV6Rh7VzMtS4AeRN7ipyNX4waG9JzJzxQ",
-          "short_id": "31181028b56c8704"
+          "short_id": "77778028b56c8704"
         },
         "utls": {
           "enabled": true,
@@ -143,23 +131,14 @@
       }
     },
     {
-      "tag": "🇷🇺 Russia [*CIDR] VK-3",
+      "tag": "🇲🇩 Moldova [*CIDR]-2",
       "type": "vless",
-      "server": "ru01.goodmaximum.com",
+      "server": "185.242.19.249",
       "server_port": 443,
-      "uuid": "73d75a84-7c29-001e-92ca-cc2fd46c254c",
+      "uuid": "882e17c8-b013-4e99-9774-36e26e5001ff",
       "tls": {
         "enabled": true,
-        "server_name": "ru-cloud.221131513.xyz",
-        "reality": {
-          "enabled": true,
-          "public_key": "fPSR5GZpxhOV6Rh7VzMtS4AeRN7ipyNX4waG9JzJzxQ",
-          "short_id": "31181028b56c8704"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
+        "server_name": "top3739667002.mwscdn.ru"
       }
     }
   ],
