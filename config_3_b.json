@@ -34,11 +34,11 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
+        "🌐 Anycast-IP | 🇦🇹 [*CIDR] YA",
+        "🌐 Anycast-IP | 🇦🇹 🇩🇪 [*CIDR] YA",
         "🇬🇧 United Kingdom | 🌐 [*CIDR] YA",
         "🇬🇧 United Kingdom | 🌐 [*CIDR] YA-2",
-        "🇬🇧 United Kingdom | 🌐 [*CIDR] YA-3",
-        "🇬🇧 United Kingdom | 🌐 [*CIDR] YA-4",
-        "🇬🇧 United Kingdom | 🌐 [*CIDR] YA-5"
+        "🇬🇧 United Kingdom | 🌐 [*CIDR] YA-3"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -51,21 +51,67 @@
       "tag": "select",
       "outbounds": [
         "auto",
+        "🌐 Anycast-IP | 🇦🇹 [*CIDR] YA",
+        "🌐 Anycast-IP | 🇦🇹 🇩🇪 [*CIDR] YA",
         "🇬🇧 United Kingdom | 🌐 [*CIDR] YA",
         "🇬🇧 United Kingdom | 🌐 [*CIDR] YA-2",
-        "🇬🇧 United Kingdom | 🌐 [*CIDR] YA-3",
-        "🇬🇧 United Kingdom | 🌐 [*CIDR] YA-4",
-        "🇬🇧 United Kingdom | 🌐 [*CIDR] YA-5"
+        "🇬🇧 United Kingdom | 🌐 [*CIDR] YA-3"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
+    },
+    {
+      "tag": "🌐 Anycast-IP | 🇦🇹 [*CIDR] YA",
+      "type": "vless",
+      "server": "fastq.phantom.direct",
+      "server_port": 443,
+      "uuid": "b6ed0dbb-3af1-4a56-9a91-d495c3fa8fbe",
+      "tls": {
+        "enabled": true,
+        "server_name": "api-maps.yandex.ru",
+        "reality": {
+          "enabled": true,
+          "public_key": "uXXzayGWNo5UTxFBjiGqrVeIAYvkjXH_FiImT3ppWl4",
+          "short_id": "f1f7007cdc2067b5"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
+      },
+      "transport": {
+        "type": "grpc"
+      }
+    },
+    {
+      "tag": "🌐 Anycast-IP | 🇦🇹 🇩🇪 [*CIDR] YA",
+      "type": "vless",
+      "server": "fastq.phantom.direct",
+      "server_port": 443,
+      "uuid": "b6ed0dbb-3af1-4a56-9a91-d495c3fa8fbe",
+      "tls": {
+        "enabled": true,
+        "server_name": "api.yandex.ru",
+        "reality": {
+          "enabled": true,
+          "public_key": "uXXzayGWNo5UTxFBjiGqrVeIAYvkjXH_FiImT3ppWl4",
+          "short_id": "ca44c9d3de89a7f5"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
+      },
+      "transport": {
+        "type": "grpc"
+      }
     },
     {
       "tag": "🇬🇧 United Kingdom | 🌐 [*CIDR] YA",
       "type": "vless",
       "server": "51.250.108.162",
       "server_port": 443,
-      "uuid": "5fed20ff-30e2-4ad9-a8e5-5b6884d16caa",
+      "uuid": "2d284cb8-7ec3-46ae-90b5-d05a288790f0",
       "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
@@ -84,9 +130,9 @@
     {
       "tag": "🇬🇧 United Kingdom | 🌐 [*CIDR] YA-2",
       "type": "vless",
-      "server": "51.250.102.69",
+      "server": "51.250.24.222",
       "server_port": 443,
-      "uuid": "9f87b70e-8ff7-44e4-bb72-bb8d3798ec5b",
+      "uuid": "e29b167a-d3fa-4de5-ac70-9c13085f44bb",
       "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
@@ -105,51 +151,9 @@
     {
       "tag": "🇬🇧 United Kingdom | 🌐 [*CIDR] YA-3",
       "type": "vless",
-      "server": "51.250.108.162",
-      "server_port": 443,
-      "uuid": "9f87b70e-8ff7-44e4-bb72-bb8d3798ec5b",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "cdp.x5.ru",
-        "reality": {
-          "enabled": true,
-          "public_key": "wgXD4k3A16WR0aL63N9Mx8xoqFigJLyQWJXi-l3MPXI",
-          "short_id": "8ec792bfd725be8a"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "safari"
-        }
-      }
-    },
-    {
-      "tag": "🇬🇧 United Kingdom | 🌐 [*CIDR] YA-4",
-      "type": "vless",
       "server": "51.250.103.104",
       "server_port": 443,
-      "uuid": "9f87b70e-8ff7-44e4-bb72-bb8d3798ec5b",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "cdp.x5.ru",
-        "reality": {
-          "enabled": true,
-          "public_key": "wgXD4k3A16WR0aL63N9Mx8xoqFigJLyQWJXi-l3MPXI",
-          "short_id": "8ec792bfd725be8a"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "safari"
-        }
-      }
-    },
-    {
-      "tag": "🇬🇧 United Kingdom | 🌐 [*CIDR] YA-5",
-      "type": "vless",
-      "server": "51.250.24.232",
-      "server_port": 443,
-      "uuid": "5fed20ff-30e2-4ad9-a8e5-5b6884d16caa",
+      "uuid": "e29b167a-d3fa-4de5-ac70-9c13085f44bb",
       "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
