@@ -37,8 +37,8 @@
         "🇳🇱 The Netherlands [*CIDR] VK",
         "🇳🇱 The Netherlands | 🌐 [*CIDR] YA",
         "🇳🇱 The Netherlands | 🌐 [*CIDR] YA-2",
-        "🇪🇪 Estonia | 🌐 [*CIDR] YA",
-        "🇪🇪 Estonia [*CIDR] YA"
+        "🇳🇱 The Netherlands [*CIDR] YA",
+        "🇳🇱 The Netherlands | 🌐 [*CIDR] YA-3"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -54,8 +54,8 @@
         "🇳🇱 The Netherlands [*CIDR] VK",
         "🇳🇱 The Netherlands | 🌐 [*CIDR] YA",
         "🇳🇱 The Netherlands | 🌐 [*CIDR] YA-2",
-        "🇪🇪 Estonia | 🌐 [*CIDR] YA",
-        "🇪🇪 Estonia [*CIDR] YA"
+        "🇳🇱 The Netherlands [*CIDR] YA",
+        "🇳🇱 The Netherlands | 🌐 [*CIDR] YA-3"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
@@ -83,16 +83,16 @@
     {
       "tag": "🇳🇱 The Netherlands | 🌐 [*CIDR] YA",
       "type": "vless",
-      "server": "84.201.168.122",
+      "server": "51.250.19.156",
       "server_port": 443,
       "uuid": "59341a57-7f08-4776-9f94-e4aab1461432",
       "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "yandex.ru",
+        "server_name": "ads.x5.ru",
         "reality": {
           "enabled": true,
-          "public_key": "Ec54Eop0jZft7rcJsPN4RHc4xG9smXhtenM52pJFUQI",
+          "public_key": "v6rib0-2FxBd1MnBxdylbIRIhvXywSj56QEtCkaEuBo",
           "short_id": "27e53bbcab7593d7"
         },
         "utls": {
@@ -110,10 +110,10 @@
       "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "www.vk.com",
+        "server_name": "max.ru",
         "reality": {
           "enabled": true,
-          "public_key": "bwuT_tpimT_uUeWpSn-HbRztfol4o4uCcUHcdvkeFx0",
+          "public_key": "BjG7XoEMR2uxHbBk_rtkR7P_S_luG2VcvQlvZ4YHzH8",
           "short_id": "27e53bbcab7593d7"
         },
         "utls": {
@@ -123,30 +123,9 @@
       }
     },
     {
-      "tag": "🇪🇪 Estonia | 🌐 [*CIDR] YA",
+      "tag": "🇳🇱 The Netherlands [*CIDR] YA",
       "type": "vless",
-      "server": "51.250.43.93",
-      "server_port": 443,
-      "uuid": "91427003-38cb-473e-95f2-a4b500c91f7b",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "ads.x5.ru",
-        "reality": {
-          "enabled": true,
-          "public_key": "MXpxhnU1ctGMXbGGjIrtDfjRX-BbbpsjnS4-SUv3OFs",
-          "short_id": ""
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      }
-    },
-    {
-      "tag": "🇪🇪 Estonia [*CIDR] YA",
-      "type": "vless",
-      "server": "158.160.252.95",
+      "server": "62.84.112.113",
       "server_port": 443,
       "uuid": "7b7619ef-3015-45e4-a1c0-5672f81b864c",
       "flow": "xtls-rprx-vision",
@@ -155,12 +134,33 @@
         "server_name": "ya.ru",
         "reality": {
           "enabled": true,
-          "public_key": "G6ekEx_2qJMHo-DzjF7ww8UPbPiVSd8A6LY5yn-i3XU",
-          "short_id": "83915e401341"
+          "public_key": "RJsLWisvBs-NayKhcJ4sJ111Eoh6mpBX0pgvBR4f4EU",
+          "short_id": "9e6e0631f73cad02"
         },
         "utls": {
           "enabled": true,
           "fingerprint": "qq"
+        }
+      }
+    },
+    {
+      "tag": "🇳🇱 The Netherlands | 🌐 [*CIDR] YA-3",
+      "type": "vless",
+      "server": "51.250.66.119",
+      "server_port": 443,
+      "uuid": "59341a57-7f08-4776-9f94-e4aab1461432",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "api-maps.yandex.ru",
+        "reality": {
+          "enabled": true,
+          "public_key": "XRo267CzH105Z2-hZpS1mpq_Ul2JeJUo6HP5tEEwCxY",
+          "short_id": "51fe69188d5dc580"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
         }
       }
     }

@@ -34,11 +34,11 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "ð³ð± The Netherlands | [*CIDR]",
-        "🇩🇪 Germany [*CIDR]",
-        "🇷🇺 Russia [*CIDR]",
+        "🌐 Anycast-IP | 🇨🇦 🇫🇮 [*CIDR]",
         "🇫🇷 France [*CIDR]",
-        "🇫🇷 France [*CIDR]-2"
+        "🇷🇺 Russia [*CIDR]",
+        "ð³ð± The Netherlands | [*CIDR]",
+        "🇭🇺 Hungary [*CIDR]"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -51,68 +51,35 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "ð³ð± The Netherlands | [*CIDR]",
-        "🇩🇪 Germany [*CIDR]",
-        "🇷🇺 Russia [*CIDR]",
+        "🌐 Anycast-IP | 🇨🇦 🇫🇮 [*CIDR]",
         "🇫🇷 France [*CIDR]",
-        "🇫🇷 France [*CIDR]-2"
+        "🇷🇺 Russia [*CIDR]",
+        "ð³ð± The Netherlands | [*CIDR]",
+        "🇭🇺 Hungary [*CIDR]"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
     },
     {
-      "tag": "ð³ð± The Netherlands | [*CIDR]",
-      "type": "vmess",
-      "server": "37.220.161.249",
-      "server_port": 443,
-      "uuid": "df9c9355-b02c-4c12-909d-0dbeb725d52b",
-      "security": "auto",
-      "tls": {
-        "enabled": true,
-        "server_name": "renderer-stream-1-411.mirra.now"
-      },
-      "transport": {
-        "type": "ws",
-        "headers": {
-          "Host": "renderer-stream-1-411.mirra.now"
-        },
-        "path": "/api/v1/gpu-stream/socket"
-      }
-    },
-    {
-      "tag": "🇩🇪 Germany [*CIDR]",
+      "tag": "🌐 Anycast-IP | 🇨🇦 🇫🇮 [*CIDR]",
       "type": "vless",
-      "server": "de-xh-01.hpdata.click",
+      "server": "141.193.213.10",
       "server_port": 443,
-      "uuid": "1014818b-5c5c-46b1-98fe-eaf8d5eba642",
+      "uuid": "724de599-277f-4ad1-ba40-57d06674a3e8",
       "tls": {
         "enabled": true,
-        "server_name": "de-xh-01.hpdata.click",
+        "server_name": "space.byu.id.r3xxe.eu.cc",
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
         }
-      }
-    },
-    {
-      "tag": "🇷🇺 Russia [*CIDR]",
-      "type": "vless",
-      "server": "91.222.237.127",
-      "server_port": 443,
-      "uuid": "59341a57-7f08-4776-9f94-e4aab1461432",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "ru.dendiboss.org",
-        "reality": {
-          "enabled": true,
-          "public_key": "VfQv2SS_WclTga8Y8H0OCEMWLGKAHqK72nAUQyHN8js",
-          "short_id": "9c2378562188c3cb"
+      },
+      "transport": {
+        "type": "ws",
+        "headers": {
+          "Host": "space.byu.id.r3xxe.eu.cc"
         },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
-        }
+        "path": "/us-gllc"
       }
     },
     {
@@ -138,24 +105,58 @@
       }
     },
     {
-      "tag": "🇫🇷 France [*CIDR]-2",
-      "type": "trojan",
-      "server": "216.24.57.7",
+      "tag": "🇷🇺 Russia [*CIDR]",
+      "type": "vless",
+      "server": "91.222.237.127",
       "server_port": 443,
-      "password": "humanity",
+      "uuid": "59341a57-7f08-4776-9f94-e4aab1461432",
+      "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "www.ignitelimit.com",
-        "alpn": [
-          "http/1.1"
-        ]
+        "server_name": "ru.dendiboss.org",
+        "reality": {
+          "enabled": true,
+          "public_key": "VfQv2SS_WclTga8Y8H0OCEMWLGKAHqK72nAUQyHN8js",
+          "short_id": "9c2378562188c3cb"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
+      }
+    },
+    {
+      "tag": "ð³ð± The Netherlands | [*CIDR]",
+      "type": "vmess",
+      "server": "93.93.88.22",
+      "server_port": 443,
+      "uuid": "df9c9355-b02c-4c12-909d-0dbeb725d52b",
+      "security": "auto",
+      "tls": {
+        "enabled": true,
+        "server_name": "renderer-stream-1-411.mirra.now"
       },
       "transport": {
         "type": "ws",
         "headers": {
-          "Host": "www.ignitelimit.com"
+          "Host": "renderer-stream-1-411.mirra.now"
         },
-        "path": "/assignment"
+        "path": "/api/v1/gpu-stream/socket"
+      }
+    },
+    {
+      "tag": "🇭🇺 Hungary [*CIDR]",
+      "type": "vless",
+      "server": "89.232.177.114",
+      "server_port": 8443,
+      "uuid": "931729a8-3c20-4841-89a1-f18dc9ce0a6f",
+      "tls": {
+        "enabled": true,
+        "server_name": "cdn7-09.vk-cdnvideo.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
       }
     }
   ],

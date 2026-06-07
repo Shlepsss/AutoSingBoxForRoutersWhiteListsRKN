@@ -35,10 +35,10 @@
       "tag": "auto",
       "outbounds": [
         "🇲🇩 Moldova [*CIDR]",
-        "🌐 Anycast-IP | 🇨🇦 🇫🇮 [*CIDR]",
-        "🇳🇱 The Netherlands [*CIDR] VK",
-        "🇲🇩 Moldova [*CIDR]-2",
-        "🇷🇺 Russia [*CIDR]"
+        "🇫🇷 France [*CIDR]",
+        "🇳🇱 The Netherlands [*CIDR]",
+        "🇷🇺 Russia [*CIDR]",
+        "🌐 Anycast-IP | 🇩🇪 🇬🇧 [*CIDR] VK"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -52,10 +52,10 @@
       "outbounds": [
         "auto",
         "🇲🇩 Moldova [*CIDR]",
-        "🌐 Anycast-IP | 🇨🇦 🇫🇮 [*CIDR]",
-        "🇳🇱 The Netherlands [*CIDR] VK",
-        "🇲🇩 Moldova [*CIDR]-2",
-        "🇷🇺 Russia [*CIDR]"
+        "🇫🇷 France [*CIDR]",
+        "🇳🇱 The Netherlands [*CIDR]",
+        "🇷🇺 Russia [*CIDR]",
+        "🌐 Anycast-IP | 🇩🇪 🇬🇧 [*CIDR] VK"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
@@ -72,53 +72,46 @@
       }
     },
     {
-      "tag": "🌐 Anycast-IP | 🇨🇦 🇫🇮 [*CIDR]",
+      "tag": "🇫🇷 France [*CIDR]",
       "type": "trojan",
-      "server": "141.193.213.11",
+      "server": "216.24.57.7",
       "server_port": 443,
-      "password": "Telegram-Config0plus-983ced63-fcf0-4d15-b81b-432e32e9b932",
+      "password": "humanity",
       "tls": {
         "enabled": true,
-        "server_name": "api24-normal.tiktokv.com.r3xxe.eu.cc"
+        "server_name": "www.ignitelimit.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
       },
       "transport": {
         "type": "ws",
         "headers": {
-          "Host": "api24-normal.tiktokv.com.r3xxe.eu.cc"
+          "Host": "www.ignitelimit.com"
         },
-        "path": "/us-gllc"
+        "path": "/assignment"
       }
     },
     {
-      "tag": "🇳🇱 The Netherlands [*CIDR] VK",
+      "tag": "🇳🇱 The Netherlands [*CIDR]",
       "type": "vless",
-      "server": "94.139.247.211",
+      "server": "157.22.181.141",
       "server_port": 443,
-      "uuid": "c65ca957-329a-0001-8e62-eaaa48468833",
+      "uuid": "5d8fcd24-9634-4dd7-845c-3dc2d6291942",
       "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "b02.connectv.net",
+        "server_name": "www.google.com",
         "reality": {
           "enabled": true,
-          "public_key": "0RegtdcQHk9Fg95kgn5jmRglN6N3sdk3ZhrFXvmbrgk",
-          "short_id": ""
+          "public_key": "2fgsbEAn-ALVpjnE4ZTPrzaZY70vVplYwldCnslInE0",
+          "short_id": "86b80f1e713a33ad"
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "edge"
+          "fingerprint": "chrome"
         }
-      }
-    },
-    {
-      "tag": "🇲🇩 Moldova [*CIDR]-2",
-      "type": "vless",
-      "server": "185.242.19.250",
-      "server_port": 443,
-      "uuid": "cfb70000-ed61-4a7e-89a3-2b9c2caa6001",
-      "tls": {
-        "enabled": true,
-        "server_name": "top3739667002.mwscdn.ru"
       }
     },
     {
@@ -140,6 +133,30 @@
           "enabled": true,
           "fingerprint": "firefox"
         }
+      }
+    },
+    {
+      "tag": "🌐 Anycast-IP | 🇩🇪 🇬🇧 [*CIDR] VK",
+      "type": "vless",
+      "server": "89.208.208.92",
+      "server_port": 7443,
+      "uuid": "cbc27e56-38a1-4b0d-bce3-f9e7dcb807a4",
+      "tls": {
+        "enabled": true,
+        "server_name": "loadtest.dev.urent.ru",
+        "reality": {
+          "enabled": true,
+          "public_key": "_AXs-QnufIq918tbb2pwM3MDbe7kQ6i0cIHDMLwPmGs",
+          "short_id": "3210e0eee6605048"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "grpc"
       }
     }
   ],
