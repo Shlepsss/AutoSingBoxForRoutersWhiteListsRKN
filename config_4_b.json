@@ -34,8 +34,8 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇵🇱 Poland [SNI-RU] max.ru",
-        "🇷🇺 Russia [SNI-RU] yandex.ru"
+        "🇬🇧 United Kingdom [SNI-RU] a.wb.ru",
+        "🇳🇱 The Netherlands [SNI-RU] yandex.ru"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -48,47 +48,46 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇵🇱 Poland [SNI-RU] max.ru",
-        "🇷🇺 Russia [SNI-RU] yandex.ru"
+        "🇬🇧 United Kingdom [SNI-RU] a.wb.ru",
+        "🇳🇱 The Netherlands [SNI-RU] yandex.ru"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
     },
     {
-      "tag": "🇵🇱 Poland [SNI-RU] max.ru",
+      "tag": "🇬🇧 United Kingdom [SNI-RU] a.wb.ru",
       "type": "vless",
-      "server": "city-most-1.harknmav.fun",
+      "server": "31.76.50.109",
       "server_port": 443,
-      "uuid": "5dfd9acc-85fd-405b-8efe-b60f2b91744a",
-      "flow": "xtls-rprx-vision",
+      "uuid": "28cee14e-a124-4c9f-88e2-fcb6c1304ea3",
       "tls": {
         "enabled": true,
-        "server_name": "max.ru",
+        "server_name": "a.wb.ru",
         "reality": {
           "enabled": true,
-          "public_key": "zWeCf20jRIFNaeSWo_028sR92X_Of9UEJGMZWRLhiHc",
-          "short_id": "be3c4c10ca44241a"
+          "public_key": "Ueqd3mFmtmBODNPEA2zOnS1L3FrcS0bLweBZQW5xmmw",
+          "short_id": "6069ba5ecbf75abb"
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "edge"
+          "fingerprint": "firefox"
         }
       }
     },
     {
-      "tag": "🇷🇺 Russia [SNI-RU] yandex.ru",
+      "tag": "🇳🇱 The Netherlands [SNI-RU] yandex.ru",
       "type": "vless",
-      "server": "ya2.harknmav.fun",
+      "server": "31.130.130.168",
       "server_port": 443,
-      "uuid": "5dfd9acc-85fd-405b-8efe-b60f2b91744a",
+      "uuid": "ef6faa53-d230-4e35-a071-e38224d9126f",
       "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
         "server_name": "yandex.ru",
         "reality": {
           "enabled": true,
-          "public_key": "bzX8l1h-ze1eML9stiVhe0DsotjtW4WOkjkk4eri9BM",
-          "short_id": "dfdbaa7f996dd0e9"
+          "public_key": "PNtfWIdwZkgsP4XJGdgrEibPecaA_-uV1EzVewshgXE",
+          "short_id": "872f0656fc1196"
         },
         "utls": {
           "enabled": true,
