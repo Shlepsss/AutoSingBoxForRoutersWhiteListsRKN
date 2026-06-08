@@ -31,27 +31,132 @@
       "type": "block"
     },
     {
-      "type": "selector",
-      "tag": "select",
+      "type": "urltest",
+      "tag": "auto",
       "outbounds": [
-        "🇩🇪 Germany [SNI-RU] m.ok.ru"
+        "🇷🇺 Russia [SNI-RU] eh.vk.com",
+        "🇬🇧 United Kingdom [SNI-RU] a.wb.ru",
+        "🇷🇺 Russia [SNI-RU] ads.x5.ru",
+        "🇵🇱 Poland [SNI-RU] max.ru",
+        "🇷🇺 Russia [SNI-RU] yandex.ru"
       ],
-      "default": "🇩🇪 Germany [SNI-RU] m.ok.ru",
+      "url": "https://google.com/generate_204",
+      "interval": "1m",
+      "tolerance": 250,
+      "idle_timeout": "30m",
       "interrupt_exist_connections": false
     },
     {
-      "tag": "🇩🇪 Germany [SNI-RU] m.ok.ru",
+      "type": "selector",
+      "tag": "select",
+      "outbounds": [
+        "auto",
+        "🇷🇺 Russia [SNI-RU] eh.vk.com",
+        "🇬🇧 United Kingdom [SNI-RU] a.wb.ru",
+        "🇷🇺 Russia [SNI-RU] ads.x5.ru",
+        "🇵🇱 Poland [SNI-RU] max.ru",
+        "🇷🇺 Russia [SNI-RU] yandex.ru"
+      ],
+      "default": "auto",
+      "interrupt_exist_connections": false
+    },
+    {
+      "tag": "🇷🇺 Russia [SNI-RU] eh.vk.com",
       "type": "vless",
-      "server": "whitede.alexanderoff.ru",
-      "server_port": 450,
-      "uuid": "68104c20-fc5c-403a-8f70-e2779f105fd8",
+      "server": "vk-most-gaming.harknmav.fun",
+      "server_port": 443,
+      "uuid": "5dfd9acc-85fd-405b-8efe-b60f2b91744a",
+      "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "m.ok.ru",
+        "server_name": "eh.vk.com",
         "reality": {
           "enabled": true,
-          "public_key": "JW3P5Fn3MGk9wXsO0aFxQF6wvSEefCnkiYhmk9_OGXg",
-          "short_id": "cc02825c94e9d055"
+          "public_key": "ZJcIRk3tkkvpe-n4Zzz7938AQG4FmBSzN9gwXcJ8mg4",
+          "short_id": "4a752b0d4d15e0f7"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
+      }
+    },
+    {
+      "tag": "🇬🇧 United Kingdom [SNI-RU] a.wb.ru",
+      "type": "vless",
+      "server": "31.76.50.109",
+      "server_port": 443,
+      "uuid": "28cee14e-a124-4c9f-88e2-fcb6c1304ea3",
+      "tls": {
+        "enabled": true,
+        "server_name": "a.wb.ru",
+        "reality": {
+          "enabled": true,
+          "public_key": "Ueqd3mFmtmBODNPEA2zOnS1L3FrcS0bLweBZQW5xmmw",
+          "short_id": "6069ba5ecbf75abb"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
+      }
+    },
+    {
+      "tag": "🇷🇺 Russia [SNI-RU] ads.x5.ru",
+      "type": "vless",
+      "server": "gcn-2.harknmav.fun",
+      "server_port": 443,
+      "uuid": "5dfd9acc-85fd-405b-8efe-b60f2b91744a",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "ads.x5.ru",
+        "reality": {
+          "enabled": true,
+          "public_key": "6Mk84AXRdZIpj-kCtnHIY5bHPglycJJh9nJO3S6AC2c",
+          "short_id": "aadbaa7f996dd0e9"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      }
+    },
+    {
+      "tag": "🇵🇱 Poland [SNI-RU] max.ru",
+      "type": "vless",
+      "server": "city-most-1.harknmav.fun",
+      "server_port": 443,
+      "uuid": "5dfd9acc-85fd-405b-8efe-b60f2b91744a",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "max.ru",
+        "reality": {
+          "enabled": true,
+          "public_key": "zWeCf20jRIFNaeSWo_028sR92X_Of9UEJGMZWRLhiHc",
+          "short_id": "be3c4c10ca44241a"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "edge"
+        }
+      }
+    },
+    {
+      "tag": "🇷🇺 Russia [SNI-RU] yandex.ru",
+      "type": "vless",
+      "server": "ya2.harknmav.fun",
+      "server_port": 443,
+      "uuid": "5dfd9acc-85fd-405b-8efe-b60f2b91744a",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "yandex.ru",
+        "reality": {
+          "enabled": true,
+          "public_key": "bzX8l1h-ze1eML9stiVhe0DsotjtW4WOkjkk4eri9BM",
+          "short_id": "dfdbaa7f996dd0e9"
         },
         "utls": {
           "enabled": true,
