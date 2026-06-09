@@ -34,11 +34,11 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🌐 Anycast-IP | 🇨🇦 🇬🇧 🇷🇺 [SNI-RU] ya.ru",
+        "🇧🇬 Bulgaria [SNI-RU] ads.x5.ru",
         "🇬🇧 United Kingdom [SNI-RU] ads.x5.ru",
-        "🇬🇧 United Kingdom [SNI-RU] ads.x5.ru-2",
-        "🇬🇧 United Kingdom [SNI-RU] ads.x5.ru-3",
-        "🇬🇧 United Kingdom [SNI-RU] ads.x5.ru-4"
+        "🇧🇬 Bulgaria [SNI-RU] ads.x5.ru-2",
+        "🌐 Anycast-IP | 🇬🇧 🇳🇱 [SNI-RU] rutube.ru",
+        "🇦🇪 United Arab Emirates [SNI-RU] vk.ru"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -51,59 +51,41 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🌐 Anycast-IP | 🇨🇦 🇬🇧 🇷🇺 [SNI-RU] ya.ru",
+        "🇧🇬 Bulgaria [SNI-RU] ads.x5.ru",
         "🇬🇧 United Kingdom [SNI-RU] ads.x5.ru",
-        "🇬🇧 United Kingdom [SNI-RU] ads.x5.ru-2",
-        "🇬🇧 United Kingdom [SNI-RU] ads.x5.ru-3",
-        "🇬🇧 United Kingdom [SNI-RU] ads.x5.ru-4"
+        "🇧🇬 Bulgaria [SNI-RU] ads.x5.ru-2",
+        "🌐 Anycast-IP | 🇬🇧 🇳🇱 [SNI-RU] rutube.ru",
+        "🇦🇪 United Arab Emirates [SNI-RU] vk.ru"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
     },
     {
-      "tag": "🌐 Anycast-IP | 🇨🇦 🇬🇧 🇷🇺 [SNI-RU] ya.ru",
+      "tag": "🇧🇬 Bulgaria [SNI-RU] ads.x5.ru",
       "type": "vless",
-      "server": "138.124.254.42",
-      "server_port": 443,
-      "uuid": "9e5201b2-5061-413b-b310-36cc6ec590c6",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "ya.ru",
-        "reality": {
-          "enabled": true,
-          "public_key": "Wg5joXzclHLegMLQA9ra4f7G0gwSRL09GxNm5vAIKnk",
-          "short_id": "127cb9d6d9d86586"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "qq"
-        }
-      }
-    },
-    {
-      "tag": "🇬🇧 United Kingdom [SNI-RU] ads.x5.ru",
-      "type": "vless",
-      "server": "31.76.109.55",
+      "server": "nl.riotvpn.eu",
       "server_port": 8443,
-      "uuid": "9e5201b2-5061-413b-b310-36cc6ec590c6",
-      "flow": "xtls-rprx-vision",
+      "uuid": "7fe363a0-c6e2-4609-9301-7a7d92ddb780",
       "tls": {
         "enabled": true,
         "server_name": "ads.x5.ru",
         "reality": {
           "enabled": true,
-          "public_key": "AYWvVCObGJ_5TnNMGj4z_UDSDzMJ3IcoRgIBCAeUWFs",
-          "short_id": ""
+          "public_key": "sgFFdQvfeujBKh6g7N7klU_u0mKYlr800MFbko5FzUg",
+          "short_id": "844352756c1fabba"
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "qq"
+          "fingerprint": "chrome"
         }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "grpc-yandex"
       }
     },
     {
-      "tag": "🇬🇧 United Kingdom [SNI-RU] ads.x5.ru-2",
+      "tag": "🇬🇧 United Kingdom [SNI-RU] ads.x5.ru",
       "type": "vless",
       "server": "uk.riotvpn.eu",
       "server_port": 443,
@@ -125,45 +107,68 @@
       }
     },
     {
-      "tag": "🇬🇧 United Kingdom [SNI-RU] ads.x5.ru-3",
+      "tag": "🇧🇬 Bulgaria [SNI-RU] ads.x5.ru-2",
       "type": "vless",
-      "server": "uk.riotvpn.eu",
-      "server_port": 443,
-      "uuid": "eecbcbb9-b770-40cd-ab7b-50c68a19595d",
-      "flow": "xtls-rprx-vision",
+      "server": "nl.riotvpn.eu",
+      "server_port": 8443,
+      "uuid": "7fe363a0-c6e2-4609-9301-7a7d92ddb780",
       "tls": {
         "enabled": true,
-        "insecure": true,
         "server_name": "ads.x5.ru",
         "reality": {
           "enabled": true,
-          "public_key": "8h8t5eBWL9oERK7xWHQLFJE5j6sZdgNDQAs3EGnNbho",
-          "short_id": "2f49bccf11150ef2"
+          "public_key": "sgFFdQvfeujBKh6g7N7klU_u0mKYlr800MFbko5FzUg",
+          "short_id": "844352756c1fabba"
         },
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
         }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "grpc-yandex"
       }
     },
     {
-      "tag": "🇬🇧 United Kingdom [SNI-RU] ads.x5.ru-4",
+      "tag": "🌐 Anycast-IP | 🇬🇧 🇳🇱 [SNI-RU] rutube.ru",
       "type": "vless",
-      "server": "uk.riotvpn.eu",
-      "server_port": 443,
-      "uuid": "b42e34e3-d95c-4f9e-9e8c-e327e2323b6c",
+      "server": "45.91.55.233",
+      "server_port": 7443,
+      "uuid": "8bbf020e-653f-4a82-9900-1214e4e37dab",
       "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "ads.x5.ru",
+        "server_name": "rutube.ru",
         "reality": {
           "enabled": true,
-          "public_key": "8h8t5eBWL9oERK7xWHQLFJE5j6sZdgNDQAs3EGnNbho",
-          "short_id": "b76dcf9e1183fe1b"
+          "public_key": "5QAO98ot2U7TcGs_f6EEaQjCzNOJLNHqPf6smYsdFVI",
+          "short_id": "be0ce047"
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "chrome"
+          "fingerprint": "firefox"
+        }
+      }
+    },
+    {
+      "tag": "🇦🇪 United Arab Emirates [SNI-RU] vk.ru",
+      "type": "vless",
+      "server": "31.56.188.85",
+      "server_port": 8443,
+      "uuid": "9e5201b2-5061-413b-b310-36cc6ec590c6",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "vk.ru",
+        "reality": {
+          "enabled": true,
+          "public_key": "QGlJtT7TdXFaIctNpsvykWqAgTR3VCq3Z0H94-QKHDc",
+          "short_id": ""
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
         }
       }
     }
