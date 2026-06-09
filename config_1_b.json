@@ -34,11 +34,11 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇷🇺 Russia [*CIDR]",
-        "ð³ð± The Netherlands [*CIDR]",
+        "🇵🇱 Poland [*CIDR]",
         "🇲🇩 Moldova [*CIDR]",
-        "🇬🇧 United Kingdom [*CIDR]",
-        "ð³ð± The Netherlands | [*CIDR]"
+        "🇷🇺 Russia [*CIDR]",
+        "🇲🇩 Moldova [*CIDR]-2",
+        "🇲🇩 Moldova [*CIDR]-3"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -51,14 +51,50 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇷🇺 Russia [*CIDR]",
-        "ð³ð± The Netherlands [*CIDR]",
+        "🇵🇱 Poland [*CIDR]",
         "🇲🇩 Moldova [*CIDR]",
-        "🇬🇧 United Kingdom [*CIDR]",
-        "ð³ð± The Netherlands | [*CIDR]"
+        "🇷🇺 Russia [*CIDR]",
+        "🇲🇩 Moldova [*CIDR]-2",
+        "🇲🇩 Moldova [*CIDR]-3"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
+    },
+    {
+      "tag": "🇵🇱 Poland [*CIDR]",
+      "type": "vless",
+      "server": "195.133.198.249",
+      "server_port": 19443,
+      "uuid": "9e5201b2-5061-413b-b310-36cc6ec590c6",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "rutube.ru",
+        "reality": {
+          "enabled": true,
+          "public_key": "QGlJtT7TdXFaIctNpsvykWqAgTR3VCq3Z0H94-QKHDc",
+          "short_id": ""
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
+      }
+    },
+    {
+      "tag": "🇲🇩 Moldova [*CIDR]",
+      "type": "vless",
+      "server": "185.242.19.249",
+      "server_port": 443,
+      "uuid": "882e17c8-b013-4e99-9774-36e26e5001ff",
+      "tls": {
+        "enabled": true,
+        "server_name": "top3739667002.mwscdn.ru",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      }
     },
     {
       "tag": "🇷🇺 Russia [*CIDR]",
@@ -82,26 +118,7 @@
       }
     },
     {
-      "tag": "ð³ð± The Netherlands [*CIDR]",
-      "type": "vmess",
-      "server": "93.93.88.22",
-      "server_port": 443,
-      "uuid": "df9c9355-b02c-4c12-909d-0dbeb725d52b",
-      "security": "auto",
-      "tls": {
-        "enabled": true,
-        "server_name": "renderer-stream-1-411.mirra.now"
-      },
-      "transport": {
-        "type": "ws",
-        "headers": {
-          "Host": "renderer-stream-1-411.mirra.now"
-        },
-        "path": "/api/v1/gpu-stream/socket"
-      }
-    },
-    {
-      "tag": "🇲🇩 Moldova [*CIDR]",
+      "tag": "🇲🇩 Moldova [*CIDR]-2",
       "type": "vless",
       "server": "185.242.19.250",
       "server_port": 443,
@@ -116,46 +133,25 @@
       }
     },
     {
-      "tag": "🇬🇧 United Kingdom [*CIDR]",
+      "tag": "🇲🇩 Moldova [*CIDR]-3",
       "type": "vless",
-      "server": "62.152.56.254",
-      "server_port": 8443,
-      "uuid": "1da3b96e-55af-0012-9147-39e79074aaea",
+      "server": "185.242.19.249",
+      "server_port": 443,
+      "uuid": "cfb70000-ed61-4a7e-89a3-2b9c2caa6001",
       "tls": {
         "enabled": true,
-        "server_name": "loadtest.dev.urent.ru",
-        "reality": {
-          "enabled": true,
-          "public_key": "36F7ul7R68ih8TAKPfHnqEvw_23kWNgOXCrfQKK3MXQ",
-          "short_id": "3722621913893e97"
-        },
+        "server_name": "top707762634.mwscdn.ru",
         "utls": {
           "enabled": true,
-          "fingerprint": "firefox"
+          "fingerprint": "chrome"
         }
-      },
-      "transport": {
-        "type": "grpc",
-        "service_name": "/api"
-      }
-    },
-    {
-      "tag": "ð³ð± The Netherlands | [*CIDR]",
-      "type": "vmess",
-      "server": "renderer-stream-1-411.mirra.now",
-      "server_port": 443,
-      "uuid": "df9c9355-b02c-4c12-909d-0dbeb725d52b",
-      "security": "auto",
-      "tls": {
-        "enabled": true,
-        "server_name": "renderer-stream-1-411.mirra.now"
       },
       "transport": {
         "type": "ws",
         "headers": {
-          "Host": "renderer-stream-1-411.mirra.now"
+          "Host": "top707762634.mwscdn.ru"
         },
-        "path": "/api/v1/gpu-stream/socket"
+        "path": "/livestreamcontent/"
       }
     }
   ],

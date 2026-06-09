@@ -35,10 +35,10 @@
       "tag": "auto",
       "outbounds": [
         "🇲🇩 Moldova [*CIDR]",
-        "ð³ð± The Netherlands | [*CIDR]",
-        "🇲🇩 Moldova [*CIDR]-2",
         "ð³ð± The Netherlands [*CIDR]",
-        "🇷🇺 Russia [*CIDR]"
+        "🇷🇺 Russia [*CIDR]",
+        "🇲🇩 Moldova [*CIDR]-2",
+        "🌐 Anycast-IP | 🇨🇦 🇫🇮 [*CIDR]"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -52,10 +52,10 @@
       "outbounds": [
         "auto",
         "🇲🇩 Moldova [*CIDR]",
-        "ð³ð± The Netherlands | [*CIDR]",
-        "🇲🇩 Moldova [*CIDR]-2",
         "ð³ð± The Netherlands [*CIDR]",
-        "🇷🇺 Russia [*CIDR]"
+        "🇷🇺 Russia [*CIDR]",
+        "🇲🇩 Moldova [*CIDR]-2",
+        "🌐 Anycast-IP | 🇨🇦 🇫🇮 [*CIDR]"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
@@ -68,47 +68,13 @@
       "uuid": "882e17c8-b013-4e99-9774-36e26e5001ff",
       "tls": {
         "enabled": true,
-        "server_name": "top3739667002.mwscdn.ru",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      }
-    },
-    {
-      "tag": "ð³ð± The Netherlands | [*CIDR]",
-      "type": "vmess",
-      "server": "195.209.90.168",
-      "server_port": 443,
-      "uuid": "df9c9355-b02c-4c12-909d-0dbeb725d52b",
-      "security": "auto",
-      "tls": {
-        "enabled": true,
-        "server_name": "renderer-stream-1-411.mirra.now"
-      },
-      "transport": {
-        "type": "ws",
-        "headers": {
-          "Host": "renderer-stream-1-411.mirra.now"
-        },
-        "path": "/api/v1/gpu-stream/socket"
-      }
-    },
-    {
-      "tag": "🇲🇩 Moldova [*CIDR]-2",
-      "type": "vless",
-      "server": "185.242.19.250",
-      "server_port": 443,
-      "uuid": "cfb70000-ed61-4a7e-89a3-2b9c2caa6001",
-      "tls": {
-        "enabled": true,
         "server_name": "top3739667002.mwscdn.ru"
       }
     },
     {
       "tag": "ð³ð± The Netherlands [*CIDR]",
       "type": "vmess",
-      "server": "93.93.88.22",
+      "server": "37.220.161.247",
       "server_port": 443,
       "uuid": "df9c9355-b02c-4c12-909d-0dbeb725d52b",
       "security": "auto",
@@ -142,6 +108,36 @@
         "utls": {
           "enabled": true,
           "fingerprint": "firefox"
+        }
+      }
+    },
+    {
+      "tag": "🇲🇩 Moldova [*CIDR]-2",
+      "type": "vless",
+      "server": "185.242.19.250",
+      "server_port": 443,
+      "uuid": "882e17c8-b013-4e99-9774-36e26e5001ff",
+      "tls": {
+        "enabled": true,
+        "server_name": "top3739667002.mwscdn.ru",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      }
+    },
+    {
+      "tag": "🌐 Anycast-IP | 🇨🇦 🇫🇮 [*CIDR]",
+      "type": "vless",
+      "server": "141.193.213.21",
+      "server_port": 443,
+      "uuid": "9f135709-60a1-4a9b-b31c-78d326d8752a",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.middle.cc.cd",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
         }
       }
     }

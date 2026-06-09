@@ -35,10 +35,10 @@
       "tag": "auto",
       "outbounds": [
         "🇲🇩 Moldova [*CIDR]",
-        "🌐 Anycast-IP | 🇨🇦 🇫🇮 [*CIDR]",
-        "🌐 Anycast-IP | 🇦🇷 🇨🇦 🇵🇱 [*CIDR]",
+        "ð³ð± The Netherlands | [*CIDR]",
         "🇷🇺 Russia [*CIDR]",
-        "🇬🇧 United Kingdom | 🌐 [*CIDR]"
+        "ð³ð± The Netherlands | [*CIDR]-2",
+        "ð³ð± The Netherlands | [*CIDR]-3"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -52,10 +52,10 @@
       "outbounds": [
         "auto",
         "🇲🇩 Moldova [*CIDR]",
-        "🌐 Anycast-IP | 🇨🇦 🇫🇮 [*CIDR]",
-        "🌐 Anycast-IP | 🇦🇷 🇨🇦 🇵🇱 [*CIDR]",
+        "ð³ð± The Netherlands | [*CIDR]",
         "🇷🇺 Russia [*CIDR]",
-        "🇬🇧 United Kingdom | 🌐 [*CIDR]"
+        "ð³ð± The Netherlands | [*CIDR]-2",
+        "ð³ð± The Netherlands | [*CIDR]-3"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
@@ -68,44 +68,26 @@
       "uuid": "cfb70000-ed61-4a7e-89a3-2b9c2caa6001",
       "tls": {
         "enabled": true,
-        "server_name": "top3739667002.mwscdn.ru",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
+        "server_name": "top3739667002.mwscdn.ru"
       }
     },
     {
-      "tag": "🌐 Anycast-IP | 🇨🇦 🇫🇮 [*CIDR]",
-      "type": "vless",
-      "server": "141.193.213.21",
+      "tag": "ð³ð± The Netherlands | [*CIDR]",
+      "type": "vmess",
+      "server": "renderer-stream-1-411.mirra.now",
       "server_port": 443,
-      "uuid": "9f135709-60a1-4a9b-b31c-78d326d8752a",
+      "uuid": "df9c9355-b02c-4c12-909d-0dbeb725d52b",
+      "security": "auto",
       "tls": {
         "enabled": true,
-        "server_name": "www.middle.cc.cd",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      }
-    },
-    {
-      "tag": "🌐 Anycast-IP | 🇦🇷 🇨🇦 🇵🇱 [*CIDR]",
-      "type": "vless",
-      "server": "144.31.4.235",
-      "server_port": 443,
-      "uuid": "36af4874-d6a3-4f7c-82a7-1cb724961b52",
-      "tls": {
-        "enabled": true,
-        "server_name": "linek.perry.us.kg"
+        "server_name": "renderer-stream-1-411.mirra.now"
       },
       "transport": {
         "type": "ws",
         "headers": {
-          "Host": "linek.perry.us.kg"
+          "Host": "renderer-stream-1-411.mirra.now"
         },
-        "path": "/pdf"
+        "path": "/api/v1/gpu-stream/socket"
       }
     },
     {
@@ -130,24 +112,49 @@
       }
     },
     {
-      "tag": "🇬🇧 United Kingdom | 🌐 [*CIDR]",
-      "type": "vless",
-      "server": "147.45.99.249",
+      "tag": "ð³ð± The Netherlands | [*CIDR]-2",
+      "type": "vmess",
+      "server": "37.220.161.247",
       "server_port": 443,
-      "uuid": "e438ed18-0208-4620-b7f4-56ba7045f397",
-      "flow": "xtls-rprx-vision",
+      "uuid": "df9c9355-b02c-4c12-909d-0dbeb725d52b",
+      "security": "auto",
       "tls": {
         "enabled": true,
-        "server_name": "gb.sellflow.org",
-        "reality": {
-          "enabled": true,
-          "public_key": "SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc",
-          "short_id": ""
+        "server_name": "renderer-stream-1-411.mirra.now"
+      },
+      "transport": {
+        "type": "ws",
+        "headers": {
+          "Host": "renderer-stream-1-411.mirra.now"
         },
+        "path": "/api/v1/gpu-stream/socket"
+      }
+    },
+    {
+      "tag": "ð³ð± The Netherlands | [*CIDR]-3",
+      "type": "vmess",
+      "server": "renderer-stream-1-411.mirra.now",
+      "server_port": 443,
+      "uuid": "df9c9355-b02c-4c12-909d-0dbeb725d52b",
+      "security": "auto",
+      "tls": {
+        "enabled": true,
+        "server_name": "renderer-stream-1-411.mirra.now",
+        "alpn": [
+          "h2",
+          "http/1.1"
+        ],
         "utls": {
           "enabled": true,
-          "fingerprint": "firefox"
+          "fingerprint": "chrome"
         }
+      },
+      "transport": {
+        "type": "ws",
+        "headers": {
+          "Host": "renderer-stream-1-411.mirra.now"
+        },
+        "path": "/api/v1/gpu-stream/socket"
       }
     }
   ],

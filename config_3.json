@@ -35,7 +35,8 @@
       "tag": "auto",
       "outbounds": [
         "🇳🇱 The Netherlands | 🌐 [*CIDR] YA",
-        "🌐 Anycast-IP | 🇪🇪 🇳🇱 [*CIDR] YA"
+        "🌐 Anycast-IP | 🇩🇪 🇬🇧 [*CIDR] VK",
+        "🇳🇱 The Netherlands | 🌐 [*CIDR] YA-2"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -49,7 +50,8 @@
       "outbounds": [
         "auto",
         "🇳🇱 The Netherlands | 🌐 [*CIDR] YA",
-        "🌐 Anycast-IP | 🇪🇪 🇳🇱 [*CIDR] YA"
+        "🌐 Anycast-IP | 🇩🇪 🇬🇧 [*CIDR] VK",
+        "🇳🇱 The Netherlands | 🌐 [*CIDR] YA-2"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
@@ -76,18 +78,22 @@
       }
     },
     {
-      "tag": "🌐 Anycast-IP | 🇪🇪 🇳🇱 [*CIDR] YA",
+      "tag": "🌐 Anycast-IP | 🇩🇪 🇬🇧 [*CIDR] VK",
       "type": "vless",
-      "server": "158.160.183.141",
-      "server_port": 23458,
-      "uuid": "c8e83bdd-40ae-43f9-9e2a-c19241d2ca33",
+      "server": "89.208.208.92",
+      "server_port": 7443,
+      "uuid": "cbc27e56-38a1-4b0d-bce3-f9e7dcb807a4",
       "tls": {
         "enabled": true,
-        "server_name": "debian.ubuntuhosting.host",
+        "insecure": true,
+        "server_name": "loadtest.dev.urent.ru",
+        "alpn": [
+          "http/1.1"
+        ],
         "reality": {
           "enabled": true,
-          "public_key": "p9B6DsYSn21Md7L8ZVfgy8KkbRh2vpYYtzvh_XfIJ24",
-          "short_id": "707c8615b9"
+          "public_key": "_AXs-QnufIq918tbb2pwM3MDbe7kQ6i0cIHDMLwPmGs",
+          "short_id": "3210e0eee6605048"
         },
         "utls": {
           "enabled": true,
@@ -96,7 +102,28 @@
       },
       "transport": {
         "type": "grpc",
-        "service_name": "gun"
+        "service_name": "grpc"
+      }
+    },
+    {
+      "tag": "🇳🇱 The Netherlands | 🌐 [*CIDR] YA-2",
+      "type": "vless",
+      "server": "84.201.167.190",
+      "server_port": 443,
+      "uuid": "87a61ee1-f6eb-48b4-ac90-c255ce067a07",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "smartcaptcha.yandexcloud.net",
+        "reality": {
+          "enabled": true,
+          "public_key": "vffVSILmcC4J4EcoKf5ZBhqGXA1u356YqQaBh97_OBQ",
+          "short_id": "27e53bbcab7593d1"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
       }
     }
   ],

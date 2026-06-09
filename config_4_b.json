@@ -31,69 +31,36 @@
       "type": "block"
     },
     {
-      "type": "urltest",
-      "tag": "auto",
-      "outbounds": [
-        "🇬🇧 United Kingdom [SNI-RU] rutube.ru",
-        "🇦🇪 United Arab Emirates [SNI-RU] vk.ru"
-      ],
-      "url": "https://google.com/generate_204",
-      "interval": "1m",
-      "tolerance": 250,
-      "idle_timeout": "30m",
-      "interrupt_exist_connections": false
-    },
-    {
       "type": "selector",
       "tag": "select",
       "outbounds": [
-        "auto",
-        "🇬🇧 United Kingdom [SNI-RU] rutube.ru",
-        "🇦🇪 United Arab Emirates [SNI-RU] vk.ru"
+        "🇵🇱 Poland | 🌐 [SNI-RU] ads.x5.ru"
       ],
-      "default": "auto",
+      "default": "🇵🇱 Poland | 🌐 [SNI-RU] ads.x5.ru",
       "interrupt_exist_connections": false
     },
     {
-      "tag": "🇬🇧 United Kingdom [SNI-RU] rutube.ru",
+      "tag": "🇵🇱 Poland | 🌐 [SNI-RU] ads.x5.ru",
       "type": "vless",
-      "server": "45.91.55.234",
-      "server_port": 7443,
-      "uuid": "8bbf020e-653f-4a82-9900-1214e4e37dab",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "rutube.ru",
-        "reality": {
-          "enabled": true,
-          "public_key": "5QAO98ot2U7TcGs_f6EEaQjCzNOJLNHqPf6smYsdFVI",
-          "short_id": "be0ce047"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
-        }
-      }
-    },
-    {
-      "tag": "🇦🇪 United Arab Emirates [SNI-RU] vk.ru",
-      "type": "vless",
-      "server": "31.56.188.85",
+      "server": "pl.riotvpn.eu",
       "server_port": 8443,
-      "uuid": "9e5201b2-5061-413b-b310-36cc6ec590c6",
-      "flow": "xtls-rprx-vision",
+      "uuid": "b6c78959-ce5f-41d2-ad14-4be945c357c6",
       "tls": {
         "enabled": true,
-        "server_name": "vk.ru",
+        "server_name": "ads.x5.ru",
         "reality": {
           "enabled": true,
-          "public_key": "QGlJtT7TdXFaIctNpsvykWqAgTR3VCq3Z0H94-QKHDc",
-          "short_id": ""
+          "public_key": "sgFFdQvfeujBKh6g7N7klU_u0mKYlr800MFbko5FzUg",
+          "short_id": "844352756c1fabba"
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "firefox"
+          "fingerprint": "chrome"
         }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "grpc-yandex"
       }
     }
   ],
