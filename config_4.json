@@ -34,11 +34,11 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇬🇧 United Kingdom [SNI-RU] eh.vk.com",
-        "🇧🇬 Bulgaria [SNI-RU] ads.x5.ru",
-        "🇬🇧 United Kingdom [SNI-RU] ads.x5.ru",
-        "🇫🇮 Finland | 🌐 [SNI-RU] max.ru",
-        "🌐 Anycast-IP | 🇬🇧 🇳🇱 [SNI-RU] rutube.ru"
+        "🇸🇪 Sweden | 🌐 [SNI-RU] max.ru",
+        "🇳🇱 The Netherlands [SNI-RU] ads.x5.ru",
+        "🇷🇺 Russia [SNI-RU] ads.x5.ru",
+        "🇳🇱 The Netherlands [SNI-RU] ads.x5.ru-2",
+        "🇬🇧 United Kingdom | 🌐 [SNI-RU] rutube.ru"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -51,107 +51,104 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇬🇧 United Kingdom [SNI-RU] eh.vk.com",
-        "🇧🇬 Bulgaria [SNI-RU] ads.x5.ru",
-        "🇬🇧 United Kingdom [SNI-RU] ads.x5.ru",
-        "🇫🇮 Finland | 🌐 [SNI-RU] max.ru",
-        "🌐 Anycast-IP | 🇬🇧 🇳🇱 [SNI-RU] rutube.ru"
+        "🇸🇪 Sweden | 🌐 [SNI-RU] max.ru",
+        "🇳🇱 The Netherlands [SNI-RU] ads.x5.ru",
+        "🇷🇺 Russia [SNI-RU] ads.x5.ru",
+        "🇳🇱 The Netherlands [SNI-RU] ads.x5.ru-2",
+        "🇬🇧 United Kingdom | 🌐 [SNI-RU] rutube.ru"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
     },
     {
-      "tag": "🇬🇧 United Kingdom [SNI-RU] eh.vk.com",
+      "tag": "🇸🇪 Sweden | 🌐 [SNI-RU] max.ru",
       "type": "vless",
-      "server": "31.76.93.54",
-      "server_port": 8443,
-      "uuid": "7b7fe91c-89cc-414d-9860-839b3845f50d",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "eh.vk.com",
-        "reality": {
-          "enabled": true,
-          "public_key": "BrGL0gTKK_Ir2VwJOa91Vd8870DswnOXhA6-F92RBGI",
-          "short_id": "a987b6bd1781daa3"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "qq"
-        }
-      }
-    },
-    {
-      "tag": "🇧🇬 Bulgaria [SNI-RU] ads.x5.ru",
-      "type": "vless",
-      "server": "nl.riotvpn.eu",
-      "server_port": 8443,
-      "uuid": "7fe363a0-c6e2-4609-9301-7a7d92ddb780",
-      "tls": {
-        "enabled": true,
-        "server_name": "ads.x5.ru",
-        "reality": {
-          "enabled": true,
-          "public_key": "sgFFdQvfeujBKh6g7N7klU_u0mKYlr800MFbko5FzUg",
-          "short_id": "844352756c1fabba"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
-      "transport": {
-        "type": "grpc",
-        "service_name": "grpc-yandex"
-      }
-    },
-    {
-      "tag": "🇬🇧 United Kingdom [SNI-RU] ads.x5.ru",
-      "type": "vless",
-      "server": "uk.riotvpn.eu",
-      "server_port": 8443,
-      "uuid": "7fe363a0-c6e2-4609-9301-7a7d92ddb780",
-      "tls": {
-        "enabled": true,
-        "server_name": "ads.x5.ru",
-        "reality": {
-          "enabled": true,
-          "public_key": "sgFFdQvfeujBKh6g7N7klU_u0mKYlr800MFbko5FzUg",
-          "short_id": "844352756c1fabba"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
-      "transport": {
-        "type": "grpc",
-        "service_name": "grpc-yandex"
-      }
-    },
-    {
-      "tag": "🇫🇮 Finland | 🌐 [SNI-RU] max.ru",
-      "type": "vless",
-      "server": "beamgedrive.topupaxme.icu",
-      "server_port": 5443,
-      "uuid": "a6bd2cf2-cb83-4ac3-82a3-350cc9d0d469",
-      "flow": "xtls-rprx-vision",
+      "server": "85.209.135.79",
+      "server_port": 8445,
+      "uuid": "0d698540-e126-44ee-8604-d408b6e01ed9",
       "tls": {
         "enabled": true,
         "server_name": "max.ru",
         "reality": {
           "enabled": true,
-          "public_key": "LGcG8Sqv5vPDypbaEgHV0ZGqQOBkgDepPWXyDohbVXQ",
-          "short_id": ""
+          "public_key": "9Nx0aV3vVuP_t_lO0eAisDPtf2Z3Q-iKS8Q2_sWlBXM",
+          "short_id": "c207a94e35186a56"
         },
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
         }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "grpc"
       }
     },
     {
-      "tag": "🌐 Anycast-IP | 🇬🇧 🇳🇱 [SNI-RU] rutube.ru",
+      "tag": "🇳🇱 The Netherlands [SNI-RU] ads.x5.ru",
+      "type": "vless",
+      "server": "89.223.69.242",
+      "server_port": 9443,
+      "uuid": "96882e4c-d07a-4712-bd9a-326d328ac184",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "ads.x5.ru",
+        "reality": {
+          "enabled": true,
+          "public_key": "K42aHYxM9Lt1Tl4vF-OniHV5pNju-wnB_opA-hVihgs",
+          "short_id": "1000"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
+      }
+    },
+    {
+      "tag": "🇷🇺 Russia [SNI-RU] ads.x5.ru",
+      "type": "vless",
+      "server": "147.45.146.240",
+      "server_port": 443,
+      "uuid": "7093d974-52c0-11f1-9b1b-2052e5698dbf",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "ads.x5.ru",
+        "reality": {
+          "enabled": true,
+          "public_key": "2IAFC23dkBm2ZRPTcxSWZ5YkpVxJufIIZn3-aSPRH10",
+          "short_id": ""
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
+      }
+    },
+    {
+      "tag": "🇳🇱 The Netherlands [SNI-RU] ads.x5.ru-2",
+      "type": "vless",
+      "server": "89.223.69.242",
+      "server_port": 9443,
+      "uuid": "d7cca0c5-8efe-45d1-b0ab-fdd6d7336fe1",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "ads.x5.ru",
+        "reality": {
+          "enabled": true,
+          "public_key": "K42aHYxM9Lt1Tl4vF-OniHV5pNju-wnB_opA-hVihgs",
+          "short_id": "1000"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
+      }
+    },
+    {
+      "tag": "🇬🇧 United Kingdom | 🌐 [SNI-RU] rutube.ru",
       "type": "vless",
       "server": "45.91.55.232",
       "server_port": 7443,
