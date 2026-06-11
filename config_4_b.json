@@ -34,11 +34,11 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇸🇬 Singapore | 🌐 [SNI-RU] eh.vk.com",
-        "🇵🇱 Poland [SNI-RU] api-maps.yandex.ru",
-        "🇵🇱 Poland | 🌐 [SNI-RU] ads.x5.ru",
-        "🇵🇱 Poland | 🌐 [SNI-RU] ads.x5.ru-2",
-        "🌐 Anycast-IP | 🇬🇧 🇳🇱 [SNI-RU] rutube.ru"
+        "🇬🇧 United Kingdom | 🌐 [SNI-RU] rutube.ru",
+        "🇧🇬 Bulgaria [SNI-RU] avatars.mds.yandex.net",
+        "🇵🇱 Poland [SNI-RU] ads.x5.ru",
+        "🇩🇪 Germany | 🌐 [SNI-RU] eh.vk.com",
+        "🇵🇱 Poland [SNI-RU] ads.x5.ru-2"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -51,100 +51,17 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇸🇬 Singapore | 🌐 [SNI-RU] eh.vk.com",
-        "🇵🇱 Poland [SNI-RU] api-maps.yandex.ru",
-        "🇵🇱 Poland | 🌐 [SNI-RU] ads.x5.ru",
-        "🇵🇱 Poland | 🌐 [SNI-RU] ads.x5.ru-2",
-        "🌐 Anycast-IP | 🇬🇧 🇳🇱 [SNI-RU] rutube.ru"
+        "🇬🇧 United Kingdom | 🌐 [SNI-RU] rutube.ru",
+        "🇧🇬 Bulgaria [SNI-RU] avatars.mds.yandex.net",
+        "🇵🇱 Poland [SNI-RU] ads.x5.ru",
+        "🇩🇪 Germany | 🌐 [SNI-RU] eh.vk.com",
+        "🇵🇱 Poland [SNI-RU] ads.x5.ru-2"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
     },
     {
-      "tag": "🇸🇬 Singapore | 🌐 [SNI-RU] eh.vk.com",
-      "type": "vless",
-      "server": "139.162.61.57",
-      "server_port": 443,
-      "uuid": "03fcc618-b93d-6796-6aed-8a38c975d581",
-      "tls": {
-        "enabled": true,
-        "insecure": true,
-        "server_name": "eh.vk.com"
-      }
-    },
-    {
-      "tag": "🇵🇱 Poland [SNI-RU] api-maps.yandex.ru",
-      "type": "vless",
-      "server": "109.237.98.81",
-      "server_port": 443,
-      "uuid": "1dfd369b-d13c-4a2d-89e8-60961656d1ce",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "api-maps.yandex.ru",
-        "reality": {
-          "enabled": true,
-          "public_key": "uAabfPYujQGS9CY-h1on-TOtHU-y-vrumPXWo6G6AVg",
-          "short_id": "e92d8fca"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
-        }
-      }
-    },
-    {
-      "tag": "🇵🇱 Poland | 🌐 [SNI-RU] ads.x5.ru",
-      "type": "vless",
-      "server": "83.168.91.240",
-      "server_port": 8443,
-      "uuid": "41da9cd0-b02c-427a-b74e-7e402c610ae4",
-      "tls": {
-        "enabled": true,
-        "insecure": true,
-        "server_name": "ads.x5.ru",
-        "reality": {
-          "enabled": true,
-          "public_key": "sgFFdQvfeujBKh6g7N7klU_u0mKYlr800MFbko5FzUg",
-          "short_id": "844352756c1fabba"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
-      "transport": {
-        "type": "grpc",
-        "service_name": "grpc-yandex"
-      }
-    },
-    {
-      "tag": "🇵🇱 Poland | 🌐 [SNI-RU] ads.x5.ru-2",
-      "type": "vless",
-      "server": "83.168.91.244",
-      "server_port": 8443,
-      "uuid": "41da9cd0-b02c-427a-b74e-7e402c610ae4",
-      "tls": {
-        "enabled": true,
-        "insecure": true,
-        "server_name": "ads.x5.ru",
-        "reality": {
-          "enabled": true,
-          "public_key": "sgFFdQvfeujBKh6g7N7klU_u0mKYlr800MFbko5FzUg",
-          "short_id": "844352756c1fabba"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
-      "transport": {
-        "type": "grpc",
-        "service_name": "grpc-yandex"
-      }
-    },
-    {
-      "tag": "🌐 Anycast-IP | 🇬🇧 🇳🇱 [SNI-RU] rutube.ru",
+      "tag": "🇬🇧 United Kingdom | 🌐 [SNI-RU] rutube.ru",
       "type": "vless",
       "server": "45.91.55.234",
       "server_port": 7443,
@@ -161,6 +78,90 @@
         "utls": {
           "enabled": true,
           "fingerprint": "firefox"
+        }
+      }
+    },
+    {
+      "tag": "🇧🇬 Bulgaria [SNI-RU] avatars.mds.yandex.net",
+      "type": "vless",
+      "server": "nl.riotvpn.eu",
+      "server_port": 443,
+      "uuid": "c470171c-2951-4806-988d-61d4d811486d",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "avatars.mds.yandex.net",
+        "reality": {
+          "enabled": true,
+          "public_key": "8h8t5eBWL9oERK7xWHQLFJE5j6sZdgNDQAs3EGnNbho",
+          "short_id": "b76dcf9e1183fe1b"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "qq"
+        }
+      }
+    },
+    {
+      "tag": "🇵🇱 Poland [SNI-RU] ads.x5.ru",
+      "type": "vless",
+      "server": "pl.riotvpn.eu",
+      "server_port": 443,
+      "uuid": "e8cd1edf-d722-459e-9581-6a30a751e6c2",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "insecure": true,
+        "server_name": "ads.x5.ru",
+        "reality": {
+          "enabled": true,
+          "public_key": "8h8t5eBWL9oERK7xWHQLFJE5j6sZdgNDQAs3EGnNbho",
+          "short_id": "2f49bccf11150ef2"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "qq"
+        }
+      }
+    },
+    {
+      "tag": "🇩🇪 Germany | 🌐 [SNI-RU] eh.vk.com",
+      "type": "vless",
+      "server": "151.101.69.223",
+      "server_port": 443,
+      "uuid": "5f65c1ae-9e7a-48ea-8ecf-6822365cd177",
+      "tls": {
+        "enabled": true,
+        "insecure": true,
+        "server_name": "eh.vk.com"
+      },
+      "transport": {
+        "type": "ws",
+        "headers": {
+          "Host": "apiv2.global.ssl.fastly.net"
+        },
+        "path": "/"
+      }
+    },
+    {
+      "tag": "🇵🇱 Poland [SNI-RU] ads.x5.ru-2",
+      "type": "vless",
+      "server": "pl.riotvpn.eu",
+      "server_port": 443,
+      "uuid": "e8cd1edf-d722-459e-9581-6a30a751e6c2",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "insecure": true,
+        "server_name": "ads.x5.ru",
+        "reality": {
+          "enabled": true,
+          "public_key": "8h8t5eBWL9oERK7xWHQLFJE5j6sZdgNDQAs3EGnNbho",
+          "short_id": "2f49bccf11150ef2"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
         }
       }
     }
