@@ -36,14 +36,14 @@
       "outbounds": [
         "🇷🇺 Russia | 🌐 [*CIDR]",
         "🇷🇺 Russia | 🌐 [*CIDR]-2",
-        "🇷🇺 Russia [*CIDR] VK",
         "🇷🇺 Russia | 🌐 [*CIDR]-3",
         "🇷🇺 Russia | 🌐 [*CIDR]-4",
+        "🇷🇺 Russia [*CIDR]",
+        "🇷🇺 Russia [*CIDR]-2",
+        "🇷🇺 Russia [*CIDR] VK",
         "🇷🇺 Russia | 🌐 [*CIDR]-5",
         "🇷🇺 Russia | 🌐 [*CIDR]-6",
-        "🇷🇺 Russia | 🌐 [*CIDR]-7",
-        "🇷🇺 Russia [*CIDR]",
-        "🇷🇺 Russia | 🌐 [*CIDR]-8"
+        "🇷🇺 Russia [*CIDR]-3"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -58,14 +58,14 @@
         "auto",
         "🇷🇺 Russia | 🌐 [*CIDR]",
         "🇷🇺 Russia | 🌐 [*CIDR]-2",
-        "🇷🇺 Russia [*CIDR] VK",
         "🇷🇺 Russia | 🌐 [*CIDR]-3",
         "🇷🇺 Russia | 🌐 [*CIDR]-4",
+        "🇷🇺 Russia [*CIDR]",
+        "🇷🇺 Russia [*CIDR]-2",
+        "🇷🇺 Russia [*CIDR] VK",
         "🇷🇺 Russia | 🌐 [*CIDR]-5",
         "🇷🇺 Russia | 🌐 [*CIDR]-6",
-        "🇷🇺 Russia | 🌐 [*CIDR]-7",
-        "🇷🇺 Russia [*CIDR]",
-        "🇷🇺 Russia | 🌐 [*CIDR]-8"
+        "🇷🇺 Russia [*CIDR]-3"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
@@ -75,7 +75,7 @@
       "type": "vless",
       "server": "85.239.40.249",
       "server_port": 443,
-      "uuid": "d5b52d85-714e-4b3c-95cd-ca0cbfba35c3",
+      "uuid": "5a96b986-1a96-4005-b5ae-45096ae6f85a",
       "tls": {
         "enabled": true,
         "server_name": "ru.locklance.lol",
@@ -93,63 +93,40 @@
     {
       "tag": "🇷🇺 Russia | 🌐 [*CIDR]-2",
       "type": "vless",
-      "server": "89.223.68.130",
+      "server": "ru.locklance.lol",
       "server_port": 443,
-      "uuid": "bbaaff1e-c914-4817-9d33-58be35a3bee6",
-      "flow": "xtls-rprx-vision",
+      "uuid": "d5b52d85-714e-4b3c-95cd-ca0cbfba35c3",
       "tls": {
         "enabled": true,
-        "server_name": "serv-ru-2.whit3.net",
+        "server_name": "ru.locklance.lol",
         "reality": {
           "enabled": true,
-          "public_key": "nhAokqXGOVhoKptzb4oHyF5_Kj88T7yebPppzJDVQ3s",
-          "short_id": "7db0264ba766f307"
+          "public_key": "dzpKdY2nJ5SDkizuORY2BQ0pvOd5TWwUkyjou4pFhAI",
+          "short_id": "4fccf1f98f04c7bb"
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "firefox"
-        }
-      }
-    },
-    {
-      "tag": "🇷🇺 Russia [*CIDR] VK",
-      "type": "vless",
-      "server": "185.86.147.210",
-      "server_port": 443,
-      "uuid": "5a96b986-1a96-4005-b5ae-45096ae6f85a",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "download.max.ru",
-        "reality": {
-          "enabled": true,
-          "public_key": "uAEnruG3uui3vI_hofiVrBFbRiLM-DKKWYTnZdj8lDE",
-          "short_id": "f5f4d10234185c63"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
+          "fingerprint": "chrome"
         }
       }
     },
     {
       "tag": "🇷🇺 Russia | 🌐 [*CIDR]-3",
       "type": "vless",
-      "server": "217.12.207.15",
+      "server": "85.239.40.249",
       "server_port": 443,
       "uuid": "5a96b986-1a96-4005-b5ae-45096ae6f85a",
-      "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "pl.aiage.work",
+        "server_name": "ru.locklance.lol",
         "reality": {
           "enabled": true,
-          "public_key": "8KqR58G5z0RkDn4P979JfYzCOwTYIvOS8ordh8o8ZjA",
-          "short_id": "a68790de236dfca6"
+          "public_key": "dzpKdY2nJ5SDkizuORY2BQ0pvOd5TWwUkyjou4pFhAI",
+          "short_id": "5cdb398a7baa0765"
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "chrome"
+          "fingerprint": "firefox"
         }
       }
     },
@@ -174,39 +151,19 @@
       }
     },
     {
-      "tag": "🇷🇺 Russia | 🌐 [*CIDR]-5",
+      "tag": "🇷🇺 Russia [*CIDR]",
       "type": "vless",
-      "server": "85.239.40.249",
+      "server": "89.223.68.130",
       "server_port": 443,
-      "uuid": "0a12381a-e241-4b63-a03c-1a5a45a95977",
-      "tls": {
-        "enabled": true,
-        "server_name": "ru.locklance.lol",
-        "reality": {
-          "enabled": true,
-          "public_key": "dzpKdY2nJ5SDkizuORY2BQ0pvOd5TWwUkyjou4pFhAI",
-          "short_id": "3b591a1227f69e03"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      }
-    },
-    {
-      "tag": "🇷🇺 Russia | 🌐 [*CIDR]-6",
-      "type": "vless",
-      "server": "pl.aiage.work",
-      "server_port": 443,
-      "uuid": "d5b52d85-714e-4b3c-95cd-ca0cbfba35c3",
+      "uuid": "bbaaff1e-c914-4817-9d33-58be35a3bee6",
       "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "pl.aiage.work",
+        "server_name": "serv-ru-2.whit3.net",
         "reality": {
           "enabled": true,
-          "public_key": "8KqR58G5z0RkDn4P979JfYzCOwTYIvOS8ordh8o8ZjA",
-          "short_id": "fa0a959a27fac554"
+          "public_key": "nhAokqXGOVhoKptzb4oHyF5_Kj88T7yebPppzJDVQ3s",
+          "short_id": "7db0264ba766f307"
         },
         "utls": {
           "enabled": true,
@@ -215,27 +172,7 @@
       }
     },
     {
-      "tag": "🇷🇺 Russia | 🌐 [*CIDR]-7",
-      "type": "vless",
-      "server": "85.239.40.249",
-      "server_port": 443,
-      "uuid": "5a96b986-1a96-4005-b5ae-45096ae6f85a",
-      "tls": {
-        "enabled": true,
-        "server_name": "ru.locklance.lol",
-        "reality": {
-          "enabled": true,
-          "public_key": "dzpKdY2nJ5SDkizuORY2BQ0pvOd5TWwUkyjou4pFhAI",
-          "short_id": "4fccf1f98f04c7bb"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      }
-    },
-    {
-      "tag": "🇷🇺 Russia [*CIDR]",
+      "tag": "🇷🇺 Russia [*CIDR]-2",
       "type": "vless",
       "server": "217.12.207.15",
       "server_port": 443,
@@ -256,23 +193,86 @@
       }
     },
     {
-      "tag": "🇷🇺 Russia | 🌐 [*CIDR]-8",
+      "tag": "🇷🇺 Russia [*CIDR] VK",
       "type": "vless",
-      "server": "ru.locklance.lol",
+      "server": "185.86.146.15",
+      "server_port": 5443,
+      "uuid": "a6bd2cf2-cb83-4ac3-82a3-350cc9d0d469",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "max.ru",
+        "reality": {
+          "enabled": true,
+          "public_key": "LGcG8Sqv5vPDypbaEgHV0ZGqQOBkgDepPWXyDohbVXQ",
+          "short_id": ""
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      }
+    },
+    {
+      "tag": "🇷🇺 Russia | 🌐 [*CIDR]-5",
+      "type": "vless",
+      "server": "85.239.40.249",
       "server_port": 443,
-      "uuid": "5a96b986-1a96-4005-b5ae-45096ae6f85a",
+      "uuid": "d5b52d85-714e-4b3c-95cd-ca0cbfba35c3",
       "tls": {
         "enabled": true,
         "server_name": "ru.locklance.lol",
         "reality": {
           "enabled": true,
           "public_key": "dzpKdY2nJ5SDkizuORY2BQ0pvOd5TWwUkyjou4pFhAI",
-          "short_id": "5cdb398a7baa0765"
+          "short_id": "4fccf1f98f04c7bb"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
+      }
+    },
+    {
+      "tag": "🇷🇺 Russia | 🌐 [*CIDR]-6",
+      "type": "vless",
+      "server": "85.239.40.249",
+      "server_port": 443,
+      "uuid": "0a12381a-e241-4b63-a03c-1a5a45a95977",
+      "tls": {
+        "enabled": true,
+        "server_name": "ru.locklance.lol",
+        "reality": {
+          "enabled": true,
+          "public_key": "dzpKdY2nJ5SDkizuORY2BQ0pvOd5TWwUkyjou4pFhAI",
+          "short_id": "3b591a1227f69e03"
         },
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
         }
+      }
+    },
+    {
+      "tag": "🇷🇺 Russia [*CIDR]-3",
+      "type": "vless",
+      "server": "l12.l-itx.info",
+      "server_port": 2053,
+      "uuid": "f1a44ae4-20f9-4dd7-b60e-b4f2acecfdb4",
+      "tls": {
+        "enabled": true,
+        "server_name": "554dad6ab34f7baf.itx-server.digital",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "headers": {
+          "Host": "itx-server.digital"
+        },
+        "path": "/ws"
       }
     }
   ],
