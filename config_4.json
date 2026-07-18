@@ -34,10 +34,10 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇮🇳 India | 🌐 | [SNI-RU] yandex.net",
-        "🇺🇸 United States | [SNI-RU] web.max.ru",
-        "🇧🇬 Bulgaria [SNI-RU] web.max.ru",
         "🇧🇬 Bulgaria | [SNI-RU] web.max.ru",
+        "🇧🇬 Bulgaria [SNI-RU] web.max.ru",
+        "🇮🇳 India | 🌐 | [SNI-RU] yandex.net",
+        "🇮🇳 India | 🌐 | [SNI-RU] yandex.net-2",
         "🇺🇸 United States [SNI-RU] web.max.ru"
       ],
       "url": "https://google.com/generate_204",
@@ -51,83 +51,14 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇮🇳 India | 🌐 | [SNI-RU] yandex.net",
-        "🇺🇸 United States | [SNI-RU] web.max.ru",
-        "🇧🇬 Bulgaria [SNI-RU] web.max.ru",
         "🇧🇬 Bulgaria | [SNI-RU] web.max.ru",
+        "🇧🇬 Bulgaria [SNI-RU] web.max.ru",
+        "🇮🇳 India | 🌐 | [SNI-RU] yandex.net",
+        "🇮🇳 India | 🌐 | [SNI-RU] yandex.net-2",
         "🇺🇸 United States [SNI-RU] web.max.ru"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
-    },
-    {
-      "tag": "🇮🇳 India | 🌐 | [SNI-RU] yandex.net",
-      "type": "vless",
-      "server": "187.127.157.76",
-      "server_port": 443,
-      "uuid": "58b5c3e8-7fc8-4fc8-9e35-59c134a92420",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "yandex.net",
-        "reality": {
-          "enabled": true,
-          "public_key": "2fgsbEAn-ALVpjnE4ZTPrzaZY70vVplYwldCnslInE0",
-          "short_id": "86b80f1e713a33ad"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
-        }
-      }
-    },
-    {
-      "tag": "🇺🇸 United States | [SNI-RU] web.max.ru",
-      "type": "vless",
-      "server": "86.109.75.147",
-      "server_port": 444,
-      "uuid": "0b9bcbc1-b289-4a64-86fa-a5b731b65384",
-      "tls": {
-        "enabled": true,
-        "server_name": "web.max.ru",
-        "reality": {
-          "enabled": true,
-          "public_key": "MF_E-_CYAXdWxC1N_wTkdFyk3K7_1cNqNDPb0vnwl20",
-          "short_id": "8311761729abcdef"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
-      "transport": {
-        "type": "grpc",
-        "service_name": "web.max.ru"
-      }
-    },
-    {
-      "tag": "🇧🇬 Bulgaria [SNI-RU] web.max.ru",
-      "type": "vless",
-      "server": "93.152.205.216",
-      "server_port": 444,
-      "uuid": "0b9bcbc1-b289-4a64-86fa-a5b731b65384",
-      "tls": {
-        "enabled": true,
-        "server_name": "web.max.ru",
-        "reality": {
-          "enabled": true,
-          "public_key": "X-YL5VNtlMNIaBrwaHt3hJCeF_gMT9gPRDDlK1Qg7Tc",
-          "short_id": "8321461729abcdef"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
-        }
-      },
-      "transport": {
-        "type": "grpc",
-        "service_name": "web.max.ru"
-      }
     },
     {
       "tag": "🇧🇬 Bulgaria | [SNI-RU] web.max.ru",
@@ -154,6 +85,72 @@
       }
     },
     {
+      "tag": "🇧🇬 Bulgaria [SNI-RU] web.max.ru",
+      "type": "vless",
+      "server": "nl2.vrsvpn.com",
+      "server_port": 444,
+      "uuid": "0b9bcbc1-b289-4a64-86fa-a5b731b65384",
+      "tls": {
+        "enabled": true,
+        "server_name": "web.max.ru",
+        "reality": {
+          "enabled": true,
+          "public_key": "X-YL5VNtlMNIaBrwaHt3hJCeF_gMT9gPRDDlK1Qg7Tc",
+          "short_id": "8321461729abcdef"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "edge"
+        }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "web.max.ru"
+      }
+    },
+    {
+      "tag": "🇮🇳 India | 🌐 | [SNI-RU] yandex.net",
+      "type": "vless",
+      "server": "187.127.157.76",
+      "server_port": 443,
+      "uuid": "58b5c3e8-7fc8-4fc8-9e35-59c134a92420",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "yandex.net",
+        "reality": {
+          "enabled": true,
+          "public_key": "2fgsbEAn-ALVpjnE4ZTPrzaZY70vVplYwldCnslInE0",
+          "short_id": "86b80f1e713a33ad"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
+      }
+    },
+    {
+      "tag": "🇮🇳 India | 🌐 | [SNI-RU] yandex.net-2",
+      "type": "vless",
+      "server": "187.127.157.76",
+      "server_port": 443,
+      "uuid": "58b5c3e8-7fc8-4fc8-9e35-59c134a92420",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "yandex.net",
+        "reality": {
+          "enabled": true,
+          "public_key": "2fgsbEAn-ALVpjnE4ZTPrzaZY70vVplYwldCnslInE0",
+          "short_id": "86b80f1e713a33ad"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "qq"
+        }
+      }
+    },
+    {
       "tag": "🇺🇸 United States [SNI-RU] web.max.ru",
       "type": "vless",
       "server": "usa.vrsvpn.com",
@@ -169,7 +166,7 @@
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "edge"
+          "fingerprint": "firefox"
         }
       },
       "transport": {
