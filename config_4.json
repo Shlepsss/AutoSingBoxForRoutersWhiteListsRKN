@@ -36,8 +36,8 @@
       "outbounds": [
         "🇺🇸 United States | [SNI-RU] web.max.ru",
         "🇺🇸 United States | [SNI-RU] web.max.ru-2",
-        "🇺🇸 United States [SNI-RU] web.max.ru",
         "🇧🇬 Bulgaria [SNI-RU] web.max.ru",
+        "🇺🇸 United States [SNI-RU] web.max.ru",
         "🇧🇬 Bulgaria [SNI-RU] web.max.ru-2"
       ],
       "url": "https://google.com/generate_204",
@@ -53,8 +53,8 @@
         "auto",
         "🇺🇸 United States | [SNI-RU] web.max.ru",
         "🇺🇸 United States | [SNI-RU] web.max.ru-2",
-        "🇺🇸 United States [SNI-RU] web.max.ru",
         "🇧🇬 Bulgaria [SNI-RU] web.max.ru",
+        "🇺🇸 United States [SNI-RU] web.max.ru",
         "🇧🇬 Bulgaria [SNI-RU] web.max.ru-2"
       ],
       "default": "auto",
@@ -109,33 +109,9 @@
       }
     },
     {
-      "tag": "🇺🇸 United States [SNI-RU] web.max.ru",
-      "type": "vless",
-      "server": "86.109.75.147",
-      "server_port": 444,
-      "uuid": "0b9bcbc1-b289-4a64-86fa-a5b731b65384",
-      "tls": {
-        "enabled": true,
-        "server_name": "web.max.ru",
-        "reality": {
-          "enabled": true,
-          "public_key": "MF_E-_CYAXdWxC1N_wTkdFyk3K7_1cNqNDPb0vnwl20",
-          "short_id": "8311761729abcdef"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
-        }
-      },
-      "transport": {
-        "type": "grpc",
-        "service_name": "web.max.ru"
-      }
-    },
-    {
       "tag": "🇧🇬 Bulgaria [SNI-RU] web.max.ru",
       "type": "vless",
-      "server": "93.152.205.216",
+      "server": "nl2.vrsvpn.com",
       "server_port": 444,
       "uuid": "0b9bcbc1-b289-4a64-86fa-a5b731b65384",
       "tls": {
@@ -148,7 +124,31 @@
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "safari"
+          "fingerprint": "firefox"
+        }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "web.max.ru"
+      }
+    },
+    {
+      "tag": "🇺🇸 United States [SNI-RU] web.max.ru",
+      "type": "vless",
+      "server": "usa.vrsvpn.com",
+      "server_port": 444,
+      "uuid": "0b9bcbc1-b289-4a64-86fa-a5b731b65384",
+      "tls": {
+        "enabled": true,
+        "server_name": "web.max.ru",
+        "reality": {
+          "enabled": true,
+          "public_key": "MF_E-_CYAXdWxC1N_wTkdFyk3K7_1cNqNDPb0vnwl20",
+          "short_id": "8311761729abcdef"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "edge"
         }
       },
       "transport": {
@@ -172,7 +172,7 @@
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "firefox"
+          "fingerprint": "safari"
         }
       },
       "transport": {
