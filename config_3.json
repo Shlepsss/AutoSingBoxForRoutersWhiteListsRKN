@@ -34,13 +34,13 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇩🇪 Germany | [*CIDR] YA",
+        ".𖥔 ݁ ˖ִ🛸༄˖°. | [*CIDR] YA",
         "🇷🇺 Russia | [*CIDR] VK",
-        "🇷🇺 Russia [*CIDR] VK",
-        "🇩🇪 Germany | [*CIDR] YA-2",
         "🇮🇹 Italy | 🌐 [*CIDR] YA",
         "🇷🇺 Russia | [*CIDR] VK-2",
-        "🇷🇺 Russia | [*CIDR] VK-3"
+        "🇷🇺 Russia [*CIDR] VK",
+        "🇷🇺 Russia | [*CIDR] VK-3",
+        "🇷🇺 Russia | [*CIDR] VK-4"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -53,30 +53,34 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇩🇪 Germany | [*CIDR] YA",
+        ".𖥔 ݁ ˖ִ🛸༄˖°. | [*CIDR] YA",
         "🇷🇺 Russia | [*CIDR] VK",
-        "🇷🇺 Russia [*CIDR] VK",
-        "🇩🇪 Germany | [*CIDR] YA-2",
         "🇮🇹 Italy | 🌐 [*CIDR] YA",
         "🇷🇺 Russia | [*CIDR] VK-2",
-        "🇷🇺 Russia | [*CIDR] VK-3"
+        "🇷🇺 Russia [*CIDR] VK",
+        "🇷🇺 Russia | [*CIDR] VK-3",
+        "🇷🇺 Russia | [*CIDR] VK-4"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
     },
     {
-      "tag": "🇩🇪 Germany | [*CIDR] YA",
+      "tag": ".𖥔 ݁ ˖ִ🛸༄˖°. | [*CIDR] YA",
       "type": "vless",
-      "server": "bs1.whitehost.org",
+      "server": "51.250.3.73",
       "server_port": 443,
-      "uuid": "cad59ee8-e80f-4d0f-a9dd-d082e00a75e4",
-      "flow": "xtls-rprx-vision",
+      "uuid": "3fffe7ed-7374-57ba-956f-6e930f10f04f",
       "tls": {
         "enabled": true,
-        "server_name": "wde3.whitedeu.org",
+        "server_name": "ads.x5.ru",
+        "reality": {
+          "enabled": true,
+          "public_key": "QapbUJT61NbhceZHd1X5ylScWQpkHOEkUZ5VG6p53w4",
+          "short_id": "ed1fd4c7"
+        },
         "utls": {
           "enabled": true,
-          "fingerprint": "edge"
+          "fingerprint": "qq"
         }
       }
     },
@@ -95,43 +99,6 @@
           "public_key": "SHIYN7zN9aFVxwKK-bIvDbhUgtHvlBhDi1qSl2sWwRw",
           "short_id": "01e7"
         },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      }
-    },
-    {
-      "tag": "🇷🇺 Russia [*CIDR] VK",
-      "type": "vless",
-      "server": "node2.frost-api.com",
-      "server_port": 443,
-      "uuid": "217145c8-86d1-47c2-800f-1a85dec46a3c",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "max.ru",
-        "reality": {
-          "enabled": true,
-          "public_key": "SHIYN7zN9aFVxwKK-bIvDbhUgtHvlBhDi1qSl2sWwRw",
-          "short_id": "01e7"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "ios"
-        }
-      }
-    },
-    {
-      "tag": "🇩🇪 Germany | [*CIDR] YA-2",
-      "type": "vless",
-      "server": "bs1.whitehost.org",
-      "server_port": 443,
-      "uuid": "cad59ee8-e80f-4d0f-a9dd-d082e00a75e4",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "wde3.whitedeu.org",
         "utls": {
           "enabled": true,
           "fingerprint": "android"
@@ -175,6 +142,27 @@
         },
         "utls": {
           "enabled": true,
+          "fingerprint": "firefox"
+        }
+      }
+    },
+    {
+      "tag": "🇷🇺 Russia [*CIDR] VK",
+      "type": "vless",
+      "server": "node2.frost-api.com",
+      "server_port": 443,
+      "uuid": "217145c8-86d1-47c2-800f-1a85dec46a3c",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "max.ru",
+        "reality": {
+          "enabled": true,
+          "public_key": "SHIYN7zN9aFVxwKK-bIvDbhUgtHvlBhDi1qSl2sWwRw",
+          "short_id": "01e7"
+        },
+        "utls": {
+          "enabled": true,
           "fingerprint": "edge"
         }
       }
@@ -196,7 +184,28 @@
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "firefox"
+          "fingerprint": "chrome"
+        }
+      }
+    },
+    {
+      "tag": "🇷🇺 Russia | [*CIDR] VK-4",
+      "type": "vless",
+      "server": "node2.frost-api.com",
+      "server_port": 443,
+      "uuid": "217145c8-86d1-47c2-800f-1a85dec46a3c",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "max.ru",
+        "reality": {
+          "enabled": true,
+          "public_key": "SHIYN7zN9aFVxwKK-bIvDbhUgtHvlBhDi1qSl2sWwRw",
+          "short_id": "01e7"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "ios"
         }
       }
     }
