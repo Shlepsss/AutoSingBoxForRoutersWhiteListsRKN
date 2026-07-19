@@ -34,11 +34,10 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇩🇪 Germany | [*CIDR] VK",
         "🇮🇹 Italy | 🌐 [*CIDR] YA",
-        "🇷🇺 Russia | [*CIDR] YA",
-        "🇩🇪 Germany | [*CIDR] VK-2",
-        "🇷🇺 Russia | [*CIDR] YA-2"
+        "🇮🇹 Italy | 🌐 [*CIDR] YA-2",
+        "🇷🇺 Russia [*CIDR] VK",
+        "🇷🇺 Russia [*CIDR] VK-2"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -51,41 +50,36 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇩🇪 Germany | [*CIDR] VK",
         "🇮🇹 Italy | 🌐 [*CIDR] YA",
-        "🇷🇺 Russia | [*CIDR] YA",
-        "🇩🇪 Germany | [*CIDR] VK-2",
-        "🇷🇺 Russia | [*CIDR] YA-2"
+        "🇮🇹 Italy | 🌐 [*CIDR] YA-2",
+        "🇷🇺 Russia [*CIDR] VK",
+        "🇷🇺 Russia [*CIDR] VK-2"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
     },
     {
-      "tag": "🇩🇪 Germany | [*CIDR] VK",
+      "tag": "🇮🇹 Italy | 🌐 [*CIDR] YA",
       "type": "vless",
-      "server": "217.16.21.108",
-      "server_port": 7444,
-      "uuid": "9aff9c52-b2ee-44b9-a5f0-9f11a3aeca8e",
+      "server": "51.250.3.73",
+      "server_port": 443,
+      "uuid": "3fffe7ed-7374-57ba-956f-6e930f10f04f",
       "tls": {
         "enabled": true,
-        "server_name": "id.pervye.ru",
+        "server_name": "ads.x5.ru",
         "reality": {
           "enabled": true,
-          "public_key": "QZz4tjRkxYsgTZBlRALOQU4O5YnAGtSGkXF8OSX11m8",
-          "short_id": ""
+          "public_key": "QapbUJT61NbhceZHd1X5ylScWQpkHOEkUZ5VG6p53w4",
+          "short_id": "ed1fd4c7"
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "ios"
+          "fingerprint": "safari"
         }
-      },
-      "transport": {
-        "type": "grpc",
-        "service_name": "ns"
       }
     },
     {
-      "tag": "🇮🇹 Italy | 🌐 [*CIDR] YA",
+      "tag": "🇮🇹 Italy | 🌐 [*CIDR] YA-2",
       "type": "vless",
       "server": "51.250.3.73",
       "server_port": 443,
@@ -105,68 +99,44 @@
       }
     },
     {
-      "tag": "🇷🇺 Russia | [*CIDR] YA",
+      "tag": "🇷🇺 Russia [*CIDR] VK",
       "type": "vless",
-      "server": "94.126.205.237",
-      "server_port": 8743,
-      "uuid": "6801b462-3ae8-4004-b33e-f450f30acddb",
+      "server": "node2.frost-api.com",
+      "server_port": 443,
+      "uuid": "217145c8-86d1-47c2-800f-1a85dec46a3c",
       "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "google.com",
+        "server_name": "max.ru",
         "reality": {
           "enabled": true,
-          "public_key": "t6na-2afCF3o9dLqQaZYS230qyn4944iGexKNERMcGI",
-          "short_id": "6baad05c"
+          "public_key": "SHIYN7zN9aFVxwKK-bIvDbhUgtHvlBhDi1qSl2sWwRw",
+          "short_id": "01e7"
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "firefox"
+          "fingerprint": "ios"
         }
       }
     },
     {
-      "tag": "🇩🇪 Germany | [*CIDR] VK-2",
+      "tag": "🇷🇺 Russia [*CIDR] VK-2",
       "type": "vless",
-      "server": "217.16.21.108",
-      "server_port": 7444,
-      "uuid": "9aff9c52-b2ee-44b9-a5f0-9f11a3aeca8e",
-      "tls": {
-        "enabled": true,
-        "server_name": "id.pervye.ru",
-        "reality": {
-          "enabled": true,
-          "public_key": "QZz4tjRkxYsgTZBlRALOQU4O5YnAGtSGkXF8OSX11m8",
-          "short_id": ""
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
-        }
-      },
-      "transport": {
-        "type": "grpc",
-        "service_name": "ns"
-      }
-    },
-    {
-      "tag": "🇷🇺 Russia | [*CIDR] YA-2",
-      "type": "vless",
-      "server": "94.126.205.237",
-      "server_port": 8743,
-      "uuid": "6801b462-3ae8-4004-b33e-f450f30acddb",
+      "server": "node2.frost-api.com",
+      "server_port": 443,
+      "uuid": "217145c8-86d1-47c2-800f-1a85dec46a3c",
       "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "google.com",
+        "server_name": "max.ru",
         "reality": {
           "enabled": true,
-          "public_key": "t6na-2afCF3o9dLqQaZYS230qyn4944iGexKNERMcGI",
-          "short_id": "6baad05c"
+          "public_key": "SHIYN7zN9aFVxwKK-bIvDbhUgtHvlBhDi1qSl2sWwRw",
+          "short_id": "01e7"
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "android"
+          "fingerprint": "chrome"
         }
       }
     }

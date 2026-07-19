@@ -34,11 +34,11 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇷🇺 Russia | [SNI-RU] max.ru",
-        "🇷🇺 Russia [SNI-RU] max.ru",
-        "🌐 Anycast-IP | 🇨🇿 🇷🇺 | [SNI-RU] ads.x5.ru",
-        "🌐 Anycast-IP | 🇨🇿 🇷🇺 | [SNI-RU] ads.x5.ru-2",
-        "🇺🇸 United States [SNI-RU] web.max.ru"
+        "🇱🇻 Latvia | 🌐 | [SNI-RU] api-maps.yandex.ru",
+        "🇧🇬 Bulgaria | [SNI-RU] web.max.ru",
+        "🇺🇸 United States [SNI-RU] web.max.ru",
+        "🇧🇬 Bulgaria | [SNI-RU] web.max.ru-2",
+        "🇱🇻 Latvia | 🌐 | [SNI-RU] api-maps.yandex.ru-2"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -51,103 +51,64 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇷🇺 Russia | [SNI-RU] max.ru",
-        "🇷🇺 Russia [SNI-RU] max.ru",
-        "🌐 Anycast-IP | 🇨🇿 🇷🇺 | [SNI-RU] ads.x5.ru",
-        "🌐 Anycast-IP | 🇨🇿 🇷🇺 | [SNI-RU] ads.x5.ru-2",
-        "🇺🇸 United States [SNI-RU] web.max.ru"
+        "🇱🇻 Latvia | 🌐 | [SNI-RU] api-maps.yandex.ru",
+        "🇧🇬 Bulgaria | [SNI-RU] web.max.ru",
+        "🇺🇸 United States [SNI-RU] web.max.ru",
+        "🇧🇬 Bulgaria | [SNI-RU] web.max.ru-2",
+        "🇱🇻 Latvia | 🌐 | [SNI-RU] api-maps.yandex.ru-2"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
     },
     {
-      "tag": "🇷🇺 Russia | [SNI-RU] max.ru",
+      "tag": "🇱🇻 Latvia | 🌐 | [SNI-RU] api-maps.yandex.ru",
       "type": "vless",
-      "server": "node2.frost-api.com",
+      "server": "red-fhmq5ehr3ievlnabv8l2.concept7.ru",
       "server_port": 443,
-      "uuid": "217145c8-86d1-47c2-800f-1a85dec46a3c",
+      "uuid": "15e0833c-08ad-47f3-bf80-60c2a47a6774",
       "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "max.ru",
+        "server_name": "api-maps.yandex.ru",
         "reality": {
           "enabled": true,
-          "public_key": "SHIYN7zN9aFVxwKK-bIvDbhUgtHvlBhDi1qSl2sWwRw",
-          "short_id": "01e7"
+          "public_key": "KEZ93Y9VgoirI18wIpcfS3z8I9GiaiFe-GKqGdEPMmg",
+          "short_id": "4e07408562be"
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "firefox"
+          "fingerprint": "qq"
         }
       }
     },
     {
-      "tag": "🇷🇺 Russia [SNI-RU] max.ru",
+      "tag": "🇧🇬 Bulgaria | [SNI-RU] web.max.ru",
       "type": "vless",
-      "server": "node2.frost-api.com",
-      "server_port": 443,
-      "uuid": "217145c8-86d1-47c2-800f-1a85dec46a3c",
-      "flow": "xtls-rprx-vision",
+      "server": "nl2.vrsvpn.com",
+      "server_port": 444,
+      "uuid": "0b9bcbc1-b289-4a64-86fa-a5b731b65384",
       "tls": {
         "enabled": true,
-        "server_name": "max.ru",
+        "server_name": "web.max.ru",
         "reality": {
           "enabled": true,
-          "public_key": "SHIYN7zN9aFVxwKK-bIvDbhUgtHvlBhDi1qSl2sWwRw",
-          "short_id": "01e7"
+          "public_key": "X-YL5VNtlMNIaBrwaHt3hJCeF_gMT9gPRDDlK1Qg7Tc",
+          "short_id": "8321461729abcdef"
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "ios"
+          "fingerprint": "safari"
         }
-      }
-    },
-    {
-      "tag": "🌐 Anycast-IP | 🇨🇿 🇷🇺 | [SNI-RU] ads.x5.ru",
-      "type": "vless",
-      "server": "78.159.247.166",
-      "server_port": 7444,
-      "uuid": "9aff9c52-b2ee-44b9-a5f0-9f11a3aeca8e",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "ads.x5.ru",
-        "reality": {
-          "enabled": true,
-          "public_key": "-P8DgKISSG4jnLuj6ihZDqZs1_zt-juBrhVhTylHiAo",
-          "short_id": ""
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
-        }
-      }
-    },
-    {
-      "tag": "🌐 Anycast-IP | 🇨🇿 🇷🇺 | [SNI-RU] ads.x5.ru-2",
-      "type": "vless",
-      "server": "78.159.247.177",
-      "server_port": 7444,
-      "uuid": "9aff9c52-b2ee-44b9-a5f0-9f11a3aeca8e",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "ads.x5.ru",
-        "reality": {
-          "enabled": true,
-          "public_key": "-P8DgKISSG4jnLuj6ihZDqZs1_zt-juBrhVhTylHiAo",
-          "short_id": ""
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "ios"
-        }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "web.max.ru"
       }
     },
     {
       "tag": "🇺🇸 United States [SNI-RU] web.max.ru",
       "type": "vless",
-      "server": "usa.vrsvpn.com",
+      "server": "86.109.75.147",
       "server_port": 444,
       "uuid": "0b9bcbc1-b289-4a64-86fa-a5b731b65384",
       "tls": {
@@ -166,6 +127,51 @@
       "transport": {
         "type": "grpc",
         "service_name": "web.max.ru"
+      }
+    },
+    {
+      "tag": "🇧🇬 Bulgaria | [SNI-RU] web.max.ru-2",
+      "type": "vless",
+      "server": "93.152.205.216",
+      "server_port": 444,
+      "uuid": "0b9bcbc1-b289-4a64-86fa-a5b731b65384",
+      "tls": {
+        "enabled": true,
+        "server_name": "web.max.ru",
+        "reality": {
+          "enabled": true,
+          "public_key": "X-YL5VNtlMNIaBrwaHt3hJCeF_gMT9gPRDDlK1Qg7Tc",
+          "short_id": "8321461729abcdef"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "web.max.ru"
+      }
+    },
+    {
+      "tag": "🇱🇻 Latvia | 🌐 | [SNI-RU] api-maps.yandex.ru-2",
+      "type": "vless",
+      "server": "red-fhmq5ehr3ievlnabv8l2.concept7.ru",
+      "server_port": 443,
+      "uuid": "15e0833c-08ad-47f3-bf80-60c2a47a6774",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "api-maps.yandex.ru",
+        "reality": {
+          "enabled": true,
+          "public_key": "KEZ93Y9VgoirI18wIpcfS3z8I9GiaiFe-GKqGdEPMmg",
+          "short_id": "4e07408562be"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
       }
     }
   ],
