@@ -35,8 +35,8 @@
       "tag": "auto",
       "outbounds": [
         "🇷🇺 Russia | 🌐 [*CIDR] VK",
-        "🇨🇿 Czechia [*CIDR] YA",
-        "🇳🇱 The Netherlands [*CIDR] YA"
+        "🇳🇱 The Netherlands [*CIDR] YA",
+        "🇨🇿 Czechia [*CIDR] YA"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -50,8 +50,8 @@
       "outbounds": [
         "auto",
         "🇷🇺 Russia | 🌐 [*CIDR] VK",
-        "🇨🇿 Czechia [*CIDR] YA",
-        "🇳🇱 The Netherlands [*CIDR] YA"
+        "🇳🇱 The Netherlands [*CIDR] YA",
+        "🇨🇿 Czechia [*CIDR] YA"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
@@ -78,27 +78,6 @@
       }
     },
     {
-      "tag": "🇨🇿 Czechia [*CIDR] YA",
-      "type": "vless",
-      "server": "84.201.139.231",
-      "server_port": 443,
-      "uuid": "4401809f-4d60-4df7-ab14-da48955c2cb3",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "web.max.ru",
-        "reality": {
-          "enabled": true,
-          "public_key": "FkyjJ-RLGIBWnsUQAuyfv-qReJSiuyb7qFnJS14ASgQ",
-          "short_id": "27e53bbcab7593d7"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
-        }
-      }
-    },
-    {
       "tag": "🇳🇱 The Netherlands [*CIDR] YA",
       "type": "vless",
       "server": "51.250.40.183",
@@ -116,6 +95,27 @@
         "utls": {
           "enabled": true,
           "fingerprint": "random"
+        }
+      }
+    },
+    {
+      "tag": "🇨🇿 Czechia [*CIDR] YA",
+      "type": "vless",
+      "server": "84.201.139.231",
+      "server_port": 443,
+      "uuid": "4401809f-4d60-4df7-ab14-da48955c2cb3",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "web.max.ru",
+        "reality": {
+          "enabled": true,
+          "public_key": "FkyjJ-RLGIBWnsUQAuyfv-qReJSiuyb7qFnJS14ASgQ",
+          "short_id": "27e53bbcab7593d7"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
         }
       }
     }
