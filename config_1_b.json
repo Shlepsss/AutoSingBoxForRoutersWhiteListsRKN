@@ -34,11 +34,16 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇨🇿 Czechia [*CIDR]",
-        "🇪🇪 Estonia | 🌐 | [*CIDR]",
-        "🇩🇪 Germany | [*CIDR]",
-        "🇩🇪 Germany | [*CIDR]-2",
-        "🇪🇪 Estonia | 🌐 [*CIDR]"
+        "🇷🇺 Russia | 🌐 | [*CIDR]",
+        "🇰🇿 Kazakhstan | 🌐 | [*CIDR]",
+        "🇷🇺 Russia [*CIDR] YA",
+        "🇷🇺 Russia | 🌐 | [*CIDR]-2",
+        "🇷🇺 Russia | 🌐 | [*CIDR]-3",
+        "🇷🇺 Russia | 🌐 | [*CIDR]-4",
+        "🇷🇺 Russia [*CIDR] YA-2",
+        "🇳🇱 The Netherlands | 🌐 [*CIDR]",
+        "🇷🇺 Russia [*CIDR] YA-3",
+        "🇷🇺 Russia | [*CIDR] YA"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -51,29 +56,141 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇨🇿 Czechia [*CIDR]",
-        "🇪🇪 Estonia | 🌐 | [*CIDR]",
-        "🇩🇪 Germany | [*CIDR]",
-        "🇩🇪 Germany | [*CIDR]-2",
-        "🇪🇪 Estonia | 🌐 [*CIDR]"
+        "🇷🇺 Russia | 🌐 | [*CIDR]",
+        "🇰🇿 Kazakhstan | 🌐 | [*CIDR]",
+        "🇷🇺 Russia [*CIDR] YA",
+        "🇷🇺 Russia | 🌐 | [*CIDR]-2",
+        "🇷🇺 Russia | 🌐 | [*CIDR]-3",
+        "🇷🇺 Russia | 🌐 | [*CIDR]-4",
+        "🇷🇺 Russia [*CIDR] YA-2",
+        "🇳🇱 The Netherlands | 🌐 [*CIDR]",
+        "🇷🇺 Russia [*CIDR] YA-3",
+        "🇷🇺 Russia | [*CIDR] YA"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
     },
     {
-      "tag": "🇨🇿 Czechia [*CIDR]",
+      "tag": "🇷🇺 Russia | 🌐 | [*CIDR]",
       "type": "vless",
-      "server": "185.40.28.212",
-      "server_port": 8443,
-      "uuid": "ecad47b0-249e-0011-adff-e3c8f02b1897",
+      "server": "188.68.218.101",
+      "server_port": 443,
+      "uuid": "5238521b-c5dd-42af-870e-c174a2aaaafe",
       "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "auto.quattro-tech.ru",
+        "insecure": true,
+        "server_name": "cloud.mail.ru",
         "reality": {
           "enabled": true,
-          "public_key": "10rVZPoOUP1TlQviIAsQ_jAROX0fRQxH0C92nq_zGQc",
-          "short_id": "43dcff53849b81e6"
+          "public_key": "A41b2Th15KC7t1hSRTvkA3-CzZfv1DD1XOV2L5ICuA0",
+          "short_id": ""
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "edge"
+        }
+      }
+    },
+    {
+      "tag": "🇰🇿 Kazakhstan | 🌐 | [*CIDR]",
+      "type": "vless",
+      "server": "82.202.158.188",
+      "server_port": 544,
+      "uuid": "b440a476-e65e-4f67-9993-b8c6d1308fd7",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.amd.com",
+        "reality": {
+          "enabled": true,
+          "public_key": "xP3LIJ6-qQ51S89vFyW2PQeCjN921yVjN7pFDWKaswU",
+          "short_id": "1111"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "safari"
+        }
+      }
+    },
+    {
+      "tag": "🇷🇺 Russia [*CIDR] YA",
+      "type": "vless",
+      "server": "84.201.162.99",
+      "server_port": 49958,
+      "uuid": "6855c0ad-e259-4180-a6b8-776efdfbbcea",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.nvidia.com",
+        "reality": {
+          "enabled": true,
+          "public_key": "wwIAlV04ehfHxXiYZtCum2uKRU5mXK2uQ0bL_2_R8mE",
+          "short_id": "83e911b88e14"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "ios"
+        }
+      }
+    },
+    {
+      "tag": "🇷🇺 Russia | 🌐 | [*CIDR]-2",
+      "type": "vless",
+      "server": "188.68.218.101",
+      "server_port": 443,
+      "uuid": "5238521b-c5dd-42af-870e-c174a2aaaafe",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "insecure": true,
+        "server_name": "cloud.mail.ru",
+        "reality": {
+          "enabled": true,
+          "public_key": "A41b2Th15KC7t1hSRTvkA3-CzZfv1DD1XOV2L5ICuA0",
+          "short_id": ""
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
+      }
+    },
+    {
+      "tag": "🇷🇺 Russia | 🌐 | [*CIDR]-3",
+      "type": "vless",
+      "server": "188.68.218.101",
+      "server_port": 443,
+      "uuid": "5238521b-c5dd-42af-870e-c174a2aaaafe",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "insecure": true,
+        "server_name": "cloud.mail.ru",
+        "reality": {
+          "enabled": true,
+          "public_key": "A41b2Th15KC7t1hSRTvkA3-CzZfv1DD1XOV2L5ICuA0",
+          "short_id": ""
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      }
+    },
+    {
+      "tag": "🇷🇺 Russia | 🌐 | [*CIDR]-4",
+      "type": "vless",
+      "server": "188.68.218.101",
+      "server_port": 443,
+      "uuid": "5238521b-c5dd-42af-870e-c174a2aaaafe",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "insecure": true,
+        "server_name": "cloud.mail.ru",
+        "reality": {
+          "enabled": true,
+          "public_key": "A41b2Th15KC7t1hSRTvkA3-CzZfv1DD1XOV2L5ICuA0",
+          "short_id": ""
         },
         "utls": {
           "enabled": true,
@@ -82,19 +199,18 @@
       }
     },
     {
-      "tag": "🇪🇪 Estonia | 🌐 | [*CIDR]",
+      "tag": "🇷🇺 Russia [*CIDR] YA-2",
       "type": "vless",
-      "server": "92.223.109.89",
-      "server_port": 443,
-      "uuid": "c436d7dc-170d-40bf-b2b8-6cf468db5e65",
-      "flow": "xtls-rprx-vision",
+      "server": "84.201.162.99",
+      "server_port": 49958,
+      "uuid": "6855c0ad-e259-4180-a6b8-776efdfbbcea",
       "tls": {
         "enabled": true,
-        "server_name": "5post-gate.x5.ru",
+        "server_name": "www.nvidia.com",
         "reality": {
           "enabled": true,
-          "public_key": "wlCVdU8TCIBjIKRPWA6kpmptW0MV9rCP8WfWLSapsjU",
-          "short_id": "cc7dc5fb"
+          "public_key": "wwIAlV04ehfHxXiYZtCum2uKRU5mXK2uQ0bL_2_R8mE",
+          "short_id": "83e911b88e14"
         },
         "utls": {
           "enabled": true,
@@ -103,57 +219,7 @@
       }
     },
     {
-      "tag": "🇩🇪 Germany | [*CIDR]",
-      "type": "vless",
-      "server": "media.kinodrozd.com",
-      "server_port": 14443,
-      "uuid": "8f0560ec-ba22-4431-a6a7-318dc59d5233",
-      "tls": {
-        "enabled": true,
-        "server_name": "media.kinodrozd.com",
-        "alpn": [
-          "http/1.1"
-        ],
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "headers": {
-          "Host": "media.kinodrozd.com"
-        },
-        "path": "/"
-      }
-    },
-    {
-      "tag": "🇩🇪 Germany | [*CIDR]-2",
-      "type": "vless",
-      "server": "media.kinodrozd.com",
-      "server_port": 14443,
-      "uuid": "8f0560ec-ba22-4431-a6a7-318dc59d5233",
-      "tls": {
-        "enabled": true,
-        "server_name": "media.kinodrozd.com",
-        "alpn": [
-          "http/1.1"
-        ],
-        "utls": {
-          "enabled": true,
-          "fingerprint": "edge"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "headers": {
-          "Host": "media.kinodrozd.com"
-        },
-        "path": "/"
-      }
-    },
-    {
-      "tag": "🇪🇪 Estonia | 🌐 [*CIDR]",
+      "tag": "🇳🇱 The Netherlands | 🌐 [*CIDR]",
       "type": "vless",
       "server": "92.223.109.89",
       "server_port": 443,
@@ -161,7 +227,7 @@
       "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "5post-gate.x5.ru",
+        "server_name": "ads.x5.ru",
         "reality": {
           "enabled": true,
           "public_key": "wlCVdU8TCIBjIKRPWA6kpmptW0MV9rCP8WfWLSapsjU",
@@ -170,6 +236,46 @@
         "utls": {
           "enabled": true,
           "fingerprint": "ios"
+        }
+      }
+    },
+    {
+      "tag": "🇷🇺 Russia [*CIDR] YA-3",
+      "type": "vless",
+      "server": "84.201.162.99",
+      "server_port": 49958,
+      "uuid": "6855c0ad-e259-4180-a6b8-776efdfbbcea",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.nvidia.com",
+        "reality": {
+          "enabled": true,
+          "public_key": "wwIAlV04ehfHxXiYZtCum2uKRU5mXK2uQ0bL_2_R8mE",
+          "short_id": "83e911b88e14"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      }
+    },
+    {
+      "tag": "🇷🇺 Russia | [*CIDR] YA",
+      "type": "vless",
+      "server": "84.201.162.99",
+      "server_port": 49958,
+      "uuid": "6855c0ad-e259-4180-a6b8-776efdfbbcea",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.nvidia.com",
+        "reality": {
+          "enabled": true,
+          "public_key": "wwIAlV04ehfHxXiYZtCum2uKRU5mXK2uQ0bL_2_R8mE",
+          "short_id": "83e911b88e14"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
         }
       }
     }
