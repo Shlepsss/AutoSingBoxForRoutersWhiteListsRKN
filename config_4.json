@@ -34,11 +34,11 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🌐 Anycast-IP | 🇨🇿 🇷🇺 | [SNI-RU] ads.x5.ru",
+        "🇵🇱 Poland | [SNI-RU] rutube.ru",
+        "🇧🇬 Bulgaria | [SNI-RU] web.max.ru",
         "🇧🇬 Bulgaria [SNI-RU] web.max.ru",
-        "🌐 Anycast-IP | 🇨🇿 🇷🇺 | [SNI-RU] ads.x5.ru-2",
-        "🇧🇬 Bulgaria [SNI-RU] web.max.ru-2",
-        "🇵🇱 Poland | [SNI-RU] rutube.ru"
+        "🇦🇹 Austria | 🌐 [SNI-RU] rutube.ru",
+        "🇱🇹 Lithuania [SNI-RU] api-maps.yandex.ru"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -51,40 +51,40 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🌐 Anycast-IP | 🇨🇿 🇷🇺 | [SNI-RU] ads.x5.ru",
+        "🇵🇱 Poland | [SNI-RU] rutube.ru",
+        "🇧🇬 Bulgaria | [SNI-RU] web.max.ru",
         "🇧🇬 Bulgaria [SNI-RU] web.max.ru",
-        "🌐 Anycast-IP | 🇨🇿 🇷🇺 | [SNI-RU] ads.x5.ru-2",
-        "🇧🇬 Bulgaria [SNI-RU] web.max.ru-2",
-        "🇵🇱 Poland | [SNI-RU] rutube.ru"
+        "🇦🇹 Austria | 🌐 [SNI-RU] rutube.ru",
+        "🇱🇹 Lithuania [SNI-RU] api-maps.yandex.ru"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
     },
     {
-      "tag": "🌐 Anycast-IP | 🇨🇿 🇷🇺 | [SNI-RU] ads.x5.ru",
+      "tag": "🇵🇱 Poland | [SNI-RU] rutube.ru",
       "type": "vless",
-      "server": "78.159.247.177",
-      "server_port": 7444,
-      "uuid": "9aff9c52-b2ee-44b9-a5f0-9f11a3aeca8e",
+      "server": "194.58.42.240",
+      "server_port": 443,
+      "uuid": "3e628fe4-2cbf-4740-9e49-d8b5d9b61916",
       "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "ads.x5.ru",
+        "server_name": "rutube.ru",
         "reality": {
           "enabled": true,
-          "public_key": "-P8DgKISSG4jnLuj6ihZDqZs1_zt-juBrhVhTylHiAo",
+          "public_key": "VcVsa8UC3dh3GabUCSi4Y4sepRHPoXL2evmRxSfi9nM",
           "short_id": ""
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "edge"
+          "fingerprint": "firefox"
         }
       }
     },
     {
-      "tag": "🇧🇬 Bulgaria [SNI-RU] web.max.ru",
+      "tag": "🇧🇬 Bulgaria | [SNI-RU] web.max.ru",
       "type": "vless",
-      "server": "nl2.vrsvpn.com",
+      "server": "93.152.205.216",
       "server_port": 444,
       "uuid": "0b9bcbc1-b289-4a64-86fa-a5b731b65384",
       "tls": {
@@ -97,7 +97,7 @@
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "edge"
+          "fingerprint": "qq"
         }
       },
       "transport": {
@@ -106,28 +106,7 @@
       }
     },
     {
-      "tag": "🌐 Anycast-IP | 🇨🇿 🇷🇺 | [SNI-RU] ads.x5.ru-2",
-      "type": "vless",
-      "server": "78.159.247.177",
-      "server_port": 7444,
-      "uuid": "9aff9c52-b2ee-44b9-a5f0-9f11a3aeca8e",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "ads.x5.ru",
-        "reality": {
-          "enabled": true,
-          "public_key": "-P8DgKISSG4jnLuj6ihZDqZs1_zt-juBrhVhTylHiAo",
-          "short_id": ""
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "ios"
-        }
-      }
-    },
-    {
-      "tag": "🇧🇬 Bulgaria [SNI-RU] web.max.ru-2",
+      "tag": "🇧🇬 Bulgaria [SNI-RU] web.max.ru",
       "type": "vless",
       "server": "93.152.205.216",
       "server_port": 444,
@@ -151,23 +130,47 @@
       }
     },
     {
-      "tag": "🇵🇱 Poland | [SNI-RU] rutube.ru",
+      "tag": "🇦🇹 Austria | 🌐 [SNI-RU] rutube.ru",
       "type": "vless",
-      "server": "194.58.42.240",
+      "server": "185.141.227.194",
       "server_port": 443,
       "uuid": "3e628fe4-2cbf-4740-9e49-d8b5d9b61916",
-      "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
         "server_name": "rutube.ru",
         "reality": {
           "enabled": true,
-          "public_key": "VcVsa8UC3dh3GabUCSi4Y4sepRHPoXL2evmRxSfi9nM",
-          "short_id": ""
+          "public_key": "6UMLJ345bVmG67qDaH7cfpekoMtlE-U21BmlJoHlzjk",
+          "short_id": "19b18fa6a3082b38"
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "android"
+          "fingerprint": "edge"
+        }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "ebl"
+      }
+    },
+    {
+      "tag": "🇱🇹 Lithuania [SNI-RU] api-maps.yandex.ru",
+      "type": "vless",
+      "server": "red-fhmq5ehr3ievlnabv8l2.concept7.ru",
+      "server_port": 443,
+      "uuid": "15e0833c-08ad-47f3-bf80-60c2a47a6774",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "api-maps.yandex.ru",
+        "reality": {
+          "enabled": true,
+          "public_key": "KEZ93Y9VgoirI18wIpcfS3z8I9GiaiFe-GKqGdEPMmg",
+          "short_id": "4e07408562be"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
         }
       }
     }

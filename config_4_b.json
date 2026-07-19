@@ -34,11 +34,11 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
+        "🌐 Anycast-IP | 🇨🇿 🇷🇺 | [SNI-RU] ads.x5.ru",
+        "🇱🇹 Lithuania [SNI-RU] api-maps.yandex.ru",
+        "🌐 Anycast-IP | 🇨🇿 🇷🇺 | [SNI-RU] ads.x5.ru-2",
         "🇧🇬 Bulgaria [SNI-RU] ads.x5.ru",
-        "🇧🇬 Bulgaria | [SNI-RU] web.max.ru",
-        "🇧🇬 Bulgaria | [SNI-RU] web.max.ru-2",
-        "🇧🇬 Bulgaria [SNI-RU] ads.x5.ru-2",
-        "🇦🇹 Austria | 🌐 [SNI-RU] rutube.ru"
+        "🇧🇬 Bulgaria [SNI-RU] ads.x5.ru-2"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -51,14 +51,77 @@
       "tag": "select",
       "outbounds": [
         "auto",
+        "🌐 Anycast-IP | 🇨🇿 🇷🇺 | [SNI-RU] ads.x5.ru",
+        "🇱🇹 Lithuania [SNI-RU] api-maps.yandex.ru",
+        "🌐 Anycast-IP | 🇨🇿 🇷🇺 | [SNI-RU] ads.x5.ru-2",
         "🇧🇬 Bulgaria [SNI-RU] ads.x5.ru",
-        "🇧🇬 Bulgaria | [SNI-RU] web.max.ru",
-        "🇧🇬 Bulgaria | [SNI-RU] web.max.ru-2",
-        "🇧🇬 Bulgaria [SNI-RU] ads.x5.ru-2",
-        "🇦🇹 Austria | 🌐 [SNI-RU] rutube.ru"
+        "🇧🇬 Bulgaria [SNI-RU] ads.x5.ru-2"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
+    },
+    {
+      "tag": "🌐 Anycast-IP | 🇨🇿 🇷🇺 | [SNI-RU] ads.x5.ru",
+      "type": "vless",
+      "server": "78.159.247.177",
+      "server_port": 7444,
+      "uuid": "9aff9c52-b2ee-44b9-a5f0-9f11a3aeca8e",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "ads.x5.ru",
+        "reality": {
+          "enabled": true,
+          "public_key": "-P8DgKISSG4jnLuj6ihZDqZs1_zt-juBrhVhTylHiAo",
+          "short_id": ""
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "safari"
+        }
+      }
+    },
+    {
+      "tag": "🇱🇹 Lithuania [SNI-RU] api-maps.yandex.ru",
+      "type": "vless",
+      "server": "red-fhmq5ehr3ievlnabv8l2.concept7.ru",
+      "server_port": 443,
+      "uuid": "15e0833c-08ad-47f3-bf80-60c2a47a6774",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "api-maps.yandex.ru",
+        "reality": {
+          "enabled": true,
+          "public_key": "KEZ93Y9VgoirI18wIpcfS3z8I9GiaiFe-GKqGdEPMmg",
+          "short_id": "4e07408562be"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
+      }
+    },
+    {
+      "tag": "🌐 Anycast-IP | 🇨🇿 🇷🇺 | [SNI-RU] ads.x5.ru-2",
+      "type": "vless",
+      "server": "78.159.247.177",
+      "server_port": 7444,
+      "uuid": "9aff9c52-b2ee-44b9-a5f0-9f11a3aeca8e",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "ads.x5.ru",
+        "reality": {
+          "enabled": true,
+          "public_key": "-P8DgKISSG4jnLuj6ihZDqZs1_zt-juBrhVhTylHiAo",
+          "short_id": ""
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "edge"
+        }
+      }
     },
     {
       "tag": "🇧🇬 Bulgaria [SNI-RU] ads.x5.ru",
@@ -77,60 +140,12 @@
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "edge"
-        }
-      },
-      "transport": {
-        "type": "grpc",
-        "service_name": "api.v2.SyncService/StreamUpdates"
-      }
-    },
-    {
-      "tag": "🇧🇬 Bulgaria | [SNI-RU] web.max.ru",
-      "type": "vless",
-      "server": "93.152.205.216",
-      "server_port": 444,
-      "uuid": "0b9bcbc1-b289-4a64-86fa-a5b731b65384",
-      "tls": {
-        "enabled": true,
-        "server_name": "web.max.ru",
-        "reality": {
-          "enabled": true,
-          "public_key": "X-YL5VNtlMNIaBrwaHt3hJCeF_gMT9gPRDDlK1Qg7Tc",
-          "short_id": "8321461729abcdef"
-        },
-        "utls": {
-          "enabled": true,
           "fingerprint": "qq"
         }
       },
       "transport": {
         "type": "grpc",
-        "service_name": "web.max.ru"
-      }
-    },
-    {
-      "tag": "🇧🇬 Bulgaria | [SNI-RU] web.max.ru-2",
-      "type": "vless",
-      "server": "93.152.205.216",
-      "server_port": 444,
-      "uuid": "0b9bcbc1-b289-4a64-86fa-a5b731b65384",
-      "tls": {
-        "enabled": true,
-        "server_name": "web.max.ru",
-        "reality": {
-          "enabled": true,
-          "public_key": "X-YL5VNtlMNIaBrwaHt3hJCeF_gMT9gPRDDlK1Qg7Tc",
-          "short_id": "8321461729abcdef"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
-      "transport": {
-        "type": "grpc",
-        "service_name": "web.max.ru"
+        "service_name": "api.v2.SyncService/StreamUpdates"
       }
     },
     {
@@ -156,30 +171,6 @@
       "transport": {
         "type": "grpc",
         "service_name": "api.v2.SyncService/StreamUpdates"
-      }
-    },
-    {
-      "tag": "🇦🇹 Austria | 🌐 [SNI-RU] rutube.ru",
-      "type": "vless",
-      "server": "185.141.227.194",
-      "server_port": 443,
-      "uuid": "3e628fe4-2cbf-4740-9e49-d8b5d9b61916",
-      "tls": {
-        "enabled": true,
-        "server_name": "rutube.ru",
-        "reality": {
-          "enabled": true,
-          "public_key": "6UMLJ345bVmG67qDaH7cfpekoMtlE-U21BmlJoHlzjk",
-          "short_id": "19b18fa6a3082b38"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "ios"
-        }
-      },
-      "transport": {
-        "type": "grpc",
-        "service_name": "ebl"
       }
     }
   ],

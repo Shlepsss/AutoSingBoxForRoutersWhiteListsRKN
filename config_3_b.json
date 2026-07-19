@@ -36,9 +36,9 @@
       "outbounds": [
         "🇩🇪 Germany | [*CIDR] VK",
         "🇱🇹 Lithuania [*CIDR] YA",
-        "🇱🇹 Lithuania | [*CIDR] YA",
         "🇱🇹 Lithuania [*CIDR] YA-2",
-        "🇩🇪 Germany | [*CIDR] VK-2"
+        "🇩🇪 Germany | [*CIDR] YA",
+        "🇱🇹 Lithuania [*CIDR] YA-3"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -53,9 +53,9 @@
         "auto",
         "🇩🇪 Germany | [*CIDR] VK",
         "🇱🇹 Lithuania [*CIDR] YA",
-        "🇱🇹 Lithuania | [*CIDR] YA",
         "🇱🇹 Lithuania [*CIDR] YA-2",
-        "🇩🇪 Germany | [*CIDR] VK-2"
+        "🇩🇪 Germany | [*CIDR] YA",
+        "🇱🇹 Lithuania [*CIDR] YA-3"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
@@ -76,7 +76,7 @@
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "ios"
+          "fingerprint": "qq"
         }
       },
       "transport": {
@@ -106,27 +106,6 @@
       }
     },
     {
-      "tag": "🇱🇹 Lithuania | [*CIDR] YA",
-      "type": "vless",
-      "server": "51.250.82.165",
-      "server_port": 443,
-      "uuid": "15e0833c-08ad-47f3-bf80-60c2a47a6774",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "api-maps.yandex.ru",
-        "reality": {
-          "enabled": true,
-          "public_key": "KEZ93Y9VgoirI18wIpcfS3z8I9GiaiFe-GKqGdEPMmg",
-          "short_id": "4e07408562be"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "qq"
-        }
-      }
-    },
-    {
       "tag": "🇱🇹 Lithuania [*CIDR] YA-2",
       "type": "vless",
       "server": "51.250.82.165",
@@ -148,27 +127,40 @@
       }
     },
     {
-      "tag": "🇩🇪 Germany | [*CIDR] VK-2",
+      "tag": "🇩🇪 Germany | [*CIDR] YA",
       "type": "vless",
-      "server": "217.16.21.108",
-      "server_port": 7440,
-      "uuid": "9aff9c52-b2ee-44b9-a5f0-9f11a3aeca8e",
+      "server": "bs1.whitehost.org",
+      "server_port": 443,
+      "uuid": "cad59ee8-e80f-4d0f-a9dd-d082e00a75e4",
+      "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "id.pervye.ru",
+        "server_name": "wde3.whitedeu.org",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "ios"
+        }
+      }
+    },
+    {
+      "tag": "🇱🇹 Lithuania [*CIDR] YA-3",
+      "type": "vless",
+      "server": "51.250.82.165",
+      "server_port": 443,
+      "uuid": "15e0833c-08ad-47f3-bf80-60c2a47a6774",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "api-maps.yandex.ru",
         "reality": {
           "enabled": true,
-          "public_key": "QZz4tjRkxYsgTZBlRALOQU4O5YnAGtSGkXF8OSX11m8",
-          "short_id": ""
+          "public_key": "KEZ93Y9VgoirI18wIpcfS3z8I9GiaiFe-GKqGdEPMmg",
+          "short_id": "4e07408562be"
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "safari"
+          "fingerprint": "ios"
         }
-      },
-      "transport": {
-        "type": "grpc",
-        "service_name": "ns"
       }
     }
   ],

@@ -34,11 +34,11 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
+        "🇨🇿 Czechia [*CIDR]",
+        "🇪🇪 Estonia | 🌐 | [*CIDR]",
         "🇩🇪 Germany | [*CIDR]",
-        "🇩🇪 Germany [*CIDR] YA",
-        "🇺🇸 United States [*CIDR]",
-        "🇺🇸 United States | [*CIDR]",
-        "🇩🇪 Germany | 🌐 | [*CIDR]"
+        "🇩🇪 Germany | [*CIDR]-2",
+        "🇪🇪 Estonia | 🌐 [*CIDR]"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -51,14 +51,56 @@
       "tag": "select",
       "outbounds": [
         "auto",
+        "🇨🇿 Czechia [*CIDR]",
+        "🇪🇪 Estonia | 🌐 | [*CIDR]",
         "🇩🇪 Germany | [*CIDR]",
-        "🇩🇪 Germany [*CIDR] YA",
-        "🇺🇸 United States [*CIDR]",
-        "🇺🇸 United States | [*CIDR]",
-        "🇩🇪 Germany | 🌐 | [*CIDR]"
+        "🇩🇪 Germany | [*CIDR]-2",
+        "🇪🇪 Estonia | 🌐 [*CIDR]"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
+    },
+    {
+      "tag": "🇨🇿 Czechia [*CIDR]",
+      "type": "vless",
+      "server": "185.40.28.212",
+      "server_port": 8443,
+      "uuid": "ecad47b0-249e-0011-adff-e3c8f02b1897",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "auto.quattro-tech.ru",
+        "reality": {
+          "enabled": true,
+          "public_key": "10rVZPoOUP1TlQviIAsQ_jAROX0fRQxH0C92nq_zGQc",
+          "short_id": "43dcff53849b81e6"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "qq"
+        }
+      }
+    },
+    {
+      "tag": "🇪🇪 Estonia | 🌐 | [*CIDR]",
+      "type": "vless",
+      "server": "92.223.109.89",
+      "server_port": 443,
+      "uuid": "c436d7dc-170d-40bf-b2b8-6cf468db5e65",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "5post-gate.x5.ru",
+        "reality": {
+          "enabled": true,
+          "public_key": "wlCVdU8TCIBjIKRPWA6kpmptW0MV9rCP8WfWLSapsjU",
+          "short_id": "cc7dc5fb"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "edge"
+        }
+      }
     },
     {
       "tag": "🇩🇪 Germany | [*CIDR]",
@@ -86,85 +128,49 @@
       }
     },
     {
-      "tag": "🇩🇪 Germany [*CIDR] YA",
+      "tag": "🇩🇪 Germany | [*CIDR]-2",
       "type": "vless",
-      "server": "bs1.whitehost.org",
-      "server_port": 443,
-      "uuid": "cad59ee8-e80f-4d0f-a9dd-d082e00a75e4",
-      "flow": "xtls-rprx-vision",
+      "server": "media.kinodrozd.com",
+      "server_port": 14443,
+      "uuid": "8f0560ec-ba22-4431-a6a7-318dc59d5233",
       "tls": {
         "enabled": true,
-        "server_name": "wde3.whitedeu.org",
+        "server_name": "media.kinodrozd.com",
+        "alpn": [
+          "http/1.1"
+        ],
         "utls": {
           "enabled": true,
           "fingerprint": "edge"
         }
-      }
-    },
-    {
-      "tag": "🇺🇸 United States [*CIDR]",
-      "type": "vless",
-      "server": "92.223.109.89",
-      "server_port": 443,
-      "uuid": "c436d7dc-170d-40bf-b2b8-6cf468db5e65",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "tunnel.vk-apps.com",
-        "reality": {
-          "enabled": true,
-          "public_key": "wlCVdU8TCIBjIKRPWA6kpmptW0MV9rCP8WfWLSapsjU",
-          "short_id": "cc7dc5fb"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "safari"
-        }
-      }
-    },
-    {
-      "tag": "🇺🇸 United States | [*CIDR]",
-      "type": "vless",
-      "server": "92.223.109.89",
-      "server_port": 443,
-      "uuid": "c436d7dc-170d-40bf-b2b8-6cf468db5e65",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "tunnel.vk-apps.com",
-        "reality": {
-          "enabled": true,
-          "public_key": "wlCVdU8TCIBjIKRPWA6kpmptW0MV9rCP8WfWLSapsjU",
-          "short_id": "cc7dc5fb"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
-        }
-      }
-    },
-    {
-      "tag": "🇩🇪 Germany | 🌐 | [*CIDR]",
-      "type": "vless",
-      "server": "171.22.134.207",
-      "server_port": 443,
-      "uuid": "218fd696-e3a2-4c33-b397-a5f13a82969e",
-      "tls": {
-        "enabled": true,
-        "server_name": "media2.tcpdoor.net",
-        "reality": {
-          "enabled": true,
-          "public_key": "vxhkDXfYpz1OLqZ-_9QVoQr3_UJLtJFheb5bD5YH7z8",
-          "short_id": "3303c7a5"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "safari"
-        }
       },
       "transport": {
-        "type": "grpc",
-        "service_name": "grpc"
+        "type": "ws",
+        "headers": {
+          "Host": "media.kinodrozd.com"
+        },
+        "path": "/"
+      }
+    },
+    {
+      "tag": "🇪🇪 Estonia | 🌐 [*CIDR]",
+      "type": "vless",
+      "server": "92.223.109.89",
+      "server_port": 443,
+      "uuid": "c436d7dc-170d-40bf-b2b8-6cf468db5e65",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "5post-gate.x5.ru",
+        "reality": {
+          "enabled": true,
+          "public_key": "wlCVdU8TCIBjIKRPWA6kpmptW0MV9rCP8WfWLSapsjU",
+          "short_id": "cc7dc5fb"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "ios"
+        }
       }
     }
   ],

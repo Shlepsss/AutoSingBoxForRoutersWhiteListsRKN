@@ -35,10 +35,10 @@
       "tag": "auto",
       "outbounds": [
         "🇪🇪 Estonia | 🌐 | [*CIDR]",
-        "🇺🇸 United States | [*CIDR]",
-        "🇫🇮 Finland | [*CIDR]",
-        "🇱🇹 Lithuania [*CIDR] YA",
-        "🇨🇿 Czechia | [*CIDR]"
+        "🇩🇪 Germany [*CIDR]",
+        "🇺🇸 United States [*CIDR]",
+        "🇩🇪 Germany | [*CIDR]",
+        "🇺🇸 United States | [*CIDR]"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -52,10 +52,10 @@
       "outbounds": [
         "auto",
         "🇪🇪 Estonia | 🌐 | [*CIDR]",
-        "🇺🇸 United States | [*CIDR]",
-        "🇫🇮 Finland | [*CIDR]",
-        "🇱🇹 Lithuania [*CIDR] YA",
-        "🇨🇿 Czechia | [*CIDR]"
+        "🇩🇪 Germany [*CIDR]",
+        "🇺🇸 United States [*CIDR]",
+        "🇩🇪 Germany | [*CIDR]",
+        "🇺🇸 United States | [*CIDR]"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
@@ -77,8 +77,79 @@
         },
         "utls": {
           "enabled": true,
+          "fingerprint": "firefox"
+        }
+      }
+    },
+    {
+      "tag": "🇩🇪 Germany [*CIDR]",
+      "type": "vless",
+      "server": "media.kinodrozd.com",
+      "server_port": 14443,
+      "uuid": "8f0560ec-ba22-4431-a6a7-318dc59d5233",
+      "tls": {
+        "enabled": true,
+        "server_name": "media.kinodrozd.com",
+        "alpn": [
+          "http/1.1"
+        ],
+        "utls": {
+          "enabled": true,
           "fingerprint": "safari"
         }
+      },
+      "transport": {
+        "type": "ws",
+        "headers": {
+          "Host": "media.kinodrozd.com"
+        },
+        "path": "/"
+      }
+    },
+    {
+      "tag": "🇺🇸 United States [*CIDR]",
+      "type": "vless",
+      "server": "92.223.109.89",
+      "server_port": 443,
+      "uuid": "c436d7dc-170d-40bf-b2b8-6cf468db5e65",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "tunnel.vk-apps.com",
+        "reality": {
+          "enabled": true,
+          "public_key": "wlCVdU8TCIBjIKRPWA6kpmptW0MV9rCP8WfWLSapsjU",
+          "short_id": "cc7dc5fb"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "safari"
+        }
+      }
+    },
+    {
+      "tag": "🇩🇪 Germany | [*CIDR]",
+      "type": "vless",
+      "server": "media.kinodrozd.com",
+      "server_port": 14443,
+      "uuid": "8f0560ec-ba22-4431-a6a7-318dc59d5233",
+      "tls": {
+        "enabled": true,
+        "server_name": "media.kinodrozd.com",
+        "alpn": [
+          "http/1.1"
+        ],
+        "utls": {
+          "enabled": true,
+          "fingerprint": "edge"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "headers": {
+          "Host": "media.kinodrozd.com"
+        },
+        "path": "/"
       }
     },
     {
@@ -98,73 +169,7 @@
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "edge"
-        }
-      }
-    },
-    {
-      "tag": "🇫🇮 Finland | [*CIDR]",
-      "type": "vless",
-      "server": "5.188.114.73",
-      "server_port": 443,
-      "uuid": "21e28374-04f3-40f8-987c-e7ea497e7d45",
-      "tls": {
-        "enabled": true,
-        "server_name": "max.ru",
-        "reality": {
-          "enabled": true,
-          "public_key": "_QNDgsnfJt9qUimf4fJFmtpDGgLCbx2oV02WLfTojj4",
-          "short_id": ""
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
-        }
-      },
-      "transport": {
-        "type": "grpc",
-        "service_name": "ns"
-      }
-    },
-    {
-      "tag": "🇱🇹 Lithuania [*CIDR] YA",
-      "type": "vless",
-      "server": "51.250.82.165",
-      "server_port": 443,
-      "uuid": "15e0833c-08ad-47f3-bf80-60c2a47a6774",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "api-maps.yandex.ru",
-        "reality": {
-          "enabled": true,
-          "public_key": "KEZ93Y9VgoirI18wIpcfS3z8I9GiaiFe-GKqGdEPMmg",
-          "short_id": "4e07408562be"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "ios"
-        }
-      }
-    },
-    {
-      "tag": "🇨🇿 Czechia | [*CIDR]",
-      "type": "vless",
-      "server": "185.40.28.212",
-      "server_port": 8443,
-      "uuid": "ecad47b0-249e-0011-adff-e3c8f02b1897",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "auto.quattro-tech.ru",
-        "reality": {
-          "enabled": true,
-          "public_key": "10rVZPoOUP1TlQviIAsQ_jAROX0fRQxH0C92nq_zGQc",
-          "short_id": "43dcff53849b81e6"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "ios"
+          "fingerprint": "android"
         }
       }
     }

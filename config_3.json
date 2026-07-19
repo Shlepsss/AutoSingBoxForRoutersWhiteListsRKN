@@ -37,8 +37,8 @@
         "🇩🇪 Germany [*CIDR] YA",
         "🇱🇹 Lithuania [*CIDR] YA",
         "🇱🇹 Lithuania [*CIDR] YA-2",
-        "🇩🇪 Germany [*CIDR] YA-2",
-        "🇱🇹 Lithuania | [*CIDR] YA"
+        "🇱🇹 Lithuania [*CIDR] YA-3",
+        "🇱🇹 Lithuania [*CIDR] YA-4"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -54,8 +54,8 @@
         "🇩🇪 Germany [*CIDR] YA",
         "🇱🇹 Lithuania [*CIDR] YA",
         "🇱🇹 Lithuania [*CIDR] YA-2",
-        "🇩🇪 Germany [*CIDR] YA-2",
-        "🇱🇹 Lithuania | [*CIDR] YA"
+        "🇱🇹 Lithuania [*CIDR] YA-3",
+        "🇱🇹 Lithuania [*CIDR] YA-4"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
@@ -72,7 +72,7 @@
         "server_name": "wde3.whitedeu.org",
         "utls": {
           "enabled": true,
-          "fingerprint": "edge"
+          "fingerprint": "firefox"
         }
       }
     },
@@ -114,28 +114,12 @@
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "chrome"
+          "fingerprint": "edge"
         }
       }
     },
     {
-      "tag": "🇩🇪 Germany [*CIDR] YA-2",
-      "type": "vless",
-      "server": "bs1.whitehost.org",
-      "server_port": 443,
-      "uuid": "cad59ee8-e80f-4d0f-a9dd-d082e00a75e4",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "wde3.whitedeu.org",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
-        }
-      }
-    },
-    {
-      "tag": "🇱🇹 Lithuania | [*CIDR] YA",
+      "tag": "🇱🇹 Lithuania [*CIDR] YA-3",
       "type": "vless",
       "server": "51.250.82.165",
       "server_port": 443,
@@ -151,7 +135,28 @@
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "qq"
+          "fingerprint": "safari"
+        }
+      }
+    },
+    {
+      "tag": "🇱🇹 Lithuania [*CIDR] YA-4",
+      "type": "vless",
+      "server": "51.250.82.165",
+      "server_port": 443,
+      "uuid": "15e0833c-08ad-47f3-bf80-60c2a47a6774",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "api-maps.yandex.ru",
+        "reality": {
+          "enabled": true,
+          "public_key": "KEZ93Y9VgoirI18wIpcfS3z8I9GiaiFe-GKqGdEPMmg",
+          "short_id": "4e07408562be"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
         }
       }
     }
