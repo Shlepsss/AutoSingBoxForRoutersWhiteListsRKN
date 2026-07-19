@@ -34,11 +34,11 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇧🇬 Bulgaria [SNI-RU] web.max.ru",
-        "🇧🇬 Bulgaria [SNI-RU] web.max.ru-2",
+        "🇺🇸 United States | [SNI-RU] web.max.ru",
         "🇷🇺 Russia | [SNI-RU] max.ru",
-        "🇧🇬 Bulgaria | [SNI-RU] web.max.ru",
-        "🇷🇺 Russia [SNI-RU] max.ru"
+        "🇷🇺 Russia [SNI-RU] max.ru",
+        "🌐 Anycast-IP | 🇨🇿 🇷🇺 | [SNI-RU] ads.x5.ru",
+        "🇺🇸 United States | [SNI-RU] web.max.ru-2"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -51,19 +51,19 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇧🇬 Bulgaria [SNI-RU] web.max.ru",
-        "🇧🇬 Bulgaria [SNI-RU] web.max.ru-2",
+        "🇺🇸 United States | [SNI-RU] web.max.ru",
         "🇷🇺 Russia | [SNI-RU] max.ru",
-        "🇧🇬 Bulgaria | [SNI-RU] web.max.ru",
-        "🇷🇺 Russia [SNI-RU] max.ru"
+        "🇷🇺 Russia [SNI-RU] max.ru",
+        "🌐 Anycast-IP | 🇨🇿 🇷🇺 | [SNI-RU] ads.x5.ru",
+        "🇺🇸 United States | [SNI-RU] web.max.ru-2"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
     },
     {
-      "tag": "🇧🇬 Bulgaria [SNI-RU] web.max.ru",
+      "tag": "🇺🇸 United States | [SNI-RU] web.max.ru",
       "type": "vless",
-      "server": "93.152.205.216",
+      "server": "usa.vrsvpn.com",
       "server_port": 444,
       "uuid": "0b9bcbc1-b289-4a64-86fa-a5b731b65384",
       "tls": {
@@ -71,36 +71,12 @@
         "server_name": "web.max.ru",
         "reality": {
           "enabled": true,
-          "public_key": "X-YL5VNtlMNIaBrwaHt3hJCeF_gMT9gPRDDlK1Qg7Tc",
-          "short_id": "8321461729abcdef"
+          "public_key": "MF_E-_CYAXdWxC1N_wTkdFyk3K7_1cNqNDPb0vnwl20",
+          "short_id": "8311761729abcdef"
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "safari"
-        }
-      },
-      "transport": {
-        "type": "grpc",
-        "service_name": "web.max.ru"
-      }
-    },
-    {
-      "tag": "🇧🇬 Bulgaria [SNI-RU] web.max.ru-2",
-      "type": "vless",
-      "server": "93.152.205.216",
-      "server_port": 444,
-      "uuid": "0b9bcbc1-b289-4a64-86fa-a5b731b65384",
-      "tls": {
-        "enabled": true,
-        "server_name": "web.max.ru",
-        "reality": {
-          "enabled": true,
-          "public_key": "X-YL5VNtlMNIaBrwaHt3hJCeF_gMT9gPRDDlK1Qg7Tc",
-          "short_id": "8321461729abcdef"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "edge"
+          "fingerprint": "chrome"
         }
       },
       "transport": {
@@ -125,32 +101,8 @@
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "ios"
+          "fingerprint": "firefox"
         }
-      }
-    },
-    {
-      "tag": "🇧🇬 Bulgaria | [SNI-RU] web.max.ru",
-      "type": "vless",
-      "server": "93.152.205.216",
-      "server_port": 444,
-      "uuid": "0b9bcbc1-b289-4a64-86fa-a5b731b65384",
-      "tls": {
-        "enabled": true,
-        "server_name": "web.max.ru",
-        "reality": {
-          "enabled": true,
-          "public_key": "X-YL5VNtlMNIaBrwaHt3hJCeF_gMT9gPRDDlK1Qg7Tc",
-          "short_id": "8321461729abcdef"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
-      "transport": {
-        "type": "grpc",
-        "service_name": "web.max.ru"
       }
     },
     {
@@ -170,8 +122,53 @@
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "chrome"
+          "fingerprint": "ios"
         }
+      }
+    },
+    {
+      "tag": "🌐 Anycast-IP | 🇨🇿 🇷🇺 | [SNI-RU] ads.x5.ru",
+      "type": "vless",
+      "server": "78.159.247.166",
+      "server_port": 7444,
+      "uuid": "9aff9c52-b2ee-44b9-a5f0-9f11a3aeca8e",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "ads.x5.ru",
+        "reality": {
+          "enabled": true,
+          "public_key": "-P8DgKISSG4jnLuj6ihZDqZs1_zt-juBrhVhTylHiAo",
+          "short_id": ""
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
+      }
+    },
+    {
+      "tag": "🇺🇸 United States | [SNI-RU] web.max.ru-2",
+      "type": "vless",
+      "server": "usa.vrsvpn.com",
+      "server_port": 444,
+      "uuid": "0b9bcbc1-b289-4a64-86fa-a5b731b65384",
+      "tls": {
+        "enabled": true,
+        "server_name": "web.max.ru",
+        "reality": {
+          "enabled": true,
+          "public_key": "MF_E-_CYAXdWxC1N_wTkdFyk3K7_1cNqNDPb0vnwl20",
+          "short_id": "8311761729abcdef"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "edge"
+        }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "web.max.ru"
       }
     }
   ],
