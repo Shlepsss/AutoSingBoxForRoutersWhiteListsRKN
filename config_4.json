@@ -34,13 +34,13 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇷🇺 Russia [SNI-RU] api-maps.yandex.ru",
-        "🇷🇺 Russia [SNI-RU] api-maps.yandex.ru-2",
-        "🇫🇷 France [SNI-RU] yandex.net",
-        "🇷🇺 Russia [SNI-RU] api-maps.yandex.ru-3",
-        "🇷🇺 Russia [SNI-RU] api-maps.yandex.ru-4",
-        "🇮🇪 Ireland [SNI-RU] www.vk.com",
-        "🇷🇺 Russia [SNI-RU] api-maps.yandex.ru-5"
+        "🇷🇺 Russia | [SNI-RU] api-maps.yandex.ru",
+        "🇷🇺 Russia | [SNI-RU] api-maps.yandex.ru-2",
+        "🇷🇺 Russia | [SNI-RU] api-maps.yandex.ru-3",
+        "🇷🇺 Russia | [SNI-RU] api-maps.yandex.ru-4",
+        "🇩🇪 Germany | [SNI-RU] api-maps.yandex.ru",
+        "🇧🇬 Bulgaria [SNI-RU] web.max.ru",
+        "🇷🇺 Russia | [SNI-RU] api-maps.yandex.ru-5"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -53,19 +53,19 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇷🇺 Russia [SNI-RU] api-maps.yandex.ru",
-        "🇷🇺 Russia [SNI-RU] api-maps.yandex.ru-2",
-        "🇫🇷 France [SNI-RU] yandex.net",
-        "🇷🇺 Russia [SNI-RU] api-maps.yandex.ru-3",
-        "🇷🇺 Russia [SNI-RU] api-maps.yandex.ru-4",
-        "🇮🇪 Ireland [SNI-RU] www.vk.com",
-        "🇷🇺 Russia [SNI-RU] api-maps.yandex.ru-5"
+        "🇷🇺 Russia | [SNI-RU] api-maps.yandex.ru",
+        "🇷🇺 Russia | [SNI-RU] api-maps.yandex.ru-2",
+        "🇷🇺 Russia | [SNI-RU] api-maps.yandex.ru-3",
+        "🇷🇺 Russia | [SNI-RU] api-maps.yandex.ru-4",
+        "🇩🇪 Germany | [SNI-RU] api-maps.yandex.ru",
+        "🇧🇬 Bulgaria [SNI-RU] web.max.ru",
+        "🇷🇺 Russia | [SNI-RU] api-maps.yandex.ru-5"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
     },
     {
-      "tag": "🇷🇺 Russia [SNI-RU] api-maps.yandex.ru",
+      "tag": "🇷🇺 Russia | [SNI-RU] api-maps.yandex.ru",
       "type": "vless",
       "server": "red-fhmq5ehr3ievlnabv8l2.concept7.ru",
       "server_port": 443,
@@ -86,7 +86,28 @@
       }
     },
     {
-      "tag": "🇷🇺 Russia [SNI-RU] api-maps.yandex.ru-2",
+      "tag": "🇷🇺 Russia | [SNI-RU] api-maps.yandex.ru-2",
+      "type": "vless",
+      "server": "red-fhmq5ehr3ievlnabv8l2.concept7.ru",
+      "server_port": 443,
+      "uuid": "15e0833c-08ad-47f3-bf80-60c2a47a6774",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "api-maps.yandex.ru",
+        "reality": {
+          "enabled": true,
+          "public_key": "KEZ93Y9VgoirI18wIpcfS3z8I9GiaiFe-GKqGdEPMmg",
+          "short_id": "4e07408562be"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "ios"
+        }
+      }
+    },
+    {
+      "tag": "🇷🇺 Russia | [SNI-RU] api-maps.yandex.ru-3",
       "type": "vless",
       "server": "red-fhmq5ehr3ievlnabv8l2.concept7.ru",
       "server_port": 443,
@@ -107,28 +128,7 @@
       }
     },
     {
-      "tag": "🇫🇷 France [SNI-RU] yandex.net",
-      "type": "vless",
-      "server": "45.192.2.115",
-      "server_port": 443,
-      "uuid": "0b8dfc50-9e2d-4b3c-85cd-870b478312a0",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "yandex.net",
-        "reality": {
-          "enabled": true,
-          "public_key": "1oUeBtHH4DskTM_jCh-6enWRkFMDX9l1OU5kWYl4kxA",
-          "short_id": "f34818a561dfd1fe"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
-        }
-      }
-    },
-    {
-      "tag": "🇷🇺 Russia [SNI-RU] api-maps.yandex.ru-3",
+      "tag": "🇷🇺 Russia | [SNI-RU] api-maps.yandex.ru-4",
       "type": "vless",
       "server": "red-fhmq5ehr3ievlnabv8l2.concept7.ru",
       "server_port": 443,
@@ -149,7 +149,55 @@
       }
     },
     {
-      "tag": "🇷🇺 Russia [SNI-RU] api-maps.yandex.ru-4",
+      "tag": "🇩🇪 Germany | [SNI-RU] api-maps.yandex.ru",
+      "type": "vless",
+      "server": "89.222.123.211",
+      "server_port": 16923,
+      "uuid": "69991c78-0cc6-46e7-a5bc-f37b90d8273c",
+      "tls": {
+        "enabled": true,
+        "server_name": "api-maps.yandex.ru",
+        "reality": {
+          "enabled": true,
+          "public_key": "_QeslG3rHGM7DoM99pYC8-jpc16pM2MbNZ6NRMoxmHA",
+          "short_id": "10ffb85da1c2d986"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "ios"
+        }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "neurex"
+      }
+    },
+    {
+      "tag": "🇧🇬 Bulgaria [SNI-RU] web.max.ru",
+      "type": "vless",
+      "server": "nl2.vrsvpn.com",
+      "server_port": 444,
+      "uuid": "0b9bcbc1-b289-4a64-86fa-a5b731b65384",
+      "tls": {
+        "enabled": true,
+        "server_name": "web.max.ru",
+        "reality": {
+          "enabled": true,
+          "public_key": "X-YL5VNtlMNIaBrwaHt3hJCeF_gMT9gPRDDlK1Qg7Tc",
+          "short_id": "8321461729abcdef"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "safari"
+        }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "web.max.ru"
+      }
+    },
+    {
+      "tag": "🇷🇺 Russia | [SNI-RU] api-maps.yandex.ru-5",
       "type": "vless",
       "server": "red-fhmq5ehr3ievlnabv8l2.concept7.ru",
       "server_port": 443,
@@ -166,43 +214,6 @@
         "utls": {
           "enabled": true,
           "fingerprint": "edge"
-        }
-      }
-    },
-    {
-      "tag": "🇮🇪 Ireland [SNI-RU] www.vk.com",
-      "type": "trojan",
-      "server": "146.70.90.198",
-      "server_port": 57452,
-      "password": "t1k169n5zmvvwn96r9ft",
-      "tls": {
-        "enabled": true,
-        "insecure": true,
-        "server_name": "www.vk.com",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
-        }
-      }
-    },
-    {
-      "tag": "🇷🇺 Russia [SNI-RU] api-maps.yandex.ru-5",
-      "type": "vless",
-      "server": "red-fhmq5ehr3ievlnabv8l2.concept7.ru",
-      "server_port": 443,
-      "uuid": "15e0833c-08ad-47f3-bf80-60c2a47a6774",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "api-maps.yandex.ru",
-        "reality": {
-          "enabled": true,
-          "public_key": "KEZ93Y9VgoirI18wIpcfS3z8I9GiaiFe-GKqGdEPMmg",
-          "short_id": "4e07408562be"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "ios"
         }
       }
     }
