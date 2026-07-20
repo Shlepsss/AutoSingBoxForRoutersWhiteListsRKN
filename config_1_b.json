@@ -35,15 +35,15 @@
       "tag": "auto",
       "outbounds": [
         "🇷🇺 Russia [*CIDR]",
-        "🇷🇺 Russia | [*CIDR]",
         "🇷🇺 Russia [*CIDR]-2",
         "🇷🇺 Russia [*CIDR]-3",
-        "🇷🇺 Russia | [*CIDR]-2",
-        "🇷🇺 Russia | [*CIDR]-3",
         "🇷🇺 Russia [*CIDR]-4",
         "🇷🇺 Russia [*CIDR]-5",
-        "🇷🇺 Russia | [*CIDR]-4",
-        "🇷🇺 Russia [*CIDR]-6"
+        "🇷🇺 Russia [*CIDR]-6",
+        "🇷🇺 Russia [*CIDR]-7",
+        "🇷🇺 Russia [*CIDR]-8",
+        "🇷🇺 Russia [*CIDR]-9",
+        "🇷🇺 Russia [*CIDR]-10"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -57,15 +57,15 @@
       "outbounds": [
         "auto",
         "🇷🇺 Russia [*CIDR]",
-        "🇷🇺 Russia | [*CIDR]",
         "🇷🇺 Russia [*CIDR]-2",
         "🇷🇺 Russia [*CIDR]-3",
-        "🇷🇺 Russia | [*CIDR]-2",
-        "🇷🇺 Russia | [*CIDR]-3",
         "🇷🇺 Russia [*CIDR]-4",
         "🇷🇺 Russia [*CIDR]-5",
-        "🇷🇺 Russia | [*CIDR]-4",
-        "🇷🇺 Russia [*CIDR]-6"
+        "🇷🇺 Russia [*CIDR]-6",
+        "🇷🇺 Russia [*CIDR]-7",
+        "🇷🇺 Russia [*CIDR]-8",
+        "🇷🇺 Russia [*CIDR]-9",
+        "🇷🇺 Russia [*CIDR]-10"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
@@ -85,56 +85,7 @@
       }
     },
     {
-      "tag": "🇷🇺 Russia | [*CIDR]",
-      "type": "vless",
-      "server": "192.144.13.35",
-      "server_port": 59242,
-      "uuid": "566f8818-17fe-4ca9-8035-c9081ece6f68",
-      "tls": {
-        "enabled": true,
-        "utls": {
-          "enabled": true,
-          "fingerprint": "android"
-        }
-      }
-    },
-    {
       "tag": "🇷🇺 Russia [*CIDR]-2",
-      "type": "vless",
-      "server": "176.123.165.127",
-      "server_port": 12672,
-      "uuid": "566f8818-17fe-4ca9-8035-c9081ece6f68",
-      "tls": {
-        "enabled": true,
-        "utls": {
-          "enabled": true,
-          "fingerprint": "safari"
-        }
-      }
-    },
-    {
-      "tag": "🇷🇺 Russia [*CIDR]-3",
-      "type": "vless",
-      "server": "176.123.165.127",
-      "server_port": 56745,
-      "uuid": "566f8818-17fe-4ca9-8035-c9081ece6f68"
-    },
-    {
-      "tag": "🇷🇺 Russia | [*CIDR]-2",
-      "type": "vless",
-      "server": "176.123.165.127",
-      "server_port": 56745,
-      "uuid": "566f8818-17fe-4ca9-8035-c9081ece6f68",
-      "tls": {
-        "enabled": true,
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      }
-    },
-    {
-      "tag": "🇷🇺 Russia | [*CIDR]-3",
       "type": "vless",
       "server": "87.242.85.201",
       "server_port": 35412,
@@ -148,10 +99,10 @@
       }
     },
     {
-      "tag": "🇷🇺 Russia [*CIDR]-4",
+      "tag": "🇷🇺 Russia [*CIDR]-3",
       "type": "vless",
-      "server": "176.123.165.127",
-      "server_port": 57836,
+      "server": "87.242.85.201",
+      "server_port": 13561,
       "uuid": "566f8818-17fe-4ca9-8035-c9081ece6f68",
       "tls": {
         "enabled": true,
@@ -162,21 +113,48 @@
       }
     },
     {
-      "tag": "🇷🇺 Russia [*CIDR]-5",
+      "tag": "🇷🇺 Russia [*CIDR]-4",
       "type": "vless",
-      "server": "87.242.85.201",
-      "server_port": 35412,
-      "uuid": "566f8818-17fe-4ca9-8035-c9081ece6f68",
+      "server": "84.38.187.169",
+      "server_port": 443,
+      "uuid": "39b25b94-3b44-0032-94bf-98456f1b38a3",
       "tls": {
         "enabled": true,
+        "server_name": "mc.yandex.tr",
+        "reality": {
+          "enabled": true,
+          "public_key": "rJMYW6mHgjs61mHxfm8Gmm_Re23sV_xe5b0IrTpLsiQ",
+          "short_id": "94c9dbbf07366d96"
+        },
         "utls": {
           "enabled": true,
-          "fingerprint": "ios"
+          "fingerprint": "firefox"
         }
       }
     },
     {
-      "tag": "🇷🇺 Russia | [*CIDR]-4",
+      "tag": "🇷🇺 Russia [*CIDR]-5",
+      "type": "vless",
+      "server": "ru.rush-server.com",
+      "server_port": 443,
+      "uuid": "a96373c2-6c78-44dc-ac4b-33fd3d32c68b",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "findmypackets.com",
+        "reality": {
+          "enabled": true,
+          "public_key": "mza5Hn1aolSz65qu-UwvBP3oesxMe25r11o4nxvikF0",
+          "short_id": "93ae75024604f796"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
+      }
+    },
+    {
+      "tag": "🇷🇺 Russia [*CIDR]-6",
       "type": "vless",
       "server": "87.242.85.201",
       "server_port": 13561,
@@ -185,16 +163,64 @@
         "enabled": true,
         "utls": {
           "enabled": true,
-          "fingerprint": "edge"
+          "fingerprint": "android"
         }
       }
     },
     {
-      "tag": "🇷🇺 Russia [*CIDR]-6",
+      "tag": "🇷🇺 Russia [*CIDR]-7",
       "type": "vless",
       "server": "192.144.13.35",
       "server_port": 59242,
       "uuid": "566f8818-17fe-4ca9-8035-c9081ece6f68"
+    },
+    {
+      "tag": "🇷🇺 Russia [*CIDR]-8",
+      "type": "vless",
+      "server": "46.8.209.118",
+      "server_port": 443,
+      "uuid": "1c3bccdf-0d36-49dc-8f3d-ca51bbcecb0a",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "cdn0.cloud-cdn.xyz",
+        "reality": {
+          "enabled": true,
+          "public_key": "mmcOO-NjtbwOZucoHLNhRov8rqaLy0Nm6yazieM8bCQ",
+          "short_id": "9a05cc16cc5ce7ad"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
+      }
+    },
+    {
+      "tag": "🇷🇺 Russia [*CIDR]-9",
+      "type": "vless",
+      "server": "87.242.85.201",
+      "server_port": 35412,
+      "uuid": "566f8818-17fe-4ca9-8035-c9081ece6f68"
+    },
+    {
+      "tag": "🇷🇺 Russia [*CIDR]-10",
+      "type": "vless",
+      "server": "93.189.63.146",
+      "server_port": 443,
+      "uuid": "39b25b94-3b44-0032-94bf-98456f1b38a3",
+      "tls": {
+        "enabled": true,
+        "server_name": "mm.melbicom.net",
+        "reality": {
+          "enabled": true,
+          "public_key": "YHPoUNxsml4z6pYt-7djOb1lqnBjxCk4-2mk84pveyc",
+          "short_id": "3b5b38669a1a51c0"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
+      }
     }
   ],
   "route": {

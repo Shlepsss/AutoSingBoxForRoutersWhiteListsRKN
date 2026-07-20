@@ -34,10 +34,10 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇱🇹 Lithuania | [*CIDR] YA",
-        "🇱🇹 Lithuania | [*CIDR] YA-2",
-        "🇱🇹 Lithuania | [*CIDR] YA-3",
-        "🇱🇹 Lithuania | [*CIDR] YA-4"
+        "🇷🇺 Russia [*CIDR] VK",
+        "🇷🇺 Russia [*CIDR] YA",
+        "🇱🇹 Lithuania | 🌐 [*CIDR] YA",
+        "🇱🇹 Lithuania [*CIDR] YA"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -50,28 +50,49 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇱🇹 Lithuania | [*CIDR] YA",
-        "🇱🇹 Lithuania | [*CIDR] YA-2",
-        "🇱🇹 Lithuania | [*CIDR] YA-3",
-        "🇱🇹 Lithuania | [*CIDR] YA-4"
+        "🇷🇺 Russia [*CIDR] VK",
+        "🇷🇺 Russia [*CIDR] YA",
+        "🇱🇹 Lithuania | 🌐 [*CIDR] YA",
+        "🇱🇹 Lithuania [*CIDR] YA"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
     },
     {
-      "tag": "🇱🇹 Lithuania | [*CIDR] YA",
+      "tag": "🇷🇺 Russia [*CIDR] VK",
       "type": "vless",
-      "server": "red-fhmq5ehr3ievlnabv8l2.concept7.ru",
+      "server": "95.163.211.150",
       "server_port": 443,
-      "uuid": "15e0833c-08ad-47f3-bf80-60c2a47a6774",
+      "uuid": "d768d4ba-0b73-4509-87ea-afb074d2f766",
       "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "api-maps.yandex.ru",
+        "server_name": "sellflow.org",
         "reality": {
           "enabled": true,
-          "public_key": "KEZ93Y9VgoirI18wIpcfS3z8I9GiaiFe-GKqGdEPMmg",
-          "short_id": "4e07408562be"
+          "public_key": "SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc",
+          "short_id": ""
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "ios"
+        }
+      }
+    },
+    {
+      "tag": "🇷🇺 Russia [*CIDR] YA",
+      "type": "vless",
+      "server": "51.250.84.76",
+      "server_port": 443,
+      "uuid": "bdc00b0d-e5f5-4cde-8414-6eb7ab5af117",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "ads.x5.ru",
+        "reality": {
+          "enabled": true,
+          "public_key": "Py03aPnCma9Ip4xCvtBsK77NScUYphSw46RmdjFSvls",
+          "short_id": "a374f536afccddfe"
         },
         "utls": {
           "enabled": true,
@@ -80,7 +101,7 @@
       }
     },
     {
-      "tag": "🇱🇹 Lithuania | [*CIDR] YA-2",
+      "tag": "🇱🇹 Lithuania | 🌐 [*CIDR] YA",
       "type": "vless",
       "server": "red-fhmq5ehr3ievlnabv8l2.concept7.ru",
       "server_port": 443,
@@ -96,12 +117,12 @@
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "qq"
+          "fingerprint": "edge"
         }
       }
     },
     {
-      "tag": "🇱🇹 Lithuania | [*CIDR] YA-3",
+      "tag": "🇱🇹 Lithuania [*CIDR] YA",
       "type": "vless",
       "server": "red-fhmq5ehr3ievlnabv8l2.concept7.ru",
       "server_port": 443,
@@ -118,27 +139,6 @@
         "utls": {
           "enabled": true,
           "fingerprint": "ios"
-        }
-      }
-    },
-    {
-      "tag": "🇱🇹 Lithuania | [*CIDR] YA-4",
-      "type": "vless",
-      "server": "red-fhmq5ehr3ievlnabv8l2.concept7.ru",
-      "server_port": 443,
-      "uuid": "15e0833c-08ad-47f3-bf80-60c2a47a6774",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "api-maps.yandex.ru",
-        "reality": {
-          "enabled": true,
-          "public_key": "KEZ93Y9VgoirI18wIpcfS3z8I9GiaiFe-GKqGdEPMmg",
-          "short_id": "4e07408562be"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
         }
       }
     }

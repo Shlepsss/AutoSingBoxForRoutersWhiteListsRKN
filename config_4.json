@@ -34,11 +34,11 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        ".𖥔 ݁ ˖ִ🛸༄˖°. | [SNI-RU] www.vk.com",
-        "🇧🇬 Bulgaria | [SNI-RU] web.max.ru",
-        "🇧🇬 Bulgaria | [SNI-RU] web.max.ru-2",
-        "🇧🇬 Bulgaria | [SNI-RU] web.max.ru-3",
-        "🇳🇱 The Netherlands | 🌐 | [SNI-RU] yandex.ru"
+        "🇩🇪 Germany [SNI-RU] api-maps.yandex.ru",
+        "🇺🇸 United States [SNI-RU] ads.x5.ru",
+        "🇨🇭 Switzerland [SNI-RU] api-maps.yandex.ru",
+        "🇨🇭 Switzerland [SNI-RU] api-maps.yandex.ru-2",
+        "🇺🇸 United States [SNI-RU] ads.x5.ru-2"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -51,68 +51,97 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        ".𖥔 ݁ ˖ִ🛸༄˖°. | [SNI-RU] www.vk.com",
-        "🇧🇬 Bulgaria | [SNI-RU] web.max.ru",
-        "🇧🇬 Bulgaria | [SNI-RU] web.max.ru-2",
-        "🇧🇬 Bulgaria | [SNI-RU] web.max.ru-3",
-        "🇳🇱 The Netherlands | 🌐 | [SNI-RU] yandex.ru"
+        "🇩🇪 Germany [SNI-RU] api-maps.yandex.ru",
+        "🇺🇸 United States [SNI-RU] ads.x5.ru",
+        "🇨🇭 Switzerland [SNI-RU] api-maps.yandex.ru",
+        "🇨🇭 Switzerland [SNI-RU] api-maps.yandex.ru-2",
+        "🇺🇸 United States [SNI-RU] ads.x5.ru-2"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
     },
     {
-      "tag": ".𖥔 ݁ ˖ִ🛸༄˖°. | [SNI-RU] www.vk.com",
-      "type": "trojan",
-      "server": "146.70.90.198",
-      "server_port": 57452,
-      "password": "t1k169n5zmvvwn96r9ft",
-      "tls": {
-        "enabled": true,
-        "insecure": true,
-        "server_name": "www.vk.com",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "safari"
-        }
-      }
-    },
-    {
-      "tag": "🇧🇬 Bulgaria | [SNI-RU] web.max.ru",
+      "tag": "🇩🇪 Germany [SNI-RU] api-maps.yandex.ru",
       "type": "vless",
-      "server": "nl2.vrsvpn.com",
-      "server_port": 444,
-      "uuid": "0b9bcbc1-b289-4a64-86fa-a5b731b65384",
+      "server": "89.222.123.211",
+      "server_port": 16923,
+      "uuid": "69991c78-0cc6-46e7-a5bc-f37b90d8273c",
       "tls": {
         "enabled": true,
-        "server_name": "web.max.ru",
+        "server_name": "api-maps.yandex.ru",
         "reality": {
           "enabled": true,
-          "public_key": "X-YL5VNtlMNIaBrwaHt3hJCeF_gMT9gPRDDlK1Qg7Tc",
-          "short_id": "8321461729abcdef"
+          "public_key": "_QeslG3rHGM7DoM99pYC8-jpc16pM2MbNZ6NRMoxmHA",
+          "short_id": "10ffb85da1c2d986"
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "safari"
+          "fingerprint": "chrome"
         }
       },
       "transport": {
         "type": "grpc",
-        "service_name": "web.max.ru"
+        "service_name": "neurex"
       }
     },
     {
-      "tag": "🇧🇬 Bulgaria | [SNI-RU] web.max.ru-2",
+      "tag": "🇺🇸 United States [SNI-RU] ads.x5.ru",
       "type": "vless",
-      "server": "93.152.205.216",
-      "server_port": 444,
-      "uuid": "0b9bcbc1-b289-4a64-86fa-a5b731b65384",
+      "server": "usa.izzzyvpn.ru",
+      "server_port": 443,
+      "uuid": "aea30a00-4cbb-4acc-b1c2-cb53a7522d09",
+      "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "web.max.ru",
+        "server_name": "ads.x5.ru:443",
         "reality": {
           "enabled": true,
-          "public_key": "X-YL5VNtlMNIaBrwaHt3hJCeF_gMT9gPRDDlK1Qg7Tc",
-          "short_id": "8321461729abcdef"
+          "public_key": "dQ1UuZtHmkxbOa0CuhzD8xx5l2oX3PTYvEWWE7C2Djk",
+          "short_id": ""
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "qq"
+        }
+      }
+    },
+    {
+      "tag": "🇨🇭 Switzerland [SNI-RU] api-maps.yandex.ru",
+      "type": "vless",
+      "server": "152.233.31.72",
+      "server_port": 16923,
+      "uuid": "69991c78-0cc6-46e7-a5bc-f37b90d8273c",
+      "tls": {
+        "enabled": true,
+        "server_name": "api-maps.yandex.ru",
+        "reality": {
+          "enabled": true,
+          "public_key": "_QeslG3rHGM7DoM99pYC8-jpc16pM2MbNZ6NRMoxmHA",
+          "short_id": "10ffb85da1c2d986"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "ios"
+        }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "neurex"
+      }
+    },
+    {
+      "tag": "🇨🇭 Switzerland [SNI-RU] api-maps.yandex.ru-2",
+      "type": "vless",
+      "server": "152.233.31.72",
+      "server_port": 16923,
+      "uuid": "69991c78-0cc6-46e7-a5bc-f37b90d8273c",
+      "tls": {
+        "enabled": true,
+        "server_name": "api-maps.yandex.ru",
+        "reality": {
+          "enabled": true,
+          "public_key": "_QeslG3rHGM7DoM99pYC8-jpc16pM2MbNZ6NRMoxmHA",
+          "short_id": "10ffb85da1c2d986"
         },
         "utls": {
           "enabled": true,
@@ -121,47 +150,23 @@
       },
       "transport": {
         "type": "grpc",
-        "service_name": "web.max.ru"
+        "service_name": "neurex"
       }
     },
     {
-      "tag": "🇧🇬 Bulgaria | [SNI-RU] web.max.ru-3",
+      "tag": "🇺🇸 United States [SNI-RU] ads.x5.ru-2",
       "type": "vless",
-      "server": "nl2.vrsvpn.com",
-      "server_port": 444,
-      "uuid": "0b9bcbc1-b289-4a64-86fa-a5b731b65384",
-      "tls": {
-        "enabled": true,
-        "server_name": "web.max.ru",
-        "reality": {
-          "enabled": true,
-          "public_key": "X-YL5VNtlMNIaBrwaHt3hJCeF_gMT9gPRDDlK1Qg7Tc",
-          "short_id": "8321461729abcdef"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "edge"
-        }
-      },
-      "transport": {
-        "type": "grpc",
-        "service_name": "web.max.ru"
-      }
-    },
-    {
-      "tag": "🇳🇱 The Netherlands | 🌐 | [SNI-RU] yandex.ru",
-      "type": "vless",
-      "server": "92.119.164.57",
+      "server": "usa.izzzyvpn.ru",
       "server_port": 443,
-      "uuid": "60f9bb33-6c48-41f3-8d0d-420f83bc3261",
+      "uuid": "aea30a00-4cbb-4acc-b1c2-cb53a7522d09",
       "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "yandex.ru",
+        "server_name": "ads.x5.ru:443",
         "reality": {
           "enabled": true,
-          "public_key": "ThlIJki5wLsF5x9BYDt9RSDmwFPhwIhCoZpEqHk5fTA",
-          "short_id": "ba4f72709ab151b6"
+          "public_key": "dQ1UuZtHmkxbOa0CuhzD8xx5l2oX3PTYvEWWE7C2Djk",
+          "short_id": ""
         },
         "utls": {
           "enabled": true,
