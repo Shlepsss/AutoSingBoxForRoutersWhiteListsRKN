@@ -34,10 +34,11 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
+        "🌐 Anycast-IP | 🇧🇾 🇩🇪 🇱🇻 🇵🇱 [*CIDR] VK",
+        "🌐 Anycast-IP | 🇱🇻 🇵🇱 [*CIDR] VK",
         "🇷🇺 Russia [*CIDR] VK",
-        "🇷🇺 Russia [*CIDR] YA",
         "🇱🇹 Lithuania | 🌐 [*CIDR] YA",
-        "🇱🇹 Lithuania [*CIDR] YA"
+        "🇷🇺 Russia [*CIDR] YA"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -50,13 +51,62 @@
       "tag": "select",
       "outbounds": [
         "auto",
+        "🌐 Anycast-IP | 🇧🇾 🇩🇪 🇱🇻 🇵🇱 [*CIDR] VK",
+        "🌐 Anycast-IP | 🇱🇻 🇵🇱 [*CIDR] VK",
         "🇷🇺 Russia [*CIDR] VK",
-        "🇷🇺 Russia [*CIDR] YA",
         "🇱🇹 Lithuania | 🌐 [*CIDR] YA",
-        "🇱🇹 Lithuania [*CIDR] YA"
+        "🇷🇺 Russia [*CIDR] YA"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
+    },
+    {
+      "tag": "🌐 Anycast-IP | 🇧🇾 🇩🇪 🇱🇻 🇵🇱 [*CIDR] VK",
+      "type": "vless",
+      "server": "5.188.140.194",
+      "server_port": 2053,
+      "uuid": "ee791990-83c7-11f1-9ca5-1e6febe3e1df",
+      "tls": {
+        "enabled": true,
+        "server_name": "hh.ru",
+        "reality": {
+          "enabled": true,
+          "public_key": "WUY8Lb4LfUUKLzZK3oSlRAdoy-Iu0w3Ait1-jtxbW1M",
+          "short_id": "4b685844d0b4f724"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "grpc-direct"
+      }
+    },
+    {
+      "tag": "🌐 Anycast-IP | 🇱🇻 🇵🇱 [*CIDR] VK",
+      "type": "vless",
+      "server": "5.188.141.144",
+      "server_port": 2053,
+      "uuid": "ee791990-83c7-11f1-9ca5-1e6febe3e1df",
+      "tls": {
+        "enabled": true,
+        "server_name": "hh.ru",
+        "reality": {
+          "enabled": true,
+          "public_key": "WUY8Lb4LfUUKLzZK3oSlRAdoy-Iu0w3Ait1-jtxbW1M",
+          "short_id": "7824dfd19eab1acc"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "grpc-direct"
+      }
     },
     {
       "tag": "🇷🇺 Russia [*CIDR] VK",
@@ -72,6 +122,27 @@
           "enabled": true,
           "public_key": "SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc",
           "short_id": ""
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "ios"
+        }
+      }
+    },
+    {
+      "tag": "🇱🇹 Lithuania | 🌐 [*CIDR] YA",
+      "type": "vless",
+      "server": "red-fhmq5ehr3ievlnabv8l2.concept7.ru",
+      "server_port": 443,
+      "uuid": "15e0833c-08ad-47f3-bf80-60c2a47a6774",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "api-maps.yandex.ru",
+        "reality": {
+          "enabled": true,
+          "public_key": "KEZ93Y9VgoirI18wIpcfS3z8I9GiaiFe-GKqGdEPMmg",
+          "short_id": "4e07408562be"
         },
         "utls": {
           "enabled": true,
@@ -97,48 +168,6 @@
         "utls": {
           "enabled": true,
           "fingerprint": "firefox"
-        }
-      }
-    },
-    {
-      "tag": "🇱🇹 Lithuania | 🌐 [*CIDR] YA",
-      "type": "vless",
-      "server": "red-fhmq5ehr3ievlnabv8l2.concept7.ru",
-      "server_port": 443,
-      "uuid": "15e0833c-08ad-47f3-bf80-60c2a47a6774",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "api-maps.yandex.ru",
-        "reality": {
-          "enabled": true,
-          "public_key": "KEZ93Y9VgoirI18wIpcfS3z8I9GiaiFe-GKqGdEPMmg",
-          "short_id": "4e07408562be"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "edge"
-        }
-      }
-    },
-    {
-      "tag": "🇱🇹 Lithuania [*CIDR] YA",
-      "type": "vless",
-      "server": "red-fhmq5ehr3ievlnabv8l2.concept7.ru",
-      "server_port": 443,
-      "uuid": "15e0833c-08ad-47f3-bf80-60c2a47a6774",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "api-maps.yandex.ru",
-        "reality": {
-          "enabled": true,
-          "public_key": "KEZ93Y9VgoirI18wIpcfS3z8I9GiaiFe-GKqGdEPMmg",
-          "short_id": "4e07408562be"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "ios"
         }
       }
     }
