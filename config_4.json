@@ -36,8 +36,8 @@
       "outbounds": [
         "🇺🇸 United States [SNI-RU] ads.x5.ru",
         "🇳🇱 The Netherlands [SNI-RU] 00.img.avito.st",
-        "🇺🇸 United States [SNI-RU] ads.x5.ru-2",
         "🇳🇱 The Netherlands [SNI-RU] 00.img.avito.st-2",
+        "🇺🇸 United States [SNI-RU] ads.x5.ru-2",
         "🇺🇸 United States [SNI-RU] ads.x5.ru-3"
       ],
       "url": "https://google.com/generate_204",
@@ -53,8 +53,8 @@
         "auto",
         "🇺🇸 United States [SNI-RU] ads.x5.ru",
         "🇳🇱 The Netherlands [SNI-RU] 00.img.avito.st",
-        "🇺🇸 United States [SNI-RU] ads.x5.ru-2",
         "🇳🇱 The Netherlands [SNI-RU] 00.img.avito.st-2",
+        "🇺🇸 United States [SNI-RU] ads.x5.ru-2",
         "🇺🇸 United States [SNI-RU] ads.x5.ru-3"
       ],
       "default": "auto",
@@ -77,54 +77,12 @@
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "ios"
+          "fingerprint": "safari"
         }
       }
     },
     {
       "tag": "🇳🇱 The Netherlands [SNI-RU] 00.img.avito.st",
-      "type": "vless",
-      "server": "193.233.126.104",
-      "server_port": 8443,
-      "uuid": "b12eebc2-369c-4f3c-96a0-a8bd150ca8d5",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "00.img.avito.st",
-        "reality": {
-          "enabled": true,
-          "public_key": "Lxs8Ruv2zHH0XW5EiQmuCaScfkGPCxWjW02YDWH8pyU",
-          "short_id": "eb0cca7312345678"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "ios"
-        }
-      }
-    },
-    {
-      "tag": "🇺🇸 United States [SNI-RU] ads.x5.ru-2",
-      "type": "vless",
-      "server": "usa.izzzyvpn.ru",
-      "server_port": 443,
-      "uuid": "aea30a00-4cbb-4acc-b1c2-cb53a7522d09",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "ads.x5.ru:443",
-        "reality": {
-          "enabled": true,
-          "public_key": "dQ1UuZtHmkxbOa0CuhzD8xx5l2oX3PTYvEWWE7C2Djk",
-          "short_id": ""
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
-        }
-      }
-    },
-    {
-      "tag": "🇳🇱 The Netherlands [SNI-RU] 00.img.avito.st-2",
       "type": "vless",
       "server": "193.233.126.104",
       "server_port": 443,
@@ -145,7 +103,28 @@
       }
     },
     {
-      "tag": "🇺🇸 United States [SNI-RU] ads.x5.ru-3",
+      "tag": "🇳🇱 The Netherlands [SNI-RU] 00.img.avito.st-2",
+      "type": "vless",
+      "server": "193.233.126.104",
+      "server_port": 8443,
+      "uuid": "b12eebc2-369c-4f3c-96a0-a8bd150ca8d5",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "00.img.avito.st",
+        "reality": {
+          "enabled": true,
+          "public_key": "Lxs8Ruv2zHH0XW5EiQmuCaScfkGPCxWjW02YDWH8pyU",
+          "short_id": "eb0cca7312345678"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
+      }
+    },
+    {
+      "tag": "🇺🇸 United States [SNI-RU] ads.x5.ru-2",
       "type": "vless",
       "server": "usa.izzzyvpn.ru",
       "server_port": 443,
@@ -162,6 +141,27 @@
         "utls": {
           "enabled": true,
           "fingerprint": "ios"
+        }
+      }
+    },
+    {
+      "tag": "🇺🇸 United States [SNI-RU] ads.x5.ru-3",
+      "type": "vless",
+      "server": "usa.izzzyvpn.ru",
+      "server_port": 443,
+      "uuid": "aea30a00-4cbb-4acc-b1c2-cb53a7522d09",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "ads.x5.ru:443",
+        "reality": {
+          "enabled": true,
+          "public_key": "dQ1UuZtHmkxbOa0CuhzD8xx5l2oX3PTYvEWWE7C2Djk",
+          "short_id": ""
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "qq"
         }
       }
     }
