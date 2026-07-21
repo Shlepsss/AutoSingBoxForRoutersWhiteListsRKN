@@ -35,15 +35,15 @@
       "tag": "auto",
       "outbounds": [
         "🇷🇺 Russia [*CIDR]",
+        "🇷🇺 Russia | [*CIDR]",
+        "🇷🇺 Russia [*CIDR] VK",
+        "🇷🇺 Russia | [*CIDR]-2",
         "🇷🇺 Russia [*CIDR]-2",
+        "🇷🇺 Russia | [*CIDR]-3",
         "🇷🇺 Russia [*CIDR]-3",
-        "🇷🇺 Russia [*CIDR] YA",
-        "🇷🇺 Russia | 🌐 [*CIDR]",
-        "🇷🇺 Russia | 🌐 [*CIDR]-2",
-        "🇷🇺 Russia [*CIDR]-4",
-        "🇷🇺 Russia [*CIDR]-5",
-        "🇷🇺 Russia [*CIDR]-6",
-        "🇷🇺 Russia [*CIDR]-7"
+        "🇷🇺 Russia | [*CIDR]-4",
+        "🇷🇺 Russia | [*CIDR]-5",
+        "🇷🇺 Russia | [*CIDR] VK"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -57,15 +57,15 @@
       "outbounds": [
         "auto",
         "🇷🇺 Russia [*CIDR]",
+        "🇷🇺 Russia | [*CIDR]",
+        "🇷🇺 Russia [*CIDR] VK",
+        "🇷🇺 Russia | [*CIDR]-2",
         "🇷🇺 Russia [*CIDR]-2",
+        "🇷🇺 Russia | [*CIDR]-3",
         "🇷🇺 Russia [*CIDR]-3",
-        "🇷🇺 Russia [*CIDR] YA",
-        "🇷🇺 Russia | 🌐 [*CIDR]",
-        "🇷🇺 Russia | 🌐 [*CIDR]-2",
-        "🇷🇺 Russia [*CIDR]-4",
-        "🇷🇺 Russia [*CIDR]-5",
-        "🇷🇺 Russia [*CIDR]-6",
-        "🇷🇺 Russia [*CIDR]-7"
+        "🇷🇺 Russia | [*CIDR]-4",
+        "🇷🇺 Russia | [*CIDR]-5",
+        "🇷🇺 Russia | [*CIDR] VK"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
@@ -73,86 +73,88 @@
     {
       "tag": "🇷🇺 Russia [*CIDR]",
       "type": "vless",
-      "server": "147.45.110.81",
-      "server_port": 8443,
-      "uuid": "cf2feab8-7f5f-40f8-b2cc-23af2044426d",
+      "server": "87.242.85.201",
+      "server_port": 35412,
+      "uuid": "566f8818-17fe-4ca9-8035-c9081ece6f68",
       "tls": {
         "enabled": true,
-        "server_name": "www.apple.com",
-        "reality": {
-          "enabled": true,
-          "public_key": "ujgxDZv4euWW-us20zlWu8d1PnD5p_i8E0SpARCP3xI",
-          "short_id": "23505cc9"
-        },
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
+        }
+      }
+    },
+    {
+      "tag": "🇷🇺 Russia | [*CIDR]",
+      "type": "vless",
+      "server": "95.85.240.216",
+      "server_port": 443,
+      "uuid": "00a84cc6-073c-454b-9487-f0b7238e715f",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "stepik.org",
+        "reality": {
+          "enabled": true,
+          "public_key": "yo4lSUn_5i7HCFBG6rszy8LZWCV_WuYuV_312M8tihk",
+          "short_id": "b006669e43ae5c1f"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "qq"
+        }
+      }
+    },
+    {
+      "tag": "🇷🇺 Russia [*CIDR] VK",
+      "type": "vless",
+      "server": "95.163.211.150",
+      "server_port": 443,
+      "uuid": "d768d4ba-0b73-4509-87ea-afb074d2f766",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "sellflow.org",
+        "reality": {
+          "enabled": true,
+          "public_key": "SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc",
+          "short_id": ""
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "ios"
+        }
+      }
+    },
+    {
+      "tag": "🇷🇺 Russia | [*CIDR]-2",
+      "type": "vless",
+      "server": "87.242.85.201",
+      "server_port": 35412,
+      "uuid": "566f8818-17fe-4ca9-8035-c9081ece6f68",
+      "tls": {
+        "enabled": true,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "android"
         }
       }
     },
     {
       "tag": "🇷🇺 Russia [*CIDR]-2",
       "type": "vless",
-      "server": "213.171.31.29",
-      "server_port": 443,
-      "uuid": "ed425746-3d10-4b45-a71d-11ff5c3a772f",
-      "tls": {
-        "enabled": true,
-        "server_name": "ru2.fastfive.ru",
-        "reality": {
-          "enabled": true,
-          "public_key": "I2aM-iYWKsWCPtzA_zRbq4AYiaZFDrDNo--xFI51Nlw",
-          "short_id": "7a842f6632c23114"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "qq"
-        }
-      },
-      "transport": {
-        "type": "grpc",
-        "service_name": "clgoto"
-      }
+      "server": "87.242.85.201",
+      "server_port": 35412,
+      "uuid": "566f8818-17fe-4ca9-8035-c9081ece6f68"
     },
     {
-      "tag": "🇷🇺 Russia [*CIDR]-3",
+      "tag": "🇷🇺 Russia | [*CIDR]-3",
       "type": "vless",
-      "server": "213.171.31.29",
-      "server_port": 443,
-      "uuid": "ed425746-3d10-4b45-a71d-11ff5c3a772f",
+      "server": "87.242.85.201",
+      "server_port": 35412,
+      "uuid": "566f8818-17fe-4ca9-8035-c9081ece6f68",
       "tls": {
         "enabled": true,
-        "server_name": "ru2.fastfive.ru",
-        "reality": {
-          "enabled": true,
-          "public_key": "I2aM-iYWKsWCPtzA_zRbq4AYiaZFDrDNo--xFI51Nlw",
-          "short_id": "7a842f6632c23114"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "safari"
-        }
-      },
-      "transport": {
-        "type": "grpc",
-        "service_name": "clgoto"
-      }
-    },
-    {
-      "tag": "🇷🇺 Russia [*CIDR] YA",
-      "type": "vless",
-      "server": "94.126.204.93",
-      "server_port": 443,
-      "uuid": "971adc95-c9f1-437c-8964-8dbdaaaec2b8",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "storage.yandexcloud.net",
-        "reality": {
-          "enabled": true,
-          "public_key": "97m6bc1WSj1DJ-QzBU6Fx5s0NxA4uSvVKTcZAcjlHF8",
-          "short_id": "138dcd25cce7ab07"
-        },
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
@@ -160,51 +162,24 @@
       }
     },
     {
-      "tag": "🇷🇺 Russia | 🌐 [*CIDR]",
-      "type": "vless",
-      "server": "109.237.98.140",
-      "server_port": 443,
-      "uuid": "62d41535-25d3-4bb6-8378-e918cfeba95f",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "max.ru",
-        "reality": {
-          "enabled": true,
-          "public_key": "Q0351ApYOgCGCOgSEROnacDdm7xp-kLs9mYddSDFwRQ",
-          "short_id": "360881fdb193758d"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "edge"
-        }
-      }
-    },
-    {
-      "tag": "🇷🇺 Russia | 🌐 [*CIDR]-2",
-      "type": "vless",
-      "server": "tw02.kinomir.fun",
-      "server_port": 40443,
-      "uuid": "9f5f55bd-e59e-4c32-a29d-85639919f01f",
-      "tls": {
-        "enabled": true,
-        "server_name": "deepl.com",
-        "reality": {
-          "enabled": true,
-          "public_key": "O9clKx7I5jpBnibeaV5Httd1lDFkVIhsf0c8kgjIkiU",
-          "short_id": "20c6"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "qq"
-        }
-      }
-    },
-    {
-      "tag": "🇷🇺 Russia [*CIDR]-4",
+      "tag": "🇷🇺 Russia [*CIDR]-3",
       "type": "vless",
       "server": "176.123.165.127",
-      "server_port": 56745,
+      "server_port": 57836,
+      "uuid": "566f8818-17fe-4ca9-8035-c9081ece6f68",
+      "tls": {
+        "enabled": true,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "safari"
+        }
+      }
+    },
+    {
+      "tag": "🇷🇺 Russia | [*CIDR]-4",
+      "type": "vless",
+      "server": "176.123.165.127",
+      "server_port": 12672,
       "uuid": "566f8818-17fe-4ca9-8035-c9081ece6f68",
       "tls": {
         "enabled": true,
@@ -215,18 +190,18 @@
       }
     },
     {
-      "tag": "🇷🇺 Russia [*CIDR]-5",
+      "tag": "🇷🇺 Russia | [*CIDR]-5",
       "type": "vless",
-      "server": "147.45.110.89",
-      "server_port": 8443,
-      "uuid": "cf2feab8-7f5f-40f8-b2cc-23af2044426d",
+      "server": "45.143.203.21",
+      "server_port": 443,
+      "uuid": "3e7f67de-648e-4871-b51a-a225214d41ee",
       "tls": {
         "enabled": true,
-        "server_name": "www.apple.com",
+        "server_name": "j.6sc.co",
         "reality": {
           "enabled": true,
-          "public_key": "ujgxDZv4euWW-us20zlWu8d1PnD5p_i8E0SpARCP3xI",
-          "short_id": "23505cc9"
+          "public_key": "TRP10HqKUXEQ3O-cfsq93DycfBmbJe9KM36yvSa8Mmw",
+          "short_id": ""
         },
         "utls": {
           "enabled": true,
@@ -235,32 +210,19 @@
       }
     },
     {
-      "tag": "🇷🇺 Russia [*CIDR]-6",
+      "tag": "🇷🇺 Russia | [*CIDR] VK",
       "type": "vless",
-      "server": "176.123.165.127",
-      "server_port": 57836,
-      "uuid": "566f8818-17fe-4ca9-8035-c9081ece6f68",
+      "server": "95.163.211.150",
+      "server_port": 443,
+      "uuid": "d768d4ba-0b73-4509-87ea-afb074d2f766",
+      "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "utls": {
-          "enabled": true,
-          "fingerprint": "ios"
-        }
-      }
-    },
-    {
-      "tag": "🇷🇺 Russia [*CIDR]-7",
-      "type": "vless",
-      "server": "147.45.110.89",
-      "server_port": 8443,
-      "uuid": "cf2feab8-7f5f-40f8-b2cc-23af2044426d",
-      "tls": {
-        "enabled": true,
-        "server_name": "www.apple.com",
+        "server_name": "sellflow.org",
         "reality": {
           "enabled": true,
-          "public_key": "ujgxDZv4euWW-us20zlWu8d1PnD5p_i8E0SpARCP3xI",
-          "short_id": "23505cc9"
+          "public_key": "SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc",
+          "short_id": ""
         },
         "utls": {
           "enabled": true,
