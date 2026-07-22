@@ -35,10 +35,10 @@
       "tag": "auto",
       "outbounds": [
         "🇳🇱 The Netherlands | [SNI-RU] sun6-21.userapi.com",
-        "🇨🇿 Czechia | 🌐 | [SNI-RU] vk.com",
-        "🇵🇱 Poland [SNI-RU] api-maps.yandex.ru",
-        "🇨🇿 Czechia | [SNI-RU] vk.com",
-        "🇭🇺 Hungary [SNI-RU] api-maps.yandex.ru"
+        "🇨🇿 Czechia | 🌐 [SNI-RU] vk.com",
+        "🇨🇭 Switzerland [SNI-RU] api-maps.yandex.ru",
+        "🇨🇿 Czechia | 🌐 [SNI-RU] vk.com-2",
+        "🇵🇱 Poland [SNI-RU] api-maps.yandex.ru"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -52,10 +52,10 @@
       "outbounds": [
         "auto",
         "🇳🇱 The Netherlands | [SNI-RU] sun6-21.userapi.com",
-        "🇨🇿 Czechia | 🌐 | [SNI-RU] vk.com",
-        "🇵🇱 Poland [SNI-RU] api-maps.yandex.ru",
-        "🇨🇿 Czechia | [SNI-RU] vk.com",
-        "🇭🇺 Hungary [SNI-RU] api-maps.yandex.ru"
+        "🇨🇿 Czechia | 🌐 [SNI-RU] vk.com",
+        "🇨🇭 Switzerland [SNI-RU] api-maps.yandex.ru",
+        "🇨🇿 Czechia | 🌐 [SNI-RU] vk.com-2",
+        "🇵🇱 Poland [SNI-RU] api-maps.yandex.ru"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
@@ -77,12 +77,12 @@
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "edge"
+          "fingerprint": "qq"
         }
       }
     },
     {
-      "tag": "🇨🇿 Czechia | 🌐 | [SNI-RU] vk.com",
+      "tag": "🇨🇿 Czechia | 🌐 [SNI-RU] vk.com",
       "type": "vless",
       "server": "cxh1.w-mebel.pro",
       "server_port": 443,
@@ -97,16 +97,16 @@
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "chrome"
+          "fingerprint": "edge"
         }
       }
     },
     {
-      "tag": "🇵🇱 Poland [SNI-RU] api-maps.yandex.ru",
+      "tag": "🇨🇭 Switzerland [SNI-RU] api-maps.yandex.ru",
       "type": "vless",
-      "server": "152.233.43.77",
+      "server": "152.233.31.72",
       "server_port": 16923,
-      "uuid": "8daaba82-fb49-45d4-98ab-aa6b78cf6ef1",
+      "uuid": "da986116-4cb4-4b34-a738-4680949213b8",
       "tls": {
         "enabled": true,
         "server_name": "api-maps.yandex.ru",
@@ -126,7 +126,7 @@
       }
     },
     {
-      "tag": "🇨🇿 Czechia | [SNI-RU] vk.com",
+      "tag": "🇨🇿 Czechia | 🌐 [SNI-RU] vk.com-2",
       "type": "trojan",
       "server": "cztr1.w-mebel.pro",
       "server_port": 443,
@@ -141,16 +141,16 @@
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "android"
+          "fingerprint": "firefox"
         }
       }
     },
     {
-      "tag": "🇭🇺 Hungary [SNI-RU] api-maps.yandex.ru",
+      "tag": "🇵🇱 Poland [SNI-RU] api-maps.yandex.ru",
       "type": "vless",
-      "server": "152.233.41.30",
+      "server": "152.233.43.77",
       "server_port": 16923,
-      "uuid": "cc791bbc-be47-4c15-a8dc-abef8990caba",
+      "uuid": "8daaba82-fb49-45d4-98ab-aa6b78cf6ef1",
       "tls": {
         "enabled": true,
         "server_name": "api-maps.yandex.ru",

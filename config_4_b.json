@@ -34,11 +34,11 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇵🇱 Poland [SNI-RU] api-maps.yandex.ru",
         "🇭🇺 Hungary [SNI-RU] api-maps.yandex.ru",
         "🇨🇭 Switzerland [SNI-RU] api-maps.yandex.ru",
-        "🇭🇺 Hungary [SNI-RU] api-maps.yandex.ru-2",
-        "🇳🇱 The Netherlands | [SNI-RU] sun6-21.userapi.com"
+        "🇫🇮 Finland | [SNI-RU] api-maps.yandex.ru",
+        "🇨🇿 Czechia [SNI-RU] vk.com",
+        "🇨🇿 Czechia | 🌐 [SNI-RU] vk.com"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -51,38 +51,14 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇵🇱 Poland [SNI-RU] api-maps.yandex.ru",
         "🇭🇺 Hungary [SNI-RU] api-maps.yandex.ru",
         "🇨🇭 Switzerland [SNI-RU] api-maps.yandex.ru",
-        "🇭🇺 Hungary [SNI-RU] api-maps.yandex.ru-2",
-        "🇳🇱 The Netherlands | [SNI-RU] sun6-21.userapi.com"
+        "🇫🇮 Finland | [SNI-RU] api-maps.yandex.ru",
+        "🇨🇿 Czechia [SNI-RU] vk.com",
+        "🇨🇿 Czechia | 🌐 [SNI-RU] vk.com"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
-    },
-    {
-      "tag": "🇵🇱 Poland [SNI-RU] api-maps.yandex.ru",
-      "type": "vless",
-      "server": "152.233.43.77",
-      "server_port": 16923,
-      "uuid": "8daaba82-fb49-45d4-98ab-aa6b78cf6ef1",
-      "tls": {
-        "enabled": true,
-        "server_name": "api-maps.yandex.ru",
-        "reality": {
-          "enabled": true,
-          "public_key": "_QeslG3rHGM7DoM99pYC8-jpc16pM2MbNZ6NRMoxmHA",
-          "short_id": "10ffb85da1c2d986"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
-        }
-      },
-      "transport": {
-        "type": "grpc",
-        "service_name": "neurex"
-      }
     },
     {
       "tag": "🇭🇺 Hungary [SNI-RU] api-maps.yandex.ru",
@@ -100,7 +76,7 @@
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "edge"
+          "fingerprint": "chrome"
         }
       },
       "transport": {
@@ -124,7 +100,7 @@
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "edge"
+          "fingerprint": "ios"
         }
       },
       "transport": {
@@ -133,11 +109,11 @@
       }
     },
     {
-      "tag": "🇭🇺 Hungary [SNI-RU] api-maps.yandex.ru-2",
+      "tag": "🇫🇮 Finland | [SNI-RU] api-maps.yandex.ru",
       "type": "vless",
-      "server": "152.233.41.30",
+      "server": "212.237.217.7",
       "server_port": 16923,
-      "uuid": "cc791bbc-be47-4c15-a8dc-abef8990caba",
+      "uuid": "da986116-4cb4-4b34-a738-4680949213b8",
       "tls": {
         "enabled": true,
         "server_name": "api-maps.yandex.ru",
@@ -157,23 +133,42 @@
       }
     },
     {
-      "tag": "🇳🇱 The Netherlands | [SNI-RU] sun6-21.userapi.com",
-      "type": "vless",
-      "server": "freenl.strettenvpn.com",
+      "tag": "🇨🇿 Czechia [SNI-RU] vk.com",
+      "type": "trojan",
+      "server": "cztr1.w-mebel.pro",
       "server_port": 443,
-      "uuid": "b04a708a-7e56-45f9-9557-2d6253a8de6e",
-      "flow": "xtls-rprx-vision",
+      "password": "c1d62d53-2fcd-4951-ab96-c81486f59775",
       "tls": {
         "enabled": true,
-        "server_name": "sun6-21.userapi.com",
+        "server_name": "vk.com",
         "reality": {
           "enabled": true,
-          "public_key": "yhUfTGgu5PYRlFqMnRZkxffH_aU05AFUToGI8_EKF28",
-          "short_id": "8248954896"
+          "public_key": "UzUMu3Jq0iuyiEXs362o2EJE2rzVPuD34HMnoAG-qFM",
+          "short_id": "e8a81db57cf11014"
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "qq"
+          "fingerprint": "edge"
+        }
+      }
+    },
+    {
+      "tag": "🇨🇿 Czechia | 🌐 [SNI-RU] vk.com",
+      "type": "trojan",
+      "server": "cztr1.w-mebel.pro",
+      "server_port": 443,
+      "password": "c1d62d53-2fcd-4951-ab96-c81486f59775",
+      "tls": {
+        "enabled": true,
+        "server_name": "vk.com",
+        "reality": {
+          "enabled": true,
+          "public_key": "UzUMu3Jq0iuyiEXs362o2EJE2rzVPuD34HMnoAG-qFM",
+          "short_id": "e8a81db57cf11014"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
         }
       }
     }
