@@ -34,11 +34,8 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇭🇺 Hungary | [SNI-RU] api-maps.yandex.ru",
-        "🇩🇪 Germany | [SNI-RU] api-maps.yandex.ru",
-        "🇳🇱 The Netherlands [SNI-RU] 00.img.avito.st",
-        "🇵🇱 Poland | [SNI-RU] api-maps.yandex.ru",
-        "🇳🇱 The Netherlands | [SNI-RU] 00.img.avito.st"
+        "🇳🇱 The Netherlands | [SNI-RU] sun6-21.userapi.com",
+        "🇳🇱 The Netherlands | [SNI-RU] sun6-21.userapi.com-2"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -51,126 +48,51 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇭🇺 Hungary | [SNI-RU] api-maps.yandex.ru",
-        "🇩🇪 Germany | [SNI-RU] api-maps.yandex.ru",
-        "🇳🇱 The Netherlands [SNI-RU] 00.img.avito.st",
-        "🇵🇱 Poland | [SNI-RU] api-maps.yandex.ru",
-        "🇳🇱 The Netherlands | [SNI-RU] 00.img.avito.st"
+        "🇳🇱 The Netherlands | [SNI-RU] sun6-21.userapi.com",
+        "🇳🇱 The Netherlands | [SNI-RU] sun6-21.userapi.com-2"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
     },
     {
-      "tag": "🇭🇺 Hungary | [SNI-RU] api-maps.yandex.ru",
+      "tag": "🇳🇱 The Netherlands | [SNI-RU] sun6-21.userapi.com",
       "type": "vless",
-      "server": "152.233.41.30",
-      "server_port": 16923,
-      "uuid": "02b1557c-2e83-4405-ae9a-c7e1b6f532c8",
-      "tls": {
-        "enabled": true,
-        "server_name": "api-maps.yandex.ru",
-        "reality": {
-          "enabled": true,
-          "public_key": "_QeslG3rHGM7DoM99pYC8-jpc16pM2MbNZ6NRMoxmHA",
-          "short_id": "10ffb85da1c2d986"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
-        }
-      },
-      "transport": {
-        "type": "grpc",
-        "service_name": "neurex"
-      }
-    },
-    {
-      "tag": "🇩🇪 Germany | [SNI-RU] api-maps.yandex.ru",
-      "type": "vless",
-      "server": "89.222.123.211",
-      "server_port": 16923,
-      "uuid": "02b1557c-2e83-4405-ae9a-c7e1b6f532c8",
-      "tls": {
-        "enabled": true,
-        "server_name": "api-maps.yandex.ru",
-        "reality": {
-          "enabled": true,
-          "public_key": "_QeslG3rHGM7DoM99pYC8-jpc16pM2MbNZ6NRMoxmHA",
-          "short_id": "10ffb85da1c2d986"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
-        }
-      },
-      "transport": {
-        "type": "grpc",
-        "service_name": "neurex"
-      }
-    },
-    {
-      "tag": "🇳🇱 The Netherlands [SNI-RU] 00.img.avito.st",
-      "type": "vless",
-      "server": "193.233.126.104",
-      "server_port": 8443,
-      "uuid": "b12eebc2-369c-4f3c-96a0-a8bd150ca8d5",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "00.img.avito.st",
-        "reality": {
-          "enabled": true,
-          "public_key": "Lxs8Ruv2zHH0XW5EiQmuCaScfkGPCxWjW02YDWH8pyU",
-          "short_id": "eb0cca7312345678"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "ios"
-        }
-      }
-    },
-    {
-      "tag": "🇵🇱 Poland | [SNI-RU] api-maps.yandex.ru",
-      "type": "vless",
-      "server": "152.233.43.77",
-      "server_port": 16923,
-      "uuid": "02b1557c-2e83-4405-ae9a-c7e1b6f532c8",
-      "tls": {
-        "enabled": true,
-        "server_name": "api-maps.yandex.ru",
-        "reality": {
-          "enabled": true,
-          "public_key": "_QeslG3rHGM7DoM99pYC8-jpc16pM2MbNZ6NRMoxmHA",
-          "short_id": "10ffb85da1c2d986"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
-        }
-      },
-      "transport": {
-        "type": "grpc",
-        "service_name": "neurex"
-      }
-    },
-    {
-      "tag": "🇳🇱 The Netherlands | [SNI-RU] 00.img.avito.st",
-      "type": "vless",
-      "server": "193.233.126.104",
+      "server": "freenl.strettenvpn.com",
       "server_port": 443,
-      "uuid": "b12eebc2-369c-4f3c-96a0-a8bd150ca8d5",
+      "uuid": "b04a708a-7e56-45f9-9557-2d6253a8de6e",
       "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "00.img.avito.st",
+        "server_name": "sun6-21.userapi.com",
         "reality": {
           "enabled": true,
-          "public_key": "Lxs8Ruv2zHH0XW5EiQmuCaScfkGPCxWjW02YDWH8pyU",
-          "short_id": "eb0cca7312345678"
+          "public_key": "yhUfTGgu5PYRlFqMnRZkxffH_aU05AFUToGI8_EKF28",
+          "short_id": "8248954896"
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "safari"
+          "fingerprint": "qq"
+        }
+      }
+    },
+    {
+      "tag": "🇳🇱 The Netherlands | [SNI-RU] sun6-21.userapi.com-2",
+      "type": "vless",
+      "server": "freenl.strettenvpn.com",
+      "server_port": 443,
+      "uuid": "b04a708a-7e56-45f9-9557-2d6253a8de6e",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "sun6-21.userapi.com",
+        "reality": {
+          "enabled": true,
+          "public_key": "yhUfTGgu5PYRlFqMnRZkxffH_aU05AFUToGI8_EKF28",
+          "short_id": "8248954896"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
         }
       }
     }
