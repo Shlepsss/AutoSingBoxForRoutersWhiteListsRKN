@@ -34,9 +34,11 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇷🇺 Russia | [*CIDR] VK",
-        "🇷🇺 Russia | [*CIDR] VK-2",
-        "🇷🇺 Russia | [*CIDR] VK-3"
+        "🌐 Anycast-IP | 🇩🇪 🇪🇪 🇱🇻 🇵🇱 [*CIDR] VK",
+        "🇮🇹 Italy | [*CIDR] YA",
+        "🇪🇪 Estonia | 🌐 [*CIDR] VK",
+        "🇪🇪 Estonia | 🌐 [*CIDR] VK-2",
+        "🇪🇪 Estonia | 🌐 [*CIDR] VK-3"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -49,48 +51,76 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇷🇺 Russia | [*CIDR] VK",
-        "🇷🇺 Russia | [*CIDR] VK-2",
-        "🇷🇺 Russia | [*CIDR] VK-3"
+        "🌐 Anycast-IP | 🇩🇪 🇪🇪 🇱🇻 🇵🇱 [*CIDR] VK",
+        "🇮🇹 Italy | [*CIDR] YA",
+        "🇪🇪 Estonia | 🌐 [*CIDR] VK",
+        "🇪🇪 Estonia | 🌐 [*CIDR] VK-2",
+        "🇪🇪 Estonia | 🌐 [*CIDR] VK-3"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
     },
     {
-      "tag": "🇷🇺 Russia | [*CIDR] VK",
+      "tag": "🌐 Anycast-IP | 🇩🇪 🇪🇪 🇱🇻 🇵🇱 [*CIDR] VK",
       "type": "vless",
-      "server": "213.219.212.24",
-      "server_port": 443,
-      "uuid": "f2e0c1d5-1e6d-4316-86da-ad4dbfb42af2",
-      "flow": "xtls-rprx-vision",
+      "server": "89.208.229.243",
+      "server_port": 2053,
+      "uuid": "f6517e0e-8666-11f1-9ca5-1e6febe3e1df",
       "tls": {
         "enabled": true,
-        "server_name": "pro-ru-213.emrata.top",
+        "server_name": "hh.ru",
         "reality": {
           "enabled": true,
-          "public_key": "AAZjVvbC7AwPKot_1ygO5VMpN7XYifCA7lG0RNR5sEk",
-          "short_id": ""
+          "public_key": "WUY8Lb4LfUUKLzZK3oSlRAdoy-Iu0w3Ait1-jtxbW1M",
+          "short_id": "7824dfd19eab1acc"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "ios"
+        }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "grpc-direct"
+      }
+    },
+    {
+      "tag": "🇮🇹 Italy | [*CIDR] YA",
+      "type": "vless",
+      "server": "158.160.246.193",
+      "server_port": 443,
+      "uuid": "c01c2da7-6977-4b53-a493-cda17fa61b4f",
+      "tls": {
+        "enabled": true,
+        "server_name": "static-mon.yandex.net",
+        "reality": {
+          "enabled": true,
+          "public_key": "9lryIkDCyHLzVsVJiGE4LFMuOHdzYDSTNJOFqGlpcl8",
+          "short_id": "2901df419dc4e3ff"
         },
         "utls": {
           "enabled": true,
           "fingerprint": "firefox"
         }
+      },
+      "transport": {
+        "type": "grpc"
       }
     },
     {
-      "tag": "🇷🇺 Russia | [*CIDR] VK-2",
+      "tag": "🇪🇪 Estonia | 🌐 [*CIDR] VK",
       "type": "vless",
-      "server": "213.219.212.24",
-      "server_port": 443,
-      "uuid": "f2e0c1d5-1e6d-4316-86da-ad4dbfb42af2",
+      "server": "95sub.ghost-lan.com",
+      "server_port": 8442,
+      "uuid": "873f1046-0210-4b2e-a0ec-dc1826886071",
       "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "pro-ru-213.emrata.top",
+        "server_name": "max.ru",
         "reality": {
           "enabled": true,
-          "public_key": "AAZjVvbC7AwPKot_1ygO5VMpN7XYifCA7lG0RNR5sEk",
-          "short_id": ""
+          "public_key": "TRB-7JE8MNZDBFSduYp9syU1AdpLez1MJ7dPrHeGFwg",
+          "short_id": "a7f9106ba66e4796"
         },
         "utls": {
           "enabled": true,
@@ -99,23 +129,44 @@
       }
     },
     {
-      "tag": "🇷🇺 Russia | [*CIDR] VK-3",
+      "tag": "🇪🇪 Estonia | 🌐 [*CIDR] VK-2",
       "type": "vless",
-      "server": "213.219.212.24",
-      "server_port": 443,
-      "uuid": "f2e0c1d5-1e6d-4316-86da-ad4dbfb42af2",
+      "server": "95sub.ghost-lan.com",
+      "server_port": 8442,
+      "uuid": "873f1046-0210-4b2e-a0ec-dc1826886071",
       "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "pro-ru-213.emrata.top",
+        "server_name": "max.ru",
         "reality": {
           "enabled": true,
-          "public_key": "AAZjVvbC7AwPKot_1ygO5VMpN7XYifCA7lG0RNR5sEk",
-          "short_id": ""
+          "public_key": "TRB-7JE8MNZDBFSduYp9syU1AdpLez1MJ7dPrHeGFwg",
+          "short_id": "a7f9106ba66e4796"
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "qq"
+          "fingerprint": "edge"
+        }
+      }
+    },
+    {
+      "tag": "🇪🇪 Estonia | 🌐 [*CIDR] VK-3",
+      "type": "vless",
+      "server": "95sub.ghost-lan.com",
+      "server_port": 8442,
+      "uuid": "873f1046-0210-4b2e-a0ec-dc1826886071",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "max.ru",
+        "reality": {
+          "enabled": true,
+          "public_key": "TRB-7JE8MNZDBFSduYp9syU1AdpLez1MJ7dPrHeGFwg",
+          "short_id": "a7f9106ba66e4796"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
         }
       }
     }
