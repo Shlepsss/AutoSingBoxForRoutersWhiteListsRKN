@@ -34,9 +34,10 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇸🇪 Sweden | [*CIDR] VK",
-        "🇸🇪 Sweden | [*CIDR] VK-2",
-        "🇸🇪 Sweden | [*CIDR] VK-3"
+        "🇷🇺 Russia | [*CIDR] YA",
+        "🇷🇺 Russia | 🌐 [*CIDR] YA",
+        "🇷🇺 Russia [*CIDR] YA",
+        "🇷🇺 Russia [*CIDR] YA-2"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -49,83 +50,96 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇸🇪 Sweden | [*CIDR] VK",
-        "🇸🇪 Sweden | [*CIDR] VK-2",
-        "🇸🇪 Sweden | [*CIDR] VK-3"
+        "🇷🇺 Russia | [*CIDR] YA",
+        "🇷🇺 Russia | 🌐 [*CIDR] YA",
+        "🇷🇺 Russia [*CIDR] YA",
+        "🇷🇺 Russia [*CIDR] YA-2"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
     },
     {
-      "tag": "🇸🇪 Sweden | [*CIDR] VK",
+      "tag": "🇷🇺 Russia | [*CIDR] YA",
       "type": "vless",
-      "server": "213.219.212.254",
-      "server_port": 8443,
-      "uuid": "5cbde895-9de5-4b86-971b-84a82a5be896",
+      "server": "178.154.214.214",
+      "server_port": 443,
+      "uuid": "09a36cea-a641-4b7e-9fb1-789ebe589b50",
+      "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "360.yandex.ru",
+        "server_name": "ads.x5.ru",
         "reality": {
           "enabled": true,
-          "public_key": "ZpXBddDY5CBXaRTnUz4lM4xs_KBVX4CPulN-q9AqhAI",
-          "short_id": ""
+          "public_key": "s8rHJ8TSxWVCl4OnDzygPD1rvGAulfXoXpGHvZV7tlE",
+          "short_id": "e4aa362b5f9d07d7"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      }
+    },
+    {
+      "tag": "🇷🇺 Russia | 🌐 [*CIDR] YA",
+      "type": "vless",
+      "server": "178.154.214.214",
+      "server_port": 443,
+      "uuid": "09a36cea-a641-4b7e-9fb1-789ebe589b50",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "ads.x5.ru",
+        "reality": {
+          "enabled": true,
+          "public_key": "s8rHJ8TSxWVCl4OnDzygPD1rvGAulfXoXpGHvZV7tlE",
+          "short_id": "e4aa362b5f9d07d7"
         },
         "utls": {
           "enabled": true,
           "fingerprint": "qq"
         }
-      },
-      "transport": {
-        "type": "grpc",
-        "service_name": "ns"
       }
     },
     {
-      "tag": "🇸🇪 Sweden | [*CIDR] VK-2",
+      "tag": "🇷🇺 Russia [*CIDR] YA",
       "type": "vless",
-      "server": "213.219.212.254",
-      "server_port": 8443,
-      "uuid": "5cbde895-9de5-4b86-971b-84a82a5be896",
+      "server": "178.154.214.214",
+      "server_port": 443,
+      "uuid": "09a36cea-a641-4b7e-9fb1-789ebe589b50",
+      "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "360.yandex.ru",
+        "server_name": "ads.x5.ru",
         "reality": {
           "enabled": true,
-          "public_key": "ZpXBddDY5CBXaRTnUz4lM4xs_KBVX4CPulN-q9AqhAI",
-          "short_id": ""
+          "public_key": "s8rHJ8TSxWVCl4OnDzygPD1rvGAulfXoXpGHvZV7tlE",
+          "short_id": "e4aa362b5f9d07d7"
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "android"
+          "fingerprint": "ios"
         }
-      },
-      "transport": {
-        "type": "grpc",
-        "service_name": "ns"
       }
     },
     {
-      "tag": "🇸🇪 Sweden | [*CIDR] VK-3",
+      "tag": "🇷🇺 Russia [*CIDR] YA-2",
       "type": "vless",
-      "server": "213.219.212.254",
-      "server_port": 8443,
-      "uuid": "5cbde895-9de5-4b86-971b-84a82a5be896",
+      "server": "178.154.214.214",
+      "server_port": 443,
+      "uuid": "09a36cea-a641-4b7e-9fb1-789ebe589b50",
+      "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "360.yandex.ru",
+        "server_name": "ads.x5.ru",
         "reality": {
           "enabled": true,
-          "public_key": "ZpXBddDY5CBXaRTnUz4lM4xs_KBVX4CPulN-q9AqhAI",
-          "short_id": ""
+          "public_key": "s8rHJ8TSxWVCl4OnDzygPD1rvGAulfXoXpGHvZV7tlE",
+          "short_id": "e4aa362b5f9d07d7"
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "edge"
+          "fingerprint": "firefox"
         }
-      },
-      "transport": {
-        "type": "grpc",
-        "service_name": "ns"
       }
     }
   ],
