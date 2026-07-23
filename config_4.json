@@ -34,10 +34,11 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
+        "🇩🇪 Germany | [SNI-RU] stats.vk-portal.net",
         "🇪🇪 Estonia | 🌐 [SNI-RU] max.ru",
+        "🇩🇪 Germany | [SNI-RU] stats.vk-portal.net-2",
         "🇪🇪 Estonia | 🌐 [SNI-RU] max.ru-2",
-        "🇪🇪 Estonia | 🌐 | [SNI-RU] max.ru",
-        "🇪🇪 Estonia | 🌐 [SNI-RU] max.ru-3"
+        "🇫🇷 France | [SNI-RU] yandex.net"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -50,28 +51,28 @@
       "tag": "select",
       "outbounds": [
         "auto",
+        "🇩🇪 Germany | [SNI-RU] stats.vk-portal.net",
         "🇪🇪 Estonia | 🌐 [SNI-RU] max.ru",
+        "🇩🇪 Germany | [SNI-RU] stats.vk-portal.net-2",
         "🇪🇪 Estonia | 🌐 [SNI-RU] max.ru-2",
-        "🇪🇪 Estonia | 🌐 | [SNI-RU] max.ru",
-        "🇪🇪 Estonia | 🌐 [SNI-RU] max.ru-3"
+        "🇫🇷 France | [SNI-RU] yandex.net"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
     },
     {
-      "tag": "🇪🇪 Estonia | 🌐 [SNI-RU] max.ru",
+      "tag": "🇩🇪 Germany | [SNI-RU] stats.vk-portal.net",
       "type": "vless",
-      "server": "95sub.ghost-lan.com",
-      "server_port": 8442,
-      "uuid": "873f1046-0210-4b2e-a0ec-dc1826886071",
-      "flow": "xtls-rprx-vision",
+      "server": "desrv.noooo.win",
+      "server_port": 443,
+      "uuid": "6f98a077-004e-4b86-8b78-8d09308d3868",
       "tls": {
         "enabled": true,
-        "server_name": "max.ru",
+        "server_name": "stats.vk-portal.net",
         "reality": {
           "enabled": true,
-          "public_key": "TRB-7JE8MNZDBFSduYp9syU1AdpLez1MJ7dPrHeGFwg",
-          "short_id": "a7f9106ba66e4796"
+          "public_key": "XBBVeMURFu7jmYJ9MZwjEWgfQlGTnRs0B5So5Fy7jWs",
+          "short_id": "992f3294e2336744"
         },
         "utls": {
           "enabled": true,
@@ -80,28 +81,7 @@
       }
     },
     {
-      "tag": "🇪🇪 Estonia | 🌐 [SNI-RU] max.ru-2",
-      "type": "vless",
-      "server": "95sub.ghost-lan.com",
-      "server_port": 8442,
-      "uuid": "873f1046-0210-4b2e-a0ec-dc1826886071",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "max.ru",
-        "reality": {
-          "enabled": true,
-          "public_key": "TRB-7JE8MNZDBFSduYp9syU1AdpLez1MJ7dPrHeGFwg",
-          "short_id": "a7f9106ba66e4796"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
-        }
-      }
-    },
-    {
-      "tag": "🇪🇪 Estonia | 🌐 | [SNI-RU] max.ru",
+      "tag": "🇪🇪 Estonia | 🌐 [SNI-RU] max.ru",
       "type": "vless",
       "server": "95sub.ghost-lan.com",
       "server_port": 8442,
@@ -122,7 +102,27 @@
       }
     },
     {
-      "tag": "🇪🇪 Estonia | 🌐 [SNI-RU] max.ru-3",
+      "tag": "🇩🇪 Germany | [SNI-RU] stats.vk-portal.net-2",
+      "type": "vless",
+      "server": "desrv.noooo.win",
+      "server_port": 443,
+      "uuid": "6f98a077-004e-4b86-8b78-8d09308d3868",
+      "tls": {
+        "enabled": true,
+        "server_name": "stats.vk-portal.net",
+        "reality": {
+          "enabled": true,
+          "public_key": "XBBVeMURFu7jmYJ9MZwjEWgfQlGTnRs0B5So5Fy7jWs",
+          "short_id": "992f3294e2336744"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
+      }
+    },
+    {
+      "tag": "🇪🇪 Estonia | 🌐 [SNI-RU] max.ru-2",
       "type": "vless",
       "server": "95sub.ghost-lan.com",
       "server_port": 8442,
@@ -141,6 +141,31 @@
           "fingerprint": "safari"
         }
       }
+    },
+    {
+      "tag": "🇫🇷 France | [SNI-RU] yandex.net",
+      "type": "vless",
+      "server": "45.192.2.157",
+      "server_port": 443,
+      "uuid": "5098e189-3462-4ff7-8ddd-4aaecfd060ea",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "yandex.net",
+        "alpn": [
+          "http/1.1"
+        ],
+        "reality": {
+          "enabled": true,
+          "public_key": "1oUeBtHH4DskTM_jCh-6enWRkFMDX9l1OU5kWYl4kxA",
+          "short_id": "f34818a561dfd1fe"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "qq"
+        }
+      },
+      "packet_encoding": "xudp"
     }
   ],
   "route": {

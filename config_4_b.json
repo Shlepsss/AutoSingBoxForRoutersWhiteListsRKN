@@ -34,10 +34,11 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
+        "🇩🇪 Germany | [SNI-RU] api-maps.yandex.ru",
         "🇪🇪 Estonia | 🌐 [SNI-RU] max.ru",
+        "🇩🇪 Germany | [SNI-RU] api-maps.yandex.ru-2",
         "🇪🇪 Estonia | 🌐 [SNI-RU] max.ru-2",
-        "🇪🇪 Estonia | 🌐 | [SNI-RU] max.ru",
-        "🇪🇪 Estonia | 🌐 [SNI-RU] max.ru-3"
+        "🇩🇪 Germany | [SNI-RU] stats.vk-portal.net"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -50,13 +51,38 @@
       "tag": "select",
       "outbounds": [
         "auto",
+        "🇩🇪 Germany | [SNI-RU] api-maps.yandex.ru",
         "🇪🇪 Estonia | 🌐 [SNI-RU] max.ru",
+        "🇩🇪 Germany | [SNI-RU] api-maps.yandex.ru-2",
         "🇪🇪 Estonia | 🌐 [SNI-RU] max.ru-2",
-        "🇪🇪 Estonia | 🌐 | [SNI-RU] max.ru",
-        "🇪🇪 Estonia | 🌐 [SNI-RU] max.ru-3"
+        "🇩🇪 Germany | [SNI-RU] stats.vk-portal.net"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
+    },
+    {
+      "tag": "🇩🇪 Germany | [SNI-RU] api-maps.yandex.ru",
+      "type": "vless",
+      "server": "89.222.123.209",
+      "server_port": 16923,
+      "uuid": "781be37f-2ed2-40b3-a013-f416e0450fd0",
+      "tls": {
+        "enabled": true,
+        "server_name": "api-maps.yandex.ru",
+        "reality": {
+          "enabled": true,
+          "public_key": "_QeslG3rHGM7DoM99pYC8-jpc16pM2MbNZ6NRMoxmHA",
+          "short_id": "10ffb85da1c2d986"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "neurex"
+      }
     },
     {
       "tag": "🇪🇪 Estonia | 🌐 [SNI-RU] max.ru",
@@ -80,6 +106,30 @@
       }
     },
     {
+      "tag": "🇩🇪 Germany | [SNI-RU] api-maps.yandex.ru-2",
+      "type": "vless",
+      "server": "89.222.123.209",
+      "server_port": 16923,
+      "uuid": "781be37f-2ed2-40b3-a013-f416e0450fd0",
+      "tls": {
+        "enabled": true,
+        "server_name": "api-maps.yandex.ru",
+        "reality": {
+          "enabled": true,
+          "public_key": "_QeslG3rHGM7DoM99pYC8-jpc16pM2MbNZ6NRMoxmHA",
+          "short_id": "10ffb85da1c2d986"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "qq"
+        }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "neurex"
+      }
+    },
+    {
       "tag": "🇪🇪 Estonia | 🌐 [SNI-RU] max.ru-2",
       "type": "vless",
       "server": "95sub.ghost-lan.com",
@@ -96,49 +146,27 @@
         },
         "utls": {
           "enabled": true,
+          "fingerprint": "edge"
+        }
+      }
+    },
+    {
+      "tag": "🇩🇪 Germany | [SNI-RU] stats.vk-portal.net",
+      "type": "vless",
+      "server": "desrv.noooo.win",
+      "server_port": 443,
+      "uuid": "6f98a077-004e-4b86-8b78-8d09308d3868",
+      "tls": {
+        "enabled": true,
+        "server_name": "stats.vk-portal.net",
+        "reality": {
+          "enabled": true,
+          "public_key": "XBBVeMURFu7jmYJ9MZwjEWgfQlGTnRs0B5So5Fy7jWs",
+          "short_id": "992f3294e2336744"
+        },
+        "utls": {
+          "enabled": true,
           "fingerprint": "firefox"
-        }
-      }
-    },
-    {
-      "tag": "🇪🇪 Estonia | 🌐 | [SNI-RU] max.ru",
-      "type": "vless",
-      "server": "95sub.ghost-lan.com",
-      "server_port": 8442,
-      "uuid": "873f1046-0210-4b2e-a0ec-dc1826886071",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "max.ru",
-        "reality": {
-          "enabled": true,
-          "public_key": "TRB-7JE8MNZDBFSduYp9syU1AdpLez1MJ7dPrHeGFwg",
-          "short_id": "a7f9106ba66e4796"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "ios"
-        }
-      }
-    },
-    {
-      "tag": "🇪🇪 Estonia | 🌐 [SNI-RU] max.ru-3",
-      "type": "vless",
-      "server": "95sub.ghost-lan.com",
-      "server_port": 8442,
-      "uuid": "873f1046-0210-4b2e-a0ec-dc1826886071",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "max.ru",
-        "reality": {
-          "enabled": true,
-          "public_key": "TRB-7JE8MNZDBFSduYp9syU1AdpLez1MJ7dPrHeGFwg",
-          "short_id": "a7f9106ba66e4796"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
         }
       }
     }
