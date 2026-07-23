@@ -34,13 +34,13 @@
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇷🇺 Russia | 🌐 | [SNI-RU] stats.vk-portal.net",
-        "🇷🇺 Russia | 🌐 | [SNI-RU] stats.vk-portal.net-2",
-        "🇷🇺 Russia | 🌐 [SNI-RU] stats.vk-portal.net",
-        "🇷🇺 Russia | 🌐 [SNI-RU] stats.vk-portal.net-2",
-        "🇩🇪 Germany | [SNI-RU] stats.vk-portal.net",
-        "🇪🇪 Estonia | [SNI-RU] max.ru",
-        "🇪🇪 Estonia [SNI-RU] max.ru"
+        "🇳🇱 The Netherlands | [SNI-RU] stats.vk-portal.net",
+        "🇹🇷 Turkey [SNI-RU] stats.vk-portal.net",
+        "🇷🇺 Russia | [SNI-RU] stats.vk-portal.net",
+        "🇷🇺 Russia [SNI-RU] stats.vk-portal.net",
+        "🇷🇺 Russia | [SNI-RU] stats.vk-portal.net-2",
+        "🇷🇺 Russia [SNI-RU] stats.vk-portal.net-2",
+        "🇪🇪 Estonia | 🌐 [SNI-RU] max.ru"
       ],
       "url": "https://google.com/generate_204",
       "interval": "1m",
@@ -53,19 +53,59 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇷🇺 Russia | 🌐 | [SNI-RU] stats.vk-portal.net",
-        "🇷🇺 Russia | 🌐 | [SNI-RU] stats.vk-portal.net-2",
-        "🇷🇺 Russia | 🌐 [SNI-RU] stats.vk-portal.net",
-        "🇷🇺 Russia | 🌐 [SNI-RU] stats.vk-portal.net-2",
-        "🇩🇪 Germany | [SNI-RU] stats.vk-portal.net",
-        "🇪🇪 Estonia | [SNI-RU] max.ru",
-        "🇪🇪 Estonia [SNI-RU] max.ru"
+        "🇳🇱 The Netherlands | [SNI-RU] stats.vk-portal.net",
+        "🇹🇷 Turkey [SNI-RU] stats.vk-portal.net",
+        "🇷🇺 Russia | [SNI-RU] stats.vk-portal.net",
+        "🇷🇺 Russia [SNI-RU] stats.vk-portal.net",
+        "🇷🇺 Russia | [SNI-RU] stats.vk-portal.net-2",
+        "🇷🇺 Russia [SNI-RU] stats.vk-portal.net-2",
+        "🇪🇪 Estonia | 🌐 [SNI-RU] max.ru"
       ],
       "default": "auto",
       "interrupt_exist_connections": false
     },
     {
-      "tag": "🇷🇺 Russia | 🌐 | [SNI-RU] stats.vk-portal.net",
+      "tag": "🇳🇱 The Netherlands | [SNI-RU] stats.vk-portal.net",
+      "type": "vless",
+      "server": "desrv.noooo.win",
+      "server_port": 443,
+      "uuid": "6f98a077-004e-4b86-8b78-8d09308d3868",
+      "tls": {
+        "enabled": true,
+        "server_name": "stats.vk-portal.net",
+        "reality": {
+          "enabled": true,
+          "public_key": "XBBVeMURFu7jmYJ9MZwjEWgfQlGTnRs0B5So5Fy7jWs",
+          "short_id": "992f3294e2336744"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "safari"
+        }
+      }
+    },
+    {
+      "tag": "🇹🇷 Turkey [SNI-RU] stats.vk-portal.net",
+      "type": "vless",
+      "server": "tr.fasti.win",
+      "server_port": 443,
+      "uuid": "6f98a077-004e-4b86-8b78-8d09308d3868",
+      "tls": {
+        "enabled": true,
+        "server_name": "stats.vk-portal.net",
+        "reality": {
+          "enabled": true,
+          "public_key": "XBBVeMURFu7jmYJ9MZwjEWgfQlGTnRs0B5So5Fy7jWs",
+          "short_id": "992f3294e2336744"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "ios"
+        }
+      }
+    },
+    {
+      "tag": "🇷🇺 Russia | [SNI-RU] stats.vk-portal.net",
       "type": "vless",
       "server": "rus.fasti.win",
       "server_port": 443,
@@ -85,47 +125,7 @@
       }
     },
     {
-      "tag": "🇷🇺 Russia | 🌐 | [SNI-RU] stats.vk-portal.net-2",
-      "type": "vless",
-      "server": "rus.fasti.win",
-      "server_port": 443,
-      "uuid": "6f98a077-004e-4b86-8b78-8d09308d3868",
-      "tls": {
-        "enabled": true,
-        "server_name": "stats.vk-portal.net",
-        "reality": {
-          "enabled": true,
-          "public_key": "XBBVeMURFu7jmYJ9MZwjEWgfQlGTnRs0B5So5Fy7jWs",
-          "short_id": "992f3294e2336744"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "qq"
-        }
-      }
-    },
-    {
-      "tag": "🇷🇺 Russia | 🌐 [SNI-RU] stats.vk-portal.net",
-      "type": "vless",
-      "server": "rus.fasti.win",
-      "server_port": 443,
-      "uuid": "6f98a077-004e-4b86-8b78-8d09308d3868",
-      "tls": {
-        "enabled": true,
-        "server_name": "stats.vk-portal.net",
-        "reality": {
-          "enabled": true,
-          "public_key": "XBBVeMURFu7jmYJ9MZwjEWgfQlGTnRs0B5So5Fy7jWs",
-          "short_id": "992f3294e2336744"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "safari"
-        }
-      }
-    },
-    {
-      "tag": "🇷🇺 Russia | 🌐 [SNI-RU] stats.vk-portal.net-2",
+      "tag": "🇷🇺 Russia [SNI-RU] stats.vk-portal.net",
       "type": "vless",
       "server": "rus.fasti.win",
       "server_port": 443,
@@ -145,9 +145,9 @@
       }
     },
     {
-      "tag": "🇩🇪 Germany | [SNI-RU] stats.vk-portal.net",
+      "tag": "🇷🇺 Russia | [SNI-RU] stats.vk-portal.net-2",
       "type": "vless",
-      "server": "desrv.noooo.win",
+      "server": "rus.fasti.win",
       "server_port": 443,
       "uuid": "6f98a077-004e-4b86-8b78-8d09308d3868",
       "tls": {
@@ -160,49 +160,48 @@
         },
         "utls": {
           "enabled": true,
-          "fingerprint": "firefox"
+          "fingerprint": "qq"
         }
       }
     },
     {
-      "tag": "🇪🇪 Estonia | [SNI-RU] max.ru",
+      "tag": "🇷🇺 Russia [SNI-RU] stats.vk-portal.net-2",
       "type": "vless",
-      "server": "95sub.ghost-lan.com",
-      "server_port": 8442,
-      "uuid": "873f1046-0210-4b2e-a0ec-dc1826886071",
-      "flow": "xtls-rprx-vision",
+      "server": "rus.fasti.win",
+      "server_port": 443,
+      "uuid": "6f98a077-004e-4b86-8b78-8d09308d3868",
       "tls": {
         "enabled": true,
-        "server_name": "max.ru",
+        "server_name": "stats.vk-portal.net",
         "reality": {
           "enabled": true,
-          "public_key": "TRB-7JE8MNZDBFSduYp9syU1AdpLez1MJ7dPrHeGFwg",
-          "short_id": "a7f9106ba66e4796"
-        },
-        "utls": {
-          "enabled": true,
-          "fingerprint": "edge"
-        }
-      }
-    },
-    {
-      "tag": "🇪🇪 Estonia [SNI-RU] max.ru",
-      "type": "vless",
-      "server": "95sub.ghost-lan.com",
-      "server_port": 8442,
-      "uuid": "873f1046-0210-4b2e-a0ec-dc1826886071",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "max.ru",
-        "reality": {
-          "enabled": true,
-          "public_key": "TRB-7JE8MNZDBFSduYp9syU1AdpLez1MJ7dPrHeGFwg",
-          "short_id": "a7f9106ba66e4796"
+          "public_key": "XBBVeMURFu7jmYJ9MZwjEWgfQlGTnRs0B5So5Fy7jWs",
+          "short_id": "992f3294e2336744"
         },
         "utls": {
           "enabled": true,
           "fingerprint": "safari"
+        }
+      }
+    },
+    {
+      "tag": "🇪🇪 Estonia | 🌐 [SNI-RU] max.ru",
+      "type": "vless",
+      "server": "95sub.ghost-lan.com",
+      "server_port": 8442,
+      "uuid": "873f1046-0210-4b2e-a0ec-dc1826886071",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "max.ru",
+        "reality": {
+          "enabled": true,
+          "public_key": "TRB-7JE8MNZDBFSduYp9syU1AdpLez1MJ7dPrHeGFwg",
+          "short_id": "a7f9106ba66e4796"
+        },
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
         }
       }
     }
